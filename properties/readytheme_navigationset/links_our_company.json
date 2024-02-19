@@ -1,0 +1,56 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "id": "b91d26d3d4ae094f4c4f89e396d4b7ff",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
+            "link_dest": "ABUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "About Us",
+            "url": "https://miraclesoap.mivatest.com/about-us.html"
+        },
+        {
+            "active": 1,
+            "id": "e26eafb667ed301fa9de4d88ee97d365",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Careers</a>",
+            "link_dest": "SFNT",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Careers",
+            "url": "https://miraclesoap.mivatest.com/"
+        },
+        {
+            "active": 1,
+            "id": "304863e5c3d0a4fcc388e49ed1acfe1a",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Store Locations</a>",
+            "link_dest": "SFNT",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Store Locations",
+            "url": "https://miraclesoap.mivatest.com/"
+        },
+        {
+            "active": 1,
+            "id": "2fb5b55e02c7ff725a69db09ef38373c",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Terms &amp; Conditions</a>",
+            "link_dest": "SFNT",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Terms & Conditions",
+            "url": "https://miraclesoap.mivatest.com/"
+        },
+        {
+            "active": 1,
+            "id": "0d445e78378f6370fbd4ba3d12239d52",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
+            "link_dest": "PRPO",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Privacy Policy",
+            "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
+        }
+    ],
+    "layout": "S",
+    "name": "Our Company"
+}

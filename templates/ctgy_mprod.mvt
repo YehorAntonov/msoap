@@ -1,0 +1,98 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:category:page_title">
+		<title>&mvt:category:page_title;</title>
+	<mvt:elseif expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: &mvt:category:name;</title>
+	</mvt:if>
+	<meta name="description" content="Miracle II Soap Express Shopping Cart. Each product is miraculous in its own way.
+Miracle II Valu-Pack
+Miracle II Original Soap
+Miracle II Moisturizing Soap
+Miracle II Neutralizer Liquid
+Miracle II Neutralizer Gel
+Miracle II Skin Moisturizer
+Miracle II Therapeutic Ball
+Miracle II Natural Thai Spray Deodorant
+Miracle II By the Case Savings
+Miracle II Miraclesoap.com 888-895-7627" />
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:category:link;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+
+</script>
+</head>
+<body class="CTGY CTGY_mprod">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<mvt:comment><div id="navigation-bar"><mvt:item name="navbar" /></div></mvt:comment>
+
+	<div id="content-container" class="clearfix">
+			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+			<div id="sidebar">
+				<mvt:item name="sidebar" />
+			</div>
+			<div id="main-content" class="column">
+				
+				<mvt:if expr="NOT ISNULL l.settings:category_title:image">
+				<mvt:comment><div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div></mvt:comment>
+				<div id="category-header"><mvt:item name="prod_ctgy_hdft" param="ctgy_header" />
+				</mvt:if>
+
+				<mvt:item name="customfields" param="Read_Category_Code( l.settings:category:code, 'catTitle', l.settings:customfield:catTitle)" />
+				&mvt:customfield:catTitle;
+
+				</div>
+				<mvt:if expr="NOT ISNULL l.settings:category_tree:image">
+					<mvt:if expr="l.settings:category:code NE 'paks' AND l.settings:category:code NE 'mprod' " >
+					  <img src="&mvte:category_tree:image;" alt="&mvte:category:name;" />
+					</mvt:if>
+				</mvt:if>
+				<div class="clearfix">
+				
+				<mvt:if expr="l.settings:category:code NE 'mprod'" >
+					<mvt:item name="customfields" param="Read_Category_Code( l.settings:category:code, 'catImg', l.settings:customfield:catImg)" />
+					<div class="category-title"><img src="&mvte:customfield:catImg;" alt="&mvte:category:name;" /></div>
+				</mvt:if>
+
+				<mvt:if expr="l.settings:category:code NE 'mprod'" >
+				<mvt:item name="customfields" param="Read_Category_Code( l.settings:category:code, 'long', l.settings:customfield:long)" />
+				<div class="category_long_description  &mvt:category:code">&mvt:customfield:long;</div>
+				</div>
+				</mvt:if>
+
+				<div><mvt:item name="subcategory_listing" /></div>
+				<mvt:if expr="l.settings:page:code EQ 'CTGY'  AND l.settings:category:code ISNULL ">
+				<div><mvt:item name="subcat_listing" /></div>
+				</mvt:if>
+				
+				<div id="category-listing"><mvt:item name="category_listing" /></div>
+				<div id="category-footer"><mvt:item name="prod_ctgy_hdft" param="ctgy_footer" /></div>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</div>		
+	</div>
+	<div id="bottom-wrap"></div>
+						<mvt:item name="customfields" param="Read_Category_Code(l.settings:sub_category:code,'category_descr', l.settings:test)" /><br>
+						<mvt:foreach iterator="field" array="test">
+    							&mvte:field:category_descr;<br/>
+						</mvt:foreach>	
+
+
+
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+
+<mvt:if expr="s.Remote_Addr EQ '159.224.93.203'">
+    <mvt:item name="ry_toolbelt" param="eval|varlist('l', '', l.all_settings)" />
+    <mvt:item name="ry_toolbelt" param="eval|varlist('g', '', l.all_settings)" />
+</mvt:if>
+<mvt:if expr="s.Remote_Addr EQ '109.86.222.78'">
+    <mvt:item name="ry_toolbelt" param="eval|varlist('l', '', l.all_settings)" />
+    <mvt:item name="ry_toolbelt" param="eval|varlist('g', '', l.all_settings)" />
+
+</mvt:if>
+</div>
+</body>
+</html>

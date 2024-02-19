@@ -1,0 +1,51 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Missing Product Attributes</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="UATM one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+
+				<h1>Special Offers</h1>
+				
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				
+				<form method="post" action="&mvte:urls:_self:secure;">
+				<input type="hidden" name="Action" value="&mvte:global:Action;" />
+				<input type="hidden" name="Upsell_Product_Count" value="&mvte:global:Upsell_Product_Count;" />
+				<mvt:item name="tax" />
+				<div class="product-attributes"><mvt:item name="upsell_attr_mult" /></div>
+				<mvt:item name="buttons" param="Continue" />
+				</form>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

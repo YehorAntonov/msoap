@@ -1,0 +1,27 @@
+<mvt:if expr="g.Basket:cust_id GT 0">
+<hr>
+    <mvt:do name="l.return" file="g.Module_Feature_PGR_DB" value="PriceGroup_Load_Name( '9 Case Bottles', l.pricegroup )" />
+
+    <mvt:if expr="l.return EQ 1">
+        <mvt:do name="l.exists" file="g.Module_Feature_PGR_DB" value="PriceGroupXCustomer_Load( l.pricegroup:id, g.Basket:cust_id, l.null )" />
+        <mvt:if expr="l.exists">
+          <FONT FACE="Arial, Helvetica" SIZE="3"><b>Wholesale Customer</b></font>
+        </mvt:if>
+    </mvt:if>
+    <mvt:do name="l.return" file="g.Module_Feature_PGR_DB" value="PriceGroup_Load_Name( 'Case Size', l.pricegroup )" />
+
+    <mvt:if expr="l.return EQ 1">
+        <mvt:do name="l.exists" file="g.Module_Feature_PGR_DB" value="PriceGroupXCustomer_Load( l.pricegroup:id, g.Basket:cust_id, l.null )" />
+        <mvt:if expr="l.exists">
+          <FONT FACE="Arial, Helvetica" SIZE="3"><b>Distributor Customer</b></font>
+        </mvt:if>
+    </mvt:if>
+<mvt:else>
+          <FONT FACE="Arial, Helvetica" SIZE="3">Retail Customer</font>
+</mvt:if>
+<hr>
+<mvt:item name="phone_order_main" />
+
+
+
+

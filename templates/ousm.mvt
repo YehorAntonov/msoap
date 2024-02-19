@@ -1,0 +1,105 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Checkout: Special Offers</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="OUSM one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+
+				<h1>Special Offers</h1>
+
+				Offers valid for this order only<br />
+				<mvt:if expr="g.Upsold_Product_Count LE g.Upsell_Options:prod_sell OR g.Upsell_Options:prod_sell EQ 0">
+				You may select <span class="bold">one or more</span> of the following:
+				<mvt:elseif expr="g.Upsell_Options:prod_sell EQ 1">
+				You may select <span class="bold">one</span> of the following:
+				<mvt:else>
+				You may select up to <span class="bold">&mvte:global:Upsell_Options:prod_sell;</span> of the following:
+				</mvt:if>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				<mvt:if expr="l.settings:messages:information_message_count">
+				<div class="information-message">
+				<mvt:foreach iterator="message" array="messages:information_messages">
+					&mvt:message;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+
+				<form method="post" action="&mvte:urls:OSEL:secure;">
+				<input type="hidden" name="Action" value="AUPM" />
+				<input type="hidden" name="Attributes" value="Yes" />
+				<input type="hidden" name="Upsell_Product_Count" value="&mvte:global:Upsold_Product_Count;" />
+				<mvt:item name="tax" />
+
+				<table class="upsale-batch">
+					<tr class="heading">
+						<td class="upsale-checkbox">Buy</td>
+						<td class="upsale-code">Code</td>
+						<td class="upsale-name">Product</td>
+						<td class="upsale-formatted-price">Regularly</td>
+						<td class="upsale-formatted-upsale-price">Special</td>
+						<td class="upsale-formatted-savings">Save</td>
+					</tr>
+					<mvt:foreach array="upsale" iterator="upsold_product">
+					<tr>
+						<td>
+							<mvt:if expr="l.settings:upsold_product:selected">
+							<input type="checkbox" name="Upsell_Selected[&mvt:upsold_product:index;]" value="Yes" checked />
+							<mvt:else>
+							<input type="checkbox" name="Upsell_Selected[&mvt:upsold_product:index;]" value="Yes" />
+							</mvt:if>
+							<input type="hidden" name="Product[&mvt:upsold_product:index;]:code" value="&mvte:upsold_product:code;" />
+						</td>
+						<td>
+							&mvt:upsold_product:code;
+						</td>
+						<td>
+							&mvt:upsold_product:name;
+						</td>
+						<td>
+							&mvt:upsold_product:formatted_price;
+						</td>
+						<td>
+							&mvt:upsold_product:formatted_upsell_price;
+						</td>
+						<td>
+							&mvt:upsold_product:formatted_upsell_savings;
+						</td>
+					</tr>
+					</mvt:foreach>
+				</table>
+
+				<div class="continue-button"><mvt:item name="buttons" param="Continue" /></div>
+				</form>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Add Customer Payment Card</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="CPCA one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+
+				<h1>Customer Payment Cards: Add Card</h1>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				<mvt:if expr="l.settings:messages:information_message_count">
+				<div class="information-message">
+				<mvt:foreach iterator="message" array="messages:information_messages">
+					&mvt:message;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+
+				<div id="fields-key">
+					<div><span class="required">Bold</span> = Required</div>
+					<div><span class="italic">Italic</span> = Optional</div>
+				</div>
+
+				<form id="cpca_form" method="post" action="&mvte:urls:CPCD:auto;">
+					<input type="hidden" name="Action" value="ICPC" />
+
+					<div class="paymentcard-container"><mvt:item name="mivapay" /></div>
+
+					<div class="continue-button">
+						<script type="text/javascript">
+							var onclick_submit = function( event )
+							{
+								if ( MivaPay && ( typeof MivaPay.Submit === 'function' ) )
+								{
+									MivaPay.Submit( function()
+									{
+										var form;
+
+										form = document.getElementById( 'cpca_form' );
+										form.submit();
+									} );
+								}
+							}
+						</script>
+
+						<span onclick="onclick_submit(); return false;">
+							<mvt:item name="buttons" param="Save" />
+						</span>
+					</div>
+				</form>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

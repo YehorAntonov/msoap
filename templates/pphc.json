@@ -1,0 +1,57 @@
+{
+    "basket": {
+        "advanced": 1,
+        "applycoupons": 0,
+        "b_height": 75,
+        "b_width": 75,
+        "button_wish": 0,
+        "constrain": "B",
+        "discounts": 1,
+        "editable": 0,
+        "groups": 1,
+        "handling": 1,
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 1,
+        "lineitemprice": "base",
+        "redeemgiftcerts": 0,
+        "salestax": 1,
+        "shipping": 1,
+        "splitpayments": 1,
+        "template_filename": "pphc-basket.mvc",
+        "template_id": 163
+    },
+    "customer": {
+        "editable": 0,
+        "mode": "order",
+        "prevent_template_auto_update": 0,
+        "template_filename": "pphc-customer.mvc",
+        "template_id": 162
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "pphc-footer.mvc"
+        },
+        "header": {
+            "template_filename": "pphc-header.mvc"
+        }
+    },
+    "paypaladv": {
+        "generated": 1
+    },
+    "seo_settings": {
+        "cat_lit": "category",
+        "cat_lit_choice": "category",
+        "plit_in_bc": 1,
+        "prod_lit": "product",
+        "prod_lit_choice": "product",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://miraclesoap.mivatest.com/",
+        "url_delim": "/",
+        "urlprefix": "http://miraclesoap.mivatest.com/"
+    }
+}

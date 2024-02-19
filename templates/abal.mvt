@@ -1,0 +1,59 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Customer Account Balance</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="ABAL one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+
+				<div class="logout-link"><a href="&mvte:urls:SFNT:secure_sep;Action=LOGO">Logout</a></div>
+				<h1>Customer Account Balance</h1>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				<mvt:if expr="l.settings:messages:information_message_count">
+				<div class="information-message">
+				<mvt:foreach iterator="message" array="messages:information_messages">
+					&mvt:message;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+
+				<div class="customer_account_balance_container">
+					Current Balance: <span class="customer_account_balance">&mvt:customer:formatted_credit;</span>
+					<br />
+					<a href="&mvte:urls:RGFT:auto;" class="customer_account_balance_button_redeem">Redeem Gift Certificate</a>
+				</div>
+
+				<mvt:item name="customercredithistory" />
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "code": "main",
+    "type": "I",
+    "is_global": true,
+    "active": false,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        }
+    ]
+}

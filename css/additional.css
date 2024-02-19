@@ -1,0 +1,111 @@
+/* ------------------------ Storefront new styles ------------------------ */
+
+.SFNT #site-container #main .info-holder {
+  width: 470px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.SFNT #site-container #main .info-holder div span.blue-style,
+.SFNT #site-container #main .info-holder div a.blue-style {
+  /* padding-left: 11px; */
+  font-size: 17px !important;
+  font-weight: bold;
+  padding-bottom: 2px;
+  color: #20678c !important;
+}
+
+/* ------------------------ Change password page ------------------------ */
+
+.CPWD #content-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 730px;
+  margin-top: -9px;
+}
+
+.CPWD .change-password-wrapper {
+  margin: 0 22px 48px;
+  /* width: 300px; */
+}
+
+.CPWD .change-password-section {
+  width: 282px;
+  padding: 18px 45px;
+  margin: 0;
+  letter-spacing: -1.2px;
+  border: 1px solid #ccc;
+  background: url(/images/bluefade_v.jpg) repeat-x;
+}
+
+.CPWD .button {
+  height: auto;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  border: 1px solid #666666;
+  background-color: #125d84;
+  color: #ffffff;
+}
+
+.CPWD #change-password {
+  padding: 0 106px 0 46px;
+  color: #1b679e;
+}
+
+.CPWD .decor-text {
+  display: block;
+  font-family: system-ui;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.8px;
+  text-decoration: underline;
+}
+
+.CPWD .accent-text {
+  margin-bottom: 15px;
+  font-family: system-ui;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: red;
+}
+
+.CPWD .form_row {
+  margin: 9px 0 6px;
+}
+
+.CPWD .form_row.custom {
+  margin: 17px 0 6px;
+}
+
+.CPWD p {
+  line-height: 16px;
+}
+
+.CPWD label {
+  width: 115px;
+  padding: 7px 13px 7px 0;
+  font-size: 11px;
+}
+
+.CPWD .cpwd-input {
+  width: 133px;
+  margin: 2px 3px;
+  height: 18px;
+  border-radius: 5px;
+  border-color: #548dc4;
+}
+
+.CPWD .additional-info {
+  margin-top: 13px;
+  font-size: 11px;
+  width: 292px;
+}
+
+.CPWD .change-buttons {
+  text-align: center;
+  padding-left: 53px;
+  margin-top: 16px;
+}

@@ -1,0 +1,103 @@
+<div class="sidebar-basket">
+<h5 class="basket-sidebar-heading">Your Basket</h5>
+<div class="basket-sidebar-content">
+<mvt:if expr="l.settings:basket:empty">
+<p>Your basket is empty.</p>
+</div>
+</div>
+<mvt:exit />
+</mvt:if>
+<table>
+	<tr class="basket-heading">
+		<td class="item-quantity">Qty</td>
+		<td class="item-name">Product</td>
+		<mvt:comment><td class="item-price">Price/Ea.</td></mvt:comment>
+		<td class="item-total">Price</td>
+	</tr>
+	<mvt:foreach iterator="group" array="basket:groups">
+	<tr>
+		<mvt:if expr="l.settings:group:option_count">
+			<mvt:assign name="l.settings:rowspan" value="l.settings:group:option_count + 1" />
+		<mvt:else>
+			<mvt:assign name="l.settings:rowspan" value="1" />
+		</mvt:if>
+		<td class="item-quantity">
+			&mvt:group:quantity;
+		</td>
+		<td class="item-name">
+			<div class="special-offer"><mvt:if expr="l.settings:group:upsold">(Special Offer)</mvt:if></div>
+			<div class="item-name">&mvt:group:name;  
+			<mvt:comment><span class="item-code">
+				&mvt:group:code;
+				<mvt:foreach iterator="discount" array="group:discount">
+					<mvt:if expr="l.settings:discount:display">
+						<div class="item-discount">&mvt:discount:descrip;: &mvt:discount:formatted_discount;</div>
+					</mvt:if>
+				</mvt:foreach>
+			</span></mvt:comment>
+			</div>
+		</td>
+
+		<mvt:comment><td class="item-price">
+			&mvt:group:formatted_base_price;
+		</td></mvt:comment>
+		<td class="item-total">
+			&mvt:group:formatted_subtotal;
+		</td>
+	</tr>
+	<mvt:foreach iterator="option" array="group:options">
+	<tr class="item-options">
+		<td class="item-name">
+			<mvt:if expr="l.settings:option:option_id">
+				&mvt:option:attr_code;: &mvt:option:opt_code;
+			<mvt:elseif expr="NOT ISNULL l.settings:option:data">
+				&mvt:option:attr_code;: &mvt:option:data;
+			<mvt:elseif expr="NOT ISNULL l.settings:option:data_long">
+				&mvt:option:attr_code;: &mvt:option:data_long;
+			<mvt:else>
+				&mvt:option:attr_code;
+			</mvt:if>
+			<mvt:foreach iterator="discount" array="option:discounts">
+				<mvt:if expr="l.settings:discount:display">
+					<div class="item-discount">&mvt:discount:descrip;: &mvt:discount:formatted_discount;</div>
+				</mvt:if>
+			</mvt:foreach>
+		</td>
+		<td class="item-quantity">&nbsp;</td>
+		<mvt:comment><td class="item-price">
+			<mvt:if expr="l.settings:option:base_price">
+				&mvt:option:formatted_base_price;
+			<mvt:else>
+				&nbsp;
+			</mvt:if>
+		</td></mvt:comment>
+		<td class="item-total">
+			<mvt:if expr="l.settings:option:subtotal_base_price OR l.settings:option:subtotal">
+				<mvt:if expr="l.settings:option:subtotal_base_price NE l.settings:option:subtotal">
+					<span style="text-decoration: line-through;">&mvt:option:formatted_subtotal_base_price;</span>
+				</mvt:if>
+				&mvt:option:formatted_subtotal;
+			<mvt:else>
+				&nbsp;
+			</mvt:if>
+		</td>
+	</tr>
+	</mvt:foreach>
+	</mvt:foreach>
+	<tr id="basket-totals">
+		<td class="total-prompt">Subtotal</td>
+		<td class="formatted-total">&mvt:basket:formatted_total;</td>
+	</tr>
+</table>
+<div class="clear"></div>
+<mvt:if expr="l.settings:page:code EQ 'CTGY' AND l.settings:category:code NOT ISNULL ">
+<mvt:item name="shipestimate" />
+</mvt:if>
+
+<mvt:if expr="NOT l.settings:basket:empty">
+	<div class="checkout-button">
+		<input type="button" value="Checkout" onclick="window.location = '&mvtj:urls:BASK:auto;';" class="button" />
+	</div>
+</mvt:if>
+</div>
+</div>

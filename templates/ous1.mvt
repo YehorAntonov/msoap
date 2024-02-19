@@ -1,0 +1,68 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Checkout: Special Offer</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="OUS1 one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+
+				<h1 class="upsale-heading">Special Offer</h1>
+
+				<h2 class="aligncenter">
+					Save &mvt:upsale:formatted_upsell_savings; <br />
+					<span class="smallest">Offer valid for this order only</span>
+				</h2>
+
+				<mvt:if expr="NOT ISNULL l.settings:upsale:thumbnail">
+					<div class="product-thumbnail"><img src="&mvte:upsale:thumbnail;" alt="&mvte:upsale:name;" /></div>
+				<mvt:else>
+					<div class="thumbnail-not-available"></div>
+				</mvt:if>
+
+				<div><span class="bold">&mvt:upsale:name;</span></div>
+				<div>Code: <span class="bold">&mvt:upsale:code;</span></div>
+				<div>Regular Price: <span class="bold">&mvt:upsale:formatted_price;</span></div>
+				<div>Special Price: <span class="bold">&mvt:upsale:formatted_upsell_price;</span></div>
+				<div>You Save: <span class="bold">&mvt:upsale:formatted_upsell_savings;</span></div>
+				<div>Shipping Weight: <span class="bold">&mvt:upsale:weight;</span> &mvt:store:wtunits;</div>
+
+				<div class="product-description">&mvt:upsale:desc;</div>
+				<div class="aligncenter">
+					<form method="post" action="&mvte:urls:OSEL:secure;" />
+					<input type="hidden" name="Action" value="AUPR" />
+					<input type="hidden" name="Product_Code" value="&mvte:upsale:code;" />
+					<mvt:item name="tax" />
+					<div class="product-attributes"><mvt:item name="product_attributes" param="upsale:id" /></div>
+					<mvt:item name="buttons" param="AddToOrder" />
+					</form>
+
+					<form method="post" action="&mvte:urls:OSEL:secure;">
+					<mvt:item name="tax" />
+					<mvt:item name="buttons" param="DoNotAddToOrder" />
+					</form>
+				</div>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

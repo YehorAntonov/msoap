@@ -1,0 +1,90 @@
+<mvt:if expr="g.header_number EQ 1">
+	<tr>
+		<th align="center" colspan="4" style="padding: 4px 1px">Miracle II Products</th>
+	</tr>
+	<tr>
+		<th>Qty</th>
+		<th colspan="2">Item</th>
+		<th>Cost</th>
+	</tr>
+	<mvt:assign name="g.header_number" value="0" />
+</mvt:if>
+
+<mvt:if expr="NOT g.isbulk">
+	<mvt:if expr="ISNULL l.settings:line:Tedco_ID">
+		<mvt:if expr="l.settings:line:product_code EQ 'eos'">
+			<mvt:assign name="g.isbulk" value="1" />
+			<mvt:assign name="g.header_number" value="2" />
+		<mvt:elseif expr="l.settings:line:product_code EQ 'label'">
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<th>&mvt:line:Tedco_Name;</th>
+				<td>&nbsp;</td>
+			</tr>
+		<mvt:elseif expr="l.settings:line:product_code EQ 'space'">
+			<tr>
+				<td colspan="4"><div style="height: 2px"></div></td>
+			</tr>
+		</mvt:if>
+	<mvt:else>
+		<tr>
+			<td align="center">&mvt:line:qty;</td>
+			<td align="center">&mvt:line:Tedco_ID;</td>
+			<td>&mvte:line:Tedco_Name;</td>
+			<td align="right">&mvt:line:cost;</td>
+		</tr>
+	</mvt:if>
+</mvt:if>
+
+<mvt:if expr="g.header_number EQ 2">
+		</table>
+	</td>
+	<td valign="top" width="60%">
+		<table border="1" cellpadding="1" cellspacing="0" width="100%" style="border-collapse: collapse; font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+			<tr>
+				<th>1</th>
+				<th>15</th>
+				<th>55</th>
+				<th colspan="3" style="padding: 4px 1px">Bulk Miracle II Products</th>
+			</tr>
+			<tr>
+				<th>Gal</th>
+				<th>Gal</th>
+				<th>Gal</th>
+				<th>Item</th>
+				<th>Description</th>
+				<th>Cost</th>
+			</tr>
+			<mvt:assign name="g.header_number" value="0" />
+</mvt:if>
+
+<mvt:if expr="g.isbulk">
+	<mvt:if expr="ISNULL l.settings:line:Tedco_ID">
+		<mvt:if expr="l.settings:line:product_code EQ 'eos'">
+			<mvt:assign name="g.footer" value="1" />
+		<mvt:elseif expr="l.settings:line:product_code EQ 'label'">
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<th>&mvt:line:Tedco_Name;</th>
+				<td>&nbsp;</td>
+			</tr>
+		<mvt:elseif expr="l.settings:line:product_code EQ 'space'">
+			<tr>
+				<td colspan="6"><div style="height: 1.5px"></td>
+			</tr>
+		</mvt:if>
+	<mvt:else>
+		<tr>
+			<td align="center">&mvt:line:qty;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td align="center">&mvt:line:Tedco_ID;</td>
+			<td>&mvte:line:Tedco_Name;</td>
+			<td align="right">&mvt:line:cost;</td>
+		</tr>
+	</mvt:if>
+</mvt:if>

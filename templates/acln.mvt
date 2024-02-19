@@ -1,0 +1,56 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: My Account</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="OCST">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="content-container" class="clearfix">
+			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+			<div id="sidebar">
+				<mvt:item name="readytheme" param="contentsection( 'acnt-sidebar' )" />
+			</div>
+			<div id="main-content" class="column">
+				<h4>Personal Information | <a class="" href="/customer-edit.html" title="Update Your Information">Edit</a></h4>
+					<div class="box">
+						<table >
+							<tr>
+								<td class="required">Name</td>
+								<td>&mvte:global:customer:ship_fname; &mvte:global:customer:ship_lname;</td>
+							</tr>
+							<tr>
+								<td class="required">Email</td>
+								<td >&mvte:global:customer:ship_email;</td>
+							</tr>
+							<tr>
+								<td class="required">Password</td>
+								<td >
+									<a title="Change Your Password" href="/change-password.html">Change Password</a>
+								</td>
+							</tr>
+							</table>
+					</div>
+				<h4>Order History</h4>
+					<div>
+						<mvt:item name="orderhistory_list" />
+<mvt:comment>				<h4>Address Book | <a class="" href="/customer-address-book.html" title="Address Book">View All</a></h4>
+				<div>
+						<mvt:item name="addressbook" />
+					</div></mvt:comment>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</div>
+	</div>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

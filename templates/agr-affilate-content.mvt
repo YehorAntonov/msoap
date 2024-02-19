@@ -1,0 +1,260 @@
+<script type="text/javascript"> 
+function validate(form) { 
+
+if(!document.form1.agree.checked){alert("Please read the Agreement and check the Agreement checkbox to proceed."); 
+return false; } 
+
+return true;
+}
+</script>
+
+<div align="center"><h2>Website Affiliate Agreement</h2></div>
+<ilayer name="scroll1" width="490" height="423" clip="0,0,400,250">
+			<layer name="scroll2" width="490" height="423">
+			<div id="scroll3" style="width:490px;height:423px;overflow:scroll;">
+			<p><strong>Please read these terms and  conditions carefully as they constitute a legal agreement between you and our  company upon your acceptance into our affiliate program. By applying for and  being accepted into our affiliate program, you agree to be bound by all of the  terms and conditions set forth in this agreement.</strong></p>
+<p>THIS AFFILIATE AGREEMENT (the “Agreement) is made between  Miraclesoap, Inc., a South Dakota Corporation (the “Company”), and (the  “Affiliate,” and collectively, the “Parties”).</p>
+<p>WHEREAS Affiliate wishes to include certain materials  promoting Company, and to include a link to Company’s website within those  materials on Affiliate’s website;</p>
+<p>NOW THEREFORE, in consideration of the mutual promises,  covenants, warranties, and other good and valuable consideration set forth  herein, the Parties agree as follows:</p><ol>
+<li><strong> Promotional  Materials</strong>.&nbsp;&nbsp; Company shall make  available to Affiliate certain banner advertisements, button links, text links,  and/or other graphic or textual material for display and use on the Affiliate  website (the “Promotional Materials”).&nbsp;  Affiliate shall prominently display the Promotional Materials on  Affiliate’s website subject to the terms and conditions of this Agreement.&nbsp; Affiliate shall also include a link from the  Promotional Materials to Company’s website, as specified by Company.<br>
+<br>
+
+</li><li><strong>Use of Promotional Materials</strong>.&nbsp; The Affiliate’s use and display of the  Promotional Materials on the Affiliate’s site shall conform to the following  terms, conditions and specifications:<br><br>
+  </li>
+  <ol type="a">
+<li>Affiliate may not use any graphic, textual or other materials to promote Company’s website, products or services other than the Promotional Materials, unless Company agrees to such other materials in writing prior to their display.<br>
+  <br>
+    </li>
+    <li>Affiliate  may only use the Promotional Materials for the purpose of promoting Company’s  website (and the products and services available thereon), and for linking to  Company’s website.<br>
+      <br>
+
+    </li>
+    <li>The Promotional Materials will be used to  link only to Company’s website, to the specific page and address as specified  by Company.<br>
+      <br>
+
+    </li>
+    <li> Affiliate will  not alter, add to, subtract from, or otherwise modify the Promotional Materials  as they are prepared by Company.&nbsp; If  Affiliate wishes to alter or otherwise modify the Promotional Materials, Affiliate  must obtain prior written consent from Company for such alteration of  modification.</li></ol></ol>
+<ol>
+  <li value="3"><strong> License</strong>.&nbsp;  Company hereby grants to Affiliate a nonexclusive,
+nontransferable license (the “License”) to use the Promotional Materials
+as specified under the terms and conditions of this Agreement.&nbsp;  The term
+of the License shall expire upon the expiration or termination of this Agreement.<br><br>
+  </li>
+  
+  <li><strong>Intellectual Property</strong>.&nbsp; Company retains all right, ownership, and  interest in the Promotional Materials, and in any copyright, trademark, or  other intellectual property in the Promotional Materials.&nbsp; Nothing in this Agreement shall be construed  to grant Affiliate any rights, ownership or interest in the Promotional  Materials, or in the underlying intellectual property, other than the rights to  use the Promotional Materials granted under the License, as set forth in  Section 3.<br><br>
+  </li>
+  <li><strong>Relationship of Parties</strong>.&nbsp; This Agreement shall not be construed to  create any employment relationship, agency relationship, or partnership between  Company and Affiliate.&nbsp; Affiliate shall  provide services for Company as an independent contractor.&nbsp; Affiliate shall have no authority to bind  Company into any agreement, nor shall Affiliate be considered to be an agent of  Company in any respect.<br><br></li>
+
+  <li><strong>Order Processing</strong>: We  will process orders placed by customers who follow the Links from Affiliate’s  Web site to the Miraclesoap.com Web site. We reserve the right, in our sole  discretion, to reject orders that do not comply with requirements established  from time to time. All aspects of order processing and fulfillment, including  order entry, customer service, cancellations, returns and payment processing  will be Company’s responsibility.<br><br>
+  </li>
+  <li><strong>Commissions</strong>. <br><br>
+  </li>
+  <ol type="a">
+    <li>In consideration of Affiliate’s display of the Promotional Materials
+      and compliance with and performance of the terms and conditions of this
+      Agreement, Company shall pay to Affiliate a commission (the “Commission”)
+      as set forth in this section.<br>
+<br></li>
+    <ol><li>A Commission will be paid to Affiliate in the amount of 25% per
+        sale (not including tax or shipping) for products listed on Company’s
+        website if the customer’s initial order is tracked as originating
+        from Affiliate’s Link from the time of the Link to the time of
+        the sale (the “initial sale”).<br>
+<br></li>
+    <li>For the initial sale to generate commissions payable under this
+      section, the customer must follow Affiliate’s Link to Company’s
+      Web site, purchase Company products using Company’s online ordering
+      system, accept delivery of the product at the shipping destination, and
+      remit full payment to Company. However, no Commission will be paid for
+      orders that are refunded, not paid for, undeliverable or payment for which
+      is credited to any customer. If a product sale that generated Commission
+      is refunded to the customer, Company will deduct the corresponding Commission
+      from Affiliate’s next monthly payment.<br>
+<br></li>
+    <li>The Affiliate shall be entitled to a Commission arising from customer’s
+  purchase of Company products for a period of 365 days from the initial sale
+  regardless whether customer accesses Affiliate’s link for subsequent
+  orders; provided, however, if customer uses a different Affiliate link during
+  the 365-day period, the original Affiliate shall no longer be entitled to Commissions. 
+</li></ol><br>
+    <li> 	Company shall keep accurate and up-to-date records of the data used
+      to determine the total amount of Commissions owed to Affiliate. Affiliate
+      shall be given reasonable access to these records upon request. Any discrepancy
+      between the amount of Commissions owed according to these records, and
+      the actual amount of Commissions paid to Affiliate in any period or periods
+      shall be rectified by Company within 14 days of discovering such discrepancy.
+      Affiliate shall immediately inform Miraclesoap.com of any suspected problems
+      in the tracking code immediately.<br>
+<br>
+
+   </li><li>Company shall pay all Commissions accrued and payable to Affiliate
+     within 15 days of the first day of each month (the “Commission Payment
+     Date”). If on any Commission Payment Date, the amount of total Commissions
+     accrued and payable to Affiliate is less than $25.00, then such accrued
+     and payable balance shall be held over to the following month, and paid
+     together with the Commissions due for that month. If at any time, the balance
+     of accrued and payable Commissions is held over for 2 consecutive months,
+     then Company shall pay all accrued and payable Commissions to Affiliate
+     in the third month, regardless of the total amount owed. <br><br>
+    </li><li>In the event that Affiliate materially breaches this Agreement and Company
+      terminates this Agreement due to such breach, then any accrued and payable
+      Commissions owing to Affiliate shall be forfeited, and Company shall not
+      be obligated to pay such Commissions to Affiliate.<br>
+        <br>      
+    </li><li> Notwithstanding anything in this Agreement to the contrary,  neither
+      Miraclesoap distributors or PTPH Essential Oil distributors shall be entitled
+      to make purchases under this Affiliate program or be eligible or receive
+      any Commissions under this Agreement. The determination of which persons
+      or entities are considered Miraclesoap or PTPH Essential Oil distributors
+      will be made in the sole discretion of the Company.</li>
+  </ol>
+</ol>
+<ol>
+<li value="8"><strong>Affiliate’s  Representations and Warranties</strong>.
+  Affiliate represents and warrants the following:
+<br>
+<br>
+</li><ol type="a">
+   
+  <li>Affiliate  has the legal authority to enter into this Agreement and to be bound to the  promises, covenants, and other duties set forth in this Agreement.<br>
+<br>
+
+  </li>
+  <li>Affiliate’s  website does not contain any materials that are:</li>
+  <ol>
+    <li>Sexually explicit, obscene, or pornographic (whether in text or graphics),</li>
+    <li>Offensive, profane, hateful, threatening, harmful,  defamatory, libelous, harassing, or discriminatory (whether based on race,  ethnicity, creed, religion, gender, sexual orientation, physical disability, or  otherwise);</li>
+    <li>Graphically violent, including any violent video game  images; or</li>
+    <li>Solicitous of any unlawful behavior<br>
+<br>
+
+    </li>
+  </ol>
+  <li>Affiliate  has obtained any necessary clearances, licenses, or other permission for any  intellectual property used on Affiliate’s website.&nbsp; Nothing on Affiliate’s website infringes upon  the intellectual property rights of any person or entity.&nbsp; No person or entity has brought or threatened  an action claiming such infringement, nor does Affiliate have any reason to  believe that any person or entity will bring or threaten such a claim in the  future.<br>
+<br>
+
+  </li>
+  <li>Affiliate  will not use the Promotional Materials in any manner other than those set forth  in Section 2 above.<br>
+<br>
+
+  </li>
+  <li>Affiliate  will not make any claim to ownership of the Promotional Materials, or of the  copyright, trademark, or other intellectual property therein.<br>
+<br>
+
+  </li>
+  <li>Affiliate  will not publish or otherwise distribute any advertising materials for  Affiliate’s website that reference Company or Company’s website unless Company  gives prior written consent to the distribution of such materials.&nbsp; Affiliate will not use Company’s name (or any  name that is confusingly similar to Company’s name) for any purpose on its  website, in its promotional materials, or in any other context except to  promote Company’s website as specified in this Agreement.&nbsp;&nbsp; Affiliate will not register any domain name  that incorporates Company’s name, or that is confusingly similar to Company’s  name.<br><br>
+</li>
+  <li> Affiliate  will not engage in the distribution of any unsolicited
+              bulk emails (spam) in any way identifying or referencing Company
+      or Company’s website.<br>
+      <br></li></ol>
+      Company has the right, in its  sole discretion, to monitor Affiliate’s
+          Web site to determine if it is in compliance with the terms of this
+              Agreement.<br>
+      <br>
+    
+
+<li><strong>Indemnification</strong>.&nbsp; Affiliate shall indemnify Company and hold  harmless Company from any claim, damage, lawsuit, action, complaint, or other  costs arising out of any breach of this Agreement, including Affiliate’s  warranties set forth in Section 7 above.&nbsp;&nbsp; Affiliate
+  shall also indemnify and hold harmless Company for any damage, loss or other
+  cost arising out of the use or misuse by Affiliate of the Promotional Materials.<br>
+    <br>
+  </li>
+<li><strong>Confidentiality</strong>.&nbsp; Any information that Affiliate obtains by  virtue of its relationship with Company under this Agreement, which information  is not available to the general public, shall be considered to be “Confidential  Company Information.”&nbsp; Affiliate
+  may not use or disclose any Confidential Company Information to any person
+  or entity, except where compelled by law, unless Affiliate obtains prior written
+  consent for such disclosure from Company.<br>
+    <br>
+</li>
+<li><strong>Non-Exclusive</strong>: This is a non-exclusive agreement. Either party may enter  into similar agreements with other parties.</li>
+<br>
+<br>
+
+  <li><strong>Term</strong><ol type="a"><br><li> This Agreement shall take effect once Affiliate’s  application has been submitted, its web-site has been reviewed, and written  approval provided to Affiliate by Company.&nbsp;  Once approved, this Agreement shall commence and shall remain in full  force until terminated pursuant to this Section 10.</li><br>
+  <br>
+  
+
+      <li>Either  Party shall have the right to terminate this Agreement without cause at any  time.&nbsp; The terminating Party must give  written notice to the other Party, as provided in Section 18.<br> <br>
+  
+    </li>
+    </ol>
+  </li><li><strong>Taxes</strong>.&nbsp; Company shall not be responsible for any  taxes owed by Affiliate arising out of Affiliate’s relationship with Company as  set forth in this Agreement.&nbsp; Company  shall not withhold any taxes from the Commissions paid to Affiliate. <br>
+  <br>
+  
+</li>
+  <li><strong>LIMITATION  OF LIABILITY</strong>.&nbsp; COMPANY SHALL NOT BE  LIABLE FOR ANY LOSS OF PROFITS OR COSTS, OR FOR ANY DIRECT, INDIRECT, SPECIAL,  INCIDENTAL OR CONSEQUENTIAL DAMAGES, INCLUDING COSTS ASSOCIATED WITH THE  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES (WHETHER COMPANY WAS OR SHOULD HAVE  BEEN AWARE OR ADVISED OF THE POSSIBILITY OF SUCH DAMAGE), ARISING OUT OF OR  ASSOCIATED WITH ANY LOSS, SUSPENSION OR INTERRUPTION OF SERVICE, TERMINATION OF  THIS AGREEMENT, USE OR MISUSE OF THE PROMOTIONAL MATERIALS, OR OTHER  PERFORMANCE OF SERVICES UNDER THIS AGREEMENT.</li>
+  <br>
+  <br>
+  
+  <li> <strong>Governing Law</strong>.&nbsp; This Agreement shall be construed in  accordance with, and governed in all respects by, the laws of the State of South Dakota, without regard  to conflicts of law principles.<br>
+<br>
+  </li>
+    
+  <li> <strong>Counterparts</strong>.&nbsp;&nbsp; This Agreement may  be executed in several counterparts, each of which shall constitute an original  and all of which, when taken together, shall constitute one agreement.<br>
+<br>
+  </li>
+    
+  <li> <strong>Severability</strong>.&nbsp;&nbsp; If  any part or parts of this Agreement shall be held unenforceable for any reason,  the remainder of this Agreement shall continue in full force and effect. If any  provision of this Agreement is deemed invalid or unenforceable by any court of  competent jurisdiction, and if limiting such provision would make the provision  valid, then such provision shall be deemed to be construed as so limited.<br><br>
+  </li>
+  
+  <li> <strong>Notice</strong>.&nbsp;&nbsp;  Any notice required or otherwise given pursuant to this Agreement shall  be in writing and mailed certified return receipt requested, postage prepaid,  or delivered by overnight delivery service, addressed as follows:
+  <br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If to Company:&nbsp; Miraclesoap.com <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1904 West 24th Street<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Sioux Falls, SD&nbsp; 57105
+  <br>
+<br>
+If  to Affiliate: At the address Affiliate provides in its  online Affiliate account application.
+ <br><br>
+
+ </li>
+   
+  <li><strong> Headings</strong>.&nbsp;&nbsp; The headings for section herein are for  convenience only and shall not affect the meaning of the provisions of this  Agreement.<br>
+  <br>
+  </li>
+  <li><strong>Entire  Agreement</strong>.&nbsp;&nbsp; This Agreement constitutes the entire agreement between Company and  Affiliate, and supersedes any prior understanding or representation of any kind  preceding the date of this Agreement. There are no other promises, conditions,  understandings or other agreements, whether oral or written, relating to the subject  matter of this Agreement. Company may modify  the terms of this agreement in writing by giving 10 days written notice to  Affiliate.<p>&nbsp;</p> </li></ol>
+			</div>
+			</layer>
+			</ilayer>
+			<script>
+			/***********************************************
+			* Scrollable content Script- ï¿½ Dynamic Drive (www.dynamicdrive.com)
+			* This notice must stay intact for use
+			* Visit https://www.dynamicdrive.com/ for full source code
+			***********************************************/
+			
+			var nsstyle='display:""'
+			if (document.layers)
+			var scrolldoc=document.scroll1.document.scroll2
+			function up(){
+			if (!document.layers) return
+			if (scrolldoc.top<0)
+			scrolldoc.top+=10
+			temp2=setTimeout("up()",50)
+			}
+			function down(){
+			if (!document.layers) return
+			if (scrolldoc.top-250>=scrolldoc.document.height*-1)
+			scrolldoc.top-=10
+			temp=setTimeout("down()",50)
+			}
+			
+			function clearup(){
+			if (window.temp2)
+			clearInterval(temp2)
+			}
+			
+			function cleardown(){
+			if (window.temp)
+			clearInterval(temp)
+			}
+			
+			</script>
+<p style="background-color:#FFFF99" align="left">
+</p><form name="form1" method="post" action="&mvte:urls:AFAD:secure;" onsubmit="return validate(this)">
+<input type="hidden" name="Action" value="AFAD" />
+<label for="agree">*By checking the following checkbox, I certify that I have read and agree to the Terms and Conditions specified in the above Statement.</label>
+<input name="agree" value="yes" type="checkbox"><p></p>
+<p style="padding-top:15px;" align="center"><input src="/images/createaccount.gif" alt="Create Account" type="image"></p>
+</form>
+<p></p>
+</td>

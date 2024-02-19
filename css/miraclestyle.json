@@ -1,0 +1,22 @@
+{
+    "code": "miraclestyle",
+    "type": "L",
+    "branchless_filepath": "css/00000002/miraclestyle.css",
+    "is_global": false,
+    "active": false,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/css"
+        },
+        {
+            "name": "media",
+            "value": "all"
+        },
+        {
+            "name": "rel",
+            "value": "stylesheet"
+        }
+    ],
+    "linked_pages": []
+}

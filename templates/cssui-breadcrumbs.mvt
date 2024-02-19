@@ -1,0 +1,13 @@
+<ul>
+	<li><a href="&mvte:breadcrumbs:homelink;" class="breadcrumb-home">Home</a><span class="breadcrumb-border">&raquo;</span></li>
+	<mvt:foreach iterator="cats" array="breadcrumbs:links">
+			<mvt:if expr="l.settings:cats:name EQ '...'">
+				<li><span class="cats-hidden">&mvt:cats:name;</span><span class="breadcrumb-border">&raquo;</span></li>
+			<mvt:elseif expr="l.settings:cats:current">
+				<li><span class="current-item">&mvt:cats:name;</span></li>
+			<mvt:else>
+				<li><a href="&mvte:cats:link;">&mvt:cats:name;</a><span class="breadcrumb-border">&raquo;</span></li>
+			</mvt:if>
+	</mvt:foreach>
+</ul>
+<div class="clear"></div>

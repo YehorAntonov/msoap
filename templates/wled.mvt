@@ -1,0 +1,63 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Edit Wish List</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="WLED one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+
+				<h1>Edit Wish List</h1>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				<mvt:if expr="l.settings:messages:information_message_count">
+				<div class="information-message">
+				<mvt:foreach iterator="message" array="messages:information_messages">
+					&mvt:message;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+
+				<form id="wled_form" method="post" action="&mvte:urls:WISH:secure;">
+				<input type="hidden" name="Action" value="UWSH" />
+				<div id="wishlist-fields" class="editable"><mvt:item name="wishlist" /></div>
+				<div class="save-button">
+					<div class="floatleft">
+						<span onclick="if ( !confirm( 'Are you sure you want to delete your wish list? This action cannot be undone\n\nContinue?' ) ) { return false; } else { document.forms.wled_form.elements.Action.value = 'DWSH'; }">
+							<input type="submit" value="Delete" class="button" />
+						</span>
+					</div>
+					<mvt:item name="buttons" param="Save" />
+				</div>
+				</form>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

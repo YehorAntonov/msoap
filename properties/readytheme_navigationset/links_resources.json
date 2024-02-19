@@ -1,0 +1,56 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "id": "df4122e50cdd3a84db5f8f4f07551433",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account.html\" target=\"_self\">My Account</a>",
+            "link_dest": "ACLN",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "My Account",
+            "url": "https://miraclesoap.mivatest.com/customer-account.html"
+        },
+        {
+            "active": 1,
+            "id": "363c6cfc61c46b26a674bb0f80e1cdaf",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/wish-lists.html\" target=\"_self\">Wish List</a>",
+            "link_dest": "WLST",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Wish List",
+            "url": "https://miraclesoap.mivatest.com/wish-lists.html"
+        },
+        {
+            "active": 1,
+            "id": "7a115d12c3ab26d6f50375b8bdc5328f",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Wholesale</a>",
+            "link_dest": "SFNT",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Wholesale",
+            "url": "https://miraclesoap.mivatest.com/"
+        },
+        {
+            "active": 1,
+            "id": "0c40a4741395ebd2861de98fe7191831",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
+            "link_dest": "deals",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Deals",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+        },
+        {
+            "active": 1,
+            "id": "db1244e0e49f90dbb5620e3c5e35c03e",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Blog</a>",
+            "link_dest": "SFNT",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Blog",
+            "url": "https://miraclesoap.mivatest.com/"
+        }
+    ],
+    "layout": "S",
+    "name": "Resources"
+}

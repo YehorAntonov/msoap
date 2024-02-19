@@ -1,0 +1,348 @@
+<div id="fields-key">
+	<div><span class="required">Bold</span> = Required</div>
+	<div><span class="italic">Italic</span> = Optional</div>
+	<mvt:if expr="g.Error_Message_Count">
+	<div><span class="red">Red</span> = Invalid</div>
+	</mvt:if>
+</div>
+
+<input type="hidden" name="Address_ID" value="&mvte:global:Address_ID;" />
+
+<div id="customer-fields" class="editable">
+	<h2 class="fields-heading">Address</h2>
+	<mvt:if expr="NOT ISNULL l.settings:addressfields:validated_addresses">
+		<div>
+			<div class="validated-address-container">
+				<input type="radio" name="Validated_Address" class="validated-address-radio" data-mm_address_addr1="&mvte:global:Address_Address1;" data-mm_address_addr2="&mvte:global:Address_Address2;" data-mm_address_city="&mvte:global:Address_City;" data-mm_address_state="&mvte:global:Address_State;" data-mm_address_stateselect="&mvte:global:Address_StateSelect;" data-mm_address_zip="&mvte:global:Address_Zip;" data-mm_address_country="&mvte:global:Address_Country;" data-mm_address_resdntl="&mvte:global:Address_Residential;" data-mm_address_edit_new >
+				<span class="validated-address"><b>Re-Enter / Modify Address</b></span>
+			</div>
+
+			<mvt:foreach iterator="address" array="addressfields:validated_addresses">
+				<div class="validated-address-container">
+					<input type="radio" name="Validated_Address" class="validated-address-radio" data-mm_address_addr1="&mvte:address:addr1;"
+														     data-mm_address_addr2="&mvte:address:addr2;"
+														     data-mm_address_city="&mvte:address:city;"
+														     data-mm_address_state="&mvte:address:state;"
+														     data-mm_address_zip="&mvte:address:zip;"
+														     data-mm_address_country="&mvte:address:country;"
+														     data-mm_address_comp="&mvte:address:comp;"
+														     data-mm_address_resdntl="&mvte:address:resdntl;" />
+					<div class="validated-address">
+						<mvt:if expr="l.settings:address:validated">
+							<b>Validated Address</b><br />
+						<mvt:else>
+							<b>Use As Entered</b><br />
+						</mvt:if>
+						<mvt:if expr="NOT ISNULL l.settings:address:comp"><b>&mvte:address:comp;</b><br></mvt:if>
+						<mvt:if expr="NOT ISNULL l.settings:address:addr1">&mvte:address:addr1;<br></mvt:if>
+						<mvt:if expr="NOT ISNULL l.settings:address:addr2">&mvte:address:addr2;<br></mvt:if>
+						<mvt:if expr="NOT ISNULL l.settings:address:city">&mvte:address:city;</mvt:if><mvt:if expr="( NOT ISNULL l.settings:address:city AND NOT ISNULL l.settings:address:state ) OR ( NOT ISNULL l.settings:address:city AND NOT ISNULL l.settings:address:zip )">, </mvt:if><mvt:if expr="NOT ISNULL l.settings:address:state">&mvte:address:state;</mvt:if><mvt:if expr="NOT ISNULL l.settings:address:state AND NOT ISNULL l.settings:address:zip"> </mvt:if><mvt:if expr="NOT ISNULL l.settings:address:zip">&mvte:address:zip;<br></mvt:if>
+						<mvt:if expr="NOT ISNULL l.settings:address:country">&mvte:address:country;<br></mvt:if>
+						<mvt:if expr="l.settings:address:resdntl">
+							<br />
+							Residential Address
+						</mvt:if>
+					</div>
+				</div>
+			</mvt:foreach>
+		</div>
+		<input type="hidden" name="Address_Validated" value="1" />
+
+		<script type="text/javascript">
+			function Validated_Address_Picker()
+			{
+				var self = this;
+				var i, forms;
+
+				forms = document.getElementsByTagName( 'form' );
+
+				for ( i = 0; i < forms.length; i++ )
+				{
+					if ( forms[ i ].elements.hasOwnProperty( 'Action' ) && ( forms[ i ].elements[ 'Action' ].value === 'UCSA' ) )
+					{
+						this.element_form = forms[ i ];
+						break;
+					}
+				}
+
+				if ( !this.element_form ) return;
+
+				this.element_addr1              = this.element_form.elements[ 'Address_Address1' ];
+				this.element_addr2              = this.element_form.elements[ 'Address_Address2' ];
+				this.element_city               = this.element_form.elements[ 'Address_City' ];
+				this.element_state              = this.element_form.elements[ 'Address_State' ];
+				this.element_stateselect        = this.element_form.elements[ 'Address_StateSelect' ];
+				this.element_zip                = this.element_form.elements[ 'Address_Zip' ];
+				this.element_country            = this.element_form.elements[ 'Address_Country' ];
+				this.element_comp               = this.element_form.elements[ 'Address_Company' ];
+				this.element_address_validated  = this.element_form.elements[ 'Address_Validated' ];
+				this.element_validated_selector = this.element_form.elements[ 'Validated_Address' ];
+
+				if ( this.element_validated_selector )
+				{
+					if ( this.element_validated_selector.length === 1 )
+					{
+						this.element_validated_selector[ 0 ].checked = true;
+					}
+					else if ( this.element_validated_selector.length > 1 )
+					{
+						this.element_validated_selector[ 1 ].checked = true;
+						this.Disable_Address_Form_Fields( true );
+					}
+				}
+
+				AddEvent( this.element_form, 'submit', function( event ) { self.Form_OnSubmit( event ? event : window.event ); } );
+
+				for ( i = 0; i < self.element_validated_selector.length; i++ )
+				{
+					AddEvent( self.element_validated_selector[ i ], 'change', function( event )
+					{
+						this.hasAttribute( 'data-mm_address_edit_new' ) ? self.Disable_Address_Form_Fields( false ) : self.Disable_Address_Form_Fields( true );
+					} );
+				}
+			};
+
+			Validated_Address_Picker.prototype.Disable_Address_Form_Fields = function( disabled )
+			{
+				if ( this.element_addr1 )        this.element_addr1.disabled        = disabled;
+				if ( this.element_addr2 )        this.element_addr2.disabled        = disabled;
+				if ( this.element_city )         this.element_city.disabled         = disabled;
+				if ( this.element_state )        this.element_state.disabled        = disabled;
+				if ( this.element_stateselect )  this.element_stateselect.disabled  = disabled;
+				if ( this.element_zip )          this.element_zip.disabled          = disabled;
+				if ( this.element_country )      this.element_country.disabled      = disabled;
+			}
+
+			Validated_Address_Picker.prototype.Form_OnSubmit = function( e )
+			{
+				var i, selected_radio, address_edit_new;
+
+				for ( i = 0; i < this.element_validated_selector.length; i++ )
+				{
+					if ( this.element_validated_selector[ i ].checked )
+					{
+						selected_radio = this.element_validated_selector[ i ];
+						break;
+					}
+				}
+
+				if ( !selected_radio )
+				{
+					this.onError( 'Please select a validated address.' );
+					return eventPreventDefault( e );
+				}
+
+				address_edit_new = selected_radio.hasAttribute( 'data-mm_address_edit_new' );
+
+				if ( !address_edit_new )
+				{
+					if ( this.element_addr1 )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_addr1' ) && typeof selected_radio.getAttribute( 'data-mm_address_addr1' ) === 'string' )
+						{
+							this.element_addr1.value = selected_radio.getAttribute( 'data-mm_address_addr1' );
+						}
+						else
+						{
+							this.element_addr1.value = '';
+						}
+					}
+
+					if ( this.element_addr2 )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_addr2' ) && typeof selected_radio.getAttribute( 'data-mm_address_addr2' ) === 'string' )
+						{
+							this.element_addr2.value = selected_radio.getAttribute( 'data-mm_address_addr2' );
+						}
+						else
+						{
+							this.element_addr2.value = '';
+						}
+					}
+
+					if ( this.element_city )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_city' ) && typeof selected_radio.getAttribute( 'data-mm_address_city' ) === 'string' )
+						{
+							this.element_city.value = selected_radio.getAttribute( 'data-mm_address_city' );
+						}
+						else
+						{
+							this.element_city.value = '';
+						}
+					}
+
+					if ( this.element_state )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_state' ) && typeof selected_radio.getAttribute( 'data-mm_address_state' ) === 'string' )
+						{
+							this.element_state.value = selected_radio.getAttribute( 'data-mm_address_state' );
+						}
+						else
+						{
+							this.element_state.value = '';
+						}
+					}
+
+					if ( this.element_stateselect )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_stateselect' ) && typeof selected_radio.getAttribute( 'data-mm_address_stateselect' ) === 'string' )
+						{
+							this.element_stateselect.value = selected_radio.getAttribute( 'data-mm_address_stateselect' );
+						}
+						else
+						{
+							this.element_stateselect.value = '';
+						}
+					}
+
+					if ( this.element_zip )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_zip' ) && typeof selected_radio.getAttribute( 'data-mm_address_zip' ) === 'string' )
+						{
+							this.element_zip.value = selected_radio.getAttribute( 'data-mm_address_zip' );
+						}
+						else
+						{
+							this.element_zip.value = '';
+						}
+					}
+
+					if ( this.element_country )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_country' ) && typeof selected_radio.getAttribute( 'data-mm_address_country' ) === 'string' )
+						{
+							this.element_country.value = selected_radio.getAttribute( 'data-mm_address_country' );
+						}
+						else
+						{
+							this.element_country.value = '';
+						}
+					}
+
+					if ( this.element_comp )
+					{
+						if ( selected_radio.hasAttribute( 'data-mm_address_comp' ) && typeof selected_radio.getAttribute( 'data-mm_address_comp' ) === 'string' )
+						{
+							this.element_comp.value = selected_radio.getAttribute( 'data-mm_address_comp' );
+						}
+						else
+						{
+							this.element_comp.value = '';
+						}
+					}
+				}
+				else
+				{
+					this.element_address_validated.value = 0;
+				}
+
+				// disable "radio" element so it doesn't send in the form
+				selected_radio.disabled = true;
+				this.Disable_Address_Form_Fields( false );
+
+				return true;
+			};
+
+			Validated_Address_Picker.prototype.onError = function( message )
+			{
+				alert( message );
+			};
+
+			(function( obj, eventType, fn )
+			{
+				if ( obj.addEventListener )
+				{
+					obj.addEventListener( eventType, fn, false );
+				}
+				else if ( obj.attachEvent )
+				{
+					obj.attachEvent( 'on' + eventType, fn );
+				}
+			})( window, 'load', function(){ window.validated_address_picker = new Validated_Address_Picker(); } );
+		</script>
+	</mvt:if>
+	<div id="shipping_fields">
+		<div class="&mvte:global:Address_Description_Row;">
+			<label class="required" for="Address_Description">Address Description:</label>
+			<input type="text" name="Address_Description" id="Address_Description" value="&mvte:global:Address_Description;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_FirstName_Row;">
+			<label class="required" for="Address_FirstName">First Name:</label>
+			<input type="text" name="Address_FirstName" id="Address_FirstName" value="&mvte:global:Address_FirstName;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_LastName_Row;">
+			<label class="required" for="Address_LastName">Last Name:</label>
+			<input type="text" name="Address_LastName" id="Address_LastName" value="&mvte:global:Address_LastName;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_Email_Row;">
+			<label class="required" for="Address_Email">Email Address:</label>
+			<input type="text" name="Address_Email" id="Address_Email" value="&mvte:global:Address_Email;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_Phone_Row;">
+			<label class="required" for="Address_Phone">Phone Number:</label>
+			<input type="text" name="Address_Phone" id="Address_Phone" value="&mvte:global:Address_Phone;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_Company_Row;">
+			<label class="italic" for="Address_Company">Company:</label>
+			<input type="text" name="Address_Company" id="Address_Company" value="&mvte:global:Address_Company;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_Address1_Row;">
+			<label class="required" for="Address_Address1">Address:</label>
+			<input type="text" name="Address_Address1" id="Address_Address1" value="&mvte:global:Address_Address1;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_Address2_Row;">
+			<label class="italic" for="Address_Address2">Address 2:</label>
+			<input type="text" name="Address_Address2" id="Address_Address2" value="&mvte:global:Address_Address2;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_City_Row;">
+			<label class="required" for="Address_City">City:</label>
+			<input type="text" name="Address_City" id="Address_City" value="&mvte:global:Address_City;" class="textfield" />
+		</div>
+		<mvt:if expr="g.Address_States_Empty">
+			<div class="&mvte:global:Address_State_Row;">
+				<label class="required" for="Address_State">State/Province:</label>
+				<input type="text" name="Address_State" id="Address_State" value="&mvte:global:Address_State;" class="textfield" />
+			</div>
+		<mvt:else>
+			<div class="&mvte:global:Address_State_Row;">
+				<label class="required" for="Address_StateSelect">State/Province:</label>
+				<mvt:item name="states" param="Address_StateSelect" />
+			</div>
+
+			<div class="&mvte:global:Address_State_Row;">
+				<label class="italic" for="Address_State">Other State/Province:</label>
+				<input type="text" name="Address_State" id="Address_State" value="&mvte:global:Address_State;" class="textfield">
+			</div>
+		</mvt:if>
+		<div class="&mvte:global:Address_Zip_Row;">
+			<label class="required" for="Address_Zip">Zip/Postal Code:</label>
+			<input type="text" name="Address_Zip" id="Address_Zip" value="&mvte:global:Address_Zip;" class="textfield" />
+		</div>
+		<div class="&mvte:global:Address_Country_Row;">
+			<label class="italic" for="Address_Country">Country:</label>
+			<mvt:item name="countries" param="Address_Country" />
+		</div>
+		<div class="&mvte:global:Address_Default_Shipping_Row;">
+			<label class="italic" for="Address_Default_Shipping"></label>
+			<mvt:if expr="g.Address_Default_Shipping">
+				<input type="checkbox" name="Address_Default_Shipping" id="Address_Default_Shipping" value="1" checked />
+			<mvt:else>
+				<input type="checkbox" name="Address_Default_Shipping" id="Address_Default_Shipping" value="1" />
+			</mvt:if>
+
+			<span class="italic">Set as Default Shipping Address</span>
+		</div>
+
+		<div class="&mvte:global:Address_Default_Billing_Row;">
+			<label class="italic" for="Address_Default_Billing"></label>
+			<mvt:if expr="g.Address_Default_Billing">
+				<input type="checkbox" name="Address_Default_Billing" id="Address_Default_Billing" value="1" checked />
+			<mvt:else>
+				<input type="checkbox" name="Address_Default_Billing" id="Address_Default_Billing" value="1" />
+			</mvt:if>
+
+			<span class="italic">Set as Default Billing Address</span>
+		</div>
+	</div>
+</div>

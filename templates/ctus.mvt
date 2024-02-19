@@ -1,0 +1,105 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Checkout: Customer Information</title>
+	</mvt:if>
+	<base href="&mvt:global:basehref;" />
+	<meta name="robots" content="noindex, follow" />
+	<meta name=”robots” content=”noindex, nofollow”>
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+
+</head>
+<body class="CTUS">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<mvt:comment><div id="navigation-bar"><mvt:item name="navbar" /></div></mvt:comment>
+	<div id="content-container" class="clearfix">
+			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+			<mvt:comment><td id="left-navigation"><mvt:item name="category_tree" /></td></mvt:comment>
+			<div id="sidebar">
+				<mvt:item name="sidebar" />
+			</div>
+			<div id="main-content">
+				<mvt:comment><h1>Order Details</h1></mvt:comment>
+				<mvt:comment><div id="basket-contents" class="non-editable"><mvt:item name="basket" /></div></mvt:comment>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+					<div class="error-message">
+					<mvt:foreach iterator="error" array="messages:error_messages">
+						&mvt:error;
+					</mvt:foreach>
+					</div>
+				</mvt:if>
+
+				<mvt:if expr="l.settings:messages:information_message_count">
+					<div class="information-message">
+					<mvt:foreach iterator="message" array="messages:information_messages">
+						&mvt:message;
+					</mvt:foreach>
+					</div>
+				</mvt:if>
+
+				<mvt:if expr="l.settings:basket:total GT 0">
+					<mvt:assign name="l.settings:action" value="'ORDR'" />
+					<mvt:assign name="l.settings:url" value="l.settings:urls:OUSL:secure" />
+				<mvt:elseif expr="g.Store:req_frship">
+					<mvt:assign name="l.settings:action" value="'ORDR'" />
+					<mvt:assign name="l.settings:url" value="l.settings:urls:OSEL:secure" />
+				<mvt:else>
+					<mvt:assign name="l.settings:action" value="'ORDR,SHIP,CTAX,AUTH'" />
+					<mvt:assign name="l.settings:url" value="l.settings:urls:INVC:secure" />
+				</mvt:if>
+				<p style="font: 9pt/14px Verdana, Helvetica, Arial, sans-serif; color: #016194;"> <span style="font-weight: 700; font-size: 18px; "> <i> Contact Us </i> </span> <strong> or for general questions use our <a href="https://www.miraclesoap.com/faq-enter.htm"> FAQ </a>  section </strong> </p> 
+				<mvt:item name="readytheme" param="contentsection( 'contact_form' )" />
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</div>
+	</div>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+	<script>
+		(function () {
+	'use strict';
+
+	const contactForm = document.querySelector('[data-hook="contact-form"]');
+
+	if (contactForm) {
+		let contactFormAction = contactForm.getAttribute('data-action');
+		let contactFormButton = document.querySelector('[data-hook="contact-form__submit"]');
+		let requiredLabels = contactForm.querySelectorAll('label.is-required');
+		let enableForm = function enableForm() {
+			if (contactForm.action === document.location.href) {
+				contactForm.setAttribute('action', contactFormAction);
+				contactFormButton.removeAttribute('disabled');
+				Array.prototype.forEach.call(requiredLabels, function (label) {
+					let span = document.createElement('span');
+
+					span.setAttribute('aria-hidden', 'true');
+					span.innerText = ' *';
+					label.append(span);
+				});
+			}
+		};
+
+		contactForm.classList.remove('u-hidden');
+
+		/**
+		 * Unlock the form if the user is utilizing a touch interface, keyboard navigation, or can hover over elements.
+		 */
+		['touchstart', 'keydown', 'mouseover'].forEach(function (type) {
+			window.addEventListener(type, function powerUp(event) {
+				enableForm();
+				window.removeEventListener(type, powerUp, false);
+			}, false);
+		});
+	}
+})();
+
+	</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+    "content": {
+        "template_filename": "email_tedco-content.mvc"
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "email_tedco-footer.mvc"
+        },
+        "header": {
+            "template_filename": "email_tedco-header.mvc"
+        }
+    },
+    "order_customer": {
+        "prevent_template_auto_update": 0,
+        "template_filename": "email_tedco-order_customer.mvc"
+    },
+    "tedco_import_data": {
+        "template_filename": "email_tedco-tedco_import_data.mvc"
+    },
+    "toe_order_contents": {
+        "advanced": 0,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "display": {
+            "discounts": 1,
+            "handling": 1,
+            "salestax": 1,
+            "shipping": 1
+        },
+        "fields_custom": [
+            {
+                "code": "tedco_code",
+                "module": "customfields"
+            }
+        ],
+        "groups": 1,
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 0,
+        "payments": 1,
+        "template_filename": "email_tedco-toe_order_contents.mvc"
+    }
+}

@@ -1,0 +1,166 @@
+<span id="global-mini-basket-container">
+	<a href="&mvte:global:secure_sessionurl;Screen=BASK&amp;Store_Code=&mvta:store:code;" id="global-mini-basket-link">Basket<mvt:if expr="NOT l.settings:global_minibasket:empty"> Contents (&mvte:global_minibasket:basket_count;)</mvt:if></a> <span class="grey">|</span>
+	<mvt:if expr="NOT l.settings:global_minibasket:empty">
+	<div style="clear: both;"></div>
+	<div id="global-mini-basket-hover-content">
+	<table width="100%">
+		<thead>
+			<tr>
+				<th align="left" nowrap>Basket Summary</th>
+				<th colspan="2" align="right" nowrap><a href="&mvte:global:secure_sessionurl;Screen=BASK&amp;Store_Code=&mvta:store:code;">Basket</a><mvt:if expr="l.settings:global_minibasket:orderminimum_met"> / <a href="&mvte:global:secure_sessionurl;Screen=OINF&amp;Store_Code=&mvta:store:code;">Checkout</a></mvt:if></th>
+			</tr>
+		</thead>
+		<tbody>
+			<mvt:foreach iterator="item" array="global_minibasket:groups">
+			<mvt:if expr="( l.pos1 - 1 ) MOD 2 EQ 0 OR l.pos1 EQ 1"><tr class="on"><mvt:else><tr></mvt:if>
+				<td nowrap align="center" valign="middle">
+					<form method="post" action="&mvte:global:sessionurl;Screen=BASK">
+						<input type="hidden" name="Action" value="RPRD" />
+						<input type="hidden" name="Store_Code" value="&mvte:store:code;" />
+						<input type="hidden" name="Basket_Line" value="&mvte:item:group_id;" />
+						<input type="hidden" name="Offset" value="&mvte:global:Offset;" />
+						<input type="hidden" name="AllOffset" value="&mvte:global:AllOffset;" />
+						<input type="hidden" name="CatListingOffset" value="&mvte:global:CatListingOffset;" />
+						<input type="hidden" name="RelatedOffset" value="&mvte:global:RelatedOffset;" />
+						<input type="hidden" name="SearchOffset" value="&mvte:global:SearchOffset;" />
+						<mvt:item name="buttons" param="Remove" />
+					</form>
+				</td>
+				<td width="100%" align="left">
+					<b><a href="&mvte:item:link;">&mvt:item:name;</a></b><br />
+					Code: &mvt:item:code;<br />
+					Quantity: &mvte:item:quantity;
+					
+						<mvt:foreach iterator="discount" array="item:discounts">
+							<mvt:if expr="l.settings:discount:display">
+								<div class="item-discount">&mvt:discount:descrip;: &mvt:discount:formatted_discount;</div>
+							</mvt:if>
+						</mvt:foreach>
+				</td>
+				<td nowrap align="right" valign="middle">
+					<mvt:if expr="l.settings:item:subtotal">
+						&mvt:item:formatted_subtotal;
+					<mvt:else>
+						&nbsp;
+					</mvt:if>
+				</td>
+			</tr>
+			<mvt:foreach iterator="option" array="item:options">
+			<mvt:if expr="( l.pos1 - 1 ) MOD 2 EQ 0 OR l.pos1 EQ 1"><tr class="on"><mvt:else><tr></mvt:if>
+				<td>&nbsp;</td>
+				<td>
+					<mvt:if expr="l.settings:option:option_id">
+						&mvt:option:attr_code;: &mvt:option:opt_code;
+						<mvt:elseif expr="NOT ISNULL l.settings:option:data">
+						&mvt:option:attr_code;: &mvt:option:data;
+						<mvt:elseif expr="NOT ISNULL l.settings:option:data_long">
+						&mvt:option:attr_code;: &mvt:option:data_long;
+						<mvt:else>
+						&mvt:option:attr_code;
+					</mvt:if>
+					
+					<mvt:foreach iterator="discount" array="option:discounts">
+						<mvt:if expr="l.settings:discount:display">
+							<div class="item-discount">&mvt:discount:descrip;: &mvt:discount:formatted_discount;</div>
+						</mvt:if>
+					</mvt:foreach>
+				</td>
+				<td align="right">
+					<mvt:if expr="l.settings:option:subtotal">
+						&mvt:option:formatted_subtotal;
+					<mvt:else>
+						&nbsp;
+					</mvt:if>
+				</td>
+			</tr>
+			</mvt:foreach>
+			<mvt:if expr="l.settings:item:subterm_id">
+				<mvt:if expr="( l.pos1 - 1 ) MOD 2 EQ 0 OR l.pos1 EQ 1"><tr class="on"><mvt:else><tr></mvt:if>
+					<td>&nbsp;</td>
+					<td>Subscription: &mvte:item:productsubscriptionterm:descrip;</td>
+					<td>&nbsp;</td>
+				</tr>
+			</mvt:if>
+			
+			</mvt:foreach>
+			<mvt:foreach iterator="charge" array="global_minibasket:charges">
+			<tr class="basket-charges">
+				<td>&nbsp;</td>
+				<td class="charge-description">&mvt:charge:descrip;:</td>
+				<td class="formatted-charge" align="right">&mvt:charge:formatted_disp_amt;</td>
+			</tr>
+			</mvt:foreach>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3" align="right">Basket Total: &mvt:global_minibasket:formatted_total;</td>
+			</tr>
+		</tfoot>
+	</table>
+	</div>
+	</mvt:if>
+</span>
+
+<script type="text/javascript">
+	function MiniBasket()
+	{
+		var self = this;
+
+		this.content_container      = document.getElementById( 'global-mini-basket-hover-content' );
+		this.display_link           = document.getElementById( 'global-mini-basket-link' );
+		this.minibasket_backing     = document.createElement( 'div' );
+		
+		if ( this.content_container )
+		{
+			this.minibasket_backing.className = 'minibasket_backing';
+
+			document.getElementsByTagName( 'body' )[ 0 ].insertBefore( this.minibasket_backing, document.getElementsByTagName( 'body' )[ 0 ].firstChild );
+
+			if ( this.display_link )        this.display_link.onclick       = function() { ( ( self.content_container.style.display == 'none' ) ? self.Show() : self.Hide() ); return false; }
+			if ( this.minibasket_backing )  this.minibasket_backing.onclick = function() { self.Hide(); return false; }
+
+			this.content_container.style.display = 'none';
+		}
+	}
+
+	MiniBasket.prototype.Show = function()
+	{
+		var self = this;
+		
+		window.onresize = function() { self.Resize(); }
+		
+		this.content_container.style.display  = 'block';
+		this.minibasket_backing.style.display = 'inline';
+		
+		if ( document.documentElement.clientHeight > document.body.scrollHeight )
+		{
+			this.minibasket_backing.style.height = document.documentElement.clientHeight + 'px';
+		}
+		else
+		{
+			this.minibasket_backing.style.height = ( document.body.scrollHeight > document.documentElement.scrollHeight ) ? document.body.scrollHeight + 'px' : document.documentElement.scrollHeight + 'px';
+		}
+	}
+
+	MiniBasket.prototype.Hide = function()
+	{
+		this.content_container.style.display  = 'none';
+		this.minibasket_backing.style.display = 'none';
+
+		window.onresize = null;
+	}
+
+	MiniBasket.prototype.Resize = function()
+	{
+		if ( document.documentElement.clientHeight > document.body.scrollHeight )
+		{
+			this.minibasket_backing.style.height = document.documentElement.clientHeight + 'px';
+		}
+		else
+		{
+			this.minibasket_backing.style.height = ( document.body.scrollHeight > document.documentElement.scrollHeight ) ? document.body.scrollHeight + 'px' : document.documentElement.scrollHeight + 'px';
+		}
+	}
+
+	var minibasket = new MiniBasket();
+</script>

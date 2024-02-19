@@ -1,0 +1,880 @@
+.ACAD .save-button {
+  right: 5px !important;
+  float: right;
+  width: 30%;
+}
+
+.CABK #main-content {
+	position: relative;
+	left: 30% !important;
+}
+
+.CADA .save-button {
+	position: relative;
+  	right: 25px !important;
+	bottom: 20px !important;
+  	float: right;
+  	width: 5%;
+}
+
+.CADE .save-button {
+	position: relative;
+  	right: 25px !important;
+	bottom: 20px !important;
+  	float: right;
+  	width: 5%;
+}
+
+
+.CADE .save-button .button {
+	background-color: #125D84 !important;
+	font-family: Verdana, Arial, Helvetica, sans-serif !important;
+	border: 1px solid #666666 !important;
+	font-size: 11px !important;
+	color: #FFFFFF !important;
+	padding: 0 6px !important;
+	font-weight: 400 !important;
+}
+
+.CADA .save-button .button {
+	background-color: #125D84 !important;
+	font-family: Verdana, Arial, Helvetica, sans-serif !important;
+	border: 1px solid #666666 !important;
+	font-size: 11px !important;
+	color: #FFFFFF !important;
+	padding: 0 6px !important;
+	font-weight: 400 !important;
+}
+
+.hide_details {
+	display: none;
+	height: 0;
+}
+
+.show_details {
+	display: block;
+}
+
+.show_shipping {
+	margin: 5px 0 5px 10px !important;
+}
+
+
+.show_shipping_details {
+	width: 20px !important;
+}
+
+/* ==========================================================================
+   COMPONENTS / FORMS
+   ========================================================================== */
+/* Form list
+  =========================================== */
+/**
+ * All form fields should be presented in a list so that
+ *
+ *   a) they are easier to navigate using a screen reader;
+ *   b) if CSS fails to load for any reason, the user is still presented with a
+ *      well-formatted list of fields.
+ */
+
+.ctus_button {
+	width: 98% !important;
+}
+
+.ctus_button_placement {
+	position: relative;
+	float: right;
+}
+
+
+.c-form-list:not(.o-layout) {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.c-form-list__item,
+.c-form__item {
+	display: block;
+	margin-bottom: 0.5em;
+	width: 100%;
+}
+
+.c-form-list .c-form-list__item:last-child,
+.c-form-list .c-form__item:last-child {
+	margin-bottom: 0;
+}
+
+.success_message {
+	padding: 10px 0 30px 15px;
+	color: red;
+	font-weight: bold;
+}
+
+@media (min-width: 48em) {
+	.c-form-list__item,
+	.c-form__item {
+		max-width: 20em;
+	}
+	/* For any inputs that need to be displayed full-width */
+	.c-form-list__item--full,
+	.c-form__item--full {
+		max-width: 100%;
+	}
+}
+
+/* Form labels
+  =========================================== */
+/**
+ * All LABEL elements must also carry a class of `.c-form-label`. By applying
+ * these styles to a class and not to the LABEL element directly, we are free
+ * to reuse the same look-and-feel on spoofed LABEL elements. E.g. when we have
+ * a ‘meta label’ covering a number of sub labels:
+ *
+ *   Gender
+ *   • Male  • Female  • Rather not say
+ *
+ */
+.c-form-label {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	font-weight: bold;
+}
+
+/* Form text inputs
+  =========================================== */
+/**
+ * All text-like form inputs require a class of `.c-form-input`: we do not use
+ * selectors like `input[type="text"] {}`.
+ *
+ * 1. Fix for IE 10/11 removing vertical padding from inputs which was being
+ *	  ignored.
+ * 2. Padding added via line-height/height to re-center text for all browsers
+ * 	  (38px to account for border).
+ */
+.c-form-input {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	padding: 0 0.5em;
+	/* [1] */
+	width: 95%;
+	height: calc(2.5em - 2px);
+	/* [2] */
+	line-height: calc(2.5em - 2px);
+	/* [2] */
+	background-color: #fff;
+	border: 1px solid #c0c0c0;
+	border-radius: 0.125em;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+
+/**
+	 * For use on large text inputs such as textareas
+	 */
+.c-form-input--long {
+	height: 6em;
+}
+
+.c-form-input--file {
+	padding: 0;
+	line-height: calc(2em - 2px);
+}
+
+/* Form select inputs
+  =========================================== */
+.c-form-select {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 0.25em;
+	width: 98%;
+	font-size: 1em;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+/**
+	* Gradient to hide the overflow of long labels
+	*
+	* 1. Stretch to full height on the right (taking into account border width)
+	*/
+.c-form-select::before {
+	position: absolute;
+	top: 0.12em;
+	/* [1] */
+	right: 0.12em;
+	/* [1] */
+	bottom: 0.12em;
+	/* [1] */
+	width: 2em;
+	background: #fff;
+	background: linear-gradient(to left, white 60%, rgba(255, 255, 255, 0));
+	border-radius: 0 0.12em 0.12em 0;
+	content: "";
+	pointer-events: none;
+}
+
+/**
+	* Custom drop-down indicator icon
+	*/
+.c-form-select::after {
+	position: absolute;
+	top: 50%;
+	right: 0.5em;
+	margin-bottom: 0.25em;
+	width: 0.5em;
+	height: 0.5em;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAkCAYAAAA5DDySAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPVJREFUeNrk2s0NgzAMhmFno47EKGzQETpSR2CEjkCjyEg0aiAhP7Y/IuUSuLyPhDg4RLycc5PfH78fBLy48/3TyYcrb1iEv53RISxCqpM4dkVGSMSHTakHKAhH8RvAExXhLD58AvziCw0hJz7+E8AgFMcjIVyOR0CojreM0CzeIkLzeEsI3eItIHSP14wwLF4jwvB4TQhi8RoQxOMlEdTESyCoix+JoDZ+BIL6+J4IZuJ7IJiLb4lgNr4Fgvn4GgSY+CsIcPGFCDP0bCIDAXowU4OANZ8sRMCcUGciYN9ROEGAv6BxhHCP+B3CvLubsEjFfwUYAKjtGJxFvDJsAAAAAElFTkSuQmCC") no-repeat center center;
+	background-size: contain;
+	content: "";
+	pointer-events: none;
+	transform: translateY(-50%);
+}
+
+.c-form-select__dropdown {
+	width: 100%;
+	height: calc(2.5em - 2px);
+	padding: 0.5em 0.5em;
+	font-size: inherit;
+	background-color: #fff;
+	border: 0.12em solid #c0c0c0;
+	border-radius: 0.12em;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: box-shadow 0.25s ease, border-color 0.25s ease;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+
+.c-form-select__dropdown::-ms-expand {
+	display: none;
+}
+
+/* Form checkbox inputs
+  =========================================== */
+.c-form-checkbox {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	width: 100%;
+	cursor: pointer;
+	font-size: 1em;
+}
+
+/**
+	 * For cases where checkboxes or radio buttons need to display inline.
+	 */
+.c-form-checkbox--inline {
+	width: auto;
+	margin-right: 2em;
+}
+
+/**
+	 * Hide the default input visually to utilise keyboard functionality and allow
+	 * for custom input styles.
+	 */
+.c-form-checkbox__input {
+	width: 1px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.c-form-checkbox__caption {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-left: 2em;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+.c-form-checkbox__caption::before {
+	display: inline-block;
+	position: relative;
+	width: 1em;
+	height: 1em;
+	margin-right: 1em;
+	margin-left: -2em;
+	background-color: #fff;
+	border: 0.12em solid #c0c0c0;
+	content: "";
+	transition: border-color 0.25s ease;
+}
+
+.c-form-checkbox--radio .c-form-checkbox__caption::before {
+	border-radius: 100%;
+}
+
+.c-form-checkbox__input:focus + .c-form-checkbox__caption {
+	outline: auto #4d90fe;
+}
+
+.c-form-checkbox__input:checked + .c-form-checkbox__caption::before {
+	box-shadow: inset 0 0 0.5em 0 rgba(0, 0, 0, 0.2);
+	transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.c-form-checkbox__input:checked + .c-form-checkbox__caption::after {
+	width: 1.12em;
+	height: 1.12em;
+	position: absolute;
+	top: 50%;
+	left: -2em;
+	content: "";
+	background-color: #000;
+	border: 0.12em solid currentColor;
+	box-shadow: inset 0 0 0 2px #fff;
+	transform: translateY(-50%);
+}
+
+.c-form-checkbox--radio .c-form-checkbox__input:checked + .c-form-checkbox__caption::after {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIyMHB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyMCAyMCIgd2lkdGg9IjIwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgZmlsbD0iIzAwMDAwMCIgaWQ9IkNvcmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzguMDAwMDAwLCAtMzM4LjAwMDAwMCkiPjxnIGlkPSJyYWRpby1idXR0b24tb24iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMzOC4wMDAwMDAsIDMzOC4wMDAwMDApIj48cGF0aCBkPSJNMTAsNSBDNy4yLDUgNSw3LjIgNSwxMCBDNSwxMi44IDcuMiwxNSAxMCwxNSBDMTIuOCwxNSAxNSwxMi44IDE1LDEwIEMxNSw3LjIgMTIuOCw1IDEwLDUgTDEwLDUgWiBNMTAsMCBDNC41LDAgMCw0LjUgMCwxMCBDMCwxNS41IDQuNSwyMCAxMCwyMCBDMTUuNSwyMCAyMCwxNS41IDIwLDEwIEMyMCw0LjUgMTUuNSwwIDEwLDAgTDEwLDAgWiBNMTAsMTggQzUuNiwxOCAyLDE0LjQgMiwxMCBDMiw1LjYgNS42LDIgMTAsMiBDMTQuNCwyIDE4LDUuNiAxOCwxMCBDMTgsMTQuNCAxNC40LDE4IDEwLDE4IEwxMCwxOCBaIiBpZD0iU2hhcGUiLz48L2c+PC9nPjwvZz48L3N2Zz4=");
+	border-radius: 100%;
+}
+
+.c-form-checkbox__input:disabled + .c-form-checkbox__caption {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.c-form-checkbox__input:disabled + .c-form-checkbox__caption::before {
+	background-color: #eaeaea;
+	border-color: #eaeaea;
+}
+
+/* Disabled Form Elements
+   =========================================== */
+.c-form-input[disabled],
+.c-form-select__dropdown[disabled],
+.c-form-checkbox__input[disabled] {
+	background-color: #eaeaea;
+}
+
+/* Form errors
+  =========================================== */
+/**
+ * Errors are handled by adding the .has-error class to the field's parent –
+ * usually the .c-form-list__item.
+ *
+ * The `invalid` class is included here to work with code output by Miva Merchant on some pages.
+ */
+.has-error,
+.invalid {
+	color: #ee0020;
+}
+
+/**
+	 * Change form field styles
+	 */
+.has-error .c-form-input,
+.invalid .c-form-input,
+.c-form-input.has-error,
+.has-error .c-form-select__dropdown,
+.invalid .c-form-select__dropdown,
+.c-form-select__dropdown.has-error {
+	border-color: #ee0020;
+}
+
+.has-error .c-form-input:focus,
+.invalid .c-form-input:focus,
+.c-form-input.has-error:focus,
+.has-error .c-form-select__dropdown:focus,
+.invalid .c-form-select__dropdown:focus,
+.c-form-select__dropdown.has-error:focus {
+	border-color: #fff;
+	box-shadow: inset 0 0 0.5em 0 rgba(238, 0, 32, 0.75);
+}
+
+/**
+	 * Change checkbox/radio indicator border color
+	 */
+.has-error .c-form-checkbox__caption::before,
+.invalid .c-form-checkbox__caption::before,
+.c-form-checkbox__caption.has-error::before,
+.c-form-checkbox__caption:invalid::before {
+	border-color: #ee0020;
+}
+
+/* Input sizing modifiers
+   =========================================== */
+.c-form-input--large {
+	height: calc(3.875em - 2px);
+	/* [2] */
+	line-height: calc(3.875em - 2px);
+	/* [2] */
+}
+
+.c-form-input--huge {
+	height: calc(4.5em - 2px);
+	/* [2] */
+	line-height: calc(4.5em - 2px);
+	/* [2] */
+}
+
+.c-form-input--large.c-form-select__dropdown,
+.c-form-input--huge.c-form-select__dropdown {
+	line-height: inherit;
+}
+
+#site-container{
+	margin:0 auto 0 0;
+}
+
+.c-control-group__field {
+	width: 80% !important;
+}
+
+#content-container,
+#global-header{
+	width: 745px;
+}
+
+.CADA .italic {
+	width: 200px !important;
+}
+
+.CADA .required {
+	width: 200px !important;
+}
+
+.CADE .italic {
+	width: 200px !important;
+}
+
+.CADE .required {
+	width: 200px !important;
+}
+
+.CTUS .required {
+	width: 200px !important;
+}
+
+.CADA #main-content {
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+	font-size: 	12px;
+	line-height: 14px;
+	font-weight:normal;
+	padding:0; 
+	float: left;
+	width: 520px;
+	position: relative;
+	left: 30%;
+}
+
+.CADE #main-content {
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight:normal;
+	padding:0; 
+	float: left;
+	width: 520px;
+	position: relative;
+	left: 30%;
+}
+
+#main-content {
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+	font-size: 	12px;
+	line-height: 14px;
+	font-weight:normal;
+	padding:0; 
+	float: left;
+	width: 520px;
+}
+
+
+#global-header{
+	height: 115px;
+}
+
+.CTUS #sidebar{
+	width: 220px;
+	padding-right: 10px;
+	margin-right: 5px;
+	padding-left: 43px;
+	box-sizing: border-box;
+	min-height: 150px;
+	float: left;
+}
+
+
+#sidebar-content{
+	padding-top: 4px;
+	position: relative;
+	bottom: 35px;
+}
+
+#sidebar-content .contact_us{
+	background: url(/images/login.gif) no-repeat top;
+	width: 165px;
+	height: 200px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+#sidebar-content .account-login{
+	background: url(/images/login.gif) no-repeat top;
+	width: 165px;
+	height: 125px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+#sidebar-content .prod-history-img {
+	background: url(/images/prodhistorybox.gif) no-repeat top;
+	width: 165px;
+	height: 354px;
+	padding-bottom: 22px;
+}
+
+#sidebar-content .newsletter form{
+  background: url(/images/news-signup-small.gif) no-repeat top;
+	width: 165px;
+	height: 231px;
+	padding-bottom: 15px;
+	display: block;
+	position: relative;
+}
+
+.newsletter .form1{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid #c0c0c0;
+  font-size: 11px;
+  width: 135px;
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  margin-left: -70px;
+
+}
+
+.newsletter .form3{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid #2578A4;
+  font-size: 11px;
+  background-color: #E1F4F2;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  margin-left: -29px;
+  bottom: 30px;
+}
+
+#sidebar-content .printable-form {
+	background: url(/images/print-order-form.gif) no-repeat top;
+	width: 165px;
+	height: 42px;
+	padding-bottom: 20px;
+}
+
+.CADA #customer-fields label {
+	text-align: left;
+	font-size: 11px;
+	padding-bottom: 0;
+}
+
+.CADE #customer-fields label {
+	text-align: left;
+	font-size: 11px;
+	padding-bottom: 0;
+}
+
+.CTUS #customer-fields label {
+	text-align: left;
+	font-size: 11px;
+	padding-bottom: 0;
+}
+
+.CADA input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	border: 1px solid #c0c0c0;
+  	font-size: 11px;
+}
+
+.CADE input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	border: 1px solid #c0c0c0;
+  	font-size: 11px;
+}
+
+.CTUS input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	border: 1px solid #c0c0c0;
+  	font-size: 11px;
+}
+
+
+.CADA #cada_form{
+  border: 1px solid #c0c0c0;
+  background: url(/images/bluefade_v.jpg) repeat-x;
+  box-sizing: 	border-box;
+  height: auto;
+  display: block;
+  padding:10px 0 30px 15px;
+}
+
+.CADE #cade_form{
+  border: 1px solid #c0c0c0;
+  background: url(/images/bluefade_v.jpg) repeat-x;
+  box-sizing: border-box;
+  height: auto;
+  display: block;
+  padding: 10px 0 30px 15px;
+}
+
+
+.CTUS #ctus_form{
+  border: 1px solid #c0c0c0;
+  background: url(/images/bluefade_v.jpg) repeat-x;
+  box-sizing: 	border-box;
+  height: auto;
+  display: block;
+  padding:10px 0 30px 15px;
+}
+
+.CADE #logn .sign-in-buttons { 	
+	margin: 8px auto 0;
+  display: block;
+}
+
+.CTUS #logn .sign-in-buttons { 	
+	margin: 8px auto 0;
+  display: block;
+}
+
+
+.CADA h2.fields-heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: none;
+	padding-left: 0;
+	padding-top: 4px;
+	font-size: 12px;
+  	color: #125D84;
+  	margin-bottom: 6px;
+}
+
+.CADE h2.fields-heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: none;
+	padding-left: 0;
+	padding-top: 4px;
+	font-size: 12px;
+  	color: #125D84;
+  	margin-bottom: 6px;
+}
+
+.CTUS h2.fields-heading {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: none;
+	padding-left: 0;
+	padding-top: 4px;
+	font-size: 12px;
+  	color: #125D84;
+  	margin-bottom: 6px;
+}
+
+
+.CADA #customer-fields input.textfield {
+	width: 190px;
+}
+
+.CADE #customer-fields input.textfield {
+	width: 190px;
+}
+
+.CTUS #customer-fields input.textfield {
+	width: 190px;
+}
+
+.CADA .continue-button {
+  padding: 0;
+  padding-right: 40px !important;
+  padding-top: 20px !important;
+}
+
+.CADE .continue-button {
+  padding: 0;
+  padding-right: 40px !important;
+  padding-top: 20px !important;
+}
+
+
+.CTUS .continue-button {
+  padding: 0;
+  padding-right: 40px !important;
+  padding-top: 20px !important;
+}
+
+
+.CADA .continue-button input {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid #666666;
+  font-size: 11px;
+  font-weight: 400;
+  background-color: #125D84;
+  color: #FFFFFF;
+  width: 139px;
+  height: 	19px;
+  line-height: 1;
+}
+
+.CADE .continue-button input {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid #666666;
+  font-size: 11px;
+  font-weight: 400;
+  background-color: #125D84;
+  color: #FFFFFF;
+  width: 139px;
+  height: 	19px;
+  line-height: 1;
+}
+
+.CTUS .continue-button input {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid #666666;
+  font-size: 11px;
+  font-weight: 400;
+  background-color: #125D84;
+  color: #FFFFFF;
+  width: 139px;
+  height: 	19px;
+  line-height: 1;
+}
+
+
+.CADA #customer-fields select{
+	width: 200px;
+	position: relative;
+	top: 2px;
+}
+
+.CADE #customer-fields select{
+	width: 200px;
+	position: relative;
+	top: 2px;
+}
+
+.CTUS #customer-fields select{
+	width: 400px;
+	position: relative;
+	top: 2px;
+}
+
+nav.category-tree,
+.sidebar-basket{
+	border: 1px solid #DCDCDC;
+	border-radius: 10px;
+	margin-bottom: 	20px;
+	background: 	#F2FCFE;
+  padding-bottom: 	7px;
+}
+
+.category-tree-heading,
+.basket-sidebar-heading{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 0px 0px 0px 10px;
+  background: #DCF2F3;
+  font-size: 13px;
+  line-height: 21px;
+  color: #016194;
+  margin: 0!important;
+
+}
+
+nav.category-tree ul{
+  margin: 0;	
+  padding: 0;	
+}
+
+nav.category-tree ul li{
+  margin: 0;	
+  padding: 2px 0px 0px 12px;	
+  list-style: none;
+}
+
+
+nav.category-tree ul li a{
+	text-decoration:none;
+	font-weight: bold;
+	font-size:11px;
+	line-height: 	18px;
+}
+
+.sidebar-basket{
+	min-height: 90px;
+	box-sizing: border-box;;
+}
+
+.basket-sidebar-content{
+	padding: 2px 0px 0px 7px;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+.basket-sidebar-content p{
+	padding-top: 10px;
+}
+
+#sidebar .basket-heading{
+	font-size: 13px;
+	line-height: 15px;
+	text-align: left;
+	font-weight: 700;
+	box-sizing: border-box;
+}
+
+#sidebar .basket-heading .item-quantity{
+	width: 20px;
+}
+
+#sidebar .basket-heading .item-name{
+	text-align: center;
+}
+
+#sidebar td{
+	display:inline-block;
+}
+
+#sidebar .item-quantity{
+  width: 25px;
+}
+
+#sidebar .item-name{
+	width: 80px;
+}
+
+#sidebar #basket-totals{
+	text-align: right;
+	font-weight:700;
+	padding-top:20px;
+
+}
+
+#sidebar .checkout-button{
+	text-align: center;
+	margin-bottom: 25px; 
+}
+
+#sidebar .checkout-button input{
+	font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #016194;
+  font-size: 12px;
+  background-color: #259484;
+  color: #fff;
+  font-weight: 400;
+  padding: 0 4px;
+  height: 19px;
+}

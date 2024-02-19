@@ -1,0 +1,4 @@
+<div id="navigation-bar"><mvt:item name="navbar" /></div>
+<div id="titleDiv" style="position: absolute; z-index: 2; width: 169; height: 39; top: 39px; left: 13px;"> 
+  <a href="https://&mvt:global:domain:name;/" onmouseover="window.status='Home'; return true;" onmouseout="window.status=''; return true;"><img src="/images/whitelogo.gif" alt="MIRACLE SOAP II" name="Miracle II" id="Miracle II" width="169" height="49" border="0"></a>
+</div>

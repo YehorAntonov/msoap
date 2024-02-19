@@ -1,0 +1,34 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Checkout: Cart Empty</title>
+	</mvt:if>
+	<meta name="robots" content="noindex, follow" />
+	<meta name=”robots” content=”noindex, nofollow”>
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="BSKE">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="content-container" class="clearfix">
+			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+			<div id="sidebar">
+				<mvt:item name="sidebar" />
+			<div id="main-content">
+				<div class="basket-empty">
+					<p>Your shopping basket is currently empty.</p>
+					<a href="/mprod.html">Continue Shopping</a>
+				</div>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</div>
+	</div>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "id": "e5e336601258cda03cf06e38a90f4124",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Statement</a>",
+            "link_dest": "PRPO",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Privacy Statement",
+            "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
+        },
+        {
+            "active": 1,
+            "id": "fe31ae8947d78884e5ff8b3c2d357b54",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "7da80bf692691e7c4b54539d2121e7bd",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-1\" target=\"_self\">Subcategory 1</a>",
+                    "link_dest": "Sub-cat-1",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 1",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-1"
+                },
+                {
+                    "active": 1,
+                    "id": "c230f3253663ef4c434f737cd1719b8f",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-2\" target=\"_self\">Subcategory 2</a>",
+                    "link_dest": "Sub-cat-2",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 2",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-2"
+                }
+            ],
+            "link": "<a href=\"https://miraclesoap.mivatest.com/shipping-and-return-policy.html\" target=\"_self\">Shipping and Return Policies</a>",
+            "link_dest": "SARP",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Shipping and Return Policies",
+            "url": "https://miraclesoap.mivatest.com/shipping-and-return-policy.html"
+        }
+    ],
+    "layout": "S",
+    "name": "Global Footer Disclaimer Navigation"
+}

@@ -1,0 +1,46 @@
+<table width="100%" border="0" cellspacing="1" cellpadding="1">
+   <tr><td nowrap><b>Order Number:</b>&nbsp;</td><td width="80%">&mvt:order:id;</td></tr>
+   <tr><td><b>Placed:</b>&nbsp;</td><td width="80%">&mvt:order:date; &mvt:order:time;</td></tr>
+  </table>&nbsp;<br>
+  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+   <tr class="hili">
+    <th align="left" nowrap>&nbsp;Code&nbsp;</th>
+    <th align="left" nowrap>&nbsp;</th>
+    <th width="60%" align="left">&nbsp;Name&nbsp;</th>
+    <th align="right" nowrap>&nbsp;Quantity&nbsp;</th>
+    <th align="right" nowrap>&nbsp;Price/Ea.&nbsp;</th>
+    <th align="right" nowrap>&nbsp;Total&nbsp;</th>
+   </tr>
+
+<mvt:foreach iterator="item" array="order:groups">
+  <tr class="prodLn0">
+    <td align="left" nowrap>&nbsp;&mvt:item:code;&nbsp;</td>    
+    <td align="left" nowrap>&nbsp;<mvt:if expr="ISNULL l.settings:item:imagetypes:main">&nbsp;<mvt:else><img src="&mvte:item:imagetypes:main;" alt="&mvte:item:name;" border="0"></mvt:if>&nbsp;</td>
+    <td width="60%" align="left">&nbsp;&mvt:item:name;<span class="attr"></span>&nbsp;</td>
+    <td align="right" nowrap>&nbsp;&mvte:item:quantity;&nbsp;</td>
+    <td align="right" nowrap>&nbsp;&mvt:item:formatted_price;&nbsp;</td>
+    <td align="right" nowrap>&nbsp;&mvt:item:formatted_subtotal;&nbsp;</td>
+  </tr>
+</mvt:foreach>
+
+   <tr class="hili">
+    <th align="left" nowrap>&nbsp;</th>
+    <th align="left" nowrap>&nbsp;</th>
+    <th width="60%" align="left">&nbsp;Subtotal:&nbsp;</th>
+    <th align="right" nowrap>&nbsp;2&nbsp;</th>
+    <th align="right" nowrap>&nbsp;</th>
+    <th align="right" nowrap>&nbsp;&mvt:order:formatted_subtotal;&nbsp;</th>
+   </tr>
+<mvt:foreach iterator="charge" array="order:charges">   
+     <tr><td align="right" colspan="5">&nbsp;&mvt:charge:descrip;:&nbsp;</td><td align="right" nowrap>&nbsp;&mvt:charge:formatted_disp_amt;&nbsp;</td></tr>
+</mvt:foreach>   
+   
+   <tr class="hili">
+    <th align="left" nowrap>&nbsp;</th>
+    <th align="left" nowrap>&nbsp;</th>
+    <th width="60%" align="left">&nbsp;TOTAL:&nbsp;</th>
+    <th align="right" nowrap>&nbsp;&nbsp;</th>
+    <th align="right" nowrap>&nbsp;</th>
+    <th align="right" nowrap>&nbsp;&mvt:order:formatted_total;&nbsp;</th>
+   </tr>
+  </table>

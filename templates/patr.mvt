@@ -1,0 +1,57 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Missing Product Attributes</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+	<mvt:item name="attributemachine" param="head" />
+</head>
+<body class="PATR">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				
+				<form method="post" action="&mvte:urls:_self:rr;">
+				<input type="hidden" name="Action" value="&mvte:global:Action;" />
+				<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+				<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+				<input type="hidden" name="Current_Product_Code" value="&mvte:global:Current_Product_Code;" />
+				<input type="hidden" name="WishList_ID" value="&mvte:global:WishList_ID;" />
+				<input type="hidden" name="Quantity" value="&mvte:global:Quantity;" />
+				<input type="hidden" name="Offset" value="&mvte:global:Offset;" />
+				<input type="hidden" name="Search" value="&mvte:global:Search;" />
+				<div class="product-attributes"><mvt:item name="product_attributes" /></div>
+				<div class="continue-button"><mvt:item name="buttons" param="Continue" /></div>
+				</form>
+
+				<mvt:item name="attributemachine" param="body" />
+				
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

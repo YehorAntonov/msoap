@@ -1,0 +1,39 @@
+<div id="fields-key">
+	<div><span class="required">Bold</span> = Required</div>
+	<div><span class="italic">Italic</span> = Optional</div>
+	<mvt:if expr="g.Error_Message_Count">
+	<div><span class="red">Red</span> = Invalid</div>
+	</mvt:if>
+</div>
+
+<div class="&mvte:global:WishList_Title_Row;">
+	<span class="prompt">
+		<label for="WishList_Title" class="prompt required">Title:</label>
+	</span>
+	<span class="field">
+		<input type="text" name="WishList_Title" id="WishList_Title" value="&mvte:global:WishList_Title;" class="textfield" />
+	</span>
+</div>
+
+<div class="&mvte:global:WishList_Notes_Row;">
+	<span class="prompt">
+		<label for="WishList_Notes" class="prompt italic">Notes:</label>
+	</span>
+	<span class="field">
+		<textarea name="WishList_Notes" id="WishList_Notes" class="textarea">&mvte:global:WishList_Notes;</textarea>
+	</span>
+</div>
+
+<div class="&mvte:global:WishList_Shared_Row;">
+	<span class="prompt"></span>
+	<span class="field">
+		<label>
+		<mvt:if expr="g.WishList_Shared">
+			<input type="checkbox" name="WishList_Shared" id="WishList_Shared" value="Yes" checked />
+		<mvt:else>
+			<input type="checkbox" name="WishList_Shared" id="WishList_Shared" value="Yes" />
+		</mvt:if>
+
+		Public</label>
+	</span>
+</div>

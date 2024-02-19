@@ -1,0 +1,54 @@
+{
+    "customer": {
+        "mode": "tokens_only_nodisplay",
+        "template_filename": "csbe-customer.mvc",
+        "template_id": 374
+    },
+    "datepicker": {
+        "template_filename": "csbe-datepicker.mvc",
+        "template_id": 373
+    },
+    "hdft": {
+        "footer": {
+            "template_filename": "csbe-footer.mvc",
+            "template_id": 370
+        },
+        "header": {
+            "template_filename": "csbe-header.mvc",
+            "template_id": 369
+        }
+    },
+    "paymentcards": {
+        "mode": "tokens_only_nodisplay",
+        "template_filename": "csbe-paymentcards.mvc",
+        "template_id": 372
+    },
+    "seo_settings": {
+        "cat_lit": "category",
+        "cat_lit_choice": "category",
+        "plit_in_bc": 1,
+        "prod_lit": "product",
+        "prod_lit_choice": "product",
+        "sc_always": 0,
+        "sf_active": 0,
+        "sl_active": 0,
+        "sm_active": 1,
+        "suffix": "html",
+        "suffix_choice": "html",
+        "surlprefix": "https://miraclesoap.mivatest.com/",
+        "url_delim": "/",
+        "urlprefix": "http://miraclesoap.mivatest.com/"
+    },
+    "subscriptionfields": {
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "discounts": 1,
+        "handling": 1,
+        "mode": "subscription_edit",
+        "salestax": 1,
+        "shipping": 1,
+        "template_filename": "csbe-subscriptionfields.mvc",
+        "template_id": 371
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "hdft": {
+        "footer": {
+            "template_filename": "email_shipment_shipped-footer.mvc"
+        },
+        "header": {
+            "template_filename": "email_shipment_shipped-header.mvc"
+        }
+    },
+    "shipment": {
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B"
+    },
+    "toe_order_contents": {
+        "advanced": 0,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "display": {
+            "discounts": 1,
+            "handling": 1,
+            "salestax": 1,
+            "shipping": 1
+        },
+        "groups": 1,
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 0,
+        "payments": 1,
+        "template_filename": "email_shipment_shipped-toe_order_contents.mvc"
+    }
+}

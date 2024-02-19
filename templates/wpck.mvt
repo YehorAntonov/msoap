@@ -1,0 +1,98 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Choose Wish List</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="WPCK one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+
+				<h1>Choose a Wish List</h1>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				<mvt:if expr="l.settings:messages:information_message_count">
+				<div class="information-message">
+				<mvt:foreach iterator="message" array="messages:information_messages">
+					&mvt:message;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+
+				<form method="post" action="&mvte:urls:_self:rr;" />
+					<input type="hidden" name="Quantity" value="&mvte:global:Quantity;" />
+					<input type="hidden" name="Line_ID" value="&mvte:global:Line_ID;" />
+					<input type="hidden" name="Group_ID" value="&mvte:global:Group_ID;" />
+					<input type="hidden" name="Wish_ID" value="&mvte:global:Wish_ID;" />
+					<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+
+					<mvt:assign name="l.settings:parsed_actions" value="''" />
+					<mvt:assign name="l.settings:actions" value="' ' $ glosub( g.Action, ',', ' ' ) $ ' '" />
+					<mvt:if expr="' ATWL ' IN l.settings:actions"> <mvt:assign name="l.settings:parsed_action_count" value="miva_array_insert( l.settings:parsed_actions, 'ATWL', -1 )" />    </mvt:if>
+					<mvt:if expr="' MPWL ' IN l.settings:actions"> <mvt:assign name="l.settings:parsed_action_count" value="miva_array_insert( l.settings:parsed_actions, 'MPWL', -1 )" />    </mvt:if>
+					<mvt:if expr="' MAWL ' IN l.settings:actions"> <mvt:assign name="l.settings:parsed_action_count" value="miva_array_insert( l.settings:parsed_actions, 'MAWL', -1 )" />    </mvt:if>
+
+					<input type="hidden" name="Action" value="&mvte:parsed_actions;" />
+
+					<mvt:assign name="l.settings:attribute_index" value="0" />
+					<mvt:foreach iterator="attribute" array="global:Product_Attributes">
+						<mvt:assign name="l.settings:attribute_index" value="l.settings:attribute_index + 1" />
+						<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:code" value="&mvte:attribute:code;" />
+						<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:value" value="&mvte:attribute:value;" />
+						<mvt:if expr="l.settings:attribute:template_code NE 0">
+							<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:template_code" value="&mvte:attribute:template_code;" />
+						</mvt:if>
+					</mvt:foreach>
+
+					<mvt:if expr="miva_array_search( l.settings:parsed_actions, 1, l.action, 'l.action EQ \'ATWL\'' )">
+						Add Product "&mvte:global:Product_Code;" to wish list:<br />
+					<mvt:elseif expr="miva_array_search( l.settings:parsed_actions, 1, l.action, 'l.action EQ \'MAWL\'' )">
+						Move all items in basket to wish list:<br />
+					<mvt:elseif expr="miva_array_search( l.settings:parsed_actions, 1, l.action, 'l.action EQ \'MPWL\'' )">
+						<mvt:if expr="g.Group_ID">
+							Move basket item to wish list:<br />
+						<mvt:elseif expr="g.Line_ID">
+							Move basket item to wish list:<br />
+						<mvt:elseif expr="g.Wish_ID">
+							Move wish list item to wish list:<br />
+						</mvt:if>
+					</mvt:if>
+
+					<select name="WishList_ID">
+						<option value="">&lt;Select One&gt;</option>
+						<mvt:foreach iterator="wishlist" array="customerwishlists:wishlists">
+							<option value="&mvte:wishlist:id;">&mvte:wishlist:title;</option>
+						</mvt:foreach>
+					</select>
+
+					<div class="save-button"><mvt:item name="buttons" param="Continue" /></div>
+				</form>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

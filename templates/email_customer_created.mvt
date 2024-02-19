@@ -1,0 +1,48 @@
+<html>
+<body>
+<div style="font: 12px/1.46 Helvetica, 'Trebuchet MS', Arial, sans-serif; color: #676767; background: #ffffff;">
+	<div style="text-align: left; width: 690px; padding: 20px; page-break-after: always;">
+		
+		<p style="font-weight: bold;">
+			<mvt:if expr="ISNULL g.Customer:ship_fname">
+				Welcome,<br /><br />
+			<mvt:else>
+				Welcome &mvte:global:customer:ship_fname;,<br /><br />
+			</mvt:if>
+			<p>Congratulations in creating your 
+				<a href="&mvte:global:Domain:mm_url;Store_Code=&mvta:global:Store:code;&amp;Screen=LOGN">miraclesoap..com</a> 
+				user account! Your
+account will offer you benefits, savings, and timely information and news.</p>
+			<p>When visiting <a href="&mvte:global:Domain:mm_url;Store_Code=&mvta:global:Store:code;&amp;Screen=LOGN">miraclesoap..com</a> please sign-in with your Login and
+Password.</p>
+			<p>Please keep this email archived for future reference.</p>
+			<p><strong>Login: &mvt:global:customer:pw_email </strong></p>
+			<p><strong>Password: &mvte:global:Customer_Password</strong></p>
+			<p>If you lose your password you can always navigate to the account
+				login page, supply your email address and click on retrieve password and your password will be sent directly to your email account.
+			</p>
+			<p>MiracleSoap.com welcomes you to our family of Miracle II users that span
+				around the globe!</p>
+			<p>Thank you for choosing us as your Miracle II source, and we look forward
+to assisting you whenever needed.</p>
+		</p>
+
+		<br>
+		
+		<div style="width: 300px; float: left;">
+			<!-- Uncomment to add a logo to this email <img src="images/logo.jpg" height="34px" width="60px" /> -->
+			Sincerely,<br>
+			MiracleSoap<br>
+			miraclesoap.com<br>
+			&mvte:Store:phone;<br>
+			&mvte:Store:email;<br>
+		</div>
+
+		<div style="clear: both;"></div>
+
+		<hr style="color: #c7c8d7; background-color: #c7c8d7; height: 1px; border: 0px;" />
+
+	</div>
+</div>
+</body>
+</html>

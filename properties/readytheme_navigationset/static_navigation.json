@@ -1,0 +1,101 @@
+{
+    "descrip": "This is the side navigation for all static content pages.",
+    "items": [
+        {
+            "active": 1,
+            "id": "14fb6bc832c83c8dd9e6bf3291f30d79",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
+            "link_dest": "ABUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "About Us",
+            "url": "https://miraclesoap.mivatest.com/about-us.html"
+        },
+        {
+            "active": 1,
+            "id": "666e7610c5c6704a7ee0330129e29d96",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "2fd7cfe3652066739373e949f39f5521",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-1\" target=\"_self\">Subcategory 1</a>",
+                    "link_dest": "Sub-cat-1",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 1",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-1"
+                },
+                {
+                    "active": 1,
+                    "id": "bab2cb091e97f540c718b73dd380021b",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-2\" target=\"_self\">Subcategory 2</a>",
+                    "link_dest": "Sub-cat-2",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 2",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-2"
+                }
+            ],
+            "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact Us</a>",
+            "link_dest": "CTUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Contact Us",
+            "url": "https://miraclesoap.mivatest.com/contact-us.html"
+        },
+        {
+            "active": 1,
+            "id": "f69dd81d3bf92849f95830e835645ebe",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "a8d93d5b037582205001ac7f5e20106f",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-3\" target=\"_self\">Subcategory 3</a>",
+                    "link_dest": "Sub-cat-3",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 3",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-3"
+                },
+                {
+                    "active": 1,
+                    "id": "6b44e15fd1ec37fa6cdc257aab08e5fb",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-4\" target=\"_self\">Subcategory 4</a>",
+                    "link_dest": "Sub-cat-4",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 4",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-4"
+                }
+            ],
+            "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">Frequently Asked Questions</a>",
+            "link_dest": "FAQS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Frequently Asked Questions",
+            "url": "https://miraclesoap.mivatest.com/faqs.html"
+        },
+        {
+            "active": 1,
+            "id": "7043dc5c1631812b26c3daaafea1e780",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
+            "link_dest": "PRPO",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Privacy Policy",
+            "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
+        },
+        {
+            "active": 1,
+            "id": "0cf7a621b1a27789c3733d5da3d183ed",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/shipping-and-return-policy.html\" target=\"_self\">Shipping &amp; Return Policy</a>",
+            "link_dest": "SARP",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Shipping & Return Policy",
+            "url": "https://miraclesoap.mivatest.com/shipping-and-return-policy.html"
+        }
+    ],
+    "layout": "S",
+    "name": "Static Page Navigation"
+}

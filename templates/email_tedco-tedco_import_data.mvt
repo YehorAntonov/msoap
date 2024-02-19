@@ -1,0 +1,74 @@
+Display_Order,TEDCO ID ,Multiple,TEDCO Name ,Product_Code,Product_Name
+1,,,8 OZ,label,
+2,81,1,Gel,1015,Miracle II Neutralizer Gel - 8oz.
+2.1,81,12,Gel,2004,Neutralizer-Gel 8oz (12 Bottles)
+3,82,1,Skin Moisturizer,1020,Miracle II Skin Moisturizer 8oz.
+3.1,82,12,Skin Moisturizer,2005,Moisturizer-Lotion 8oz (12 Bottles)
+4,,,,space,
+5,,,8 OZ (7x),label,
+6,83,1,Neutralizer Gel,1016,Miracle II 7X Neutralizer Gel - 8oz
+7,,,,space,
+8,84,1,Regular Soap,1001,Miracle II Original Soap - 22 oz.
+8.1,84,12,Regular Soap,2001,Soap-Original 22oz (12 Bottles)
+9,85,1,Moisturizing Soap,1005,Miracle II Moisturizing Soap - 22 oz.
+9.1,85,12,Moisturizing Soap,2002,Soap with Moisturizer 22oz (12 Bottles)
+10,86,1,Neutralizer Liquid,1010,Miracle II Neutralizer 22 oz.
+10.1,86,12,Neutralizer Liquid,2003,Neutralizer-Liquid 22oz (12 Bottles)
+11,87,1,Neutralizer Gel,1017,Miracle II Neutralizer Gel - 22 oz.
+11.1,87,12,Neutralizer Gel,2010,Neutralizer-Gel 22oz (12 Bottles)
+12,88,1,Skin Moisturizer,1021,Miracle II Skin Moisturizer  22 oz.
+12.1,88,12,Skin Moisturizer,2011,Moisturizer-Lotion 22oz (12 Bottles)
+13,8N4,,Low Foam Soap,nfs,
+14,,,,space,
+15,,,22 OZ (2x),label,
+16,89,1,Regular Soap,1002,2x Strength Soap
+17,810,,Moisturizing Soap,nfs,
+18,811,,Neutralizer Liquid,nfs,
+19,,,,space,
+20,,,22 OZ (3x),label,
+21,812,,Regular Soap,nfs,
+22,813,,Moisturizing Soap,nfs,
+23,814,,Neutralizer Liquid,nfs,
+24,,,,space,
+25,,,22 OZ (7x),label,
+26,871,1,Gel - 22 Oz,1018,Miracle II 7X Neutralizer Gel - 22oz
+27,,,,space,
+28,815,1,THAI Crystal Stone,1060,Miracle II Deodorant Stone
+29,,,,space,
+30,816,,Assorted Laundry Ball,nfs,
+31,816B,,Blue Laundry Ball,nfs,
+32,816G,,Green Laundry Ball,nfs,
+33,816R,,Red Laundry Ball,nfs,
+34,816Y,1,Yellow Laundry Ball,1045,Miracle II Laundry & Therapeutic Ball
+34.9,,,,eos,End of section
+35,820,1,Regular Soap,1003,Miracle II Soap - 1 gal.
+36,821,1,Moisturizing Soap,1006,Miracle II Moisturizing Soap - 1 gal.
+37,822,1,Neutralizer,1011,Miracle II Neutralizer - 1 gal.
+38,823,1,Gel,1019,Miracle II Neutralizer Gel - 1 gal. - with pump
+39,824,1,Skin Moisturizer,1022,Miracle II Skin Moisturizer  1 gal. - with pump
+40,825,1,Neutralizer Power Pack,1012,Miracle II Neutralizer Powder 1 Gallon
+41,8N20,1,Gallon Low Foam,1004,Gallon Soap - Low Foam
+42,,,,space,
+43,,,(2x) Bulk,label,
+44,827,,Regular Soap,nfs,
+45,828,,Moisturizing Soap,nfs,
+46,829,1,Neutralizer,1013,Miracle II 2X Neutralizer - 1 Gal
+47,,,,space,
+48,,,(3x) Bulk,label,
+49,840,,Regular Soap,nfs,
+50,841,,Moisturizing Soap,nfs,
+51,842,,Neutralizer,nfs,
+52,,,,space,
+53,,,(7x) Bulk,label,
+54,870,,Gel,nfs,
+55,,,,space,
+56,890,1,Pump - 1 Gallon,1050,Miracle II Gallon Pump
+57,,,,space,
+58,,,Miracle II Water,label,
+59,W12C,,Mirracle II Water (12) Case,nfs,
+60,W12P,,Mirracle II Water (12) Pallet,nfs,
+61,W24C,,Mirracle II Water (24) Case,nfs,
+62,W24P,,Mirracle II Water (24) Pallet,nfs,
+63,,,,space,
+63.1,81:82:84:85:86,1,distributed to other products,1040,Value Pak Promotion
+64.9,,,,eos,End of section

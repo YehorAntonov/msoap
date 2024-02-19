@@ -1,0 +1,21 @@
+{
+    "order_customer": {
+        "template_filename": "email_orderconf_merchant-order_customer.mvc",
+        "template_id": 466
+    },
+    "toe_order_contents": {
+        "advanced": 1,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "N",
+        "groups": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 0,
+        "payments": 0,
+        "template_filename": "email_orderconf_merchant-toe_order_contents.mvc",
+        "template_id": 270
+    }
+}

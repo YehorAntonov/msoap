@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>&mvte:page:name;</title>
+<base href="&mvt:global:basehref;" />
+<style type="text/css"><mvt:item name="inline_css" /></style>
+</head>
+<body>
+
+<mvt:foreach iterator="order" array="admin_order:orders">
+	<mvt:assign name="g.1040_in_order" value="0" />
+	<mvt:item name="tbr_order_contents" />	
+	<div style="padding-left:20px;">
+	<mvt:if expr="g.1040_in_order">
+	<div style="text-align:left">
+		Order: #&mvt:order:id;
+		<br />
+		<br />
+		&mvte:order:ship_fname; &mvte:order:ship_lname;<br />
+		<mvt:if expr="l.settings:order:ship_comp">&mvte:order:ship_comp;<br /></mvt:if>
+		&mvte:order:ship_addr;<br />&mvte:order:ship_city;, &mvte:order:ship_state; &mvte:order:ship_zip;
+		<br />
+		<br />
+		<br />
+		<br />
+	</div>
+	</mvt:if>
+	</div>
+</mvt:foreach>
+</body>
+</html>

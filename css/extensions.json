@@ -1,0 +1,21 @@
+{
+    "code": "extensions",
+    "type": "L",
+    "branchless_filepath": "b07/themes/00000002/shadows/extensions.css",
+    "is_global": true,
+    "active": false,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/css"
+        },
+        {
+            "name": "media",
+            "value": "all"
+        },
+        {
+            "name": "rel",
+            "value": "stylesheet"
+        }
+    ]
+}

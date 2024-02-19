@@ -1,0 +1,36 @@
+<mvt:foreach array="cattree_categories" iterator="cattree_category">
+	<mvt:if expr="l.settings:cattree_category:parent_id EQ l.settings:category:id">
+		<mvt:assign name="l.null" value="miva_array_insert(l.settings:subcats, l.settings:cattree_category, -1)" />
+	</mvt:if>
+</mvt:foreach>
+
+<mvt:assign name="l.settings:subcat_count" value="miva_array_elements(l.settings:subcats)" />
+<mvt:if expr="l.settings:subcats GT 0">
+	<div class="row bg-white main-content-row sub-category-layout">
+		<mvt:foreach iterator="sub_category" array="subcats">
+		<mvt:item name="customfields" param="Read_Category_Code( l.settings:sub_category:code, 'description', l.settings:customfield:description )" />
+			<mvt:if expr="l.settings:sub_category:image">
+			<div class="column sub-category uppercase clearfix">
+					<div class="cat_image_holder">
+					<a href="&mvt:sub_category:link;" title="&mvt:sub_category:name;" class="clearfix">
+						<img src="&mvt:sub_category:image;" alt="&mvt:sub_category:name;" title="&mvt:sub_category:name;" class="sub-category-img"/>
+					</a>
+					</div>
+					<div class="category_description">
+						<p class="category_description-name">&mvt:sub_category:name;</p>
+						<p class="category_description-specification">&mvt:customfield:description;</p>
+						<a href="&mvt:sub_category:link;" title="&mvt:sub_category:name;">learn more</a><br>
+						<a href="&mvt:sub_category:link;" title="&mvt:sub_category:name;">purchase</a><br>
+						
+					</div>
+				</div>
+			<mvt:else>
+			<div class="column half medium-one-third sub-category uppercase">
+					<a href="&mvt:sub_category:link;" title="&mvt:sub_category:name;" class="bold">&mvt:sub_category:name;</a>
+				</div>
+			</mvt:if>
+		</mvt:foreach>
+	</div>
+	<!-- end sub-category listings -->
+</mvt:if>
+

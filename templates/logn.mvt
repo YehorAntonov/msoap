@@ -1,0 +1,110 @@
+<mvt:item name="html_profile" />
+
+<head>
+    <mvt:if expr="NOT ISNULL l.settings:page:title">
+        <title>&mvt:page:title;</title>
+        <mvt:else>
+            <title>&mvt:store:name;: Customer Login</title>
+    </mvt:if>
+
+    <base href="&mvt:global:basehref;" />
+    <link rel="canonical" href="&mvte:urls:_self:auto;" />
+    <mvt:item name="head" param="css_list" />
+    <mvt:item name="head" param="head_tag" />
+</head>
+
+<body class="LOGN one-column">
+    <div id="site-container">
+        <div id="global-header">
+            <mvt:item name="hdft" param="global_header" />
+        </div>
+        <mvt:comment>
+            <div id="navigation-bar">
+                <mvt:item name="navbar" />
+            </div>
+        </mvt:comment>
+        <table id="content-container">
+            <tr>
+                <mvt:comment>
+                    <td id="left-navigation">
+                        <mvt:item name="category_tree" />
+                    </td>
+                </mvt:comment>
+                <td id="main-content">
+                    <div id="page-header">
+                        <mvt:item name="hdft" param="header" />
+                    </div>
+                    <mvt:comment>
+                        <div id="breadcrumbs">
+                            <mvt:item name="breadcrumbs" />
+                        </div>
+                    </mvt:comment>
+                    <div class="margin-container clearfix">
+                        <mvt:if expr="l.settings:messages:error_message_count">
+                            <div class="error-message">
+                                <mvt:foreach iterator="error" array="messages:error_messages">
+                                    &mvt:error;
+                                </mvt:foreach>
+                            </div>
+                            <mvt:elseif expr="l.settings:messages:information_message_count">
+                                <div class="information-message">
+                                    <mvt:foreach iterator="message" array="messages:information_messages">
+                                        &mvt:message;
+                                    </mvt:foreach>
+                                </div>
+                        </mvt:if>
+                        <form id="logn" class="clearfix" action="&mvte:urls:CPWD:secure;" method="post" autocomplete="off">
+			<input name="Action" value="LOGN" type="hidden">
+                            <div class="section">
+                                <div class="form_row">
+                                    <label for="Customer_LoginEmail">Your E-Mail:</label><input type="text"
+                                        name="Customer_LoginEmail" id="Customer_LoginEmail" class="textfield logn-input"
+                                        autocomplete="off" fpwd-input />
+                                </div>
+                                <div class="form_row">
+                                    <label for="Customer_Password">Password:</label><input type="password"
+                                        name="Customer_Password" id="Customer_Password" class="textfield logn-input"
+                                        autocomplete="off" />
+                                </div>
+                                <div class="clear"></div>
+                                <div class="sign-in-buttons"><input type="submit" value="Click Here to Login"
+                                        class="button login" /></div>
+				 <div class="form_row" style="margin: 12px 0 24px 89px;">
+					<a href="/forgot-password.html">Forgot your password?</a></div>
+                            </div>
+                            <div class="section aligncenter">
+                                <a href="&mvte:urls:ACAD:auto;"><img src="/images/ACNT_create.gif"></a>
+                            </div>
+                        </form>
+                        <div class="account-information">
+                            <p>Signing up for a MiracleSoap account is easy. Click-on <a
+                                    href="/mm5/merchant.mvc?Screen=ACAD">Create New Account</a>. The next time you visit
+                                our store click on the Login button in the lower left hand side of the <a
+                                    href="/mm5/merchant.mvc?Screen=CTGY">products page</a> or when shopping. By Logging
+                                in it will remember your name and shipping and pre-populate the check out page saving
+                                you time, and minimizing errors. We do not store payment information for your safety.
+                            </p>
+                            <p>By creating a MiracleSoap.com account we can then also send you important information and
+                                tips via email. Many users think this feature has been beneficial. At any time you can
+                                opt-out by following the instructions at the bottom of every email from MiracleSoap.com
+                            </p>
+                            <p>We appreciate your business! - MiracleSoap.com</p>
+                            <p>Please read the website <a href="/privacy.htm">Privacy Policy</a> and the website <a
+                                    href="/security.htm">Security Policy.</a></p>
+                        </div>
+                    </div>
+
+                    <div id="page-footer">
+                        <mvt:item name="hdft" param="footer" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="bottom-wrap"></div>
+        <div id="global-footer">
+            <mvt:item name="hdft" param="global_footer" />
+        </div>
+    </div>
+</body>
+
+</html>

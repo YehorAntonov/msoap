@@ -1,0 +1,78 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Wish List</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="WISH one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+
+				<h1>&mvte:wishlist:title;</h1>
+
+				<mvt:if expr="l.settings:messages:error_message_count">
+				<div class="error-message">
+				<mvt:foreach iterator="error" array="messages:error_messages">
+					&mvt:error;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+				<mvt:if expr="l.settings:messages:information_message_count">
+				<div class="information-message">
+				<mvt:foreach iterator="message" array="messages:information_messages">
+					&mvt:message;
+				</mvt:foreach>
+				</div>
+				</mvt:if>
+
+				<div style="margin-bottom:8px;">
+					<mvt:if expr="NOT ISNULL l.settings:wishlist:notes">
+						<span class="darkgrey italic inlineblock">Notes: &mvte:wishlist:notes;</span>
+					</mvt:if>
+
+					<mvt:if expr="l.settings:wishlist:cust_id EQ g.Basket:cust_id AND g.Customer_Session_Verified">
+						<span class="floatright">
+							<a href="&mvte:urls:WLED:auto_sep;WishList_ID=&mvta:wishlist:id;">Edit</a>
+							<span class="grey">|</span>
+							<a href="&mvte:urls:WLST:secure_sep;Action=DWSH&WishList_ID=&mvta:wishlist:id;" onclick="if ( !confirm( 'Are you sure you want to delete your wish list? This action cannot be undone\n\nContinue?' ) ) return false;">Delete</a>
+							<span class="grey">|</span>
+							<span class="darkgrey"><mvt:if expr="l.settings:wishlist:shared">Public<mvt:else>Private</mvt:if></span>
+						</span>
+						<div class="clear"></div>
+					</mvt:if>
+				</div>
+				
+				<mvt:item name="wishlistitems" />
+
+				<mvt:if expr="l.settings:wishlistitems:item_count">
+					<div class="action_all_container">
+						<form method="post" action="&mvte:urls:BASK:secure;" />
+							<input type="hidden" name="Action" value="AFWA" />
+							<input type="hidden" name="WishList_ID" value="&mvte:global:WishList_ID;" />
+							<mvt:item name="buttons" param="AddAllToBasket" />
+						</form>
+					</div>
+				</mvt:if>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<div id="sidebar-content">
+	<mvt:if expr="g.Basket:cust_id">
+		<div class="logged-in">
+			<span>Welcome, &mvt:global:customer:ship_fname;. </span>
+			<div class="logout-link"><a href="&mvte:urls:SFNT:secure_sep;Action=LOGO">Logout</a></div>
+		</div>	
+	<mvt:else>
+	<div class="account-login">
+		<form id="logn" action="&mvt:global:baseurl;merchant.mvc?Screen=CTGY&category_code=mprod" method="post" autocomplete="off">
+		<input name="Action" value="LOGN" type="hidden">
+		<div class="section">
+			<div class="form_row">
+				<label for="Customer_LoginEmail">Your E-Mail:</label><input name="Customer_LoginEmail" id="Customer_LoginEmail" class="textfield logn-input" value="" autocomplete="off" type="text">
+			</div>
+			<div class="form_row">
+				<label for="Customer_Password">Password:</label><input name="Customer_Password" id="Customer_Password" class="textfield logn-input" autocomplete="off" type="password">
+			</div>
+			<div class="clear"></div>
+			<div class="sign-in-buttons"><input value="Login" class="button" type="submit"></div>
+			<div class="create-account">
+				<input value="New Account" class="button" onclick="window.location = '&mvt:global:baseurl;merchant.mvc\u003FScreen\u003DACAD';" type="button">
+			</div>
+		  </div>
+		  </form>
+	</div>
+	</mvt:if>
+
+	<div class="prod-history-img"></div>
+	
+	<div class="product-declimer">
+		<a href="/disclaimer.htm">Product Disclaimer</a>
+	</div>
+	<div class="payment-methods"></div>
+	
+</div>
+
+

@@ -1,0 +1,94 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Wish List: Customer Login</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="WLGN one-column">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="left-navigation"><mvt:item name="category_tree" /></td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+				<div class="margin-container">
+					<div class="header-message">
+						You must have a customer account to create / access a wish list
+					</div>
+
+					<form name="logn" action="&mvte:urls:WISH:secure;" method="post" autocomplete="off">
+						<mvt:if expr="ISNULL g.Action">
+							<mvt:assign name="g.Action" value="'LOGN,ATWL'" />
+						<mvt:else>
+							<mvt:assign name = "g.Action" value="'LOGN,' $ g.Action" />
+						</mvt:if>
+						
+						<input type="hidden" name="Action" value="&mvte:global:Action;" />
+						<input type="hidden" name="Quantity" value="&mvte:global:Quantity;" />
+						<input type="hidden" name="Line_ID" value="&mvte:global:Line_ID;" />
+						<input type="hidden" name="Group_ID" value="&mvte:global:Group_ID;" />
+						<input type="hidden" name="Wish_ID" value="&mvte:global:Wish_ID;" />
+						<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+
+						<mvt:assign name="l.settings:attribute_index" value="0" />
+						<mvt:foreach iterator="attribute" array="global:Product_Attributes">
+							<mvt:assign name="l.settings:attribute_index" value="l.settings:attribute_index + 1" />
+							<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:code" value="&mvte:attribute:code;" />
+							<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:value" value="&mvte:attribute:value;" />
+							<mvt:if expr="l.settings:attribute:template_code NE 0">
+								<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:template_code" value="&mvte:attribute:template_code;" />
+							</mvt:if>
+						</mvt:foreach>
+
+						<div class="section grey-border-right aligncenter">
+							<h3>Create New Account</h3>
+							<input type="button" value="Create Account" class="button" onclick="window.location = '&mvtj:urls:ACAD:auto_sep;WishList=1';" />
+						</div>
+
+						<div class="section">
+							<h3>Sign In</h3>
+							<mvt:if expr="l.settings:messages:error_message_count">
+							<div class="error-message">
+							<mvt:foreach iterator="error" array="messages:error_messages">
+								&mvt:error;
+							</mvt:foreach>
+							</div>
+							<mvt:elseif expr="l.settings:messages:information_message_count">
+							<div class="information-message">
+							<mvt:foreach iterator="message" array="messages:information_messages">
+								&mvt:message;
+							</mvt:foreach>
+							</div>
+							</mvt:if>
+							
+							<div class="form_row">
+								<label for="Customer_LoginEmail">Email Address:</label><input type="text" name="Customer_LoginEmail" id="Customer_LoginEmail" class="textfield logn-input" value="&mvte:global:Customer_LoginEmail;" autocomplete="off" />
+							</div>
+							<div class="form_row">
+								<label for="Customer_Password">Password:</label><input type="password" name="Customer_Password" id="Customer_Password" class="textfield logn-input" autocomplete="off" />
+							</div>
+							<div class="clear"></div>
+							<div class="sign-in-buttons"><mvt:item name="buttons" param="login" /></div>
+							<div class="forgot-password"><a href="&mvte:urls:FPWD:auto;">Forgot password?</a></div>
+						</div>
+					</form>
+				</div>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

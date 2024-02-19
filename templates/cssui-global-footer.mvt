@@ -1,0 +1,27 @@
+ <div class="noprint">
+<img src="/images/footerbar.jpg" width="740" height="26">
+</div>
+<div class="noprint footer-links">
+<div class="footer-logo">
+<img src="/images/1x1.gif" width="35" height="6"><a href="https://&mvt:global:domain:name;/"><img src="/images/footerlogo.jpg" alt="MIRACLE SOAP II" width="142" height="51" vspace="0" border="0"></a>
+</div>
+<img class="separator" src="/images/footerdivider.gif" width="2" height="47">
+          <div class="footer-top-block" width="520" valign="middle" align="CENTER"><img src="/images/1x1.gif" width="1" height="3">
+		<a href="/privacy.htm">Privacy Policy</a> | 
+		<a href="/security.htm">Security Policy</a> | 
+		<a href="/shipping.htm">Shipping Policy</a> | 
+		<mvt:item name="cssui_links" param="customer_account">Account Login</mvt:item>
+	  </div>
+ 	  <div class="footer-medium-block">
+            <a href="https://www.miraclesoap.com/contact-us.html">Contact Customer Support</a> | <strong>1-888-895-SOAP (7627)</strong>
+          </div>
+            <div class="footer-bottom-block"><a href="https://&mvt:global:domain:name;/">Home</a>
+            | <a href="https://&mvt:global:domain:name;/mprod.html">Products</a> 
+            | <a href="/testimonials.htm">Testimonials</a> 
+            | <a href="/producthistory.htm">Product History</a> 
+            | <a href="/disclaimer.htm">Disclaimer</a>
+            | <a href="&mvt:urls:AFED:auto;"><b>Affiliate Program</b></a>
+	    | <a href="https://www.miraclesoap.com/contact-us.html">Partners</a>
+        </div>
+        </div>
+<mvt:item name="ups" />

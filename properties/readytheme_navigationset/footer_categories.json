@@ -1,0 +1,66 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "id": "e5a128d58a02c224bcc389982149a51f",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_01\" target=\"_self\">Category 1</a>",
+            "link_dest": "category_01",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Category 1",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_01"
+        },
+        {
+            "active": 1,
+            "id": "5852e7de0d4807961c8a723f669d03a0",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_02\" target=\"_self\">Category 2</a>",
+            "link_dest": "category_02",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Category 2",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_02"
+        },
+        {
+            "active": 1,
+            "id": "b93c1841a617a554c8a134443791ee81",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_03\" target=\"_self\">Category 3</a>",
+            "link_dest": "category_03",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Category 3",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_03"
+        },
+        {
+            "active": 1,
+            "id": "9117655009b841b0bcbde0c47945b626",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_04\" target=\"_self\">Category 4</a>",
+            "link_dest": "category_04",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Category 4",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_04"
+        },
+        {
+            "active": 1,
+            "id": "813db09ee9b9f99d8b204ffafd3bddfa",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=sale\" target=\"_self\">Sale</a>",
+            "link_dest": "sale",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Sale",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=sale"
+        },
+        {
+            "active": 1,
+            "id": "4d9d86a19d97b3280c8e45df77a89cb7",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=featured\" target=\"_self\">Featured Products</a>",
+            "link_dest": "featured",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Featured Products",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=featured"
+        }
+    ],
+    "layout": "S",
+    "name": "Global Footer Category Menu"
+}

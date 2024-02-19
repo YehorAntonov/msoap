@@ -1,0 +1,80 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "id": "d19bbefee53e4c033220cdbbf9bcfa6d",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
+            "link_dest": "ABUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "About Us",
+            "url": "https://miraclesoap.mivatest.com/about-us.html"
+        },
+        {
+            "active": 1,
+            "id": "1f32960bbf96f0645f3363afc8ff772c",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "64a562b7f3c106d67687a2edf7654d7e",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-1\" target=\"_self\">Subcategory 1</a>",
+                    "link_dest": "Sub-cat-1",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 1",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-1"
+                },
+                {
+                    "active": 1,
+                    "id": "bf13da71cd47e55bdc60fc3d40239da3",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-2\" target=\"_self\">Subcategory 2</a>",
+                    "link_dest": "Sub-cat-2",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 2",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-2"
+                }
+            ],
+            "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact Us</a>",
+            "link_dest": "CTUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Contact Us",
+            "url": "https://miraclesoap.mivatest.com/contact-us.html"
+        },
+        {
+            "active": 1,
+            "id": "ffdc3c4e4f47a9e5816f77372eb9a779",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "7e069c1e53c8d803eaec5a5586cb917b",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-3\" target=\"_self\">Subcategory 3</a>",
+                    "link_dest": "Sub-cat-3",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 3",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-3"
+                },
+                {
+                    "active": 1,
+                    "id": "8864fe146af2014b12dcc6754c65e878",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-4\" target=\"_self\">Subcategory 4</a>",
+                    "link_dest": "Sub-cat-4",
+                    "link_targ": "_self",
+                    "link_type": "C",
+                    "name": "Subcategory 4",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=Sub-cat-4"
+                }
+            ],
+            "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">Frequent Questions</a>",
+            "link_dest": "FAQS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Frequent Questions",
+            "url": "https://miraclesoap.mivatest.com/faqs.html"
+        }
+    ],
+    "layout": "S",
+    "name": "Support Pages Navigation"
+}

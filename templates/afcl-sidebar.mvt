@@ -1,0 +1,32 @@
+<form id="logn" action="&mvte:urls:AFED:secure;" method="post" autocomplete="off">
+					<input type="hidden" name="Action" value="ALGI" />
+						<input type="hidden" value="Create Account" class="button" onclick="window.location = '&mvtj:urls:AFAD:auto;';" />
+					<div class="section">
+						<mvt:if expr="l.settings:messages:error_message_count">
+						<div class="error-message">
+						<mvt:foreach iterator="error" array="messages:error_messages">
+							&mvt:error;
+						</mvt:foreach>
+						</div>
+						<mvt:elseif expr="l.settings:messages:information_message_count">
+						<div class="information-message">
+						<mvt:foreach iterator="message" array="messages:information_messages">
+							&mvt:message;
+						</mvt:foreach>
+						</div>
+						</mvt:if>
+												
+						<div class="form_row">
+							<label for="Affiliate_Code">Login ID:</label><input type="text" name="Affiliate_Code" id="Affiliate_Code" class="textfield logn-input" autocomplete="off" />
+						</div>
+						<div class="form_row">
+							<label for="Affiliate_Password">Password:</label><input type="password" name="Affiliate_Password" id="Affiliate_Password" class="textfield logn-input" autocomplete="off" />
+						</div>
+						<div class="clear"></div>
+						<div class="sign-in-buttons"><mvt:item name="buttons" param="login" />
+						
+						</div>
+						<mvt:comment><div class="forgot-password"><a href="javascript:document.getElementById( 'logn' ).elements[ 'Action' ].value = 'AFPW'; document.getElementById( 'logn' ).submit();">Forgot password?</a></div></mvt:comment>
+					</div>
+					</form>
+

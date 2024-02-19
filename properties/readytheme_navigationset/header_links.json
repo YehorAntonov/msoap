@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "id": "83815a59b51aa2fd4c1a50bbcb5a1479",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
+            "link_dest": "deals",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Deals",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+        },
+        {
+            "active": 1,
+            "id": "faca032117b65bef141628c6ffc2e32a",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Help</a>",
+            "link_dest": "CTUS",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Help",
+            "url": "https://miraclesoap.mivatest.com/contact-us.html"
+        },
+        {
+            "active": 1,
+            "id": "ca2c0c0d6309abb7af3d2157bf26d06d",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/order-history-list.html\" target=\"_self\">Orders</a>",
+            "link_dest": "ORDH",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Orders",
+            "url": "https://miraclesoap.mivatest.com/order-history-list.html"
+        },
+        {
+            "active": 1,
+            "id": "3268607fe1a710aceea85898ef0d9c97",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Gift Cards</a>",
+            "link_dest": "SFNT",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Gift Cards",
+            "url": "https://miraclesoap.mivatest.com/"
+        }
+    ],
+    "layout": "S",
+    "name": "Global Site Header Links"
+}

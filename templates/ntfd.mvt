@@ -1,0 +1,46 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Not Found</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="NTFD">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="navigation-bar"><mvt:item name="navbar" /></div>
+	<table id="content-container">
+		<tr>
+			<td id="sidebar">
+				<mvt:item name="sidebar" />
+			</td>
+			<td id="main-content">
+				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+				
+				<h1>Not Found</h1>
+
+				<mvt:if expr = "l.settings:messages:error_message_count EQ 0">
+					The item you requested is not available at this time.
+				<mvt:else>
+					<mvt:foreach iterator="error" array="messages:error_messages">
+						&mvt:error;
+					</mvt:foreach>
+				</mvt:if>
+
+				<p><a href="&mvte:urls:SFNT:auto;">Home</a></p>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

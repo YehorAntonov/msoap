@@ -1,0 +1,220 @@
+<script type="text/javascript">
+// controls form submit behavior.
+function select_submit(obj){
+    if (obj.name=='country'){
+    obj.form.elements['state'].value="";
+        obj.form.elements['city'].value="";
+        obj.form.elements['zipcode'].value="";
+    }
+    if (obj.name=='state'){
+        obj.form.elements['city'].value="";
+        obj.form.elements['zipcode'].value="";
+    }
+    if (obj.name=='city'){
+        obj.form.elements['zipcode'].value="";
+    }
+    if (obj.name=='zipcode'){
+        obj.form.elements['country'].value="";
+    obj.form.elements['state'].value="";
+        obj.form.elements['city'].value="";
+    }
+    obj.form.elements['Pg:Current'].value="1";
+    if(obj.type != 'text') {
+        obj.form.submit();
+    }
+}
+</script>
+
+<table id="" width="100%" cellpadding="0" cellspacing="0" border="0" >
+<tr>
+    <td id="loc_header" colspan="2">
+        <h1>&mvt:maps_header;</h1>
+        <form id="gmap_form" name="gmap_form" method="POST" action="&mvte:global:sessionurl;store_code=&mvta:global:store_code;&amp;Screen=&mvta:global:screen;">
+
+            <input type="hidden" name="Pg:Length" value="&mvt:global:Pg:Length;" />
+            <input type="hidden" name="Pg:Current" value="&mvt:global:Pg:Current;" />
+
+            <div class="left">
+                <div class="form_row">
+                    <label for="country">Country: </label>
+                    <mvt:if expr="l.settings:maps_country_select AND l.settings:maps_list:countries">
+                        <select name="country" size="1" onchange="select_submit(this);">
+                            <option value="" />Select a Country</option>
+                            <mvt:item name="gmap" param="countries" />
+                        </select>
+                    <mvt:else>
+                        <input type="text" name="country" size="30" tabindex="1" id="country" value="&mvt:global:country;" />
+                    </mvt:if>
+                    <br />
+                </div>
+
+                <div class="form_row">
+                    <label for="state">State: </label>
+                    <mvt:if expr="l.settings:maps_state_select AND l.settings:maps_list:states">
+                        <select name="state" size="1" onchange="select_submit(this);">
+                            <option value="" />Select a State</option>
+                            <mvt:item name="gmap" param="states" />
+                        </select>
+                    <mvt:else>
+                        <input type="text" name="state" size="30" tabindex="2" id="state" value="&mvt:global:state;" />
+                    </mvt:if>
+                    <br />
+                </div>
+
+                <div class="form_row">
+                    <label for="city">City: </label>
+                    <mvt:if expr="l.settings:maps_city_select AND l.settings:maps_list:cities">
+                        <select name="city" size="1" onchange="select_submit(this);">
+                            <option value="" />Select a City</option>
+                            <mvt:item name="gmap" param="cities" />
+                        </select>
+                    <mvt:else>
+                        <input type="text" name="city" size="30" tabindex="3" id="city" value="&mvt:global:city;" />
+                    </mvt:if>
+                    <br />
+                </div>
+            </div>
+            <div class="right">
+                <div class="form_row">
+                    <label for="location_name">Location Name: </label>
+                    <input type="text" name="location_name" size="30" tabindex="4" id="location_name" value="&mvt:global:location_name;" onchange=""/>
+                </div>
+
+                <div class="form_row">
+                    <label for="zipcode">Zip Code: </label>
+                    <mvt:if expr="l.settings:maps_zipcode_select AND l.settings:maps_list:zipcodes">
+                        <select name="zipcode" size="1" onchange="select_submit(this);">
+                            <option value="" />Select a Zipcode</option>
+                            <mvt:item name="gmap" param="zipcodes" />
+                        </select>
+                    <mvt:else>
+                        <input type="text" name="zipcode" size="30" tabindex="1" id="zipcode" value="&mvt:global:zipcode;" onchange=""/>
+                    </mvt:if>
+                    &nbsp;<input style="" class="button" type="submit" name="go" value="Go" onclick="select_submit(this);"/>&nbsp;
+                    <input style class="button" type="button" name="reset" value="Reset" onclick="searchform_clear(this.form); this.form.submit();"/>
+                    <br />
+                </div>
+
+                <div class="form_row">
+                    <label>Search&nbsp;Radius:</label>
+                    <mvt:comment> Radio Buttons (maximum 4) </mvt:comment>
+                    <mvt:item name="gmap" param="radius" />
+                </div>
+            </div>
+            <br class="clear" />
+
+            <mvt:if expr="l.settings:maps_paging_off">
+                <div style="text-align: right;">
+                    Locations Found: <b>&mvt:maps_found;</b>
+                </div>
+            <mvt:else>
+                <div style="text-align: right; height: 20px;">
+                    <mvt:item name="gmap" param="pagination" />
+                </div>
+            </mvt:if>
+        </form>
+    </td>
+</tr>
+
+<tr>
+    <td id="loc_map_wrapper">
+        <mvt:comment> Google Map goes here </mvt:comment>
+        <div id="map"></div>
+    </td>
+    <td id="loc_stores_wrapper">
+        <div id="loc_stores">
+            <mvt:if expr="l.settings:maps_found EQ 0">
+                <b>No Locations Found</b>
+            </mvt:if>
+
+            <mvt:comment>
+                Database fields available:
+                id,disp_order,latitude,longitude,active,
+                name,address1,address2,city,state,postal_code,country,
+                web_page,web_site,email,phone1,phone2,hours,comments,
+                image1,image2
+
+                Example: &mvte:map:name;
+            </mvt:comment>
+
+            <mvt:foreach iterator="map" array="maps">
+                 <div class="store">
+                    <mvt:if expr="l.settings:map:latitude AND l.settings:map:longitude">
+                        <mvt:comment> Populate the map popup </mvt:comment>
+                       <div class="icon"
+                            item="&mvt:map:count;"
+                            name="&mvte:map:name;"
+                            address="&mvte:map:address1; &mvte:map:address2;"
+                            address1="&mvte:map:city;, &mvte:map:state; &mvte:map:postal_code; &mvte:map:country;"
+                            phone="&mvte:map:phone1;"
+                            lat="&mvte:map:latitude;"
+                            lng="&mvte:map:longitude;">&mvt:map:count;</div>
+                    <mvt:else>
+                        <div class="noicon">&nbsp;</div>
+                    </mvt:if>
+                    <mvt:if expr="l.settings:map:image2">
+                        <img src="&mvt:map:image2;" alt="&mvt:map:name;" align="right" />
+                    </mvt:if>
+                    <div class="name">
+                        <mvt:if expr="l.settings:map:image1">
+                            <img src="&mvt:map:image1;" alt="&mvt:map:name;" />
+                        <mvt:else>
+                            &mvt:map:name;
+                        </mvt:if>
+                        <br />
+                        <div class="detail">
+                            <mvt:if expr="l.settings:map:descript">
+                                &mvt:map:descript;<br />
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:address1 OR l.settings:map:address2">
+                                &mvt:map:address1; &mvte:map:address2;<br />
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:city">
+                                &mvt:map:city;,&nbsp;
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:state">
+                                &mvt:map:state;&nbsp;
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:postal_code">
+                                &mvt:map:postal_code;&nbsp;
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:country">
+                                &mvt:map:country;
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:city OR
+                                          l.settings:map:state OR
+                                          l.settings:map:postal_code OR
+                                          l.settings:map:country">
+                                <br />
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:phone1">
+                                &mvt:map:phone1; <br />
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:phone2">
+                                &mvt:map:phone2; <br />
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:hours">
+                                &mvt:map:hours; <br />
+                            </mvt:if>
+
+                            <mvt:if expr="l.settings:map:web_page">
+                            <!--
+                                <a class="map_link" href="https://&mvt:global:domain:name;/category/&mvt:map:web_page;.html">Learn more about this store.</a><br />
+                            -->
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:distance">
+                                Distance: &mvt:map:distance; miles<br />
+                            </mvt:if>
+                            <mvt:if expr="l.settings:map:web_site">
+                                <a class="map_link" href="https://&mvt:map:web_site;" target="_blank">&mvt:map:web_site;</a><br />
+                            </mvt:if>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </mvt:foreach>
+
+        </div> <mvt:comment> end #loc_stores </mvt:comment>
+    </td>
+</tr>
+</table>

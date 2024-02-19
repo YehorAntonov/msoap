@@ -1,0 +1,138 @@
+
+<script language="JavaScript">
+<!--
+function ReloadForm( form_field )
+{
+	document.location.reload();
+	document.getElementsByName( "OrderDetails_Format" ).value = form_field;
+}
+//-->
+</script>
+<table>
+	<tr class="heading">
+		<td class="order-reorder">&nbsp;</td>
+		<td class="order-description">Product Description</td>
+		<td class="order-status">Status</td>
+		<td class="order-quantity">Quantity</td>
+		<td class="order-price">Price/Ea.</td>
+		<td class="order-total">Total</td>
+	</tr>
+
+	<mvt:foreach iterator="item" array="order:groups">
+	<tr>
+		<mvt:if expr="l.settings:item:option_count">
+			<mvt:assign name="l.settings:rowspan" value="l.settings:item:option_count + 1" />
+		<mvt:else>
+			<mvt:assign name="l.settings:rowspan" value="1" />
+		</mvt:if>
+
+		<td class="order-reorder" rowspan="&mvt:rowspan;">
+			<mvt:if expr="l.settings:item:reorder EQ 1">
+				<a href="&mvte:urls:ORDS:secure_sep;Action=ADPR&Product_Code=&mvta:item:code;&Quantity=1&Order_ID=&mvt:order:id;">reorder</a>
+			<mvt:else>
+				&nbsp;
+			</mvt:if>
+		</td>
+
+		<td class="order-description">
+			&mvt:item:name; <mvt:if expr="l.settings:item:upsold">(Special Offer)</mvt:if>
+		</td>
+		<td class="order-status">&mvt:item:order_status;</td>
+		<td class="order-quantity">&mvt:item:quantity;</td>
+		<td class="order-price">
+			&mvt:item:formatted_price;
+		</td>
+		<td class="order-total">
+			&mvt:item:formatted_subtotal;
+		</td>
+	</tr>
+
+	<mvt:foreach iterator="option" array="item:options">
+	<tr class="item-options">
+		<td colspan="2">
+			<mvt:if expr="l.settings:option:option_id">
+				&mvt:option:attr_code;: &mvt:option:opt_code;
+			<mvt:elseif expr="NOT ISNULL l.settings:option:data">
+				<mvt:if expr="( l.settings:option:attr_code EQ 'digitaldownload' ) AND ( NOT ISNULL l.settings:option:digital_download_url )">
+					<a href="&mvte:option:digital_download_url;" target="_blank">Digital Download</a>
+				<mvt:else>
+					&mvt:option:attr_code;: &mvt:option:data;
+				</mvt:if>
+			<mvt:elseif expr="NOT ISNULL l.settings:option:data_long">
+				&mvt:option:attr_code;: &mvt:option:data_long;
+			<mvt:else>
+				&mvt:option:attr_code;
+			</mvt:if>
+			<mvt:foreach iterator="discount" array="option:discounts">
+				<mvt:if expr="l.settings:discount:display">
+					<div class="order-discount">&mvt:discount:descrip;: &mvt:discount:formatted_discount;</div>
+				</mvt:if>
+			</mvt:foreach>
+		</td>
+		<td>&nbsp;</td>
+		<td class="order-price">
+			<mvt:if expr="l.settings:option:base_price">
+				&mvt:option:formatted_base_price;
+			<mvt:else>
+				&nbsp;
+			</mvt:if>
+		</td>
+		<td class="order-total">
+			<mvt:if expr="l.settings:option:subtotal_base_price OR l.settings:option:subtotal">
+				<mvt:if expr="l.settings:option:subtotal_base_price NE l.settings:option:subtotal">
+					<span style="text-decoration: line-through;">&mvt:option:formatted_subtotal_base_price;</span>
+				</mvt:if>
+				&mvt:option:formatted_subtotal;
+			<mvt:else>
+				&nbsp;
+			</mvt:if>
+		</td>
+	</tr>
+	</mvt:foreach>
+	</mvt:foreach>
+
+
+	<mvt:foreach iterator="charge" array="order:charges">
+	<tr class="order-charges">
+		<td colspan="2">&nbsp;</td>
+		<td colspan="3" class="charge-description">&mvt:charge:descrip;:</td>
+		<td class="charge-fee">&mvt:charge:formatted_disp_amt;</td>
+	</tr>
+	</mvt:foreach>
+
+	<tr class="totals">
+		<td colspan="4">&nbsp;</td>
+		<td class="total-prompt">Total:</td>
+		<td class="formatted-total">&mvt:order:formatted_total;</td>
+	</tr>
+
+	<mvt:foreach iterator="payment" array="order:payments">
+	<tr class="order-payments">
+		<td >&nbsp;</td>
+		<td colspan="4" class="charge-description">
+			<mvt:if expr="l.settings:payment:type EQ 6">
+				Refund:
+			<mvt:else>
+				Payment:
+			</mvt:if>
+			&mvt:payment:desc;:
+		</td>
+		<td class="charge-fee">
+			<mvt:if expr="l.settings:payment:type EQ 6">
+				&mvt:payment:formatted_amount;
+			<mvt:else>
+				&mvt:payment:formatted_amount_negative;
+			</mvt:if>
+		</td>
+	</tr>
+	</mvt:foreach>
+</table>
+
+<mvt:if expr="l.settings:order:have_custom_order_field_values">
+	<br />
+	<table>
+		<tr class="heading">
+			<td colspan="2">Additional Order Information</td>
+		</tr>
+	</table>
+</mvt:if>

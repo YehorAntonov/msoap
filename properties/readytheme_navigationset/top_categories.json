@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "active": 1,
+            "id": "315778cb096648fd600a67d500c48406",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=coffee\" target=\"_self\">Coffee</a>",
+            "link_dest": "coffee",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Coffee",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=coffee"
+        },
+        {
+            "active": 1,
+            "id": "881e27aee85dbf77eba687c676744afa",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=tea\" target=\"_self\">Tea</a>",
+            "link_dest": "tea",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Tea",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=tea"
+        },
+        {
+            "active": 1,
+            "id": "eacc3280547ac47c74f546882b60cf47",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=equipment\" target=\"_self\">Equipment</a>",
+            "link_dest": "equipment",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Equipment",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=equipment"
+        },
+        {
+            "active": 1,
+            "id": "0a2d14a0f1cfe9dbdc38d0ed9b7bce4e",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=drinkware\" target=\"_self\">Drinkware</a>",
+            "link_dest": "drinkware",
+            "link_targ": "_self",
+            "link_type": "C",
+            "name": "Drinkware",
+            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=drinkware"
+        }
+    ],
+    "layout": "S",
+    "name": "Top Categories"
+}

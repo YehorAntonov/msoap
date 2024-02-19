@@ -1,0 +1,105 @@
+<div class="line-item">
+<div class="clear"></div>
+	<table>
+		<tr class="header-row">
+			<td class="item-name">
+				Name
+			</td>
+			<td class="item-price">
+				Price
+			</td>
+			<mvt:if expr="l.settings:inventory:active">
+			<td class="item-availability">
+				Availability
+			</td>
+			</mvt:if>
+			<td class="item-buttons">
+				&nbsp;
+			</td>
+		</tr>
+		<mvt:foreach iterator="product" array="search_results:products">
+		<mvt:if expr = "l.pos1 MOD 2">
+		<tr class="alt_row">
+		<mvt:else>
+		<tr>
+		</mvt:if>
+			<td class="item-name">
+				&mvt:product:name;
+			</td>
+			<td class="item-price">
+					&mvt:product:formatted_base_price;
+			</td>
+			<mvt:if expr="l.settings:inventory:active">
+			<td class="item-availability">
+				<mvt:if expr="l.settings:product:inv_active">
+				&mvt:product:inv_long;
+				<mvt:else>
+				&nbsp;
+				</mvt:if>
+			</td>
+			</mvt:if>
+			<mvt:if expr="l.settings:product:inv_level NE 'out'">
+			<td class="item-buttons">
+				<form method="post" action="&mvte:urls:BASK:rr;">
+				<input type="hidden" name="Old_Screen" value="&mvte:global:Screen;" />
+				<input type="hidden" name="Old_Search" value="&mvte:global:Search;" />
+				<input type="hidden" name="Action" value="ADPR" />
+				<input type="hidden" name="Quantity" value="1" />
+				<input type="hidden" name="Attributes" value="Yes" />
+				<input type="hidden" name="Product_Code" value="&mvte:product:code;" />
+				<input type="hidden" name="Current_Product_Code" value="&mvte:global:Product_Code;" />
+				<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+				<input type="hidden" name="Offset" value="&mvte:global:SearchOffset;" />
+				<input type="hidden" name="AllOffset" value="&mvte:global:AllOffset;" />
+				<input type="hidden" name="CatListingOffset" value="&mvte:global:CatListingOffset;" />
+				<input type="hidden" name="RelatedOffset" value="&mvte:global:RelatedOffset;" />
+				<input type="hidden" name="SearchOffset" value="&mvte:global:SearchOffset;" />
+				<mvt:item name="buttons" param="AddToBasketL" />
+				</form>
+			</td>
+			</mvt:if>
+		</tr>
+		</mvt:foreach>
+	</table>
+	<mvt:if expr="NOT l.settings:search_results:page_disp_count GT 0">
+		<mvt:if expr="g.SearchOffset OR g.SearchNextOffset">
+		<div class="next-previous">
+			<mvt:if expr="g.SearchOffset GT 0">
+			<div class="previous-button">
+				<form method="post" action="&mvte:urls:_self:auto;">
+				<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+				<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+				<input type="hidden" name="Search" value="&mvte:global:Search;" />
+				<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
+				<input type="hidden" name="Sort_By" value="&mvte:global:Sort_By;" />
+				<input type="hidden" name="Offset" value = "&mvte:global:SearchPrevOffset;" />
+				<input type="hidden" name="AllOffset" value = "&mvte:global:AllOffset;" />
+				<input type="hidden" name="CatListingOffset" value = "&mvte:global:CatListingOffset;" />
+				<input type="hidden" name="RelatedOffset" value = "&mvte:global:RelatedOffset;" />
+				<input type="hidden" name="SearchOffset" value = "&mvte:global:SearchPrevOffset;" />
+				<mvt:item name="buttons" param="Previous" />
+				</form>
+			</div>
+			</mvt:if>
+		
+			<mvt:if expr="g.SearchNextOffset GT 0">
+			<div class="next-button">
+				<form method="post" action="&mvte:urls:_self:auto;">
+				<input type="hidden" name="Category_Code" value="&mvte:global:Category_Code;" />
+				<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+				<input type="hidden" name="Search" value="&mvte:global:Search;" />
+				<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
+				<input type="hidden" name="Sort_By" value="&mvte:global:Sort_By;" />
+				<input type="hidden" name="Offset" value = "&mvte:global:SearchNextOffset;" />
+				<input type="hidden" name="AllOffset" value = "&mvte:global:AllOffset;" />
+				<input type="hidden" name="CatListingOffset" value = "&mvte:global:CatListingOffset;" />
+				<input type="hidden" name="RelatedOffset" value = "&mvte:global:RelatedOffset;" />
+				<input type="hidden" name="SearchOffset" value = "&mvte:global:SearchNextOffset;" />
+				<mvt:item name="buttons" param="Next" />
+				</form>
+			</div>
+			</mvt:if>
+		</div>
+		</mvt:if>
+	</mvt:if>
+</div>

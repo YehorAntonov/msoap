@@ -1,0 +1,168 @@
+<style>
+h1 {
+    font-style: italic;
+    padding: 0 0 1px 223px;
+    color: #016194;
+    margin:0;
+}
+
+h6 {
+	 margin: 10px 0 5px 9px;
+    	font-size: 12px;
+}
+
+h4 {
+color: #016194;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 55px;
+}
+
+h4 a {
+    padding-left: 4px;
+    font-style: initial;
+}
+
+.box {
+/** border: 1px solid #c0c0c0;
+   background: url(/images/bluefade_v.jpg) repeat-x;**/
+    box-sizing: border-box;
+    height: auto;
+    display: block;
+}
+#customer-fields.non-editable {
+    margin: 0 0 32px 0;
+    line-height: 18px;
+}
+#sidebar-content {
+    padding-top: 74px;
+}
+.order-purchased, .order-quantity {
+    text-align: center;
+}
+.heading {
+	font-size: 12px;
+}
+.address_description {
+    padding-bottom: 9px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#customer-fields.non-editable label, #affiliate-fields.non-editable label {
+    margin: 0;
+}
+#basket-contents table tr.basket-heading td, #basket-contents table tr.basket-heading td, #order-contents table tr.heading td {
+    background-color: #016194;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1em;
+    white-space: nowrap;
+    border: none;
+}
+#basket-contents.non-editable td, #basket-contents.editable td, #order-contents td {
+    background-color: transparent;
+    border:none;
+}
+#order-contents table {
+    border: 1px solid;
+}
+.totals {
+background: url(/images/bluefade_v.jpg) repeat-x 0 -50px;
+height: 40px;
+}
+.bluefade {
+border: 1px solid #c0c0c0;
+    background: url(/images/bluefade_v.jpg) repeat-x;
+    box-sizing: border-box;
+    padding: 13px;
+}
+.CEML .change-emailaddress-section {
+    width: 500px;
+    margin: 0 auto 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.CEML label {
+    width: 160px;
+}
+.button {
+    COLOR: #fff;
+    BACKGROUND-COLOR: #125D84;
+}
+#customer-fields.editable .form_row, #affiliate-fields.editable .form_row {
+    margin: 0 0 0 0;
+}
+#customer-fields select, #affiliate-fields select {
+    margin: 0 0 1px 0;
+}
+.ACED #customer-fields label {
+    font-size: 12px;
+}
+</style>
+<div id="sidebar-content">
+	<mvt:if expr="g.Basket:cust_id">
+		<div class="logged-in">
+			<span>Welcome, &mvt:global:customer:ship_fname;. </span>
+			<div class="logout-link"><a href="&mvte:urls:SFNT:secure_sep;Action=LOGO">Logout</a></div>
+		</div>	
+	<mvt:else>
+	<div class="account-login">
+		<form id="logn" action="&mvt:global:baseurl;merchant.mvc?Screen=BASK" method="post" autocomplete="off">
+		<input name="Action" value="LOGN" type="hidden">
+		<div class="section">
+		<div class="form_row">
+			<label for="Customer_LoginEmail">Your E-Mail:</label><input name="Customer_LoginEmail" id="Customer_LoginEmail" class="textfield logn-input" value="" autocomplete="off" type="text">
+		</div>
+		<div class="form_row">
+			<label for="Customer_Password">Password:</label><input name="Customer_Password" id="Customer_Password" class="textfield logn-input" autocomplete="off" type="password">
+		</div>
+		<div class="clear"></div>
+		<div class="sign-in-buttons"><input value="Login" class="button" type="submit"></div>
+
+		</div>
+		</form>
+	</div>
+	</mvt:if>
+	<div class="category-tree">
+<mvt:if expr="g.Basket:cust_id">
+	<nav class="category-tree">
+	<h5 class="category-tree-heading">Account Links</h5>
+	<h6>Personal Information</h6>
+	<ul>
+		<li class="level">	
+	           <a href="/customer-account.html">Your Account</a>
+	        </li>
+		<li class="level">	
+	           <a href="/customer-edit.html">Edit Information</a>
+	        </li>
+		<li class="level">	
+	           <a href="/change-email-address.html">Change E-Mail</a>
+	        </li>
+		<li class="level">	
+	           <a href="/change-password.html">Change Password</a>
+	        </li>
+	</ul>
+	<h6>My Orders</h6>
+	<ul>
+		<li class="level">	
+	           <a href="/customer-account.html">Order History</a>
+	        </li>
+	</ul>
+</mvt:if>
+<mvt:comment>
+	<h6>Address Book</h6>
+	<ul>
+		<li class="level">	
+	           <a href="/customer-address-book.html">Edit Addresses</a>
+	        </li>
+		<li class="level">	
+	           <a href="/customer-address-add.html">Add New Address</a>
+	        </li>
+	</ul>
+</mvt:comment>	
+	</nav>
+	</div>
+	<mvt:item name="basket" />
+	<div class="payment-methods"></div>
+</div>

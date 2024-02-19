@@ -1,0 +1,27 @@
+MMSearchField.prototype.onMenuAppendHeader = function()
+{
+	return null;
+}
+
+MMSearchField.prototype.onMenuAppendItem = function( data )
+{
+	var span;
+
+	span            = newElement( 'span', null, null, null );
+	span.innerHTML  = data;
+
+	return span;
+}
+
+MMSearchField.prototype.onMenuAppendStoreSearch = function( search_value )
+{
+	var item;
+
+	item                = newElement( 'div', { 'class': 'mm_searchfield_menuitem mm_searchfield_menuitem_storesearch' }, null, null );
+	item.element_text   = newTextNode( 'Search store for product "' + search_value + '"', item );
+
+	return item;
+}
+
+MMSearchField.prototype.onFocus = function( e ) { ; };
+MMSearchField.prototype.onBlur  = function( e ) { ; };

@@ -1,0 +1,58 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Search</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="SRCH">
+<div id="site-container" class="claerfix">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<mvt:comment><div id="navigation-bar"><mvt:item name="navbar" /></div></mvt:comment>
+	<div id="content-container" class="clearfix">
+			<mvt:comment><td id="left-navigation"><mvt:item name="category_tree" /></td></mvt:comment>
+			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+			<div id="sidebar">
+				<mvt:item name="sidebar" />
+			</div>
+			<div id="main-content" class="claerfix">
+				
+				<mvt:comment><div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div></mvt:comment>
+
+				<mvt:comment><h1>Search Results</h1></mvt:comment>
+
+				<div class="search-again">
+				<form method="post" action="&mvte:urls:SRCH:rr;">	
+				<label for="Search" class="bold">Search For The Following Word(s):</label>
+				<input type="text" name="Search" id="Search" class="textfield" value="&mvte:global:Search;" />
+				<mvt:item name="buttons" param="Search" />
+				</form>
+				</div>
+
+				<mvt:if expr="NOT ISNULL g.Search">
+					<mvt:if expr="l.settings:search_product_count EQ 0">
+				<span class="italic">No products matched your search criteria</span>
+					<mvt:else>
+				<div id="search-results"><mvt:item name="search_results" /></div></div>
+					</mvt:if>
+				</mvt:if>
+
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</div>
+	</div>
+	<div id="bottom-wrap"></div>
+	
+</div>
+<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+<mvt:if expr="s.Remote_Addr EQ '159.224.93.203'">
+    <mvt:item name="ry_toolbelt" param="eval|varlist('l', '', l.all_settings)" />
+    <mvt:item name="ry_toolbelt" param="eval|varlist('g', '', l.all_settings)" />
+</mvt:if>
+</body>
+</html>

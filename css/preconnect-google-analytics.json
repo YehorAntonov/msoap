@@ -1,0 +1,13 @@
+{
+    "code": "preconnect-google-analytics",
+    "type": "E",
+    "filepath": "//www.google-analytics.com",
+    "is_global": true,
+    "active": false,
+    "attributes": [
+        {
+            "name": "rel",
+            "value": "preconnect"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "code": "stylesheet",
+    "type": "C",
+    "is_global": true,
+    "active": false,
+    "attributes": [
+        {
+            "name": "media",
+            "value": "all"
+        },
+        {
+            "name": "rel",
+            "value": "stylesheet"
+        },
+        {
+            "name": "type",
+            "value": "text/css"
+        }
+    ],
+    "linked_resources": []
+}

@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>&mvt:store:name;: Phone Order Manager - Customers</title>
+	<base href="&mvt:global:basehref;">
+	<mvt:item name="head" />
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td align="left" valign="top" width="100%">
+		<br>
+		<mvt:item name="phone_order_customers" />
+	</td></tr>
+	</table>
+</body>
+</html>

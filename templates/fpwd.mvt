@@ -1,0 +1,88 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Customer Forgot Password</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+<style>
+.bluefade {
+border: 1px solid #c0c0c0;
+    background: url(/images/bluefade_v.jpg) repeat-x;
+    box-sizing: border-box;
+    padding: 13px;
+}
+.LOGN label {
+width: 134px;
+}
+.FPWD .forgot-password-section {
+    text-align: left;
+    width: 488px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+h1 {
+    font-style: italic;
+    padding: 0 0 1px 223px;
+    color: #016194;
+    margin:0;
+}
+</style>
+</head>
+<body class="LOGN FPWD one-column">
+    <div id="site-container">
+        <div id="global-header">
+            <mvt:item name="hdft" param="global_header" />
+        </div>
+        <table id="content-container">
+            <tr>
+                <td id="main-content">
+                    <div id="page-header">
+                        <mvt:item name="hdft" param="header" />
+                    </div>
+                  <div class="margin-container clearfix">
+				<form id="fpwd" name="fpwd" action="&mvte:urls:ACLN:secure;" method="post" autocomplete="off">
+				<input type="hidden" name="Action" value="EMPW" />
+				<div class="forgot-password-section bluefade">
+					<h3 style="margin: 0 0 12px 0;">Forgot Password</h3>
+					<mvt:if expr="l.settings:messages:error_message_count">
+					<div class="error-message">
+					<mvt:foreach iterator="error" array="messages:error_messages">
+						&mvt:error;
+					</mvt:foreach>
+					</div>
+					<mvt:elseif expr="l.settings:messages:information_message_count">
+					<div class="information-message">
+					<mvt:foreach iterator="message" array="messages:information_messages">
+						&mvt:message;
+					</mvt:foreach>
+					</div>
+					</mvt:if>
+					Enter the email address associated with your account. If you no longer use the email address associated with your account, please contact customer support.<br /><br />
+					<mvt:if expr="g.Customer_LoginEmail_Invalid">
+					<div class="form_row invalid">
+					<mvt:else>
+					<div class="form_row">
+					</mvt:if>
+						<label class="required" for="Customer_LoginEmail">Email Address:</label><input type="text" name="Customer_LoginEmail" id="Customer_LoginEmail" class="textfield fpwd-input" autocomplete="off" /><input type="submit" value="Submit" class="button" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				</form>
+				</div>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>
+

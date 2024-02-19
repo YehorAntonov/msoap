@@ -1,0 +1,19 @@
+			</table>
+			<table border="1" cellpadding="1" cellspacing="0" width="64%"
+					style="border-collapse: collapse; font-size: 11px; font-family: Arial, Helvetica, sans-serif; float: right; margin-top: -1px;">
+				<tr>
+					<td align="right" width="99%"><b>Subtotal: </b></td>
+					<td align="right">&mvte:global:formatted_cost;</td>
+				</tr>
+				<tr>
+					<td align="right"><b>&mvt:global:shipping:descrip;</b></td>
+					<td align="right"><!-- &mvte:global:shipping:formatted_disp_amt; --></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Sales Tax: <!-- &mvt:global:tax:descrip; --></b></td>
+					<td align="right"><!-- &mvte:global:tax:formatted_disp_amt; --></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

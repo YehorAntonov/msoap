@@ -1,0 +1,160 @@
+<mvt:comment> If the spray is the only item then exit </mvt:comment>
+<mvt:if expr="(miva_array_max(l.settings:order:groups) EQ 1) AND (l.settings:order:groups[1]:code EQ '1067')">
+	<mvt:exit />
+</mvt:if>
+
+<mvt:assign name="g.tab" value="asciichar(9)" />
+<mvt:assign name="g.lf" value="asciichar(10)" />
+<mvt:assign name="g.cr" value="asciichar(13)" />
+<mvt:assign name="g.crlf" value="asciichar(13) $ asciichar(10)" />
+<mvt:assign name="g.comma" value="','" />
+<mvt:assign name="g.sep" value="g.comma" />
+
+<mvt:comment> Import and parse the data into l.settings:tedco_display </mvt:comment>
+<mvt:capture variable="l.import">
+	<mvt:item name="tedco_import_data" />
+</mvt:capture>
+<mvt:assign name="l.importList" value="miva_splitstring( l.import, g.cr, l.settings:importlist, 'trim' )" />
+<mvt:assign name="l.import" value="''" />
+
+<mvt:foreach iterator="line" array="importlist">
+	<mvt:if expr="l.pos1 EQ 1 OR l.settings:line EQ ''">
+		<mvt:comment>
+			Skip the header
+			Display_Order	TEDCO ID 	Multiple	TEDCO Name 	Product_Code	Product_Name
+		</mvt:comment>
+		<mvt:foreachcontinue />
+	</mvt:if>
+
+	<mvt:assign name="l.record" 				value="''" />
+	<mvt:assign name="l.record:Display_Order" 	value="gettoken(l.settings:line,g.sep,1)" />
+	<mvt:assign name="l.record:Tedco_ID" 		value="gettoken(l.settings:line,g.sep,2)" />
+	<mvt:assign name="l.record:Multiple" 		value="gettoken(l.settings:line,g.sep,3)" />
+	<mvt:assign name="l.record:Tedco_Name" 		value="gettoken(l.settings:line,g.sep,4)" />
+	<mvt:assign name="l.record:product_code" 	value="gettoken(l.settings:line,g.sep,5)" />
+	<mvt:assign name="l.record:product_name" 	value="gettoken(l.settings:line,g.sep,6)" />	
+	<mvt:assign name="l.record:qty" 			value="'0'" />
+	<mvt:assign name="l.record:cost" 			value="'0'" />
+
+	<mvt:assign name="l.max_display" 			value="miva_array_insert( l.settings:tedco_display, l.record, -1 )" />
+</mvt:foreach>
+
+<mvt:comment> Apply the order items quantity to elements in l.settings:tedco_display:qty </mvt:comment>
+<mvt:foreach iterator="item" array="order:groups">
+	<mvt:if expr="isdigit( l.item:code )">
+		<mvt:do file="g.Module_Library_DB" name="l.success" value="Product_Load_Code( l.settings:item:code, l.product )" />
+		<mvt:assign name="l.settings:item:unit_cost"  value="l.product:cost" />
+	</mvt:if>
+
+	<mvt:assign name="l.settings:tedco_found" value="''" />
+	<mvt:assign name="l.hasMultiple" value="0" />
+	<mvt:assign name="l.found" value="0" />
+	<mvt:assign name="l.found_single" value="0" />
+	<mvt:assign name="l.found" value="miva_array_filter_ref( l.settings:tedco_display, 1, l.record, 'l.record:product_code EQ l.settings:item:code', l.settings:tedco_found )" />
+
+	<mvt:if expr="NOT l.found">
+		<mvt:foreachcontinue />
+	</mvt:if>
+
+	<mvt:if expr="l.settings:tedco_found[1]:multiple GT 1">
+		<mvt:assign name="l.hasMultiple" value="1" />
+	</mvt:if>
+
+	<mvt:if expr="':' IN l.settings:tedco_found[1]:Tedco_ID">
+		<mvt:comment> This item is a pack or multiple products. Add to multiple Tedco Ids :qty field </mvt:comment>
+		<mvt:assign name="l.void" value="miva_splitstring( l.settings:tedco_found[1]:Tedco_ID, ':', l.settings:multi_pack, 'trim' )" />
+		<mvt:foreach iterator="tedco_id" array="multi_pack">
+			<mvt:assign name="l.search_expression" value="'l.record:Tedco_ID EQ l.settings:tedco_id AND l.record:multiple EQ 1'" />
+			<mvt:assign name="l.found_single" value="miva_array_filter_ref( l.settings:tedco_display, 1, l.record, l.search_expression, l.settings:tedco_single )" />
+			<mvt:if expr="l.found_single">
+				<mvt:assign name="l.settings:tedco_single[1]:qty" 	value="l.settings:tedco_single[1]:qty 	+ (l.settings:item:Quantity * l.settings:tedco_found[1]:multiple)" />
+				<mvt:assign name="l.settings:tedco_single[1]:cost" 	value="l.settings:tedco_single[1]:cost  + (l.settings:item:Quantity * (l.settings:item:unit_cost / 5))" />
+			</mvt:if>
+		</mvt:foreach>
+
+	<mvt:elseif expr="l.hasMultiple">
+		<mvt:comment> This items is a case of single product. Add 12 to the single :qty field</mvt:comment>
+		<mvt:assign name="l.search" value="int(l.settings:tedco_found[1]:display_order)" />
+		<mvt:assign name="l.found_single" value="miva_array_filter_ref( l.settings:tedco_display, 1, l.record, 'l.record:Display_Order EQ l.search', l.settings:tedco_single )" />
+		<mvt:if expr="l.found_single">
+			<mvt:assign name="l.settings:tedco_single[1]:qty" 	value="l.settings:tedco_single[1]:qty   + (l.settings:item:Quantity * l.settings:tedco_found[1]:multiple)" />
+			<mvt:assign name="l.settings:tedco_single[1]:cost" 	value="l.settings:tedco_single[1]:cost  + (l.settings:item:Quantity * l.settings:item:unit_cost)" />
+		</mvt:if>
+
+	<mvt:else>
+		<mvt:comment> Add to the single :qty field </mvt:comment>
+		<mvt:assign name="l.settings:tedco_found[1]:qty" 	value="l.settings:tedco_found[1]:qty   + (l.settings:item:Quantity * 1)" />
+		<mvt:assign name="l.settings:tedco_found[1]:cost" 	value="l.settings:tedco_found[1]:cost  + (l.settings:item:Quantity * l.settings:item:unit_cost)" />
+
+	</mvt:if>
+
+</mvt:foreach>
+
+<mvt:comment> Get charges. </mvt:comment>
+<mvt:foreach iterator="charge" array="order:charges">
+	<mvt:if expr="l.settings:charge:type EQ 'SHIPPING'">
+		<mvt:assign name="g.shipping" value="l.settings:charge" />
+	</mvt:if>
+	<mvt:if expr="l.settings:charge:type EQ 'TAX'">
+		<mvt:assign name="g.tax" value="l.settings:charge" />
+	</mvt:if>
+</mvt:foreach>
+
+<mvt:comment> Start output </mvt:comment>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Your Miracle II Store order &mvt:order:id;</title>
+<base href="&mvt:global:basehref;" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta charset="utf-8" />
+<link href="/favicon.ico" rel="SHORTCUT ICON">
+<style>
+small {
+	font-size: 11px;
+}
+.ul {
+	border-bottom: 1px solid black;
+	width: 5cm;
+}
+th {
+	background-color: white;
+}
+</style>
+</head>
+<body style="font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+
+	<mvt:item name="hdft" param="header" />	
+
+	<mvt:comment> Loop through l.settings:tedco_display and output each line </mvt:comment>
+	<mvt:assign name="g.header_number" value="1" />
+	<mvt:foreach iterator="line" array="tedco_display">
+		<mvt:comment> Skip these </mvt:comment>
+		<mvt:if expr="':' IN l.settings:line:Tedco_ID">
+			<mvt:foreachcontinue />
+		</mvt:if>
+		<mvt:if expr="'.1' IN l.settings:line:Display_Order">
+			<mvt:foreachcontinue />
+		</mvt:if>
+
+		<mvt:comment> Supress zero display </mvt:comment>
+		<mvt:if expr="l.settings:line:qty EQ 0">
+			<mvt:assign   name="l.settings:line:qty" value="''" />
+		</mvt:if>
+		<mvt:if expr="l.settings:line:cost EQ 0">
+			<mvt:assign  name="l.settings:line:cost" value="''" />
+		<mvt:else>
+			<mvt:assign  name="l.settings:line:cost" value="l.settings:line:cost ROUND 2" />
+			<mvt:assign name="g.total_cost" 		 value="g.total_cost + l.settings:line:cost" />
+		</mvt:if>
+
+		<mvt:comment> Output each line </mvt:comment>
+		<mvt:item name="content" param="" />
+	</mvt:foreach>
+
+	<mvt:do file="g.Module_Store_Module_Currency" name="g.formatted_cost"  value="CurrencyModule_addFormatting( g.Store_Module_Currency, g.total_cost )" />
+
+	<mvt:item name="hdft" param="footer" />	
+
+</body>
+</html>

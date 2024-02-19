@@ -1,0 +1,39 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: Affiliate Login</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+<style>
+.AFCL #sidebar {
+    padding-top: 13px;
+}
+</style>
+</head>
+<body class="AFCL">
+<div id="site-container"  class="clearfix">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<mvt:comment><div id="navigation-bar"><mvt:item name="navbar" /></div></mvt:comment>
+	<div id="content-container"  class="clearfix">
+			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+			<div id="sidebar"><mvt:item name="sidebar" /></div>
+			<div id="main-content">			
+				<div class="affilate-container">
+					<mvt:item name="affilate-content" />
+				</div>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</td>
+		</tr>
+	</table>
+	<div id="bottom-wrap"></div>
+	
+</div>
+<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</body>
+</html>

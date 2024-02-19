@@ -1,0 +1,13 @@
+{
+    "code": "runtimecombofacets",
+    "type": "L",
+    "branchless_filepath": "scripts/00000002/b07/runtime_combofacets.js",
+    "is_global": true,
+    "active": false,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        }
+    ]
+}

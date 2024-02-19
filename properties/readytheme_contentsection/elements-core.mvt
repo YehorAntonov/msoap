@@ -1,0 +1,133 @@
+<mvt:comment>
+| The following links are used to determine which files get included in the framework export.
+</mvt:comment>
+
+<mvt:comment>
+	Images
+	<link href="themes/colossus/core/images/img_cvv.png">
+	<link href="themes/colossus/core/images/logo_amex.png">
+	<link href="themes/colossus/core/images/logo_check.png">
+	<link href="themes/colossus/core/images/logo_discover.png">
+	<link href="themes/colossus/core/images/logo_mastercard.png">
+	<link href="themes/colossus/core/images/logo_paypal.png">
+	<link href="themes/colossus/core/images/logo_ppal_invc.png">
+	<link href="themes/colossus/core/images/logo_ppal_opay.png">
+	<link href="themes/colossus/core/images/logo_ppal_osel.png">
+	<link href="themes/colossus/core/images/logo_visa.png">
+
+	
+	Category Title Images
+	<link href="graphics/00000002/Promos.png">
+	
+	
+	Category Tree Images
+	<link href="graphics/00000002/Bag-Brown-Bird.jpg">
+	<link href="graphics/00000002/rooibos-thm.jpg">
+	<link href="graphics/00000002/machine-thm.jpg">
+	<link href="graphics/00000002/drinkware_2_360x360.jpg">
+	<link href="graphics/00000002/shirt-black-pepper_360x360.jpg">
+	<link href="graphics/00000002/seasonal_360x360.jpg">
+	<link href="graphics/00000002/Bag-Blue-Fox2_360x353.jpg">
+	<link href="graphics/00000002/Kenya_360x360.jpg">
+	<link href="graphics/00000002/coldbrew-thm.jpg">
+	<link href="graphics/00000002/office-coffee-thm.jpg">
+	<link href="graphics/00000002/sampler_360x360.jpg">
+	<link href="graphics/00000002/ChocolateArtboard 59_360x360.jpg">
+	<link href="graphics/00000002/roast-thm.jpg">
+	<link href="graphics/00000002/region-thm.jpg">
+	<link href="graphics/00000002/top-seller-thm.jpg">
+	<link href="graphics/00000002/kcups-thm.jpg">
+	<link href="graphics/00000002/bytype-thm.jpg">
+	<link href="graphics/00000002/limited-thm.jpg">
+	<link href="graphics/00000002/onsale-thm.jpg">
+	<link href="graphics/00000002/ginger-thm.jpg">
+	<link href="graphics/00000002/honeybush-thm.jpg">
+	<link href="graphics/00000002/teabag-thm.jpg">
+	<link href="graphics/00000002/calm-tea-thm.jpg">
+	<link href="graphics/00000002/caffeinated-thm.jpg">
+	<link href="graphics/00000002/flavor-thm.jpg">
+	<link href="graphics/00000002/reserve-thm.jpg">
+	<link href="graphics/00000002/giftcard-thm.jpg">
+	<link href="graphics/00000002/instant-thm.jpg">
+	<link href="graphics/00000002/light-roast-thm.jpg">
+	<link href="graphics/00000002/med-roast-thm.jpg">
+	<link href="graphics/00000002/dark-roast-thm.jpg">
+	<link href="graphics/00000002/americas-thm.jpg">
+	<link href="graphics/00000002/africas-thm.jpg">
+	<link href="graphics/00000002/indo-thm.jpg">
+	<link href="graphics/00000002/espresso-htm.jpg">
+	<link href="graphics/00000002/coldbrew2.jpg">
+	<link href="graphics/00000002/decaf-thm.jpg">
+	<link href="graphics/00000002/signature-thm.jpg">
+	<link href="graphics/00000002/single_origin.jpg">
+	<link href="graphics/00000002/chai-thm.jpg">
+	<link href="graphics/00000002/spicy-thm.jpg">
+	<link href="graphics/00000002/fruity-thm.jpg">
+	<link href="graphics/00000002/berry-thm.jpg">
+	<link href="graphics/00000002/citrus-thm.jpg">
+	<link href="graphics/00000002/ginger-thm.jpg">
+	<link href="graphics/00000002/floral-thm.jpg">
+	<link href="graphics/00000002/mint-thm.jpg">
+	<link href="graphics/00000002/dessert-thm.jpg">
+	<link href="graphics/00000002/Chamomile-thm.jpg">
+	<link href="graphics/00000002/nutty-thm.jpg">
+	<link href="graphics/00000002/smoky-thm.jpg">
+	<link href="graphics/00000002/plain-thm.jpg">
+	<link href="graphics/00000002/black-thm.jpg">
+	<link href="graphics/00000002/oolong-thm.jpg">
+	<link href="graphics/00000002/green-thm.jpg">
+	<link href="graphics/00000002/white-thm.jpg">
+	<link href="graphics/00000002/yellow-thm.jpg">
+	<link href="graphics/00000002/purple-thm.jpg">
+	<link href="graphics/00000002/Pu-Erh-thm.jpg">
+	<link href="graphics/00000002/herbal-thm.jpg">
+	<link href="graphics/00000002/rooibos-thm.jpg">
+	<link href="graphics/00000002/honeybush-thm.jpg">
+	<link href="graphics/00000002/yerba-mate-thm.jpg">
+	<link href="graphics/00000002/fairtrade-thm.jpg">
+	<link href="graphics/00000002/loose-leaf-thm.jpg">
+	<link href="graphics/00000002/teabag-thm.jpg">
+	<link href="graphics/00000002/kcup-thm.jpg">
+	<link href="graphics/00000002/pyramid-thm.jpg">
+	<link href="graphics/00000002/iced-tea-thm.jpg">
+	<link href="graphics/00000002/adventurous-thm.jpg">
+	<link href="graphics/00000002/energy-thm.jpg">
+	<link href="graphics/00000002/calm-tea-thm.jpg">
+	<link href="graphics/00000002/blissful-thm.jpg">
+	<link href="graphics/00000002/caffeinated-thm.jpg">
+	<link href="graphics/00000002/Caffeine-free-thm.jpg">
+	<link href="graphics/00000002/decaf-thm.jpg">
+	<link href="graphics/00000002/Africa-N.jpg">
+	<link href="graphics/00000002/China-N.jpg">
+	<link href="graphics/00000002/India-N.jpg">
+	<link href="graphics/00000002/Japan-N.jpg">
+	<link href="graphics/00000002/Nepal-N.jpg">
+	<link href="graphics/00000002/SA-N.jpg">
+	<link href="graphics/00000002/SriLanka-N.jpg">
+	<link href="graphics/00000002/Taiwan-N.jpg">
+	<link href="graphics/00000002/seasonal-thm.jpg">
+	<link href="graphics/00000002/year_round.jpg">
+	<link href="graphics/00000002/sampler-thm.jpg">
+	<link href="graphics/00000002/giftcard-thm.jpg">
+	<link href="graphics/00000002/gift.jpg">
+	
+	
+	Secondary Category Title Images
+	<link href="graphics/00000002/Promo 1.png">
+	<link href="graphics/00000002/Promo 2.png">
+	
+	
+	Top Categories Custom Field Images
+	<link href="graphics/00000002/coffee.jpg">
+	<link href="graphics/00000002/tea.jpg">
+	<link href="graphics/00000002/equipment.jpg">
+	<link href="graphics/00000002/drinkware.jpg">
+	
+	
+	404 Page
+	<link href="404.html">
+	
+	
+	Robots
+	<link href="robots.txt">
+</mvt:comment>

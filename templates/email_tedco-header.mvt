@@ -1,0 +1,131 @@
+<table border="0" cellpadding="8px" width="720px" class="tedco_header" style="font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+	<tr align="left">
+		<td>
+			<h3 style="margin: 0;">Tedco, Inc.</h3>
+		</td>
+		<td align="right">
+			<h3 style="margin: 0;">MiracleSoap.com</h3>
+		</td>
+	</tr>
+</table>
+<table border="0" width="720px" class="tedco_content" style="font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<th>Order Form</th>
+		<td>Date:</td>
+		<td class="ul">
+			&mvt:order:date; &mvt:order:time;
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td align="center"><b>Bill To:</b></td>
+		<td>&nbsp;</td>
+		<td></td>
+		<td align="center"><b>Ship To:</b></td>
+	</tr>
+	<tr>
+		<td>Name:</td>
+		<td class="ul">MIRACLESOAP, INC</td>
+		<td>&nbsp;</td>
+		<td>Name:</td>
+		<td class="ul">&mvt:order:ship_fname; &mvt:order:ship_lname;&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Address:</td>
+		<td class="ul">MiracleSoap.com</td>
+		<td>&nbsp;</td>
+		<td>Address:</td>
+		<td class="ul">&mvt:order:ship_comp&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="ul">Sioux Falls, SD 57105</td>
+		<td>&nbsp;</td>
+		<td></td>
+		<td class="ul">&mvt:order:ship_addr;&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Phone #:</td>
+		<td class="ul">888-895-7627</td>
+		<td>&nbsp;</td>
+		<td></td>
+		<td class="ul">&mvt:order:ship_city;, &mvt:order:ship_state; &mvt:order:ship_zip;, &mvt:order:ship_cntry;&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Email:</td>
+		<td class="ul">orders@miraclesoap.com</td>
+		<td>&nbsp;</td>
+		<td>Phone #:</td>
+		<td class="ul">&mvt:order:ship_phone;&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td colspan="2" valign="top">
+		<table border="0" style="border-collapse: collapse; font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+			<tr>
+				<td>Payment Method</td>
+				<td>
+				<table border="1" cellpadding="1" cellspacing="0" style="border-collapse: collapse; font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+					<tr>
+						<td>AMEX</td>
+						<td>M. O.</td>
+						<td>On Acct</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>YES</td>
+						<td>YES</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><br>
+				</td>
+			</tr>
+			<tr>
+				<td><big><b>Purchase Order #</b></big></td>
+				<td><big><b>&mvt:order:id;</b></big></td>
+			</tr>
+		</table>
+		</td>
+		<td colspan="2">
+		<table border="0" width="100%" style="border-collapse: collapse; font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+			<tr>
+				<td>&nbsp;</td>
+				<td align="center"><b>Credit Card Information</b></td>
+			</tr>
+			<tr>
+				<td>Card #</td>
+				<td class="ul">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Exp Date:</td>
+				<td class="ul">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Card Holder:</td>
+				<td class="ul">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td class="ul">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td class="ul">&nbsp;</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="10" width="720px" style="font-size: 11px; font-family: Arial, Helvetica, sans-serif;">
+	<tr>
+		<td valign="top" width="40%" >
+			<table border="1" cellpadding="1" cellspacing="0" width="100%" style="border-collapse: collapse; font-size: 11px; font-family: Arial, Helvetica, sans-serif;">

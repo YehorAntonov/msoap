@@ -1,0 +1,26 @@
+<mvt:item name="ry_toolbelt" param="category_children|'mprod'" />
+  
+
+<mvt:if expr="l.settings:category_children">
+<div class="row bg-white main-content-row sub-category-layout">
+    <mvt:if expr="l.settings:category_children">
+      <mvt:foreach iterator="subcat" array="category_children">
+	<mvt:item name="customfields" param="Read_Category_Code( l.settings:subcat:code, 'description', l.settings:customfield:description )" />
+        <div class="column subcat uppercase clearfix">
+          <div class="cat_image_holder">
+            <a href="&mvt:subcat:href" title="&mvt:subcat:name;" class="clearfix">
+              <img src="&mvt:subcat:image_title;" title="&mvt:subcat:name;">
+            </a>
+	  </div>
+	  <div class="category_description">
+		<p class="category_description-name">&mvte:subcat:name;</p>
+		<p class="category_description-specification">&mvt:customfield:description;</p>
+		<a href="&mvt:subcat:href;" title="&mvt:subcat:name;">learn more</a><br>
+		<a href="&mvt:subcat:href;" title="&mvt:subcat:name;">purchase</a><br>
+	  </div>
+        </div>
+
+    </mvt:foreach>
+  </mvt:if>
+</div>
+</mvt:if>

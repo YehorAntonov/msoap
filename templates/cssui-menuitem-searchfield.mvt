@@ -1,0 +1,13 @@
+<div class="mm_searchfield_menuitem">
+	<span class="mm_searchfield_menuitem_image_container">
+		<mvt:if expr="NOT ISNULL l.settings:product:imagetypes:main">
+			<img class="mm_searchfield_menuitem_image" src="&mvte:product:imagetypes:main;" alt="&mvte:product:name;" />
+		</mvt:if>
+	</span>
+	<span class="mm_searchfield_menuitem_title_container">
+		<span class="mm_searchfield_menuitem_field mm_searchfield_menuitem_name">&mvte:product:code; - &mvte:product:name;</span>
+		<span class="mm_searchfield_menuitem_field mm_searchfield_menuitem_price">Price: 
+			<span class="bold">&mvt:product:formatted_base_price;</span>
+		</span>
+	</span>
+</div>

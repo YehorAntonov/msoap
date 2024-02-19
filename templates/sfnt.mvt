@@ -1,0 +1,33 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;</title>
+	</mvt:if>
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<meta http-equiv="Content-Language" content="en-us"><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="Author" content="Miracle II MiracleSoap.com">
+	<meta name="keywords" content="Miracle II Company, Miracle 2 Soap, Miracle II Gel Neturalizer, MiracleSoap Home, Distributor Tedco, Louisiana, Organic Miracle Products">
+	<meta name="description" content="Miracle II Soap Clayton Tedeton. The contents are all natural and the results are inspirational. Original Miracle II miraclesoap.com">
+	<meta name="msvalidate.01" content="BCF700DFFF702444362D8D82F7BCD650" />
+	<mvt:item name="head" param="head_tag" />
+<mvt:comment>
+	<mvt:item name="head" param="css_list" />	
+</mvt:comment>
+
+<!-- PayPal BEGIN -->
+  <script>
+      ;(function(a,t,o,m,s){a[m]=a[m]||[];a[m].push({t:new Date().getTime(),event:'snippetRun'});var f=t.getElementsByTagName(o)[0],e=t.createElement(o),d=m!=='paypalDDL'?'&m='+m:'';e.async=!0;e.src='https://www.paypal.com/tagmanager/pptm.js?id='+s+d;f.parentNode.insertBefore(e,f);})(window,document,'script','paypalDDL','c7d6780d-ee76-4567-b60d-82fc38cf114f');
+    </script>
+  <!-- PayPal END -->
+</head>
+<body class="SFNT">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>		
+	<mvt:item name="content"/>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>

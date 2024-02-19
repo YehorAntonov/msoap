@@ -1,0 +1,420 @@
+
+<style>
+	.shipestimate_dialog
+	{
+		display: none;
+		z-index: 11;
+		position: absolute;
+		background: #FFF;
+		padding: 8px;
+		border: 1px solid #434343;
+	}
+	
+	.shipestimate_backing
+	{
+		display: none;
+		z-index: 10;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		background: #FFF;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+	}
+
+	#shipestimate_inputfields_tbody input[type="text"], #shipestimate_inputfields_tbody select
+	{
+		width: 98%;
+	}
+</style>
+
+<mvt:if expr="g.Secure">
+	<form method="get" name="shipestimate_form" action="&mvte:global:secure_sessionurl;" target="shipestimate">
+<mvt:else>
+	<form method="get" name="shipestimate_form" action="&mvte:global:sessionurl;" target="shipestimate">
+</mvt:if>
+	<input type="hidden" name="Screen" value="SERT" />
+	<input type="hidden" name="Store_Code" value="&mvte:store:code;" />
+	
+	<div id="shipestimate_dialog" class="shipestimate_dialog">
+		<table id="shipestimate_table" width="350">
+			<tbody id="shipestimate_close_tbody">
+				<tr>
+					<td align="right" colspan="2"><a href="#" id="shipestimate_close">Close</a></td>
+				</tr>
+			</tbody>
+			<tbody id="shipestimate_inputfields_tbody">
+				<tr>
+					<td align="center" colspan="2"><b>Calculate Shipping: Basket</b></td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td nowrap align="right"><label for="shipestimate_state_select"><b>State/Province:</b></label></td>
+					<td width="100%">
+						<select name="ShipEstimate:ship_state_select" id="shipestimate_state_select">
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'OU'">
+								<option value="OU" selected>Outside US</option>
+							<mvt:else>
+								<option value="OU">Outside US</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'AK'">
+								<option value="AK" selected>Alaska</option>
+							<mvt:else>
+								<option value="AK">Alaska</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'AL'">
+								<option value="AL" selected>Alabama</option>
+							<mvt:else>
+								<option value="AL">Alabama</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'AR'">
+								<option value="AR" selected>Arkansas</option>
+							<mvt:else>
+								<option value="AR">Arkansas</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'AZ'">
+								<option value="AZ" selected>Arizona</option>
+							<mvt:else>
+								<option value="AZ">Arizona</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'CA'">
+								<option value="CA" selected>California</option>
+							<mvt:else>
+								<option value="CA">California</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'CO'">
+								<option value="CO" selected>Colorado</option>
+							<mvt:else>
+								<option value="CO">Colorado</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'CT'">
+								<option value="CT" selected>Connecticut</option>
+							<mvt:else>
+								<option value="CT">Connecticut</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'DC'">
+								<option value="DC" selected>District of Columbia</option>
+							<mvt:else>
+								<option value="DC">District of Columbia</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'DE'">
+								<option value="DE" selected>Delaware</option>
+							<mvt:else>
+								<option value="DE">Delaware</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'FL'">
+								<option value="FL" selected>Florida</option>
+							<mvt:else>
+								<option value="FL">Florida</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'GA'">
+								<option value="GA" selected>Georgia</option>
+							<mvt:else>
+								<option value="GA">Georgia</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'HI'">
+								<option value="HI" selected>Hawaii</option>
+							<mvt:else>
+								<option value="HI">Hawaii</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'IA'">
+								<option value="IA" selected>Iowa</option>
+							<mvt:else>
+								<option value="IA">Iowa</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'ID'">
+								<option value="ID" selected>Idaho</option>
+							<mvt:else>
+								<option value="ID">Idaho</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'IL'">
+								<option value="IL" selected>Illinois</option>
+							<mvt:else>
+								<option value="IL">Illinois</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'IN'">
+								<option value="IN" selected>Indiana</option>
+							<mvt:else>
+								<option value="IN">Indiana</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'KS'">
+								<option value="KS" selected>Kansas</option>
+							<mvt:else>
+								<option value="KS">Kansas</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'KY'">
+								<option value="KY" selected>Kentucky</option>
+							<mvt:else>
+								<option value="KY">Kentucky</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'LA'">
+								<option value="LA" selected>Louisiana</option>
+							<mvt:else>
+								<option value="LA">Louisiana</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'MA'">
+								<option value="MA" selected>Massachusetts</option>
+							<mvt:else>
+								<option value="MA">Massachusetts</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'MD'">
+								<option value="MD" selected>Maryland</option>
+							<mvt:else>
+								<option value="MD">Maryland</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'ME'">
+								<option value="ME" selected>Maine</option>
+							<mvt:else>
+								<option value="ME">Maine</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'MI'">
+								<option value="MI" selected>Michigan</option>
+							<mvt:else>
+								<option value="MI">Michigan</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'MN'">
+								<option value="MN" selected>Minnesota</option>
+							<mvt:else>
+								<option value="MN">Minnesota</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'MO'">
+								<option value="MO" selected>Missouri</option>
+							<mvt:else>
+								<option value="MO">Missouri</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'MS'">
+								<option value="MS" selected>Mississippi</option>
+							<mvt:else>
+								<option value="MS">Mississippi</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'MT'">
+								<option value="MT" selected>Montana</option>
+							<mvt:else>
+								<option value="MT">Montana</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'NC'">
+								<option value="NC" selected>North Carolina</option>
+							<mvt:else>
+								<option value="NC">North Carolina</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'ND'">
+								<option value="ND" selected>North Dakota</option>
+							<mvt:else>
+								<option value="ND">North Dakota</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'NE'">
+								<option value="NE" selected>Nebraska</option>
+							<mvt:else>
+								<option value="NE">Nebraska</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'NH'">
+								<option value="NH" selected>New Hampshire</option>
+							<mvt:else>
+								<option value="NH">New Hampshire</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'NJ'">
+								<option value="NJ" selected>New Jersey</option>
+							<mvt:else>
+								<option value="NJ">New Jersey</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'NM'">
+								<option value="NM" selected>New Mexico</option>
+							<mvt:else>
+								<option value="NM">New Mexico</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'NV'">
+								<option value="NV" selected>Nevada</option>
+							<mvt:else>
+								<option value="NV">Nevada</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'NY'">
+								<option value="NY" selected>New York</option>
+							<mvt:else>
+								<option value="NY">New York</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'OH'">
+								<option value="OH" selected>Ohio</option>
+							<mvt:else>
+								<option value="OH">Ohio</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'OK'">
+								<option value="OK" selected>Oklahoma</option>
+							<mvt:else>
+								<option value="OK">Oklahoma</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'OR'">
+								<option value="OR" selected>Oregon</option>
+							<mvt:else>
+								<option value="OR">Oregon</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'PA'">
+								<option value="PA" selected>Pennsylvania</option>
+							<mvt:else>
+								<option value="PA">Pennsylvania</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'RI'">
+								<option value="RI" selected>Rhode Island</option>
+							<mvt:else>
+								<option value="RI">Rhode Island</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'SC'">
+								<option value="SC" selected>South Carolina</option>
+							<mvt:else>
+								<option value="SC">South Carolina</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'SD'">
+								<option value="SD" selected>South Dakota</option>
+							<mvt:else>
+								<option value="SD">South Dakota</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'TN'">
+								<option value="TN" selected>Tennessee</option>
+							<mvt:else>
+								<option value="TN">Tennessee</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'TX'">
+								<option value="TX" selected>Texas</option>
+							<mvt:else>
+								<option value="TX">Texas</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'UT'">
+								<option value="UT" selected>Utah</option>
+							<mvt:else>
+								<option value="UT">Utah</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'VA'">
+								<option value="VA" selected>Virginia</option>
+							<mvt:else>
+								<option value="VA">Virginia</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'VT'">
+								<option value="VT" selected>Vermont</option>
+							<mvt:else>
+								<option value="VT">Vermont</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'WA'">
+								<option value="WA" selected>Washington</option>
+							<mvt:else>
+								<option value="WA">Washington</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'WI'">
+								<option value="WI" selected>Wisconsin</option>
+							<mvt:else>
+								<option value="WI">Wisconsin</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'WV'">
+								<option value="WV" selected>West Virginia</option>
+							<mvt:else>
+								<option value="WV">West Virginia</option>
+							</mvt:if>
+							<mvt:if expr="g.ShipEstimate:ship_state_select EQ 'WY'">
+								<option value="WY" selected>Wyoming</option>
+							<mvt:else>
+								<option value="WY">Wyoming</option>
+							</mvt:if>
+							<option value="">Select State/Province</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td nowrap align="right"><label for="shipestimate_state">Other State/Province:</label></td>
+					<td width="100%"><input type="text" name="ShipEstimate:ship_state" value="&mvte:global:ShipEstimate:ship_state;" id="shipestimate_state" class="textfield" /></td>
+				</tr>
+				<tr>
+					<td nowrap align="right"><label for="shipestimate_zip"><b>ZIP/Postal Code:</b></label></td>
+					<td width="100%"><input type="text" name="ShipEstimate:ship_zip" value="&mvte:global:ShipEstimate:ship_zip;" id="shipestimate_zip" class="textfield" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="hidden" name="ShipEstimate:ship_cntry" value="US" /></td>
+				</tr>
+			</tbody>
+			<tbody id="shipestimate_shippingmethods_tbody">
+				<tr>
+					<td align="center" id="shipestimate_shippingmethods" colspan="2"></td>
+				</tr>
+			</tbody>
+			<tbody id="shipestimate_controllers_tbody">
+				<tr>
+					<td align="right" colspan="2">
+						<input type="submit" id="shipestimate_calculate" class="button" value="Calculate Shipping" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<a href="#" id="shipestimate_show">Estimate Shipping</a>
+</form>
+<div id="shipestimate_backing" class="shipestimate_backing"></div>
+
+<script type="text/javascript">
+	function shipestimate()
+	{
+		var self = this;
+
+		this.dialog                     = document.getElementById( 'shipestimate_dialog' );
+		this.backing                    = document.getElementById( 'shipestimate_backing' );
+		this.inputfields_tbody          = document.getElementById( 'shipestimate_inputfields_tbody' );
+		this.shippingmethods_tbody      = document.getElementById( 'shipestimate_shippingmethods_tbody' );
+		this.shippingmethods            = document.getElementById( 'shipestimate_shippingmethods' );
+		this.body                       = document.getElementsByTagName( 'body' )[ 0 ];
+
+		this.close                      = document.getElementById( 'shipestimate_close' );
+		this.calculate                  = document.getElementById( 'shipestimate_calculate' );
+		this.show                       = document.getElementById( 'shipestimate_show' );
+	
+		if ( this.close )               this.close.onclick         = function() { self.Hide(); return false; }
+		if ( this.calculate )           this.calculate.onclick     = function() { self.Calculate(); return false; }
+		if ( this.show )                this.show.onclick          = function() { self.Show(); return false; }
+		if ( this.backing )             this.backing.onclick       = function() { self.Hide(); return false; }
+	}
+
+	shipestimate.prototype.Show = function()
+	{
+		var self = this;
+
+		this.dialog.style.display                 = 'block';
+		this.backing.style.display                = 'inline-block';
+		this.shippingmethods_tbody.style.display  = 'none';
+		this.inputfields_tbody.style.display      = '';
+		this.calculate.style.display              = 'inline-block';
+
+		window.scrollTo( 0, 0 );
+	
+		window.onresize = function() { self.Resize(); }
+		
+		self.Resize();
+	}
+
+	shipestimate.prototype.Hide = function()
+	{
+		this.dialog.style.display   = 'none';
+		this.backing.style.display  = 'none';
+	}
+
+	shipestimate.prototype.Calculate = function()
+	{
+		document.shipestimate_form.submit();
+		this.Hide();
+	}
+
+	shipestimate.prototype.Resize = function()
+	{
+		if ( document.documentElement.clientHeight > document.body.scrollHeight )
+		{
+			if ( this.backing ) this.backing.style.height = document.documentElement.clientHeight + 'px';
+		}
+		else
+		{
+			if ( this.backing ) this.backing.style.height = ( document.body.scrollHeight > document.documentElement.scrollHeight ) ? document.body.scrollHeight + 'px' : document.documentElement.scrollHeight + 'px';
+		}
+		
+		if ( this.dialog ) this.dialog.style.left = ( ( document.body.offsetWidth / 2 ) - ( this.dialog.offsetWidth / 2 ) ) + 'px';
+		if ( this.dialog ) this.dialog.style.top  = 100 + 'px';
+	}
+
+	var shipestimate_init = new shipestimate();
+</script>

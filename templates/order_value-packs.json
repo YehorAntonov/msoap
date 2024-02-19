@@ -1,0 +1,15 @@
+{
+    "inline_css": {
+        "template_filename": "order_value-packs-inline_css.mvc"
+    },
+    "tbr_order_contents": {
+        "advanced": 1,
+        "b_height": 75,
+        "b_width": 75,
+        "constrain": "B",
+        "groups": 1,
+        "lineitemcoupons": 0,
+        "lineitemdiscounts": 0,
+        "template_filename": "order_value-packs-tbr_order_contents.mvc"
+    }
+}

@@ -1,0 +1,5 @@
+	<mvt:foreach iterator="item" array="order:groups">
+		<mvt:if expr="l.settings:item:code EQ '1040'">
+			<mvt:assign name="g.1040_in_order" value="1" />
+		</mvt:if>
+	</mvt:foreach>

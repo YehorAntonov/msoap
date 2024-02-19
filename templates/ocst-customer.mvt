@@ -1,0 +1,773 @@
+<div id="fields-key">
+	<div style="margin-left: 112px;"><span class="required">Bold</span> = Required / <span class="italic">Italic</span> = Optional</div>
+	<mvt:if expr="( g.UI_Exception EQ 1 ) AND ( ( g.Session:cache:last_ui_exception EQ 'order_invalid_info' ) OR ( g.Session:cache:last_ui_exception EQ 'customer_invalid_addinfo' ) OR ( g.Session:cache:last_ui_exception EQ 'customer_invalid_editinfo' ) )">
+	<div><span class="red">Red</span> = Invalid</div>
+	</mvt:if>
+</div>
+<div id="ship-to">
+	<h2 class="fields-heading">
+		Ship To:
+		<span id="shipping_controls" class="controls">
+			<mvt:if expr="g.Action AND g.shipping_to_show">
+			<input name="shipping_to_show" id="shipping_to_show" type="checkbox" value="1" class="checkbox" checked />
+			<mvt:else>
+			<input name="shipping_to_show" id="shipping_to_show" type="checkbox" value="1" class="checkbox" />
+			</mvt:if>
+			<label for="shipping_to_show">same as billing</label>
+		</span>
+	</h2>
+
+	<div id="shipping_fields">
+		<mvt:if expr="g.Basket:cust_id AND g.Customer_Session_Verified">
+			<div class="&mvte:global:ShipID_Row;">
+				<label class="required" for="ShipID">Saved Address:</label>
+				<select name="ShipID" id="shipping_selector">
+					<option value="-1">&lt;New&gt;</option>
+					<mvt:foreach iterator="address" array="customer:addresses">
+						<mvt:if expr="toupper( l.settings:address:fname ) EQ toupper( g.ShipFirstName ) AND
+										 toupper( l.settings:address:lname ) EQ toupper( g.ShipLastName ) AND
+										 toupper( l.settings:address:email ) EQ toupper( g.ShipEmail ) AND
+										 toupper( l.settings:address:comp ) EQ toupper( g.ShipCompany ) AND
+										 toupper( l.settings:address:phone ) EQ toupper( g.ShipPhone ) AND
+										 toupper( l.settings:address:fax ) EQ toupper( g.ShipFax ) AND
+										 toupper( l.settings:address:addr1 ) EQ toupper( g.ShipAddress1 ) AND
+										 toupper( l.settings:address:addr2 ) EQ toupper( g.ShipAddress2 ) AND
+										 toupper( l.settings:address:city ) EQ toupper( g.ShipCity ) AND
+										 (
+										 	( ( NOT ISNULL g.ShipStateSelect ) AND ( toupper( l.settings:address:state ) EQ toupper( g.ShipStateSelect ) ) ) OR
+										 	( ( ISNULL g.ShipStateSelect ) AND ( toupper( l.settings:address:state ) EQ toupper( g.ShipState ) ) )
+										 ) AND
+										 toupper( l.settings:address:zip ) EQ toupper( g.ShipZip ) AND
+										 toupper( l.settings:address:cntry ) EQ toupper( g.ShipCountry )">
+							<option value="&mvte:address:id;" selected>&mvte:address:descrip;</option>
+						<mvt:else>
+							<option value="&mvte:address:id;">&mvte:address:descrip;</option>
+						</mvt:if>
+					</mvt:foreach>
+				</select>
+			</div>
+			<div class="form_row">
+				<label class="italic" for="ShipDescription">Description:</label>
+				<input type="text" name="ShipDescription" id="ShipDescription" value="&mvte:global:ShipDescription;" class="textfield" />
+			</div>
+		</mvt:if>
+		<div class="&mvte:global:ShipFirstName_Row;">
+			<label class="required" for="ShipFirstName">First Name:</label>
+			<input type="text" name="ShipFirstName" id="ShipFirstName" value="&mvte:global:ShipFirstName;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipLastName_Row;">
+			<label class="required" for="ShipLastName">Last Name:</label>
+			<input type="text" name="ShipLastName" id="ShipLastName" value="&mvte:global:ShipLastName;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipEmail_Row;">
+			<label class="required" for="ShipEmail">Email Address:</label>
+			<input type="text" name="ShipEmail" id="ShipEmail" value="&mvte:global:ShipEmail;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipPhone_Row;">
+			<label class="required" for="ShipPhone">Phone Number:</label>
+			<input type="text" name="ShipPhone" id="ShipPhone" value="&mvte:global:ShipPhone;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipCompany_Row;">
+			<label class="italic" for="ShipCompany">Company:</label>
+			<input type="text" name="ShipCompany" id="ShipCompany" value="&mvte:global:ShipCompany;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipAddress1_Row;">
+			<label class="required" for="ShipAddress1">Address:</label>
+			<input type="text" name="ShipAddress1" id="ShipAddress1" value="&mvte:global:ShipAddress1;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipAddress2_Row;">
+			<label class="italic" for="ShipAddress2">Address 2:</label>
+			<input type="text" name="ShipAddress2" id="ShipAddress2" value="&mvte:global:ShipAddress2;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipCity_Row;">
+			<label class="required" for="ShipCity">City:</label>
+			<input type="text" name="ShipCity" id="ShipCity" value="&mvte:global:ShipCity;" class="textfield" />
+		</div>
+		<mvt:if expr="g.States_Empty">
+			<div class="&mvte:global:ShipState_Row;">
+				<label class="required" for="ShipState">State/Province:</label>
+				<input type="text" name="ShipState" id="ShipState" value="&mvte:global:ShipState;" class="textfield" />
+			</div>
+		<mvt:else>
+			<div class="&mvte:global:ShipState_Row;">
+				<label class="required" for="ShipStateSelect">State/Province:</label>
+				<mvt:item name="states" param="ShipStateSelect" />
+			</div>
+
+		</mvt:if>
+		<div class="&mvte:global:ShipZip_Row;">
+			<label class="required" for="ShipZip">Zip/Postal Code:</label>
+			<input type="text" name="ShipZip" id="ShipZip" value="&mvte:global:ShipZip;" class="textfield" />
+		</div>
+		<div class="&mvte:global:ShipCountry_Row;">
+			<label class="italic" for="ShipCountry">Country:</label>
+			<mvt:item name="countries" param="ShipCountry" />
+		</div>
+	</div>
+</div>
+<div id="bill-to">
+	<h2 class="fields-heading">
+		Bill To:
+		<span id="billing_controls" class="controls">
+			<mvt:if expr="g.Action AND g.billing_to_show">
+			<input name="billing_to_show" id="billing_to_show" type="checkbox" value="1" class="checkbox" checked />
+			<mvt:else>
+			<input name="billing_to_show" id="billing_to_show" type="checkbox" value="1" class="checkbox" />
+			</mvt:if>
+			<label for="billing_to_show">same as shipping</label>
+		</span>
+	</h2>
+	<div id="billing_fields" >
+		<mvt:if expr="g.Basket:cust_id AND g.Customer_Session_Verified">
+			<div class="&mvte:global:BillID_Row;">
+				<label class="required" for="BillID">Saved Address:</label>
+				<select name="BillID" id="billing_selector">
+					<option value="-1">&lt;New&gt;</option>
+					<mvt:foreach iterator="address" array="customer:addresses">
+						<mvt:if expr="toupper( l.settings:address:fname ) EQ toupper( g.BillFirstName ) AND
+										 toupper( l.settings:address:lname ) EQ toupper( g.BillLastName ) AND
+										 toupper( l.settings:address:email ) EQ toupper( g.BillEmail ) AND
+										 toupper( l.settings:address:comp ) EQ toupper( g.BillCompany ) AND
+										 toupper( l.settings:address:phone ) EQ toupper( g.BillPhone ) AND
+										 toupper( l.settings:address:fax ) EQ toupper( g.BillFax ) AND
+										 toupper( l.settings:address:addr1 ) EQ toupper( g.BillAddress1 ) AND
+										 toupper( l.settings:address:addr2 ) EQ toupper( g.BillAddress2 ) AND
+										 toupper( l.settings:address:city ) EQ toupper( g.BillCity ) AND
+										 (
+										 	( ( NOT ISNULL g.BillStateSelect ) AND ( toupper( l.settings:address:state ) EQ toupper( g.BillStateSelect ) ) ) OR
+										 	( ( ISNULL g.BillStateSelect ) AND ( toupper( l.settings:address:state ) EQ toupper( g.BillState ) ) )
+										 ) AND
+										 toupper( l.settings:address:zip ) EQ toupper( g.BillZip ) AND
+										 toupper( l.settings:address:cntry ) EQ toupper( g.BillCountry )">
+							<option value="&mvte:address:id;" selected>&mvte:address:descrip;</option>
+						<mvt:else>
+							<option value="&mvte:address:id;">&mvte:address:descrip;</option>
+						</mvt:if>
+					</mvt:foreach>
+				</select>
+			</div>
+			<div class="form_row">
+				<label class="italic" for="BillDescription">Description:</label>
+				<input type="text" name="BillDescription" id="BillDescription" value="&mvte:global:BillDescription;" class="textfield" />
+			</div>
+		</mvt:if>
+		<div class="&mvte:global:BillFirstName_Row;">
+			<label class="required" for="BillFirstName">First Name:</label>
+			<input type="text" name="BillFirstName" id="BillFirstName" value="&mvte:global:BillFirstName;" class="textfield" />
+		</div>
+		<div class="&mvte:global:BillLastName_Row;">
+			<label class="required" for="BillLastName">Last Name:</label>
+			<input type="text" name="BillLastName" id="BillLastName" value="&mvte:global:BillLastName;" class="textfield" />
+		</div>
+		<div class="&mvte:global:BillEmail_Row;">
+			<label class="required" for="BillEmail">Email Address:</label>
+			<input type="text" name="BillEmail" id="BillEmail" value="&mvte:global:BillEmail;" class="textfield" />
+		</div>
+		<div class="&mvte:global:BillPhone_Row;">
+			<label class="required" for="BillPhone">Phone Number:</label>
+			<input type="text" name="BillPhone" id="BillPhone" value="&mvte:global:BillPhone;" class="textfield" />
+		</div>
+		<div class="&mvte:global:BillCompany_Row;">
+			<label class="italic" for="BillCompany">Company:</label>
+			<input type="text" name="BillCompany" id="BillCompany" value="&mvte:global:BillCompany;" class="textfield" />
+		</div>
+		<div class="&mvte:global:BillAddress1_Row;">
+			<label class="required" for="BillAddress1">Address:</label>
+			<input type="text" name="BillAddress1" id="BillAddress1" value="&mvte:global:BillAddress1;" class="textfield" />
+		</div>
+		<div class="&mvte:global:BillAddress2_Row;">
+			<label class="italic" for="BillAddress2">Address 2:</label>
+			<input type="text" name="BillAddress2" id="BillAddress2" value="&mvte:global:BillAddress2;" class="textfield" />
+		</div>
+		<div class="&mvte:global:BillCity_Row;">
+			<label class="required" for="BillCity">City:</label>
+			<input type="text" name="BillCity" id="BillCity" value="&mvte:global:BillCity;" class="textfield" />
+		</div>
+		<mvt:if expr="g.States_Empty">
+			<div class="&mvte:global:BillState_Row;">
+				<label class="required" for="BillState">State/Province:</label>
+				<input type="text" name="BillState" id="BillState" value="&mvte:global:BillState;" class="textfield" />
+			</div>
+		<mvt:else>
+			<div class="&mvte:global:BillState_Row;">
+				<label class="required" for="BillStateSelect">State/Province:</label>
+				<mvt:item name="states" param="BillStateSelect" />
+			</div>
+		</mvt:if>
+		<div class="&mvte:global:BillZip_Row;">
+			<label class="required" for="BillZip">Zip/Postal Code:</label>
+			<input type="text" name="BillZip" id="BillZip" value="&mvte:global:BillZip;" class="textfield" />
+		</div>
+		<div class="&mvt:global:BillCountry_Row;">
+			<label class="italic" for="BillCountry">Country:</label>
+			<mvt:item name="countries" param="BillCountry" />
+		</div>
+	</div>
+</div>
+<mvt:if expr="NOT ISNULL l.settings:customer:validated_bill_addresses OR NOT ISNULL l.settings:customer:validated_ship_addresses">
+	<div id="validated-address-modal" class="validated-address-modal" style="display: none;">
+		<div id="validated-address-modal-content" class="validated-address-modal-content">
+			<h1>ADDRESS VERIFICATION</h1>
+			<div id="validated-addresses" class="validated-addresses">
+				<mvt:if expr="NOT ISNULL l.settings:customer:validated_ship_addresses">
+					<div id="shipping-validated-addresses" class="validated-addresses-container">
+						<div>
+							<h3>Shipping Address</h3>
+							<span>Please select a validated shipping address</span>
+						</div>
+						<div class="validated-address-row">
+							<mvt:foreach iterator="address" array="customer:validated_ship_addresses">
+								<div class="validated-address-modal-container">
+									<input type="radio" name="ShipValidatedSelector" class="validated-address-radio" data-mm_address_addr1="&mvte:address:addr1;"
+																			    data-mm_address_addr2="&mvte:address:addr2;"
+																			    data-mm_address_city="&mvte:address:city;"
+																			    data-mm_address_state="&mvte:address:state;"
+																			    data-mm_address_zip="&mvte:address:zip;"
+																			    data-mm_address_country="&mvte:address:country;"
+																			    data-mm_address_resdntl="&mvte:address:resdntl;"
+																			    data-mm_address_comp="&mvte:address:comp;" />
+									<div class="validated-address-display">
+										<mvt:if expr="l.settings:address:validated">
+											<b>Validated Address</b><br />
+										<mvt:else>
+											<b>Use As Entered</b><br />
+										</mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:comp"><b>&mvte:address:comp;</b><br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:addr1">&mvte:address:addr1;<br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:addr2">&mvte:address:addr2;<br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:city">&mvte:address:city;</mvt:if><mvt:if expr="( NOT ISNULL l.settings:address:city AND NOT ISNULL l.settings:address:state ) OR ( NOT ISNULL l.settings:address:city AND NOT ISNULL l.settings:address:zip )">, </mvt:if><mvt:if expr="NOT ISNULL l.settings:address:state">&mvte:address:state;</mvt:if><mvt:if expr="NOT ISNULL l.settings:address:state AND NOT ISNULL l.settings:address:zip"> </mvt:if><mvt:if expr="NOT ISNULL l.settings:address:zip">&mvte:address:zip;<br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:country">&mvte:address:country;<br></mvt:if>
+										<mvt:if expr="l.settings:address:resdntl">
+											<br />
+											Residential Address
+										</mvt:if>
+									</div>
+								</div>
+							</mvt:foreach>
+						</div>
+						<input type="hidden" name="ShipValidated" value="1" />
+					</div>
+				</mvt:if>
+
+				<div style="flex-basis:100%;height:0;"></div>
+
+				<mvt:if expr="NOT ISNULL l.settings:customer:validated_bill_addresses">
+					<div id="billing-validated-addresses" class="validated-addresses-container">
+						<div>
+							<h3>Billing Address</h3>
+							<span>Please select a validated billing address</span>
+						</div>
+						<div class="validated-address-row">
+							<mvt:foreach iterator="address" array="customer:validated_bill_addresses">
+								<div class="validated-address-modal-container">
+									<input type="radio" name="BillValidatedSelector" class="validated-address-radio" data-mm_address_addr1="&mvte:address:addr1;"
+																			    data-mm_address_addr2="&mvte:address:addr2;"
+																			    data-mm_address_city="&mvte:address:city;"
+																			    data-mm_address_state="&mvte:address:state;"
+																			    data-mm_address_zip="&mvte:address:zip;"
+																			    data-mm_address_country="&mvte:address:country;"
+																			    data-mm_address_comp="&mvte:address:comp;" />
+									<div class="validated-address-display">
+										<mvt:if expr="l.settings:address:validated">
+											<b>Validated Address</b><br />
+										<mvt:else>
+											<b>Use As Entered</b><br />
+										</mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:comp"><b>&mvte:address:comp;</b><br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:addr1">&mvte:address:addr1;<br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:addr2">&mvte:address:addr2;<br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:city">&mvte:address:city;</mvt:if><mvt:if expr="( NOT ISNULL l.settings:address:city AND NOT ISNULL l.settings:address:state ) OR ( NOT ISNULL l.settings:address:city AND NOT ISNULL l.settings:address:zip )">, </mvt:if><mvt:if expr="NOT ISNULL l.settings:address:state">&mvte:address:state;</mvt:if><mvt:if expr="NOT ISNULL l.settings:address:state AND NOT ISNULL l.settings:address:zip"> </mvt:if><mvt:if expr="NOT ISNULL l.settings:address:zip">&mvte:address:zip;<br></mvt:if>
+										<mvt:if expr="NOT ISNULL l.settings:address:country">&mvte:address:country;<br></mvt:if>
+									</div>
+								</div>
+							</mvt:foreach>
+						</div>
+						<input type="hidden" name="BillValidated" value="1" />
+					</div>
+				</mvt:if>
+			</div>
+			<div id="validated-addresses-modal-footer" class="validated-addresses-modal-footer">
+				<input id="continue"	type="button" value="Continue"	class="button" >
+				<input id="cancel"		type="button" value="Cancel"	class="button" >
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function Validated_Address_Modal( prefix )
+		{
+			var self = this;
+			var i, forms;
+
+			forms                = document.getElementsByTagName( 'form' );
+
+			this.modal           = document.getElementById( 'validated-address-modal' );
+			this.continue_button = document.getElementById( 'continue' );
+			this.cancel_button   = document.getElementById( 'cancel' );
+
+			for ( i = 0; i < forms.length; i++ )
+			{
+				if ( forms[ i ].elements.hasOwnProperty( 'Action' ) && ( forms[ i ].elements[ 'Action' ].value === 'ORDR' ) )
+				{
+					this.element_form = forms[ i ];
+					break;
+				}
+			}
+
+			if ( !this.element_form )
+			{
+				return;
+			}
+
+			this.element_ship_comp               = this.element_form.elements[ prefix + 'ShipCompany' ];
+			this.element_bill_comp               = this.element_form.elements[ prefix + 'BillCompany' ];
+			this.element_ship_addr1              = this.element_form.elements[ prefix + 'ShipAddress1' ];
+			this.element_bill_addr1              = this.element_form.elements[ prefix + 'BillAddress1' ];
+			this.element_ship_addr2              = this.element_form.elements[ prefix + 'ShipAddress2' ];
+			this.element_bill_addr2              = this.element_form.elements[ prefix + 'BillAddress2' ];
+			this.element_ship_city               = this.element_form.elements[ prefix + 'ShipCity' ];
+			this.element_bill_city               = this.element_form.elements[ prefix + 'BillCity' ];
+			this.element_ship_state              = this.element_form.elements[ prefix + 'ShipState' ];
+			this.element_ship_stateselect        = this.element_form.elements[ prefix + 'ShipStateSelect' ];
+			this.element_bill_state              = this.element_form.elements[ prefix + 'BillState' ];
+			this.element_bill_stateselect        = this.element_form.elements[ prefix + 'BillStateSelect' ];
+			this.element_ship_zip                = this.element_form.elements[ prefix + 'ShipZip' ];
+			this.element_bill_zip                = this.element_form.elements[ prefix + 'BillZip' ];
+			this.element_ship_id                 = this.element_form.elements[ prefix + 'ShipID' ];
+			this.element_ship_validated          = this.element_form.elements[ prefix + 'ShipValidated' ];
+			this.element_ship_validated_selector = document.getElementsByName( prefix + 'ShipValidatedSelector' );
+			this.element_shipping_modal_content  = document.getElementById( 'shipping-validated-addresses' );
+			this.element_bill_id                 = this.element_form.elements[ prefix + 'BillID' ];
+			this.element_bill_validated          = this.element_form.elements[ prefix + 'BillValidated' ];
+			this.element_bill_validated_selector = document.getElementsByName( prefix + 'BillValidatedSelector' );
+			this.element_billing_modal_content   = document.getElementById( 'billing-validated-addresses' );
+			this.element_billing_to_show         = this.element_form.elements[ 'billing_to_show' ];
+
+			if ( this.element_billing_to_show.checked )
+			{
+				this.element_billing_modal_content.style.display = 'none';
+			}
+
+			if ( this.element_ship_validated_selector )
+			{
+				if ( this.element_ship_validated_selector.length === 1 )     this.element_ship_validated_selector[ 0 ].checked = true;
+				else if ( this.element_ship_validated_selector.length > 1 )  this.element_ship_validated_selector[ 1 ].checked = true;
+			}
+
+			if ( this.element_bill_validated_selector )
+			{
+				if ( this.element_bill_validated_selector.length === 1 )     this.element_bill_validated_selector[ 0 ].checked = true;
+				else if ( this.element_bill_validated_selector.length > 1 )  this.element_bill_validated_selector[ 1 ].checked = true;
+			}
+
+			AddEvent( document, 'keydown', function( e ){ self.Focus_Handler( e ); } )
+			AddEvent( this.continue_button, 'click', function( e ){ self.Submit( e ); } )
+			AddEvent( this.cancel_button, 'click', function( e ){ self.Cancel(); } )
+
+			this.modal.style.display = 'block';
+
+			this.continue_button.focus();
+		};
+
+		Validated_Address_Modal.prototype.onError = function( error )
+		{
+			alert( error );
+		}
+
+		Validated_Address_Modal.prototype.Focus_Handler = function( e )
+		{
+			var focusable_elements, first_focusable_element, focusable_content, last_focusable_element, tab_pressed;
+
+			focusable_elements      = '#cancel, #continue, input.validated-address-radio, [tabindex]:not([tabindex="-1"])';
+
+			first_focusable_element = this.modal.querySelectorAll( focusable_elements )[0];
+			focusable_content       = this.modal.querySelectorAll( focusable_elements );
+			last_focusable_element  = focusable_content[ focusable_content.length - 1 ];
+
+			tab_pressed = e.key === 'Tab' || e.keyCode === 9;
+
+			if ( !tab_pressed )
+			{
+				return;
+			}
+
+			if ( e.shiftKey )
+			{
+				if ( document.activeElement === first_focusable_element )
+				{
+					last_focusable_element.focus();
+					e.preventDefault();
+				}
+			}
+			else
+			{
+				if ( document.activeElement === last_focusable_element )
+				{
+					first_focusable_element.focus();
+					e.preventDefault();
+				}
+			}
+		}
+
+		Validated_Address_Modal.prototype.Submit = function( e )
+		{
+			var element_submit;
+
+			if ( !this.Submit_Shipping_Form() || !this.Submit_Billing_Form() )
+			{
+				return;
+			}
+
+			if ( this.element_form.requestSubmit )
+			{
+				this.element_form.requestSubmit();
+			}
+			else
+			{
+				element_submit          = document.createElement( 'input' );
+				element_submit.type     = 'submit';
+				element_submit.hidden   = true;
+
+				this.element_form.appendChild( element_submit );
+				element_submit.click();
+				this.element_form.removeChild( element_submit );
+			}
+
+			this.modal.style.display    = 'none';
+		}
+
+		Validated_Address_Modal.prototype.Cancel = function()
+		{
+			this.element_bill_validated.value = 0;
+			this.element_ship_validated.value = 0;
+			this.modal.style.display          = 'none';
+		}
+
+		Validated_Address_Modal.prototype.Submit_Shipping_Form = function( e )
+		{
+			var i, selected_radio_shipping;
+
+			for ( i = 0; i < this.element_ship_validated_selector.length; i++ )
+			{
+				if ( this.element_ship_validated_selector[ i ].checked )
+				{
+					selected_radio_shipping = this.element_ship_validated_selector[ i ];
+					break;
+				}
+			}
+
+			if ( !selected_radio_shipping )
+			{
+				this.onError( 'Please select a validated address.' );
+				return false;
+			}
+
+			if ( this.element_ship_addr1 )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_addr1' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_addr1' ) === 'string' )
+				{
+					this.element_ship_addr1.value = selected_radio_shipping.getAttribute( 'data-mm_address_addr1' );
+				}
+				else
+				{
+					this.element_ship_addr1.value = '';
+				}
+			}
+
+			if ( this.element_ship_addr2 )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_addr2' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_addr2' ) === 'string' )
+				{
+					this.element_ship_addr2.value = selected_radio_shipping.getAttribute( 'data-mm_address_addr2' );
+				}
+				else
+				{
+					this.element_ship_addr2.value = '';
+				}
+			}
+
+			if ( this.element_ship_city )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_city' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_city' ) === 'string' )
+				{
+					this.element_ship_city.value = selected_radio_shipping.getAttribute( 'data-mm_address_city' );
+				}
+				else
+				{
+					this.element_ship_city.value = '';
+				}
+			}
+
+			if ( this.element_ship_state )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_state' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_state' ) === 'string' )
+				{
+					this.element_ship_state.value = selected_radio_shipping.getAttribute( 'data-mm_address_state' );
+				}
+				else
+				{
+					this.element_ship_state.value = '';
+				}
+			}
+
+			if ( this.element_ship_stateselect )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_stateselect' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_stateselect' ) === 'string' )
+				{
+					this.element_ship_stateselect.value = selected_radio_shipping.getAttribute( 'data-mm_address_stateselect' );
+				}
+				else
+				{
+					this.element_ship_stateselect.value = '';
+				}
+			}
+
+			if ( this.element_ship_zip )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_zip' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_zip' ) === 'string' )
+				{
+					this.element_ship_zip.value = selected_radio_shipping.getAttribute( 'data-mm_address_zip' );
+				}
+				else
+				{
+					this.element_ship_zip.value = '';
+				}
+			}
+
+			if ( this.element_ship_country )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_country' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_country' ) === 'string' )
+				{
+					this.element_ship_country.value = selected_radio_shipping.getAttribute( 'data-mm_address_country' );
+				}
+				else
+				{
+					this.element_ship_country.value = '';
+				}
+			}
+
+			if ( this.element_ship_comp )
+			{
+				if ( selected_radio_shipping.hasAttribute( 'data-mm_address_comp' ) && typeof selected_radio_shipping.getAttribute( 'data-mm_address_comp' ) === 'string' )
+				{
+					this.element_ship_comp.value = selected_radio_shipping.getAttribute( 'data-mm_address_comp' );
+				}
+				else
+				{
+					this.element_ship_comp.value = '';
+				}
+			}
+
+			// disable "radio" element so it doesn't send in the form
+			selected_radio_shipping.disabled = true;
+
+			return true;
+		}
+
+		Validated_Address_Modal.prototype.Submit_Billing_Form = function( e )
+		{
+			var i, selected_radio_billing;
+
+			if ( this.element_billing_to_show.checked )
+			{
+				return true;
+			}
+
+			if ( !this.element_bill_validated_selector )
+			{
+				return;
+			}
+
+			for ( i = 0; i < this.element_bill_validated_selector.length; i++ )
+			{
+				if ( this.element_bill_validated_selector[ i ].checked )
+				{
+					selected_radio_billing = this.element_bill_validated_selector[ i ];
+					break;
+				}
+			}
+
+			if ( !selected_radio_billing )
+			{
+				this.onError( 'Please select a validated address.' );
+				return false;
+			}
+
+			if ( this.element_bill_addr1 )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_addr1' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_addr1' ) === 'string' )
+				{
+					this.element_bill_addr1.value = selected_radio_billing.getAttribute( 'data-mm_address_addr1' );
+				}
+				else
+				{
+					this.element_bill_addr1.value = '';
+				}
+			}
+
+			if ( this.element_bill_addr2 )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_addr2' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_addr2' ) === 'string' )
+				{
+					this.element_bill_addr2.value = selected_radio_billing.getAttribute( 'data-mm_address_addr2' );
+				}
+				else
+				{
+					this.element_bill_addr2.value = '';
+				}
+			}
+
+			if ( this.element_bill_city )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_city' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_city' ) === 'string' )
+				{
+					this.element_bill_city.value = selected_radio_billing.getAttribute( 'data-mm_address_city' );
+				}
+				else
+				{
+					this.element_bill_city.value = '';
+				}
+			}
+
+			if ( this.element_bill_state )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_state' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_state' ) === 'string' )
+				{
+					this.element_bill_state.value = selected_radio_billing.getAttribute( 'data-mm_address_state' );
+				}
+				else
+				{
+					this.element_bill_state.value = '';
+				}
+			}
+
+			if ( this.element_bill_stateselect )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_stateselect' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_stateselect' ) === 'string' )
+				{
+					this.element_bill_stateselect.value = selected_radio_billing.getAttribute( 'data-mm_address_stateselect' );
+				}
+				else
+				{
+					this.element_bill_stateselect.value = '';
+				}
+			}
+
+			if ( this.element_bill_zip )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_zip' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_zip' ) === 'string' )
+				{
+					this.element_bill_zip.value = selected_radio_billing.getAttribute( 'data-mm_address_zip' );
+				}
+				else
+				{
+					this.element_bill_zip.value = '';
+				}
+			}
+
+			if ( this.element_bill_country )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_country' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_country' ) === 'string' )
+				{
+					this.element_bill_country.value = selected_radio_billing.getAttribute( 'data-mm_address_country' );
+				}
+				else
+				{
+					this.element_bill_country.value = '';
+				}
+			}
+
+			if ( this.element_bill_comp )
+			{
+				if ( selected_radio_billing.hasAttribute( 'data-mm_address_comp' ) && typeof selected_radio_billing.getAttribute( 'data-mm_address_comp' ) === 'string' )
+				{
+					this.element_bill_comp.value = selected_radio_billing.getAttribute( 'data-mm_address_comp' );
+				}
+				else
+				{
+					this.element_bill_comp.value = '';
+				}
+			}
+
+			// disable "radio" element so it doesn't send in the form
+			selected_radio_billing.disabled = true;
+
+			return true;
+		};
+
+		(function( obj, eventType, fn )
+		{
+			if ( obj.addEventListener )
+			{
+				obj.addEventListener( eventType, fn, false );
+			}
+			else if ( obj.attachEvent )
+			{
+				obj.attachEvent( 'on' + eventType, fn );
+			}
+		})( window, 'load', function()
+		{
+			window.validated_address_modal = new Validated_Address_Modal( '&mvtj:prefix;' );
+		} );
+	</script>
+</mvt:if>
+<div id="tax-fields">
+<mvt:foreach array="tax:fields" iterator="field">
+	<mvt:if expr="l.settings:field:invalid">
+	<div class="form_row invalid">
+	<mvt:else>
+	<div class="form_row">
+	</mvt:if>
+		<label>&mvt:field:prompt;</label>
+		<mvt:item name="tax" param="field:code" />
+	</div>
+</mvt:foreach>
+</div>
+
+<mvt:if expr="g.Basket:cust_id">
+<div id="update-record">
+	<mvt:if expr="g.Update_Customer">
+	<input type="checkbox" name="Update_Customer" value="Yes" checked />
+	<mvt:else>
+	<input type="checkbox" name="Update_Customer" value="Yes" />
+	</mvt:if>
+	Update Customer Record With This Information
+</div>
+</mvt:if>
+<mvt:if expr="l.settings:customer:match">
+<script>
+<mvt:if expr="l.settings:customer:primaddr EQ 'shipping'">
+document.getElementById( 'billing_to_show' ).checked = true;
+<mvt:elseif expr="l.settings:customer:primaddr EQ 'billing'">
+document.getElementById( 'shipping_to_show' ).checked = true;
+</mvt:if>
+</script>
+</mvt:if>
+
+<mvt:if expr="g.Basket:cust_id AND g.Customer_Session_Verified AND l.settings:customer:address_count">
+	<script type="text/javascript">
+		var MvCustomerAddresses = [];
+
+		<mvt:foreach iterator="address" array="customer:addresses">
+			MvCustomerAddresses[ <mvt:eval expr="int( l.settings:address:id )" /> ] = {
+				"id":		<mvt:eval expr="int( l.settings:address:id )" />,
+				"cust_id":	<mvt:eval expr="int( l.settings:address:cust_id )" />,
+				"descrip":	"&mvtj:address:descrip;",
+				"fname":	"&mvtj:address:fname;",
+				"lname":	"&mvtj:address:lname;",
+				"email":	"&mvtj:address:email;",
+				"comp":		"&mvtj:address:comp;",
+				"phone":	"&mvtj:address:phone;",
+				"fax":		"&mvtj:address:fax;",
+				"addr1":	"&mvtj:address:addr1;",
+				"addr2":	"&mvtj:address:addr2;",
+				"city":		"&mvtj:address:city;",
+				"state":	"&mvtj:address:state;",
+				"zip":		"&mvtj:address:zip;",
+				"cntry":	"&mvtj:address:cntry;",
+				"resdntl":	<mvt:if expr="l.settings:address:resdntl">true<mvt:else>false</mvt:if>
+			};
+		</mvt:foreach>
+	</script>
+</mvt:if>
+
+<script src="&mvte:global:clientside_url;Store_Code=&mvta:store:code;&amp;Filename=ToggleDetails.js&amp;Primaddr=shipping&amp;Shipping=D&amp;Billing=O"></script>

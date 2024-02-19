@@ -1,0 +1,26 @@
+<div class="sub-navigation">
+<div class="prod-image">
+  <mvt:item name="customfields" param="Read_Category_Code( l.settings:category:code, 'catNavTitle', l.settings:customfield:catNavTitle)" />
+  <img src="&mvte:customfield:catNavTitle;" alt="&mvte:category:name;" />
+</div>
+	    <ul>
+		<li>
+	 	   <a href="https://&mvt:global:domain:name;/mprod.html" onmouseover="window.status='Home'; return true;" onmouseout="window.status=''; return true;"><img src="/images/mivanav/storehome.gif" border="0"></a>
+		</li>
+		<li>
+		   <a><mvt:item name="cssui_links" param="customer_account"><img src="/images/mivanav/account.gif" border="0"></mvt:item></a>
+		</li>
+		<li>
+		  <a href="&mvte:urls:SRCH:auto;"><img src="/images/mivanav/search.gif" border="0"></a>
+		</li>
+		<li>
+		   <a href="https://&mvt:global:domain:name;/express.html"><img src="/images/mivanav/expresslane.gif" border="0"></a>
+		</li>
+		<li>
+		   <a href="&mvte:urls:BASK:auto;"><img src="/images/mivanav/yourbasket.gif" border="0"></a>
+		</li>
+		<li>
+		   <a href="&mvte:urls:BASK:auto;"><img src="/images/mivanav/checkout.gif" border="0"></a>
+		</li>
+	    </ul>
+	</div>

@@ -1,0 +1,38 @@
+<mvt:item name="html_profile" />
+<head>
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: My Account</title>
+	</mvt:if>
+
+	<base href="&mvt:global:basehref;" />
+	<link rel="canonical" href="&mvte:urls:_self:auto;" />
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+</head>
+<body class="OCST">
+<div id="site-container">
+	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
+	<div id="content-container" class="clearfix">
+			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+			<div id="sidebar">
+				<mvt:item name="readytheme" param="contentsection( 'acnt-sidebar' )" />
+			</div>
+			<div id="main-content" class="column">
+
+				<h4><span class="bold">Order number:</span> &mvt:order:id;</h4>
+				<div><span class="bold">Placed:</span> &mvt:order:date; &mvt:order:time;</div>
+
+				<mvt:item name="messages" />
+				<br>
+				<div id="customer-fields" class="non-editable bluefade"><mvt:item name="order_customer" /></div>
+				<div id="order-contents"><mvt:item name="view_order" /></div>
+				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+			</div>
+	</div>
+	<div id="bottom-wrap"></div>
+	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
+</div>
+</body>
+</html>
