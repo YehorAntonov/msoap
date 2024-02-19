@@ -1,6 +1,6 @@
 {
     "footer_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Footer"
     },
     "hdft": {
         "footer": {
@@ -13,7 +13,7 @@
         }
     },
     "header_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Header"
     },
     "seo_settings": {
         "cat_lit": "category",

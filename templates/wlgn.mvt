@@ -1,94 +1,142 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Wish List: Customer Login</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="WLGN one-column">
-<div id="site-container">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<div id="navigation-bar"><mvt:item name="navbar" /></div>
-	<table id="content-container">
-		<tr>
-			<td id="left-navigation"><mvt:item name="category_tree" /></td>
-			<td id="main-content">
-				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
-				<div class="margin-container">
-					<div class="header-message">
-						You must have a customer account to create / access a wish list
-					</div>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-					<form name="logn" action="&mvte:urls:WISH:secure;" method="post" autocomplete="off">
-						<mvt:if expr="ISNULL g.Action">
-							<mvt:assign name="g.Action" value="'LOGN,ATWL'" />
-						<mvt:else>
-							<mvt:assign name = "g.Action" value="'LOGN,' $ g.Action" />
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<h1 class="u-hide-visually">&mvt:page:name;</h1>
+			<br>
+			<p class="c-heading--subheading--large u-text-center">You must have a customer account to create a wish list.</p>
+			<mvt:item name="hdft" param="header" />
+			<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+		</div>
+	</section>
+
+	<section class="o-layout o-layout--justify-center">
+		<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-logn-block">
+			<p class="c-heading-foxtrot">Welcome Back</p>
+			<form method="post" action="&mvte:urls:WISH:secure;" autocomplete="off">
+				<fieldset>
+					<legend>&mvt:page:name;</legend>
+					<mvt:if expr="ISNULL g.Action">
+						<mvt:assign name="g.Action" value="'LOGN,ATWL'" />
+					<mvt:else>
+						<mvt:assign name = "g.Action" value="'LOGN,' $ g.Action" />
+					</mvt:if>
+					<input type="hidden" name="Action" value="&mvte:global:Action;" />
+					<input type="hidden" name="Quantity" value="&mvte:global:Quantity;" />
+					<input type="hidden" name="Line_ID" value="&mvte:global:Line_ID;" />
+					<input type="hidden" name="Group_ID" value="&mvte:global:Group_ID;" />
+					<input type="hidden" name="Wish_ID" value="&mvte:global:Wish_ID;" />
+					<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+					<mvt:assign name="l.settings:attribute_index" value="0" />
+					<mvt:foreach iterator="attribute" array="global:Product_Attributes">
+						<mvt:assign name="l.settings:attribute_index" value="l.settings:attribute_index + 1" />
+						<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:code" value="&mvte:attribute:code;" />
+						<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:value" value="&mvte:attribute:value;" />
+						<mvt:if expr="l.settings:attribute:template_code NE 0">
+							<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:template_code" value="&mvte:attribute:template_code;" />
 						</mvt:if>
-						
-						<input type="hidden" name="Action" value="&mvte:global:Action;" />
-						<input type="hidden" name="Quantity" value="&mvte:global:Quantity;" />
-						<input type="hidden" name="Line_ID" value="&mvte:global:Line_ID;" />
-						<input type="hidden" name="Group_ID" value="&mvte:global:Group_ID;" />
-						<input type="hidden" name="Wish_ID" value="&mvte:global:Wish_ID;" />
-						<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
-
-						<mvt:assign name="l.settings:attribute_index" value="0" />
-						<mvt:foreach iterator="attribute" array="global:Product_Attributes">
-							<mvt:assign name="l.settings:attribute_index" value="l.settings:attribute_index + 1" />
-							<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:code" value="&mvte:attribute:code;" />
-							<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:value" value="&mvte:attribute:value;" />
-							<mvt:if expr="l.settings:attribute:template_code NE 0">
-								<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:template_code" value="&mvte:attribute:template_code;" />
-							</mvt:if>
-						</mvt:foreach>
-
-						<div class="section grey-border-right aligncenter">
-							<h3>Create New Account</h3>
-							<input type="button" value="Create Account" class="button" onclick="window.location = '&mvtj:urls:ACAD:auto_sep;WishList=1';" />
+					</mvt:foreach>
+					<div class="c-form-list">
+						<div class="c-form-list__item c-form-list__item--full">
+							<label class="c-form-label u-text-medium is-required &mvte:global:invalid_credentials;" for="l-Customer_LoginEmail">Email Address</label>
+							<input id="l-Customer_LoginEmail" class="c-form-input" type="text" inputmode="email" name="Customer_LoginEmail" value="&mvte:global:Customer_LoginEmail;" autocomplete="email" required>
 						</div>
-
-						<div class="section">
-							<h3>Sign In</h3>
-							<mvt:if expr="l.settings:messages:error_message_count">
-							<div class="error-message">
-							<mvt:foreach iterator="error" array="messages:error_messages">
-								&mvt:error;
-							</mvt:foreach>
-							</div>
-							<mvt:elseif expr="l.settings:messages:information_message_count">
-							<div class="information-message">
-							<mvt:foreach iterator="message" array="messages:information_messages">
-								&mvt:message;
-							</mvt:foreach>
-							</div>
+						<div class="c-form-list__item c-form-list__item--full">
+							<label class="c-form-label u-font-small u-text-bold u-text-uppercase is-required &mvte:global:invalid_credentials;" for="l-Customer_Password">Password:</label>
+							<mvt:if expr="g.Customer_Temporary_Password">
+								<input type="hidden" name="Customer_Temporary_Password" value="&mvte:global:Customer_Temporary_Password;">
+								<input id="l-Customer_Password" class="c-form-input" type="password" name="Customer_Password" value="&mvte:global:Customer_Temporary_Password;" required>
+							<mvt:else>
+								<input id="l-Customer_Password" class="c-form-input" type="password" name="Customer_Password" autocomplete="current-password" required>
 							</mvt:if>
-							
-							<div class="form_row">
-								<label for="Customer_LoginEmail">Email Address:</label><input type="text" name="Customer_LoginEmail" id="Customer_LoginEmail" class="textfield logn-input" value="&mvte:global:Customer_LoginEmail;" autocomplete="off" />
-							</div>
-							<div class="form_row">
-								<label for="Customer_Password">Password:</label><input type="password" name="Customer_Password" id="Customer_Password" class="textfield logn-input" autocomplete="off" />
-							</div>
-							<div class="clear"></div>
-							<div class="sign-in-buttons"><mvt:item name="buttons" param="login" /></div>
-							<div class="forgot-password"><a href="&mvte:urls:FPWD:auto;">Forgot password?</a></div>
 						</div>
-					</form>
-				</div>
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</td>
-		</tr>
-	</table>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+						<div class="c-form-list__item c-form-list__item--full">
+							<p>
+								<a data-dialog-trigger="forgot-password" href="&mvte:urls:FPWD:secure;">Forgot Password?</a>
+							</p>
+							<p>
+								<mvt:item name="buttons" param="Login" />
+							</p>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-logn-block">
+			<p class="c-heading-foxtrot">New Customers</p>
+			<form class="o-layout" method="post" action="&mvte:urls:WISH:secure;">
+				<fieldset class="o-layout__item">
+					<legend>Customer Log In</legend>
+					<mvt:if expr="ISNULL g.Action">
+						<mvt:assign name="g.Action" value="'ICSQ,ATWL'" />
+					<mvt:else>
+						<mvt:assign name = "g.Action" value="'ICSQ,' $ g.Action" />
+					</mvt:if>
+					<input type="hidden" name="Action" value="&mvte:global:Action;" />
+					<input type="hidden" name="Quantity" value="&mvte:global:Quantity;" />
+					<input type="hidden" name="Line_ID" value="&mvte:global:Line_ID;" />
+					<input type="hidden" name="Group_ID" value="&mvte:global:Group_ID;" />
+					<input type="hidden" name="Wish_ID" value="&mvte:global:Wish_ID;" />
+					<input type="hidden" name="Product_Code" value="&mvte:global:Product_Code;" />
+					<mvt:assign name="l.settings:attribute_index" value="0" />
+					<mvt:foreach iterator="attribute" array="global:Product_Attributes">
+						<mvt:assign name="l.settings:attribute_index" value="l.settings:attribute_index + 1" />
+						<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:code" value="&mvte:attribute:code;" />
+						<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:value" value="&mvte:attribute:value;" />
+						<mvt:if expr="l.settings:attribute:template_code NE 0">
+							<input type="hidden" name="Product_Attributes[ &mvt:attribute_index; ]:template_code" value="&mvte:attribute:template_code;" />
+						</mvt:if>
+					</mvt:foreach>
+					<input type="hidden" name="CSRF_Token" value="&mvte:global:Basket:csrf_token;">
+					<input type="hidden" name="WishList" value="1">
+					<div class="c-form-list">
+						<div class="c-form-list__item c-form-list__item--full">
+							<label class="c-form-label u-text-medium is-required" for="register_fname">First Name</label>
+							<input id="register_fname" class="c-form-input" type="text" name="Customer_ShipFirstName" value="&mvte:global:Customer_ShipFirstName;" autocomplete="given-name" required aria-required="true">
+						</div>
+						<div class="c-form-list__item c-form-list__item--full">
+							<label class="c-form-label u-text-medium is-required" for="register_lname">Last Name</label>
+							<input id="register_lname" class="c-form-input" type="text" name="Customer_ShipLastName" value="&mvte:global:Customer_ShipLastName;" autocomplete="family-name" required aria-required="true">
+						</div>
+						<div class="c-form-list__item c-form-list__item--full">
+							<label class="c-form-label u-text-medium is-required" for="register_email">Email Address</label>
+							<input id="register_email" class="c-form-input" type="email" inputmode="email" name="Customer_LoginEmail" value="&mvte:global:Customer_LoginEmail;" autocomplete="email" required aria-required="true">
+						</div>
+						<div class="c-form-list__item c-form-list__item--full">
+							<label class="c-form-label u-text-medium is-required" for="register_password">Password</label>
+							<input id="register_password" class="c-form-input" type="password" name="Customer_Password" autocomplete="new-password" required aria-required="true">
+						</div>
+						<div class="c-form-list__item c-form-list__item--full">
+							<input class="c-button c-button--full c-button--secondary" type="submit" value="Create My Account">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<br>
+		</div>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+			<mvt:item name="readytheme" param="contentsection( 'forgot-password' )" />
+		</div>
+	</section>
+
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

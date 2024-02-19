@@ -1,31 +1,44 @@
 {
     "all_products": {
-        "b_height": 144,
-        "b_width": 234,
+        "additionalprice": "base",
+        "advanced": 1,
+        "b_height": 384,
+        "b_width": 384,
         "button_add": 1,
         "button_buy": 1,
         "col_num": 2,
         "col_sel": "D",
         "constrain": "B",
         "default_sort": "disp_order",
+        "displaydiscounts": 0,
         "field_code": 1,
         "field_desc": 0,
         "field_name": 1,
         "field_price": 1,
+        "field_sku": 0,
+        "field_weight": 0,
         "format": "X",
         "image": "T",
         "imagemachine_enabled": 0,
+        "imagetypes": [
+            "main"
+        ],
         "invmsg": "L",
         "items_per_page_filter": 1,
-        "linkexcludecat": 1,
+        "linkexcludecat": 0,
+        "mode": "plst",
         "page_disp_count": 3,
-        "per_page": 10,
+        "per_page": 12,
+        "predictdiscounts": 1,
+        "price": "sale",
+        "reverse_default_disp_order": 0,
         "sort_by": {
             "best": 1,
             "code": 0,
             "name": 0,
             "new": 1,
             "price": 1,
+            "relevance": 0,
             "switch": 1
         },
         "template_filename": "plst-all_products.mvc",
@@ -90,7 +103,7 @@
         }
     },
     "footer_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Footer"
     },
     "hdft": {
         "footer": {
@@ -103,7 +116,7 @@
         }
     },
     "header_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Header"
     },
     "seo_settings": {
         "cat_lit": "category",

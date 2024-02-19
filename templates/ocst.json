@@ -1,21 +1,24 @@
 {
     "basket": {
-        "advanced": 0,
-        "applycoupons": 0,
-        "b_height": 75,
-        "b_width": 75,
+        "advanced": 1,
+        "applycoupons": 1,
+        "b_height": 96,
+        "b_width": 96,
         "button_wish": 0,
         "constrain": "B",
         "discounts": 1,
         "editable": 0,
         "groups": 1,
-        "handling": 0,
-        "lineitemcoupons": 0,
+        "handling": 1,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 1,
         "lineitemdiscounts": 1,
         "lineitemprice": "base",
         "redeemgiftcerts": 0,
-        "salestax": 0,
-        "shipping": 0,
+        "salestax": 1,
+        "shipping": 1,
         "splitpayments": 0,
         "template_filename": "ocst-basket.mvc",
         "template_id": 83
@@ -23,7 +26,7 @@
     "customer": {
         "editable": 1,
         "mode": "order",
-        "prevent_template_auto_update": 0,
+        "prevent_template_auto_update": 1,
         "template_filename": "ocst-customer.mvc",
         "template_id": 84
     },

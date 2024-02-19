@@ -1,35 +1,51 @@
 <mvt:item name="html_profile" />
 <head>
-    <mvt:if expr="NOT ISNULL l.settings:page:title">
-        <title>&mvt:page:title;</title>
-    <mvt:else>
-        <title>&mvt:store:name;: Affiliate Temporary Password</title>
-    </mvt:if>
-
-    <base href="&mvt:global:basehref;" />
-    <link rel="canonical" href="&mvte:urls:_self:auto;" />
-    <mvt:item name="head" param="css_list" />
-    <mvt:item name="head" param="head_tag" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
+	</mvt:if>
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="&mvte:page:code;">
-    <div id="site-container">
-        <div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-        <div id="navigation-bar"><mvt:item name="navbar" /></div>
-        <table id="content-container">
-            <tr>
-                <td id="left-navigation"><mvt:item name="category_tree" /></td>
-                <td id="main-content">
-                    <div id="page-header"><mvt:item name="hdft" param="header" /></div>
-                    
-                    Your password has been reset. Your temporary password is &mvte:global:Affiliate_Temporary_Password;<br /><br />
-                    <a href="&mvte:urls:AFCL:auto;">Click Here to Log In</a> 
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-                    <div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-                </td>
-            </tr>
-        </table>
-        <div id="bottom-wrap"></div>
-        <div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-    </div>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<h1 class="c-heading-delta">&mvt:page:name;</h1>
+			<mvt:item name="hdft" param="header" />
+		</div>
+	</section>
+
+	<section class="o-layout o-layout--justify-center">
+		<div class="o-layout__item u-width-12 u-width-6--m">
+			<form method="post" action="&mvte:urls:AFCL:secure;">
+				<fieldset>
+					<legend>&mvt:page:name;</legend>
+					<input type="hidden" name="Affiliate_Temporary_Password" value="&mvte:global:Customer_Temporary_Password;" autocomplete="off">
+					<input type="hidden" name="Affiliate_Password" value="&mvte:global:Customer_Temporary_Password;" autocomplete="off">
+					<p class="x-messages x-messages--info x-messages--with-icon">
+						<span class="x-messages__icon u-icon-info" aria-hidden="true">&nbsp;</span>
+						<span>Your password has been reset.<br><br>Your temporary password is &mvte:global:Affiliate_Temporary_Password;</span>
+					</p>
+					<p>
+						<input class="c-button" type="submit" value="Click Here to Log In">
+					</p>
+				</fieldset>
+			</form>
+		</div>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
+
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

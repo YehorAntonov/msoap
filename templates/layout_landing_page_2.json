@@ -371,6 +371,11 @@
                         "value": "light"
                     },
                     "desktop": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "column_count": {
                             "value": "auto"
                         },
@@ -379,6 +384,11 @@
                         }
                     },
                     "mobile": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "overflow_behavior": {
                             "value": "scroll"
                         }
@@ -602,7 +612,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "740835b03b1b5d726fbfd86c7fc10084",
+                "id": "dd09775541c29ddb0c5f45b6661203c1",
                 "item": "flex",
                 "name": "Hero",
                 "param": "hero"
@@ -611,7 +621,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "b7ed3b1fd05db3afcd24e25a9a0d0c0e",
+                "id": "eabcd6dcfd3be045e4e569800bd3761b",
                 "item": "flex",
                 "name": "Two Across",
                 "param": "two-across"
@@ -620,7 +630,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "1b1acc96c2a02d604e726b16b66d4fea",
+                "id": "99672d1457afc3a1f511ce99e5bdbe4c",
                 "item": "flex",
                 "name": "Text Banner",
                 "param": "text-banner"
@@ -629,7 +639,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "7ee6360578b14e10866fe7df4cbc32ac",
+                "id": "7529316f08fa5c4d194deb745d187c55",
                 "item": "flex",
                 "name": "Featured Product",
                 "param": "featured-product"
@@ -638,7 +648,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "021c291f956d33e3dd2c72fd522e6930",
+                "id": "621752f4482d56fb729cdf18ccb33bd2",
                 "item": "flex",
                 "name": "Video",
                 "param": "video"
@@ -647,7 +657,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "0eaa0c6db84b7b13e5e8d85a55a8a597",
+                "id": "965a02cb4c209b58b761779a0a4eb128",
                 "item": "flex",
                 "name": "Image and Text",
                 "param": "image-and-text"

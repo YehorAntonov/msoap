@@ -1,85 +1,185 @@
 {
-    "descrip": "This is the top navigation for all account pages.",
+    "descrip": "This is the side navigation for all account pages.",
     "items": [
         {
             "active": 1,
-            "id": "3e3a09359e8116aaa821f3974421d2c2",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account.html\" target=\"_self\">Overview</a>",
-            "link_dest": "ACLN",
+            "id": "14cd522429fea90ba71744eec1f6e04e",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "28189609e91adab6edaf71b60598869b",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-edit.html\" target=\"_self\">Edit Information</a>",
+                    "link_dest": "ACED",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Edit Information",
+                    "url": "https://miraclesoap.mivatest.com/customer-edit.html"
+                },
+                {
+                    "active": 1,
+                    "id": "5575c0995e14bb235ef06bb515616e81",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/change-email-address.html\" target=\"_self\">Change Email</a>",
+                    "link_dest": "CEML",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Change Email",
+                    "url": "https://miraclesoap.mivatest.com/change-email-address.html"
+                },
+                {
+                    "active": 1,
+                    "id": "67c774b13e201eda3bec5170c4f9d519",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/change-password.html\" target=\"_self\">Change Password</a>",
+                    "link_dest": "CPWD",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Change Password",
+                    "url": "https://miraclesoap.mivatest.com/change-password.html"
+                }
+            ],
+            "link": "Personal Information",
             "link_targ": "_self",
-            "link_type": "G",
-            "name": "Overview",
-            "url": "https://miraclesoap.mivatest.com/customer-account.html"
+            "link_type": "N",
+            "name": "Personal Information"
         },
         {
             "active": 1,
-            "id": "dda5f1311ca0e707a1f5fd591027e28e",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/order-history-list.html\" target=\"_self\">Orders</a>",
-            "link_dest": "ORDH",
+            "id": "f23cdae99e8ec3ad992e24e63d174708",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "462426b104cf19c91394c14fa44eba60",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-payment-cards.html\" target=\"_self\">Edit Cards</a>",
+                    "link_dest": "CPCD",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Edit Cards",
+                    "url": "https://miraclesoap.mivatest.com/customer-payment-cards.html"
+                },
+                {
+                    "active": 1,
+                    "id": "697bbbdfd08bbe476cbe37b6c74a35eb",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-payment-card-add.html\" target=\"_self\">Add New Card</a>",
+                    "link_dest": "CPCA",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Add New Card",
+                    "url": "https://miraclesoap.mivatest.com/customer-payment-card-add.html"
+                }
+            ],
+            "link": "Payment Options",
             "link_targ": "_self",
-            "link_type": "G",
-            "name": "Orders",
-            "url": "https://miraclesoap.mivatest.com/order-history-list.html"
+            "link_type": "N",
+            "name": "Payment Options"
         },
         {
             "active": 1,
-            "id": "86551b1cc58a6794d759d1159881ac10",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account-balance.html\" target=\"_self\">Customer Credit</a>",
-            "link_dest": "ABAL",
+            "id": "aeb72c6ccb4faaea348213e145b0dcf5",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "01dcc79b0decb74009bb5d7606cc9b08",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/order-history-list.html\" target=\"_self\">Order History</a>",
+                    "link_dest": "ORDH",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Order History",
+                    "url": "https://miraclesoap.mivatest.com/order-history-list.html"
+                },
+                {
+                    "active": 1,
+                    "id": "6dca1158a44f93237991c893880db102",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-subscriptions.html\" target=\"_self\">Manage Subscriptions</a>",
+                    "link_dest": "CSUB",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Manage Subscriptions",
+                    "url": "https://miraclesoap.mivatest.com/customer-subscriptions.html"
+                },
+                {
+                    "active": 1,
+                    "id": "792231747c31439bbd6b68e917376740",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/wish-lists.html\" target=\"_self\">Wish Lists</a>",
+                    "link_dest": "WLST",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Wish Lists",
+                    "url": "https://miraclesoap.mivatest.com/wish-lists.html"
+                }
+            ],
+            "link": "My Orders",
             "link_targ": "_self",
-            "link_type": "G",
-            "name": "Customer Credit",
-            "url": "https://miraclesoap.mivatest.com/customer-account-balance.html"
+            "link_type": "N",
+            "name": "My Orders"
         },
         {
             "active": 1,
-            "id": "656904fb55eec941298669bbcb261f90",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-profile.html\" target=\"_self\">Password</a>",
-            "link_dest": "CPRO",
+            "id": "dd103d2757365b9dab0198a9e57f29d4",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "9fce3578f7d77adac636a6a25c2311e8",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account-balance.html\" target=\"_self\">Check Your Balance</a>",
+                    "link_dest": "ABAL",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Check Your Balance",
+                    "url": "https://miraclesoap.mivatest.com/customer-account-balance.html"
+                },
+                {
+                    "active": 1,
+                    "id": "aaf06cf143fbf1878956127f723e6f93",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/redeem-gift-certificate.html\" target=\"_self\">Redeem Gift Certificate</a>",
+                    "link_dest": "RGFT",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Redeem Gift Certificate",
+                    "url": "https://miraclesoap.mivatest.com/redeem-gift-certificate.html"
+                }
+            ],
+            "link": "Customer Credit",
             "link_targ": "_self",
-            "link_type": "G",
-            "name": "Password",
-            "url": "https://miraclesoap.mivatest.com/customer-profile.html"
+            "link_type": "N",
+            "name": "Customer Credit"
         },
         {
             "active": 1,
-            "id": "027e4b2447403c7b1c6acbbd70461be4",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-payment-cards.html\" target=\"_self\">Payment</a>",
-            "link_dest": "CPCD",
+            "id": "5ad7eabb8ace7f5fd37dc7ff08296227",
+            "items": [
+                {
+                    "active": 1,
+                    "id": "c7596064d04a432dc65ebc9a366dd0fc",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-address-book.html\" target=\"_self\">Edit Addresses</a>",
+                    "link_dest": "CABK",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Edit Addresses",
+                    "url": "https://miraclesoap.mivatest.com/customer-address-book.html"
+                },
+                {
+                    "active": 1,
+                    "id": "da8f1419238882956bb2d01c2bc981e9",
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-address-add.html\" target=\"_self\">Add New Address</a>",
+                    "link_dest": "CADA",
+                    "link_targ": "_self",
+                    "link_type": "G",
+                    "name": "Add New Address",
+                    "url": "https://miraclesoap.mivatest.com/customer-address-add.html"
+                }
+            ],
+            "link": "Address Book",
             "link_targ": "_self",
-            "link_type": "G",
-            "name": "Payment",
-            "url": "https://miraclesoap.mivatest.com/customer-payment-cards.html"
+            "link_type": "N",
+            "name": "Address Book"
         },
         {
-            "active": 1,
-            "id": "32a67c044694683e82d592896d04644e",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-address-book.html\" target=\"_self\">Address Book</a>",
-            "link_dest": "CABK",
+            "active": 0,
+            "id": "da723676d732eed0e02b495094748a6e",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/affiliate-edit.html\" target=\"_self\">Affiliate Information</a>",
+            "link_dest": "AFED",
             "link_targ": "_self",
             "link_type": "G",
-            "name": "Address Book",
-            "url": "https://miraclesoap.mivatest.com/customer-address-book.html"
-        },
-        {
-            "active": 1,
-            "id": "56c251ae4591c766d42ca8b488a8a8f8",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-subscriptions.html\" target=\"_self\">Subscriptions</a>",
-            "link_dest": "CSUB",
-            "link_targ": "_self",
-            "link_type": "G",
-            "name": "Subscriptions",
-            "url": "https://miraclesoap.mivatest.com/customer-subscriptions.html"
-        },
-        {
-            "active": 1,
-            "id": "8325b1b9d3a46f4bbf51a785a45edccd",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/wish-lists.html\" target=\"_self\">Wish Lists</a>",
-            "link_dest": "WLST",
-            "link_targ": "_self",
-            "link_type": "G",
-            "name": "Wish Lists",
-            "url": "https://miraclesoap.mivatest.com/wish-lists.html"
+            "name": "Affiliate Information",
+            "url": "https://miraclesoap.mivatest.com/affiliate-edit.html"
         }
     ],
     "layout": "S",

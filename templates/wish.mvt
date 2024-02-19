@@ -1,78 +1,83 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Wish List</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="WISH one-column">
-<div id="site-container">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<div id="navigation-bar"><mvt:item name="navbar" /></div>
-	<table id="content-container">
-		<tr>
-			<td id="main-content">
-				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-				<h1>&mvte:wishlist:title;</h1>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+			<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+		</div>
+	</section>
 
-				<mvt:if expr="l.settings:messages:error_message_count">
-				<div class="error-message">
-				<mvt:foreach iterator="error" array="messages:error_messages">
-					&mvt:error;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
-				<mvt:if expr="l.settings:messages:information_message_count">
-				<div class="information-message">
-				<mvt:foreach iterator="message" array="messages:information_messages">
-					&mvt:message;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
-
-				<div style="margin-bottom:8px;">
-					<mvt:if expr="NOT ISNULL l.settings:wishlist:notes">
-						<span class="darkgrey italic inlineblock">Notes: &mvte:wishlist:notes;</span>
+	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l o-layout--no-wrap">
+		<div class="o-layout__item u-width-12 u-width-9--l">
+			<h1 class="c-heading-delta">
+				&mvte:wishlist:title;
+				<mvt:if expr="l.settings:wishlist:cust_id EQ g.Basket:cust_id AND g.Customer_Session_Verified">
+					<mvt:if expr="l.settings:wishlist:shared">
+						<strong class="c-heading--subheading--x-small"> [Public]</strong>
+					<mvt:else>
+						<strong class="c-heading--subheading--x-small u-color-red"> [Private]</strong>
 					</mvt:if>
-
-					<mvt:if expr="l.settings:wishlist:cust_id EQ g.Basket:cust_id AND g.Customer_Session_Verified">
-						<span class="floatright">
-							<a href="&mvte:urls:WLED:auto_sep;WishList_ID=&mvta:wishlist:id;">Edit</a>
-							<span class="grey">|</span>
-							<a href="&mvte:urls:WLST:secure_sep;Action=DWSH&WishList_ID=&mvta:wishlist:id;" onclick="if ( !confirm( 'Are you sure you want to delete your wish list? This action cannot be undone\n\nContinue?' ) ) return false;">Delete</a>
-							<span class="grey">|</span>
-							<span class="darkgrey"><mvt:if expr="l.settings:wishlist:shared">Public<mvt:else>Private</mvt:if></span>
-						</span>
-						<div class="clear"></div>
-					</mvt:if>
-				</div>
-				
-				<mvt:item name="wishlistitems" />
-
-				<mvt:if expr="l.settings:wishlistitems:item_count">
-					<div class="action_all_container">
-						<form method="post" action="&mvte:urls:BASK:secure;" />
-							<input type="hidden" name="Action" value="AFWA" />
-							<input type="hidden" name="WishList_ID" value="&mvte:global:WishList_ID;" />
-							<mvt:item name="buttons" param="AddAllToBasket" />
-						</form>
-					</div>
 				</mvt:if>
+			</h1>
+			<mvt:if expr="NOT ISNULL l.settings:wishlist:notes">
+				<p>Notes: &mvte:wishlist:notes;</p>
+			</mvt:if>
+			<mvt:if expr="l.settings:wishlist:cust_id EQ g.Basket:cust_id AND g.Customer_Session_Verified">
+				<p class="c-form-inline-set">
+					<a class="c-button" href="&mvte:urls:WLED:auto_sep;WishList_ID=&mvta:wishlist:id;">Edit</a>
+					<a class="c-button c-button--secondary" href="&mvte:urls:WLST:secure_sep;Action=DWSH&WishList_ID=&mvta:wishlist:id;" onClick="if ( !confirm( 'Are you sure you want to delete your wish list? This action cannot be undone\x0A\x0AContinue?' ) ) return false;">Delete</a>
+				</p>
+				<mvt:if expr="l.settings:wishlist:shared">
+					<p class="x-messages x-messages--info">
+						If you would like to share your wish list via email, copy this link: <code class="u-block u-color-black u-text-bold">&mvte:urls:_self:auto_sep;WishList_ID=&mvta:global:WishList_ID;</code>
+					</p>
+				</mvt:if>
+			</mvt:if>
+			
+			<mvt:item name="wishlistitems" />
+			
+			<mvt:if expr="l.settings:wishlistitems:item_count AND ISNULL g.Edit_Wish">
+				<form method="post" action="&mvte:urls:BASK:secure;">
+					<fieldset>
+						<legend>Add All &mvte:wishlist:title; Items to Cart</legend>
+						<input type="hidden" name="Action" value="AFWA">
+						<input type="hidden" name="WishList_ID" value="&mvte:global:WishList_ID;">
+						<div class="c-form-list">
+							<div class="c-form-list__item c-form-list__item--full u-text-right">
+								<mvt:item name="buttons" param="AddAllToBasket" />
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</mvt:if>
+		</div>
+		<aside class="o-layout__item u-width-12 u-width-3--l">
+			<mvt:if expr="l.settings:wishlist:cust_id EQ g.Basket:cust_id AND g.Customer_Session_Verified">
+				<mvt:item name="readytheme" param="navigationset( 'account_navigation' )" />
+			</mvt:if>
+		</aside>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
 
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</td>
-		</tr>
-	</table>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

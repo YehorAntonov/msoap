@@ -2,6 +2,6 @@
     "code": "settings",
     "type": "I",
     "is_global": true,
-    "active": false,
+    "active": true,
     "attributes": []
 }

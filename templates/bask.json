@@ -2,14 +2,14 @@
     "basket": {
         "advanced": 1,
         "applycoupons": 1,
-        "b_height": 75,
-        "b_width": 75,
-        "button_wish": 0,
+        "b_height": 208,
+        "b_width": 208,
+        "button_wish": 1,
         "constrain": "B",
         "discounts": 1,
         "editable": 1,
         "groups": 1,
-        "handling": 0,
+        "handling": 1,
         "imagetypes": [
             "main"
         ],
@@ -17,8 +17,8 @@
         "lineitemdiscounts": 1,
         "lineitemprice": "base",
         "redeemgiftcerts": 0,
-        "salestax": 0,
-        "shipping": 0,
+        "salestax": 1,
+        "shipping": 1,
         "splitpayments": 0,
         "template_filename": "bask-basket.mvc",
         "template_id": 73
@@ -27,7 +27,7 @@
         "template_filename": "bask-content.mvc"
     },
     "footer_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Footer"
     },
     "hdft": {
         "footer": {
@@ -40,7 +40,7 @@
         }
     },
     "header_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Header"
     },
     "paypalcp_buttons": {
         "color": "gold",
@@ -105,9 +105,9 @@
         "urlprefix": "http://miraclesoap.mivatest.com/"
     },
     "shipestimate": {
-        "advanced": 0,
+        "advanced": 1,
         "mode": "basket",
-        "results_display": "window",
+        "results_display": "inline",
         "results_page": "SERT",
         "ship_addr1": 0,
         "ship_addr2": 0,

@@ -1,23 +1,27 @@
-<mvt:item name="prodctgy_meta" param="combined" />
-<meta charset="utf-8" />
-<!--[if IE]>
-   <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<link rel="shortcut icon" href="/favicon.ico">
-<link rev="made" href="info@miraclesoap.com">
-<script language="JavaScript" src="/scripts/jive.js"></script>
-<link rel="StyleSheet" type="text/css" href="/styles/miraclestyle.css" media="screen">
-<link rel="StyleSheet" type="text/css" href="/styles/miracle_upgreate.css" media="screen">
-<script type="text/javascript" src="&mvt:global:clientside_url;Module_Code=mvga&amp;Filename=mvga.js"></script>
+<mvt:if expr="'CTGY' CIN l.settings:page:code">
+	<link rel="canonical" href="&mvte:category:link;">
+<mvt:elseif expr="'PROD' CIN l.settings:page:code OR l.settings:page:code EQ 'PATR'">
+	<link rel="canonical" href="&mvt:product:link;">
+<mvt:else>
+	<link rel="canonical" href="&mvte:urls:_self:auto;">
+</mvt:if>
+<mvt:if expr="'PROD' CIN l.settings:page:code OR l.settings:page:code EQ 'PATR'">
+    <mvt:item name="prodctgy_meta" param="prod" />
+<mvt:elseif expr="'CTGY' CIN l.settings:page:code AND l.settings:category:metafield_count GT 0">
+    <mvt:item name="prodctgy_meta" param="ctgy" />
+<mvt:else>
+	<mvt:if expr="l.settings:page_metafield_count GT 0">
+		<mvt:item name="prodctgy_meta" param="page" />
+	<mvt:else>
+		<mvt:item name="prodctgy_meta" param="global" />
+	</mvt:if>
+</mvt:if>
+<mvt:comment>
+	<!--
+		This item outputs a single body style to control the default font, background color, and/or background image
+		if you have set them under ReadyTheme Settings.
+	-->
+	<mvt:item name="readytheme" param="css" />
+</mvt:comment>
 
 <mvt:item name="head" param="modules" />
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMYVFF7XBC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PMYVFF7XBC');
-</script>

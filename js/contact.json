@@ -1,14 +1,11 @@
 {
     "code": "contact",
     "type": "L",
-    "branchless_filepath": "b07/themes/colossus/extensions/contact/contact.js",
+    "branchless_filepath": "themes/00000002/shadows/extensions/contact/contact.js",
     "is_global": false,
-    "active": false,
-    "attributes": [
-        {
-            "name": "type",
-            "value": "text/javascript"
-        }
-    ],
-    "linked_pages": []
+    "active": true,
+    "attributes": [],
+    "linked_pages": [
+        "CTUS"
+    ]
 }

@@ -1,46 +1,46 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Not Found</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="NTFD">
-<div id="site-container">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<div id="navigation-bar"><mvt:item name="navbar" /></div>
-	<table id="content-container">
-		<tr>
-			<td id="sidebar">
-				<mvt:item name="sidebar" />
-			</td>
-			<td id="main-content">
-				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-				
-				<h1>Not Found</h1>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-				<mvt:if expr = "l.settings:messages:error_message_count EQ 0">
-					The item you requested is not available at this time.
-				<mvt:else>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+		</div>
+	</section>
+
+	<section class="o-layout o-layout--justify-center">
+		<div class="o-layout__item u-width-12 u-width-6--m">
+			<mvt:if expr="l.settings:messages:error_message_count EQ 0">
+				<p class="x-messages x-messages--warning">The item you requested is not available at this time.</p>
+			<mvt:else>
+				<p class="x-messages x-messages--warning">
 					<mvt:foreach iterator="error" array="messages:error_messages">
-						&mvt:error;
+						&mvte:error;<br />
 					</mvt:foreach>
-				</mvt:if>
+				</p>
+			</mvt:if>
+			<p><a href="&mvte:urls:SFNT:rr;">Return to the Storefront</a></p>
+		</div>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
 
-				<p><a href="&mvte:urls:SFNT:auto;">Home</a></p>
-
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</td>
-		</tr>
-	</table>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

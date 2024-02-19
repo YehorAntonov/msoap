@@ -1,8 +1,8 @@
 {
     "code": "extensions",
     "type": "L",
-    "branchless_filepath": "b07/themes/00000002/shadows/extensions.js",
+    "branchless_filepath": "themes/00000002/shadows/extensions.js",
     "is_global": true,
-    "active": false,
+    "active": true,
     "attributes": []
 }

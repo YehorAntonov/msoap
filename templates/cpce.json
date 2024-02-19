@@ -12,7 +12,9 @@
     "mivapay": {
         "paymentcardfields": {
             "cardtype_prompt": "Card Type:",
+            "cardtype_prompt_hidden": 0,
             "mode": "paymentcard_edit",
+            "storecard_checkedbydefault": 0,
             "storecard_prompt": "Store This Card For Future Use",
             "template_filename": "cpce-mivapay.mvc",
             "template_id": 362

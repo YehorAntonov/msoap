@@ -1,11 +1,9 @@
-<nav class="x-category-tree">
-	<input id="categoryTree" class="x-category-tree__trigger" type="checkbox">
-	<label class="x-category-tree__label" for="categoryTree">Support</label>
+<nav class="x-category-tree x-collapsible-content" aria-labelledby="support-navigation-label">
 	<div class="x-category-tree__title">
-		<h3 class="x-category-tree__heading c-heading-echo">Support</h3>
-		<hr class="c-keyline">
+		<p id="support-navigation-label" class="x-category-tree__heading">Support</p>
 	</div>
-	<ul class="x-category-tree__row u-font-small">
+	<button class="x-category-tree__label x-collapsible-content__toggle" data-a11y-toggle="&mvte:readytheme:code;" type="button">Support <span class="u-icon-add" data-toggle="<" aria-hidden="true"></span></button>
+	<ul id="&mvte:readytheme:code;" class="x-category-tree__row x-collapsible-content__item">
 		<mvt:foreach iterator="navigationitem" array="readytheme:navigationitems">
 			<li class="x-category-tree__list x-category-tree__list--level-1">
 				<mvt:if expr="l.settings:navigationitem:link_dest EQ l.settings:page:code">

@@ -1,57 +1,44 @@
 <mvt:if expr="l.settings:paymentcards:paymentcard_count EQ 0">
-	<div class="customer_account_payment_cards_empty_container">No payment cards found</div>
+	<div class="x-messages x-messages--info">No payment cards found.</div>
 	<mvt:exit />
 </mvt:if>
-
-<div class="customer_account_payment_cards">
-	<mvt:foreach iterator="paymentcard" array="paymentcards:paymentcards">
-		<span class="customer_account_payment_card">
-			<span class="customer_account_payment_card_title">
-				&mvte:paymentcard:type; ending in &mvte:paymentcard:lastfour;
-				<span class="customer_account_payment_card_expiration">
-					<mvt:if expr="mktime_t( l.settings:paymentcard:exp_year, l.settings:paymentcard:exp_month, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, 'local') LT s.time_t">
-						<span class="customer_account_payment_card_expired">(expired)</span>
-					</mvt:if>
-
-					&mvte:paymentcard:exp_month;/&mvte:paymentcard:exp_year;
-				</span>
+<mvt:foreach iterator="paymentcard" array="paymentcards:paymentcards">
+	<mvt:if expr="strcasecmp( l.settings:paymentcard:type, 'American Express' ) EQ 0">
+		<mvt:assign name="l.settings:paymentcard:image" value="g.theme_path $ '/core/images/logo_amex.png'" />
+	<mvt:elseif expr="strcasecmp( l.settings:paymentcard:type, 'Visa' ) EQ 0">
+		<mvt:assign name="l.settings:paymentcard:image" value="g.theme_path $ '/core/images/logo_visa.png'" />
+	<mvt:elseif expr="strcasecmp( l.settings:paymentcard:type, 'MasterCard' ) EQ 0">
+		<mvt:assign name="l.settings:paymentcard:image" value="g.theme_path $ '/core/images/logo_mastercard.png'" />
+	<mvt:elseif expr="strcasecmp( l.settings:paymentcard:type, 'Discover' ) EQ 0">
+		<mvt:assign name="l.settings:paymentcard:image" value="g.theme_path $ '/core/images/logo_discover.png'" />
+	<mvt:else>
+		<mvt:assign name="l.settings:paymentcard:image" value="''" />
+	</mvt:if>
+	<div class="x-payment-card">
+		<div class="x-payment-card__image">
+			<img src="&mvte:paymentcard:image;" alt="&mvte:paymentcard:type;" loading="lazy">
+		</div>
+		<div class="x-payment-card__number">
+			&mvte:paymentcard:type; Ending in &mvte:paymentcard:lastfour;
+		</div>
+		<div class="x-payment-card__cardholder">
+			&mvte:paymentcard:fname; &mvte:paymentcard:lname;
+		</div>
+		<div class="x-payment-card__expiry">
+			<mvt:if expr="mktime_t( l.settings:paymentcard:exp_year, l.settings:paymentcard:exp_month, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, 'local') LT s.time_t">
+				<span class="u-color-red">(expired)</span><br>
+			</mvt:if>
+			&mvte:paymentcard:exp_month; / &mvte:paymentcard:exp_year;
+		</div>
+		<div class="x-payment-card__actions">
+			<span class="c-form-inline-set">
+				<a href="&mvte:urls:CPCE:auto_sep;PaymentMethod=paymentcard:&mvta:paymentcard:id;&amp;CSRF_Token=&mvta:global:Basket:csrf_token;">Edit</a>
+				<mvt:assign name="l.settings:js_encoded_url" value="encodejavascriptstring( l.settings:urls:CPCD:secure )"/>
+				<mvt:assign name="l.settings:js_encoded_paymentcard_id" value="encodejavascriptstring( l.settings:paymentcard:id )"/>
+				<mvt:assign name="l.settings:js_encoded_csrf_token" value="encodejavascriptstring( g.Sort_By )"/>
+				<button class="c-button--as-link" onclick="if ( confirm( 'Deleting this payment card cannot be undone.\x0A\x0AContinue?' ) ) { MMDynamic_Form_Submit( '&mvte:js_encoded_url;', { 'Action': 'DCPC', 'PaymentCard_ID': '&mvte:js_encoded_paymentcard_id;', 'CSRF_Token': '&mvte:js_encoded_csrf_token;' } ); } return false;">Delete</button>
 			</span>
-
-			<span class="customer_account_payment_card_row">
-				<span class="customer_account_payment_card_name">&mvte:paymentcard:fname; &mvte:paymentcard:lname;</span>
-				<span class="customer_account_payment_card_actions">
-					<a href="&mvte:urls:CPCE:auto_sep;PaymentMethod=paymentcard:&mvta:paymentcard:id;">Edit</a> |
-					<a href="&mvte:urls:CPCD:auto_sep;Action=DCPC&amp;PaymentCard_ID=&mvta:paymentcard:id;" onclick="if ( !confirm( 'Deleting this payment card cannot be undone.\n\nContinue?' ) ) return false;">Delete</a>
-				</span>
-			</span>
-
-			<mvt:if expr="NOT ISNULL l.settings:paymentcard:addr1">
-				<span class="customer_account_payment_card_row">&mvte:paymentcard:addr1;</span>
-			</mvt:if>
-
-			<mvt:if expr="NOT ISNULL l.settings:paymentcard:addr2">
-				<span class="customer_account_payment_card_row">&mvte:paymentcard:addr2;</span>
-			</mvt:if>
-
-			<mvt:if expr="NOT ISNULL l.settings:paymentcard:city OR NOT ISNULL l.settings:paymentcard:state OR NOT ISNULL l.settings:paymentcard:zip">
-				<span class="customer_account_payment_card_row">
-					<mvt:if expr="NOT ISNULL l.settings:paymentcard:city">
-						&mvte:paymentcard:city;<mvt:if expr="NOT ISNULL l.settings:paymentcard:city AND NOT ISNULL l.settings:paymentcard:state">,</mvt:if>
-					</mvt:if>
-
-					<mvt:if expr="NOT ISNULL l.settings:paymentcard:state">
-						&mvte:paymentcard:state;
-					</mvt:if>
-
-					<mvt:if expr="NOT ISNULL l.settings:paymentcard:zip">
-						&mvte:paymentcard:zip;
-					</mvt:if>
-				</span>
-			</mvt:if>
-
-			<mvt:if expr="NOT ISNULL l.settings:paymentcard:cntry">
-				<span class="customer_account_payment_card_row">&mvte:paymentcard:cntry;</span>
-			</mvt:if>
-		</span>
-	</mvt:foreach>
-</div>
+		</div>
+	</div>
+	<hr class="c-keyline">
+</mvt:foreach>

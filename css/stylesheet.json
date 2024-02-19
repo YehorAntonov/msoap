@@ -2,8 +2,12 @@
     "code": "stylesheet",
     "type": "C",
     "is_global": true,
-    "active": false,
+    "active": true,
     "attributes": [
+        {
+            "name": "type",
+            "value": "text/css"
+        },
         {
             "name": "media",
             "value": "all"
@@ -11,11 +15,11 @@
         {
             "name": "rel",
             "value": "stylesheet"
-        },
-        {
-            "name": "type",
-            "value": "text/css"
         }
     ],
-    "linked_resources": []
+    "linked_resources": [
+        "core",
+        "extensions",
+        "theme"
+    ]
 }

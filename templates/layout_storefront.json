@@ -300,11 +300,21 @@
                         "value": "light"
                     },
                     "desktop": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "overlay_opacity": {
                             "value": 0
                         }
                     },
                     "mobile": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "overflow_behavior": {
                             "value": "wrap"
                         }
@@ -681,11 +691,21 @@
                         "value": "light"
                     },
                     "desktop": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "overlay_opacity": {
                             "value": 0
                         }
                     },
                     "mobile": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "overflow_behavior": {
                             "value": "scroll"
                         }
@@ -816,6 +836,11 @@
                         "value": "light"
                     },
                     "desktop": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "column_count": {
                             "value": "auto"
                         },
@@ -824,6 +849,11 @@
                         }
                     },
                     "mobile": {
+                        "background_color": {
+                            "settings": {
+                                "enabled": 0
+                            }
+                        },
                         "overflow_behavior": {
                             "value": "scroll"
                         }
@@ -947,7 +977,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "7931b6082020baa3a3f27b7b3e96fcb9",
+                "id": "b2bedce0e633bd16f9af907e62f5765d",
                 "item": "flex",
                 "name": "Hero",
                 "param": "hero"
@@ -956,7 +986,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "757d28f09d7891762c7d7fafeea59975",
+                "id": "629c60ca98d6bf76bb0f0d2f7e334423",
                 "item": "flex",
                 "name": "Text Banner",
                 "param": "text-banner"
@@ -965,7 +995,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "12b98291e674d8acded9409d2853d8ed",
+                "id": "12014a6ac3e858b9b7217b0b595de55c",
                 "item": "flex",
                 "name": "Six Across",
                 "param": "six-across"
@@ -974,7 +1004,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "a75b04116c2b82d9a8e0760b12bda69d",
+                "id": "45aa58342a5193d602d0f3ab73b2345f",
                 "item": "flex",
                 "name": "Two Across",
                 "param": "two-across"
@@ -983,7 +1013,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "402b186c529c09a225019e03250c87de",
+                "id": "47df8a3d337dbfe5d3f0ac674a3b45a2",
                 "item": "flex",
                 "name": "Hero 2",
                 "param": "hero-2"
@@ -992,7 +1022,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "6487aee79c3397199e078c691d64ca87",
+                "id": "1d13211ea4532b434163e07251854c42",
                 "item": "flex",
                 "name": "Product Carousel",
                 "param": "product-carousel"
@@ -1001,7 +1031,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "f1e9d642831c37c16f518c342a505d64",
+                "id": "c4264c54982eb7f74975d53eaef6e4fb",
                 "item": "flex",
                 "name": "Text Banner 2",
                 "param": "text-banner-2"
@@ -1010,7 +1040,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "14656f50bec29fa7816a7b1c9c84c44e",
+                "id": "f9ddae42a490022e4b77d954a64d8e36",
                 "item": "flex",
                 "name": "Three Across",
                 "param": "three-across"
@@ -1019,7 +1049,7 @@
                 "dt_end": 0,
                 "dt_start": 0,
                 "enabled": 1,
-                "id": "32adb8b188a1c7a2c8a85073839b798e",
+                "id": "7264086288979505670f9b1f52ef784f",
                 "item": "flex",
                 "name": "Text Banner 3",
                 "param": "text-banner-3"

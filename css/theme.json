@@ -1,9 +1,9 @@
 {
     "code": "theme",
     "type": "L",
-    "branchless_filepath": "b07/themes/00000002/shadows/theme.css",
+    "branchless_filepath": "themes/00000002/shadows/theme.css",
     "is_global": true,
-    "active": false,
+    "active": true,
     "attributes": [
         {
             "name": "type",

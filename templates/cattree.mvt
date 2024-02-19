@@ -1,31 +1,20 @@
-<nav class="category-tree">
-	<h5 class="category-tree-heading">Our Products</h5>
-	<ul>
+<nav class="x-category-tree x-collapsible-content" aria-labelledby="categoryTree-label">
+	<div class="x-category-tree__title">
+		<p id="categoryTree-label" class="x-category-tree__heading">Categories</p>
+	</div>
+	<button class="x-category-tree__label x-collapsible-content__toggle" data-a11y-toggle="categoryTree" type="button">Categories <span class="u-icon-add" data-toggle="<" aria-hidden="true"></span></button>
+	<ul id="categoryTree" class="x-category-tree__row x-collapsible-content__item">
 		<mvt:foreach array="cattree_categories" iterator="cattree_category">
-			<mvt:if expr="(l.settings:category:id AND l.settings:category:id EQ l.settings:cattree_category:id) OR (l.settings:cattree_category:code EQ l.settings:breadcrumbs:links[1]:code)">
-				<mvt:assign name="l.settings:cattree_category:class" value="'active'" />
-			<mvt:elseif expr="g.Category_Code AND ISNULL l.settings:category:id AND l.settings:cattree_category:code EQ g.Category_Code">
-				<mvt:assign name="l.settings:cattree_category:class" value="'active'" />
-			</mvt:if>
-			<mvt:if expr="l.settings:cattree_category:code CIN 'express,mprod,'"><mvt:else><li class="level-&mvte:cattree_category:level; &mvte:cattree_category:class;"><a href="&mvte:cattree_category:link;">&mvte:cattree_category:name;</a></li></mvt:if>
-		</mvt:foreach>
-		<mvt:if expr="l.settings:page:code EQ 'CTGY'  AND l.settings:category:code ISNULL OR l.settings:category:code EQ 'express' OR l.settings:category:code EQ 'Valu-Pack' OR l.settings:page:code EQ 'BASK' OR l.settings:page:code EQ 'SRCH'  OR l.settings:page:code EQ 'BSKE' ">
-			<mvt:item name="ry_toolbelt" param="category_children|'mprod'" />
-			<mvt:if expr="l.settings:category_children">
-			<mvt:foreach iterator="sub_category" array="category_children">
-				<mvt:if expr="(l.settings:category:id AND l.settings:category:id EQ l.settings:sub_category:id) OR (l.settings:sub_category:code EQ l.settings:breadcrumbs:links[1]:code)">
-					<mvt:assign name="l.settings:sub_category:class" value="'active'" />
-				<mvt:elseif expr="g.Category_Code AND ISNULL l.settings:category:id AND l.settings:sub_category:code EQ g.Category_Code">
-					<mvt:assign name="l.settings:sub_category:class" value="'active'" />
+			<li class="x-category-tree__list x-category-tree__list--level-&mvte:cattree_category:level;">
+				<mvt:if expr="NOT ISNULL l.settings:category:id AND l.settings:category:id EQ l.settings:cattree_category:id AND l.settings:page:code NE 'CTLG'">
+					<a class="x-category-tree__link x-category-tree__link--current" href="&mvte:cattree_category:link;">&mvt:cattree_category:name;</a>
+				<mvt:elseif expr="NOT ISNULL g.Category_Code AND ISNULL l.settings:category:id AND l.settings:cattree_category:code EQ g.Category_Code AND l.settings:page:code NE 'CTLG'">
+					<a class="x-category-tree__link x-category-tree__link--current" href="&mvte:cattree_category:link;">&mvt:cattree_category:name;</a>
+				<mvt:else>
+					<a class="x-category-tree__link" href="&mvte:cattree_category:link;">&mvt:cattree_category:name;</a>
 				</mvt:if>
-				<li class="level-&mvte:sub_category:level; &mvte:sub_category:class;"><a href="&mvt:sub_category:href;">&mvte:sub_category:name;</a></li>
-			</mvt:foreach>
-			</mvt:if>
-		</mvt:if>
-		<li class="level">	
-	           <a href="/newsletter/index.html">Newsletter</a>
-	        </li>
-		
-			
+			</li>
+		</mvt:foreach>
 	</ul>
 </nav>
+<!-- end .x-category-tree -->

@@ -3,7 +3,7 @@
         "editable": 1,
         "mode": "customer_add",
         "prefix": "Customer_",
-        "prevent_template_auto_update": 0,
+        "prevent_template_auto_update": 1,
         "template_filename": "acad-customer.mvc",
         "template_id": 103
     },

@@ -2,7 +2,7 @@
     "code": "edit-basket-attributes",
     "type": "I",
     "is_global": false,
-    "active": false,
+    "active": true,
     "attributes": [
         {
             "name": "type",
@@ -13,5 +13,7 @@
             "value": "all"
         }
     ],
-    "linked_pages": []
+    "linked_pages": [
+        "BASK"
+    ]
 }

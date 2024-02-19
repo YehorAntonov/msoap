@@ -1,96 +1,103 @@
 <mvt:item name="html_profile" />
-
 <head>
-    <mvt:if expr="NOT ISNULL l.settings:page:title">
-        <title>&mvt:page:title;</title>
-        <mvt:else>
-            <title>&mvt:store:name;: Checkout: Customer Login</title>
-    </mvt:if>
-
-    <base href="&mvt:global:basehref;" />
-    <link rel="canonical" href="&mvte:urls:_self:auto;" />
-    <mvt:item name="head" param="css_list" />
-    <mvt:item name="head" param="head_tag" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
+	</mvt:if>
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
 </head>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-<body class="ORDL one-column">
-    <div id="site-container">
-        <div id="global-header">
-            <mvt:item name="hdft" param="global_header" />
-        </div>
-        <div id="navigation-bar">
-            <mvt:item name="navbar" />
-        </div>
-        <table id="content-container">
-            <tr>
-                <td id="left-navigation">
-                    <mvt:item name="category_tree" />
-                </td>
-                <td id="main-content">
-                    <div id="page-header">
-                        <mvt:item name="hdft" param="header" />
-                    </div>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+			<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+		</div>
+	</section>
 
-                    <form name="logn" action="&mvte:urls:OCST:secure;" method="post" autocomplete="off">
-                        <input type="hidden" name="Action" value="LOGN" />
+	<section class="o-layout o-layout--justify-center u-bg-white">
+		<mvt:if expr="g.Basket:sub_count EQ 0">
+			<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-input-font-size t-logn-block">
+				<p class="c-heading-foxtrot">Guest Checkout</p>
+				<br>
+				<p><a class="c-button c-button--full" href="&mvte:urls:OCST:secure;" title="Continue As A Guest">Continue As A Guest</a></p>
+				<p class="u-color-gray-600">You can create an account at Order Confirmation</p>
+				<mvt:item name="readytheme" param="contentsection( 'paypalcp_configuration' )" />
+			</div>
+		</mvt:if>
+		<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-input-font-size t-logn-block">
+			<p class="c-heading-foxtrot">Sign In or Register</p>
+			<div id="sign-in-form" class="t-ordl-form-wrapper" aria-labelledby="register-action" role="region">
+				<form class="t-ordl-form" method="post" action="&mvte:urls:OCST:secure;" autocomplete="off">
+					<fieldset>
+						<legend>&mvt:page:name;</legend>
+						<input type="hidden" name="Action" value="LOGN" />
+						<div class="c-form-list">
+							<div class="c-form-list__item c-form-list__item--full">
+								<label class="c-form-label u-text-medium is-required &mvte:global:invalid_credentials;" for="l-Customer_LoginEmail">Email Address</label>
+								<input id="l-Customer_LoginEmail" class="c-form-input" type="text" inputmode="email" name="Customer_LoginEmail" value="&mvte:global:Customer_LoginEmail;" autocomplete="email" required>
+							</div>
+							<div class="c-form-list__item c-form-list__item--full">
+								<label class="c-form-label u-text-medium is-required &mvte:global:invalid_credentials;" for="l-Customer_Password">Password:</label>
+								<input id="l-Customer_Password" class="c-form-input" type="password" name="Customer_Password" autocomplete="current-password" required>
+							</div>
+							<div class="c-form-list__item c-form-list__item--full">
+								<p>
+									<a data-dialog-trigger="forgot-password" href="&mvte:urls:FPWD:secure;">Forgot Password?</a>
+								</p>
+								<p>
+									<input class="c-button c-button--full c-button--secondary" type="submit" value="Sign In and Checkout">
+								</p>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<div id="register-form" class="t-ordl-form-wrapper u-hidden" aria-labelledby="sign-in-action" role="region">
+				<form class="t-ordl-form" method="post" action="&mvte:urls:OCST:secure;" autocomplete="off">
+					<p>We will save the rest of your account information during checkout.</p>
+					<fieldset>
+						<legend>Create Customer Account</legend>
+						<input type="hidden" name="Action" value="ICSQ" />
+						<input type="hidden" name="CSRF_Token" value="&mvte:global:Basket:csrf_token;">
+						<div class="c-form-list">
+							<div class="c-form-list__item c-form-list__item--full">
+								<label class="c-form-label u-text-medium is-required &mvte:global:invalid_credentials;" for="l-Create_Customer_LoginEmail">Email Address</label>
+								<input id="l-Create_Customer_LoginEmail" class="c-form-input" type="text" inputmode="email" name="Customer_LoginEmail" value="&mvte:global:Customer_LoginEmail;" autocomplete="email" required>
+							</div>
+							<div class="c-form-list__item c-form-list__item--full">
+								<label class="c-form-label u-text-medium is-required &mvte:global:invalid_credentials;" for="l-Create_Customer_Password">Password:</label>
+								<input id="l-Create_Customer_Password" class="c-form-input" type="password" name="Customer_Password" autocomplete="new-password" required>
+							</div>
+							<div class="c-form-list__item c-form-list__item--full">
+								<p>
+									<input class="c-button c-button--full c-button--secondary" type="submit" value="Register and Checkout">
+								</p>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<p class="u-text-center">
+				<button id="register-action" class="c-button c-button--as-link" aria-controls="register-form" aria-expanded="true" data-disclosure>Register Now</button>
+				<button id="sign-in-action" class="c-button c-button--as-link u-hidden" aria-controls="sign-in-form" aria-expanded="false" data-disclosure>Sign In Instead</button>
+			</p>
+		</div>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+			<mvt:item name="readytheme" param="contentsection( 'forgot-password' )" />
+		</div>
+	</section>
 
-                        <div class="section grey-border-right aligncenter">
-                            <h3>Create New Account</h3>
-                            <input type="button" value="Create Account" class="button"
-                                onclick="window.location = '&mvtj:urls:ACAD:auto_sep;Order=1';" />
-                        </div>
-                        <div id="logn" class="section grey-border-right logn-label">
-                            <h3>Sign In</h3>
-                            <mvt:if expr="l.settings:messages:error_message_count">
-                                <div class="error-message">
-                                    <mvt:foreach iterator="error" array="messages:error_messages">
-                                        &mvt:error;
-                                    </mvt:foreach>
-                                </div>
-                                <mvt:elseif expr="l.settings:messages:information_message_count">
-                                    <div class="information-message">
-                                        <mvt:foreach iterator="message" array="messages:information_messages">
-                                            &mvt:message;
-                                        </mvt:foreach>
-                                    </div>
-
-                            </mvt:if>
-
-                            <div class="form_row">
-                                <label for="Customer_LoginEmail">Your E-Mail:</label><input type="text"
-                                    name="Customer_LoginEmail" id="Customer_LoginEmail" class="textfield logn-input"
-                                    value="&mvte:global:Customer_LoginEmail;" autocomplete="off" />
-                            </div>
-                            <div class="form_row">
-                                <label for="Customer_Password">Password:</label><input type="password"
-                                    name="Customer_Password" id="Customer_Password" class="textfield logn-input"
-                                    autocomplete="off" />
-                            </div>
-                            <div class="clear"></div>
-                            <div class="sign-in-buttons">
-                                <mvt:item name="buttons" param="login" />
-                            </div>
-                            <div class="clear"></div>
-                            <div class="forgot-password"><a href="&mvte:urls:FPWD:auto;">Forgot password?</a></div>
-                        </div>
-                        <div class="section aligncenter">
-                            <h3>Express Checkout</h3>
-                            <input type="button" value="Proceed to Checkout" class="button"
-                                onclick="window.location = '&mvtj:urls:OCST:auto;';" />
-                        </div>
-                    </form>
-
-                    <div id="page-footer">
-                        <mvt:item name="hdft" param="footer" />
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <div id="bottom-wrap"></div>
-        <div id="global-footer">
-            <mvt:item name="hdft" param="global_footer" />
-        </div>
-    </div>
+	<mvt:item name="hdft" param="global_footer" />
 </body>
-
 </html>

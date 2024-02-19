@@ -1,15 +1,16 @@
 {
-    "advanced": 0,
-    "b_height": 50,
-    "b_width": 50,
+    "additionalprice": "base",
+    "advanced": 1,
+    "b_height": 32,
+    "b_width": 32,
     "constrain": "B",
     "displaydiscounts": 0,
     "image": "type:main",
     "imagetypes": [
         "main"
     ],
-    "predictdiscounts": 0,
-    "price": "base",
+    "predictdiscounts": 1,
+    "price": "sale",
     "prod_code": 1,
     "prod_desc": 0,
     "prod_name": 1,

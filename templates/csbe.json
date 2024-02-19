@@ -1,6 +1,8 @@
 {
     "customer": {
+        "editable": 0,
         "mode": "tokens_only_nodisplay",
+        "prevent_template_auto_update": 0,
         "template_filename": "csbe-customer.mvc",
         "template_id": 374
     },
@@ -40,11 +42,20 @@
         "urlprefix": "http://miraclesoap.mivatest.com/"
     },
     "subscriptionfields": {
-        "b_height": 75,
-        "b_width": 75,
+        "b_height": 360,
+        "b_width": 360,
         "constrain": "B",
         "discounts": 1,
+        "display": {
+            "discounts": 1,
+            "handling": 1,
+            "salestax": 1,
+            "shipping": 1
+        },
         "handling": 1,
+        "imagetypes": [
+            "main"
+        ],
         "mode": "subscription_edit",
         "salestax": 1,
         "shipping": 1,

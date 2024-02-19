@@ -1,1 +1,1 @@
-<input type="submit" value="Add To Wish List" class="button" />
+<input class="c-button c-button--as-link c-button--full" type="submit" value="Add to Wish List">

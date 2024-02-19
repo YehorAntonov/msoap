@@ -37,6 +37,17 @@
         "urlprefix": "http://miraclesoap.mivatest.com/"
     },
     "sequence": {
+        "sequence": [
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "4968e5d95caa87060dd78e865732bc13",
+                "item": "flex",
+                "name": "Content",
+                "param": "content"
+            }
+        ],
         "title": "Sequence"
     }
 }

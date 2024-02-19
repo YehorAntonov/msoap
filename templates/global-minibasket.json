@@ -1,13 +1,17 @@
 {
-    "advanced": 0,
-    "b_height": 75,
-    "b_width": 75,
+    "advanced": 1,
+    "b_height": 40,
+    "b_width": 40,
     "constrain": "B",
-    "discounts": 0,
+    "discounts": 1,
     "groups": 1,
-    "handling": 0,
+    "handling": 1,
+    "imagetypes": [
+        "main"
+    ],
     "ldiscount": 1,
+    "lineprice": "none",
     "maxprodlen": 0,
-    "salestax": 0,
-    "shipping": 0
+    "salestax": 1,
+    "shipping": 1
 }

@@ -1,5 +1,12 @@
 {
     "code": "head_tag",
-    "linked_js_resources": [],
-    "linked_css_resources": []
+    "linked_js_resources": [
+        "GTM-head-tag",
+        "GTM-dataLayer",
+        "runtimecombofacets"
+    ],
+    "linked_css_resources": [
+        "square-payment",
+        "edit-basket-attributes"
+    ]
 }

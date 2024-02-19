@@ -9,7 +9,7 @@
         "template_filename": "ctus-customer.mvc"
     },
     "footer_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Footer"
     },
     "hdft": {
         "footer": {
@@ -22,7 +22,7 @@
         }
     },
     "header_sequence": {
-        "title": "Sequence"
+        "title": "Page Builder Header"
     },
     "inline_css": {
         "template_filename": "ctus-inline_css.mvc"

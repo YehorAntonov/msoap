@@ -1,7 +1,12 @@
 {
     "code": "footer_js",
     "linked_js_resources": [
-        "contact_form"
+        "settings",
+        "polyfills",
+        "scripts",
+        "contact",
+        "json-ld",
+        "edit-basket-attributes"
     ],
     "linked_css_resources": []
 }

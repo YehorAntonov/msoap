@@ -1,6 +1,7 @@
 {
     "addressfields": {
         "mode": "customeraddress_add",
+        "prevent_template_auto_update": 1,
         "template_filename": "cada-addressfields.mvc",
         "template_id": 239
     },

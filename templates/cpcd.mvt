@@ -1,51 +1,46 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Customer Payment Cards</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="CPCD one-column">
-<div id="site-container">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<div id="navigation-bar"><mvt:item name="navbar" /></div>
-	<table id="content-container">
-		<tr>
-			<td id="main-content">
-				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
-				<div class="customer_add_card_link"><a href="&mvte:urls:CPCA:secure;">Add Card</a></div>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-				<h1>Customer Payment Cards</h1>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+			<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+		</div>
+	</section>
 
-				<mvt:if expr="l.settings:messages:error_message_count">
-				<div class="error-message">
-				<mvt:foreach iterator="error" array="messages:error_messages">
-					&mvt:error;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
-				<mvt:if expr="l.settings:messages:information_message_count">
-				<div class="information-message">
-				<mvt:foreach iterator="message" array="messages:information_messages">
-					&mvt:message;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
+	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--m">
+		<div class="o-layout__item u-width-12 u-width-9--m">
+			<div class="o-layout--justify-between o-layout--wrap u-flex">
+				<h1 class="c-heading-delta">&mvt:page:name;</h1>
+				<p><a class="c-button" href="&mvte:urls:CPCA:secure;">Add New Card</a></p>
+			</div>
+			<hr class="c-keyline">
+			<mvt:item name="paymentcards" />
+		</div>
+		<aside class="o-layout__item u-width-12 u-width-3--m">
+			<mvt:item name="readytheme" param="navigationset( 'account_navigation' )" />
+		</aside>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
 
-				<div class="paymentcards-container"><mvt:item name="paymentcards" /></div>
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</td>
-		</tr>
-	</table>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

@@ -1,70 +1,47 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Checkout: Customer Information</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-	<base href="&mvt:global:basehref;" />
-	<meta name="robots" content="noindex, follow" />
-	<meta name=”robots” content=”noindex, nofollow”>
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="OCST">
-<div id="site-container">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<mvt:comment><div id="navigation-bar"><mvt:item name="navbar" /></div></mvt:comment>
-	<div id="content-container" class="clearfix">
-			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-			<mvt:comment><td id="left-navigation"><mvt:item name="category_tree" /></td></mvt:comment>
-			<div id="sidebar">
-				<mvt:item name="sidebar" />
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
+
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+		</div>
+	</section>
+
+	<section class="o-layout o-layout--wide">
+		<div class="o-layout__item u-width-12 u-width-8--l u-width-9--w">
+			<div class="t-basket__product-contents">
+				<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+				<mvt:item name="customer" />
+				<mvt:item name="readytheme" param="contentsection( 'address_validation' )" />
 			</div>
-			<div id="main-content">
-				<mvt:comment><h1>Order Details</h1></mvt:comment>
-				<p>When placing orders to Canada please call 1-888-895-7627!</p>
-				<mvt:comment><div id="basket-contents" class="non-editable"><mvt:item name="basket" /></div></mvt:comment>
-
-				<mvt:if expr="l.settings:messages:error_message_count">
-					<div class="error-message">
-					<mvt:foreach iterator="error" array="messages:error_messages">
-						&mvt:error;
-					</mvt:foreach>
-					</div>
-				</mvt:if>
-
-				<mvt:if expr="l.settings:messages:information_message_count">
-					<div class="information-message">
-					<mvt:foreach iterator="message" array="messages:information_messages">
-						&mvt:message;
-					</mvt:foreach>
-					</div>
-				</mvt:if>
-
-				<mvt:if expr="l.settings:basket:total GT 0">
-					<mvt:assign name="l.settings:action" value="'ORDR'" />
-					<mvt:assign name="l.settings:url" value="l.settings:urls:OUSL:secure" />
-				<mvt:elseif expr="g.Store:req_frship">
-					<mvt:assign name="l.settings:action" value="'ORDR'" />
-					<mvt:assign name="l.settings:url" value="l.settings:urls:OSEL:secure" />
-				<mvt:else>
-					<mvt:assign name="l.settings:action" value="'ORDR,SHIP,CTAX,AUTH'" />
-					<mvt:assign name="l.settings:url" value="l.settings:urls:INVC:secure" />
-				</mvt:if>
-
-				<form id="ocst_form" method="post" action="&mvte:url;">
-				<input type="hidden" name="Action" value="&mvte:action;" />
-				<div id="customer-fields" class="editable"><mvt:item name="customer" /></div>
-				<div class="continue-button"><input type="submit" value="Next Step Click Here" class="button" /></div>
-				</form>
-
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
+		</div>
+		<aside class="o-layout__item u-width-12 u-width-4--l u-width-3--w">
+			<div class="t-basket__order-summary">
+				<mvt:item name="basket" />
 			</div>
-	</div>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+			<mvt:item name="readytheme" param="contentsection( 'helpful_info' )" />
+		</aside>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
+
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

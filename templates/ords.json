@@ -29,7 +29,7 @@
         }
     },
     "order_customer": {
-        "prevent_template_auto_update": 0,
+        "prevent_template_auto_update": 1,
         "template_filename": "ords-order_customer.mvc",
         "template_id": 185
     },
@@ -54,11 +54,14 @@
     },
     "view_order": {
         "advanced": 1,
-        "b_height": 75,
-        "b_width": 75,
+        "b_height": 128,
+        "b_width": 128,
         "constrain": "B",
         "groups": 1,
-        "lineitemcoupons": 0,
+        "imagetypes": [
+            "main"
+        ],
+        "lineitemcoupons": 1,
         "lineitemdiscounts": 1,
         "lineitemprice": "base",
         "payments": 1,

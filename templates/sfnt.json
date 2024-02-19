@@ -991,6 +991,89 @@
         "urlprefix": "http://miraclesoap.mivatest.com/"
     },
     "sequence": {
+        "sequence": [
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "d6a273fe549df1056bde78f9332d0d9b",
+                "item": "flex",
+                "name": "Hero",
+                "param": "hero"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "bef1441aeecfd1c6de1da235841024d4",
+                "item": "flex",
+                "name": "Text Banner",
+                "param": "text-banner"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "c08ea2f16f69b2fec3f85e8222e17f2b",
+                "item": "flex",
+                "name": "Six Across",
+                "param": "six-across"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "d3524c78f9868e8cccee0e369e7c1adb",
+                "item": "flex",
+                "name": "Two Across",
+                "param": "two-across"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "bbd590f350288339deb3e76b4c431079",
+                "item": "flex",
+                "name": "Hero 2",
+                "param": "hero-2"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "650e1c27a41c481a4c398f10569d4ff2",
+                "item": "flex",
+                "name": "Product Carousel",
+                "param": "product-carousel"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "e268b1f01dfd82a1aa82648b398222b9",
+                "item": "flex",
+                "name": "Text Banner 2",
+                "param": "text-banner-2"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "c288f8a49ded8f6dabb4ae929449e14b",
+                "item": "flex",
+                "name": "Three Across",
+                "param": "three-across"
+            },
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "a7114b392f36791afaa275cc2e6e3c32",
+                "item": "flex",
+                "name": "Text Banner 3",
+                "param": "text-banner-3"
+            }
+        ],
         "title": "Sequence"
     }
 }

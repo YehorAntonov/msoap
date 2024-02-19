@@ -1,34 +1,37 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Checkout: Minimum Purchase Required</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="OMIN">
-<div id="site-container">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<div id="navigation-bar"><mvt:item name="navbar" /></div>
-	<table id="content-container">
-		<tr>
-			<td id="left-navigation"><mvt:item name="category_tree" /></td>
-			<td id="main-content">
-				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-				<mvt:item name="messages" />
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+		</div>
+	</section>
 
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</td>
-		</tr>
-	</table>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+	<section class="o-layout o-layout--justify-center">
+		<div class="o-layout__item u-width-12 u-width-6--m">
+			<mvt:item name="messages" />
+		</div>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
+
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

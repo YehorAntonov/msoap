@@ -1,6 +1,7 @@
 {
     "addressfields": {
         "mode": "customeraddress_edit",
+        "prevent_template_auto_update": 1,
         "template_filename": "cade-addressfields.mvc",
         "template_id": 243
     },

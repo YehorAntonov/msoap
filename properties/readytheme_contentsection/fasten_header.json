@@ -1,6 +1,5 @@
 {
     "active": 1,
-    "css_class": "x-fasten-header",
     "name": "Global \"Sticky\" Header",
     "wrap_div": 1
 }

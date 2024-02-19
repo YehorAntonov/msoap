@@ -1,211 +1,34 @@
-<div id="filter-items-container">
-	<mvt:if expr="l.settings:orders_on_page_count GT 0">
-		<div class="sorting">
-			<form method="get" action="&mvte:urls:_self:auto_noparams;">
-				<mvt:item name="urls" param="hidden_params:_self:auto" />
-				<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
-				<input type="hidden" name="Offset" value="&mvte:global:Offset;" />
+<mvt:if expr="NOT l.settings:orders_found GT 0">
+	<p class="x-messages x-messages--info">No matching orders found.</p>
+	<mvt:exit />
+</mvt:if>
 
-				<label for="SortBy">Sort By:</label>
-				<select id="SortBy" name="SortBy" onchange="window.location.href='&mvtj:urls:_self:auto_sep;Offset=' + encodeURIComponent( '&mvtj:global:Offset;' ) + '&amp;Per_Page=' + encodeURIComponent( '&mvtj:global:Per_Page;' ) + '&amp;SortBy=' + encodeURIComponent( this.options[ this.selectedIndex ].value ) + '&amp;Order_BillEmail=' + encodeURIComponent( '&mvtj:global:Order_BillEmail;' ) + '&amp;Order_BillZip=' + encodeURIComponent( '&mvtj:global:Order_BillZip;' );">
-
-					<mvt:if expr="g.SortBy EQ 'InvAsc'">
-						<option value="InvAsc" selected="selected">Invoice Ascending</option>
-					<mvt:else>
-						<option value="InvAsc">Invoice Ascending</option>
-					</mvt:if>
-					<mvt:if expr="g.SortBy EQ 'InvDesc'">
-						<option value="InvDesc" selected="selected">Invoice Descending</option>
-					<mvt:else>
-						<option value="InvDesc">Invoice Descending</option>
-					</mvt:if>
-					<mvt:if expr="g.SortBy EQ 'OrdDtAsc'">
-						<option value="OrdDtAsc" selected="selected">Order Date Ascending</option>
-					<mvt:else>
-						<option value="OrdDtAsc">Order Date Ascending</option>
-					</mvt:if>
-					<mvt:if expr="g.SortBy EQ 'OrdDtDesc'">
-						<option value="OrdDtDesc" selected="selected">Order Date Descending</option>
-					<mvt:else>
-						<option value="OrdDtDesc">Order Date Descending</option>
-					</mvt:if>
-					<mvt:if expr="g.SortBy EQ 'StusAsc'">
-						<option value="StusAsc" selected="selected">Order Status Ascending</option>
-					<mvt:else>
-						<option value="StusAsc">Order Status Ascending</option>
-					</mvt:if>
-					<mvt:if expr="g.SortBy EQ 'StusDesc'">
-						<option value="StusDesc" selected="selected">Order Status Descending</option>
-					<mvt:else>
-						<option value="StusDesc">Order Status Descending</option>
-					</mvt:if>
-					<mvt:if expr="g.SortBy EQ 'OrdTotAsc'">
-						<option value="OrdTotAsc" selected="selected">Total Price Ascending</option>
-					<mvt:else>
-						<option value="OrdTotAsc">Total Price Ascending</option>
-					</mvt:if>
-					<mvt:if expr="g.SortBy EQ 'OrdTotDesc'">
-						<option value="OrdTotDesc" selected="selected">Total Price Descending</option>
-					<mvt:else>
-						<option value="OrdTotDesc">Total Price Descending</option>
-					</mvt:if>
-				</select>
-			</form>
-		</div>
-	</mvt:if>
-	<mvt:if expr="l.settings:orders_on_page_count GT 1">
-		<div class="per-page">
-			<form method="get" action="&mvte:urls:_self:auto_noparams;">
-				<mvt:item name="urls" param="hidden_params:_self:auto" />
-				<input type="hidden" name="SortBy" value="&mvte:global:SortBy;" />
-				<input type="hidden" name="Offset" value="&mvte:global:Offset;" />
-
-				<label for="Per_Page">View:</label>
-				<select id="Per_Page" name="Per_Page" onchange="window.location.href='&mvtj:urls:_self:auto_sep;Offset=' + encodeURIComponent( '&mvtj:global:Offset;' ) + '&amp;Per_Page=' + encodeURIComponent( this.options[ this.selectedIndex ].value ) + '&amp;SortBy=' + encodeURIComponent( '&mvtj:global:SortBy;' ) + '&amp;Order_BillEmail=' + encodeURIComponent( '&mvtj:global:Order_BillEmail;' ) + '&amp;Order_BillZip=' + encodeURIComponent( '&mvtj:global:Order_BillZip;' );">
-
-					<mvt:if expr="g.Per_Page EQ 10">
-						<option value="10" selected="selected">10</option>
-					<mvt:else>
-						<option value="10">10</option>
-					</mvt:if>
-					<mvt:if expr="g.Per_Page EQ 20">
-						<option value="20" selected="selected">20</option>
-					<mvt:else>
-						<option value="20">20</option>
-					</mvt:if>
-					<mvt:if expr="g.Per_Page EQ 40">
-						<option value="40" selected="selected">40</option>
-					<mvt:else>
-						<option value="40">40</option>
-					</mvt:if>
-					<mvt:if expr="g.Per_Page EQ -1">
-						<option value="-1" selected="selected">All</option>
-					<mvt:else>
-						<option value="-1">All</option>
-					</mvt:if>
-				</select>
-			</form>
-		</div>
-	</mvt:if>
-
-	<mvt:if expr="l.settings:page_links:last_page GT 1">
-		<div class="page-links">
-			<span class="page-links-title">Page(s):</span>
-			<span class="page-links-container">
-				<mvt:if expr="l.settings:page_links:current_page NE 1">
-					<a href="&mvte:urls:_self:auto_sep;&mvte:page_links:prev_link_params;&Order_BillEmail=&mvta:global:Order_BillEmail;&Order_BillZip=&mvta:global:Order_BillZip;" class="page-links-previous">&lt;</a>
-				<mvt:else>
-					<span class="page-links-previous page-links-deactivated">&lt;</span>
-				</mvt:if>
-				<mvt:if expr="l.settings:page_links:current_page NE l.settings:page_links:last_page">
-					<a href="&mvte:urls:_self:auto_sep;&mvte:page_links:next_link_params;&Order_BillEmail=&mvta:global:Order_BillEmail;&Order_BillZip=&mvta:global:Order_BillZip;" class="page-links-next">&gt;</a>
-				<mvt:else>
-					<span class="page-links-next page-links-deactivated">&gt;</span>
-				</mvt:if>
-				<span class="page-disp">
-					<mvt:if expr="NOT l.settings:page_links:contains_first">
-						<a href="&mvte:urls:_self:auto_sep;&mvte:page_links:first_link_params;&Order_BillEmail=&mvta:global:Order_BillEmail;&Order_BillZip=&mvta:global:Order_BillZip;" class="page-links-inactive">1</a>...
-					</mvt:if>
-					<mvt:foreach iterator="pages" array="page_links:pages">
-						<mvt:if expr="l.settings:page_links:current_page EQ l.settings:pages:page_num">
-							<span class="page-links-active">&mvte:pages:page_num;</span>
-						<mvt:else>
-							<a href="&mvte:urls:_self:auto_sep;&mvte:pages:link_params;&Order_BillEmail=&mvta:global:Order_BillEmail;&Order_BillZip=&mvta:global:Order_BillZip;" class="page-links-inactive">&mvte:pages:page_num;</a>
-						</mvt:if>
-					</mvt:foreach>
-					<mvt:if expr="NOT l.settings:page_links:contains_last">
-						...<a href="&mvte:urls:_self:auto_sep;&mvte:page_links:last_link_params;&Order_BillEmail=&mvta:global:Order_BillEmail;&Order_BillZip=&mvta:global:Order_BillZip;" class="page-links-inactive">&mvte:page_links:last_page;</a>
-					</mvt:if>
-				</span>
-			</span>
-		</div>
-	</mvt:if>
-	</div><div class="clear"></div>
-</div>
-
-<div class="line-item">
-	<table>
-		<tr class="heading">
-			<td class="order-invoice">
-				Invoice
-			</td>
-			<td class="order-date">
-				Order Date
-			</td>
-			<td class="order-status">
-				Status
-			</td>
-			<td class="order-tracking">
-				Shipments
-			</td>
-			<td class="order-total">
-				 Total
-			</td>
-		<td class="order-view">
-			&nbsp;
-		</td>
+<table class="c-table-responsive">
+	<thead class="c-table-responsive_thead">
+		<tr class="c-table-responsive__row u-font-small u-text-bold u-text-uppercase">
+			<th class="c-table-responsive__cell" scope="col">Order #</th>
+			<th class="c-table-responsive__cell" scope="col">Order Placed</th>
+			<th class="c-table-responsive__cell" scope="col">Total</th>
+			<th class="c-table-responsive__cell" scope="col">Status</th>
+			<th class="c-table-responsive__cell" scope="col">Shipments</th>
 		</tr>
+	</thead>
+	<tbody>
 		<mvt:foreach iterator="order" array="orders">
-		<mvt:if expr = "l.pos1 MOD 2">
-		<tr class="alt_row">
-		<mvt:else>
-		<tr>
-		</mvt:if>
-			<td class="order-invoice">
-				&mvt:order:id;
-			</td>
-			<td class="order-date">
-				&mvt:order:date_formatted;
-			</td>
-			<td class="order-status">
-				&mvt:order:order_status;
-			</td>
-			<td class="order-tracking">
-				<mvt:foreach iterator="shipment" array="order:shipments">
-				<a target="_blank" href="&mvt:shipment:tracklink_raw;">&mvt:shipment:tracknum;</a><br />
-				</mvt:foreach>
-			</td>
-			<td class="order-total">
-				&mvt:order:formatted_total;
-			</td>
-		<td class="order-view">
-			<a href="&mvte:global:secure_sessionurl;Screen=ORDS&amp;Store_Code=&mvta:global:Store_Code;&amp;SortBy=&mvta:global:SortBy;&amp;Offset=&mvta:global:Offset;&amp;Order_ID=&mvt:order:id;&amp;Order_BillEmail=&mvta:global:Order_BillEmail;&amp;Order_BillZip=&mvta:global:Order_BillZip;">View</a>
-		</td>
-		</tr>
+			<tr class="c-table-responsive__row u-border-none">
+				<td class="c-table-responsive__cell c-table-responsive__cell--flex" data-label="Order #">
+					&mvt:order:id;<br>
+					<a class="u-color-gray-600 u-font-small" href="&mvte:urls:ORDS:auto_sep;Order_ID=&mvta:order:id;&amp;Order_BillEmail=&mvta:global:Order_BillEmail;&amp;Order_BillZip=&mvta:global:Order_BillZip;">Order Details</a>
+				</td>
+				<td class="c-table-responsive__cell c-table-responsive__cell--flex" data-label="Order Placed">&mvt:order:date_formatted;</td>
+				<td class="c-table-responsive__cell c-table-responsive__cell--flex" data-label="Total">&mvt:order:formatted_total;</td>
+				<td class="c-table-responsive__cell c-table-responsive__cell--flex" data-label="Status">&mvt:order:order_status;</td>
+				<td class="c-table-responsive__cell c-table-responsive__cell--flex" data-label="Shipments">
+					<mvt:foreach iterator="shipment" array="order:shipments">
+						<a class="u-color-gray-50 u-font-small" href="&mvte:shipment:tracklink_raw;" target="_blank">&mvt:shipment:tracknum;</a><br/>
+					</mvt:foreach>
+				</td>
+			</tr>
 		</mvt:foreach>
-	</table>
-
-	<mvt:if expr="l.settings:page_disp_count LE 0">
-		<mvt:if expr="g.Offset OR g.NextOffset">
-		<div class="next-previous">
-			<mvt:if expr="g.Offset GT 0">
-			<div class="previous-button">
-				<form method="get" action="&mvte:urls:_self:auto_noparams;">
-					<mvt:item name="urls" param="hidden_params:_self:auto" />
-					<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
-					<input type="hidden" name="SortBy" value="&mvte:global:SortBy;" />
-					<input type="hidden" name="Order_BillEmail" value="&mvte:global:Order_BillEmail;" />
-					<input type="hidden" name="Order_BillZip" value="&mvte:global:Order_BillZip;" />
-					<input type="hidden" name="Offset" value="&mvte:global:PrevOffset;" />
-					<mvt:item name="buttons" param="Previous" />
-				</form>
-			</div>
-			</mvt:if>
-
-			<mvt:if expr="g.NextOffset GT 0">
-			<div class="next-button">
-				<form method="get" action="&mvte:urls:_self:auto_noparams;">
-					<mvt:item name="urls" param="hidden_params:_self:auto" />
-					<input type="hidden" name="Per_Page" value="&mvte:global:Per_Page;" />
-					<input type="hidden" name="SortBy" value="&mvte:global:SortBy;" />
-					<input type="hidden" name="Order_BillEmail" value="&mvte:global:Order_BillEmail;" />
-					<input type="hidden" name="Order_BillZip" value="&mvte:global:Order_BillZip;" />
-					<input type="hidden" name="Offset" value="&mvte:global:NextOffset;" />
-					<mvt:item name="buttons" param="Next" />
-				</form>
-			</div>
-			</mvt:if>
-		</div>
-		</mvt:if>
-	</mvt:if>
-</div>
+	</tbody>
+</table>

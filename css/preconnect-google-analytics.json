@@ -3,11 +3,15 @@
     "type": "E",
     "filepath": "//www.google-analytics.com",
     "is_global": true,
-    "active": false,
+    "active": true,
     "attributes": [
         {
             "name": "rel",
             "value": "preconnect"
+        },
+        {
+            "name": "crossorigin",
+            "value": ""
         }
     ]
 }

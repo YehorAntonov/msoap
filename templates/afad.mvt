@@ -1,57 +1,34 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Create Affiliate Account</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="AFAD">
-<div id="site-container" class="clearfix">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<mvt:comment><div id="navigation-bar"><mvt:item name="navbar" /></div></mvt:comment>
-	<div id="content-container" class="clearfix">
-			<mvt:comment><td id="left-navigation"><mvt:item name="category_tree" /></td></mvt:comment>
-			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-			<div id="sidebar">
-				<div id="sidebar-content">
-				</div>
-			</div>
-			<div id="main-content">
-				
-				<mvt:comment><div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div></mvt:comment>
-				<mvt:comment><h1>Affiliate Account Registration</h1></mvt:comment>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-				<mvt:if expr="l.settings:messages:error_message_count">
-				<div class="error-message">
-				<mvt:foreach iterator="error" array="messages:error_messages">
-					&mvt:error;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
-				<mvt:if expr="l.settings:messages:information_message_count">
-				<div class="information-message">
-				<mvt:foreach iterator="message" array="messages:information_messages">
-					&mvt:message;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
-				<form id="afad_form" method="post" action="&mvte:urls:AFAE:secure;" autocomplete="off">
-				<input type="hidden" name="Action" value="IAFL" />
-				<div id="affiliate-fields" class="editable"><mvt:item name="affiliate" /></div>
-				<div class="save-button"><mvt:item name="buttons" param="Save" /></div>
-				</form>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+			<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+		</div>
+	</section>
 
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</div>
-	</div>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+	<mvt:item name="affiliate" />
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
+
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

@@ -3,7 +3,7 @@
         "editable": 1,
         "mode": "customer_edit",
         "prefix": "Customer_",
-        "prevent_template_auto_update": 0,
+        "prevent_template_auto_update": 1,
         "template_filename": "aced-customer.mvc",
         "template_id": 107
     },

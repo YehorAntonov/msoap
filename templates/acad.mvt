@@ -1,76 +1,35 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Account Registration</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-	<meta name="robots" content="noindex, follow" />
-	<meta name=”robots” content=”noindex, nofollow”>
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="ACAD">
-<div id="site-container" class="clearfix">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<mvt:comment><div id="navigation-bar"><mvt:item name="navbar" /></div></mvt:comment>
-	<div id="content-container" class="clearfix">
-			<mvt:comment><td id="left-navigation"><mvt:item name="category_tree" /></td></mvt:comment>
-			<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-			<div id="sidebar">
-				<div id="sidebar-content">
-				</div>
-			</div>
-			<div id="main-content">
-				
-				<mvt:comment><div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div></mvt:comment>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
 
-				<mvt:comment><h1>Account Registration</h1></mvt:comment>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+			<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+		</div>
+	</section>
 
-				<mvt:if expr="l.settings:messages:error_message_count">
-				<div class="error-message">
-				<mvt:foreach iterator="error" array="messages:error_messages">
-					&mvt:error;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
-				<mvt:if expr="l.settings:messages:information_message_count">
-				<div class="information-message">
-				<mvt:foreach iterator="message" array="messages:information_messages">
-					&mvt:message;
-				</mvt:foreach>
-				</div>
-				</mvt:if>
+	<mvt:item name="customer" />
+	<mvt:item name="readytheme" param="contentsection( 'address_validation' )" />
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
 
-				<mvt:if expr="g.Order">
-					<mvt:assign name="l.settings:url" value="l.settings:urls:OINF:secure" />
-				<mvt:elseif expr="g.Redeem">
-					<mvt:assign name="l.settings:url" value="l.settings:urls:RGFT:secure" />
-				<mvt:elseif expr="g.WishList">
-					<mvt:assign name="l.settings:url" value="l.settings:urls:WISH:secure" />
-				<mvt:else>
-					<mvt:assign name="l.settings:url" value="'/miracle-ii-products.html'" />
-				</mvt:if>
-
-				<form id="acad_form" method="post" action="&mvte:url;" autocomplete="off">
-				<input type="hidden" name="Action" value="ICST" />
-				<input type="hidden" name="Order" value="&mvte:global:Order;" />
-				<div id="customer-fields" class="editable"><mvt:item name="customer" /></div>
-				<div class="save-button"><input type="submit" value="Save New Account" class="button" /></div>
-				</form>
-
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</div>
-	</div>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-	<script>
-		document.getElementById('showShippingDetails').addEventListener('click', function () {
-                	document.getElementById('shippingAndBillingDetails').classList.toggle("hide_details")
-            	}) 
-	</script>
-</div>
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

@@ -1,8 +1,17 @@
 {
     "code": "preconnect-google-fonts",
     "type": "E",
-    "filepath": "https://fonts.gstatic.com",
+    "filepath": "https://fonts.googleapis.com",
     "is_global": true,
-    "active": false,
-    "attributes": []
+    "active": true,
+    "attributes": [
+        {
+            "name": "rel",
+            "value": "preconnect"
+        },
+        {
+            "name": "crossorigin",
+            "value": ""
+        }
+    ]
 }

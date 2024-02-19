@@ -1,5 +1,6 @@
 {
     "addressbook": {
+        "prevent_template_auto_update": 1,
         "template_filename": "cabk-addressbook.mvc",
         "template_id": 235
     },

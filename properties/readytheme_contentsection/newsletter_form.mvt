@@ -1,13 +1,9 @@
-<form class="t-newsletter-form" action="#">
-	<h5 class="c-menu__title u-color-gray-50 u-font-tiny u-text-center u-text-left--l u-text-medium u-text-uppercase">Stay In The Know</h5>
-	<fieldset>
+<form class="t-newsletter-form x-collapsible-content" aria-labelledby="newsletter-form-label">
+	<p id="newsletter-form-label" class="c-menu__title">Join Our Newsletter</p>
+	<button class="x-collapsible-content__toggle" data-a11y-toggle="newsletter-form" type="button">Join Our Newsletter <span class="u-icon-add" data-toggle="<" aria-hidden="true"></span></button>
+	<fieldset id="newsletter-form" class="x-collapsible-content__item">
 		<legend>Join Our Newsletter</legend>
-		<ul class="c-form-list">
-			<li class="c-form-list__item c-control-group u-flex">
-				<input class="c-form-input c-form-input--large c-control-group__field u-font-tiny u-text-uppercase" type="email" name="email" value="" aria-label="Enter your email" placeholder="Enter your email" required>
-				<button class="o-layout--no-shrink c-button c-button--large	c-control-group__button u-bg-black u-font-small u-text-uppercase">Sign Up</button>
-			</li>
-		</ul>
+		<input class="c-form-input t-newsletter-form__input" type="email" name="email" value="" placeholder="Enter Your Email" aria-label="Enter your email">
+		<button class="c-button t-newsletter-form__input" aria-label="Submit to join our newsletter">Join</button>
 	</fieldset>
 </form>
-<br>

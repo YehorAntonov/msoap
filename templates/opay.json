@@ -2,14 +2,17 @@
     "basket": {
         "advanced": 1,
         "applycoupons": 0,
-        "b_height": 75,
-        "b_width": 75,
+        "b_height": 96,
+        "b_width": 96,
         "button_wish": 0,
         "constrain": "B",
         "discounts": 1,
         "editable": 0,
         "groups": 1,
         "handling": 1,
+        "imagetypes": [
+            "main"
+        ],
         "lineitemcoupons": 0,
         "lineitemdiscounts": 1,
         "lineitemprice": "base",
@@ -23,7 +26,7 @@
     "customer": {
         "editable": 0,
         "mode": "order",
-        "prevent_template_auto_update": 0,
+        "prevent_template_auto_update": 1,
         "template_filename": "opay-customer.mvc",
         "template_id": 162
     },
@@ -41,7 +44,7 @@
         "paymentcardfields": {
             "cardtype_prompt": "Card Type:",
             "cardtype_prompt_hidden": 0,
-            "mode": "paymentcard_add",
+            "mode": "checkout",
             "storecard_checkedbydefault": 0,
             "storecard_prompt": "Store This Card For Future Use",
             "template_filename": "opay-mivapay.mvc"

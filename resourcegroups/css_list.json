@@ -1,13 +1,13 @@
 {
     "code": "css_list",
-    "linked_js_resources": [
-        "contact_form"
-    ],
+    "linked_js_resources": [],
     "linked_css_resources": [
-        "cssui",
-        "readytheme",
-        "paypalcp",
-        "additional",
-        "customize_gowsikan"
+        "preconnect-google-tag-manager",
+        "preconnect-google-analytics",
+        "preconnect-google-fonts",
+        "preconnect-gstatic",
+        "google-fonts",
+        "combofacets",
+        "stylesheet"
     ]
 }

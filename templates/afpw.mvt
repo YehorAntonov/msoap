@@ -1,60 +1,58 @@
 <mvt:item name="html_profile" />
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>
 	<mvt:else>
-		<title>&mvt:store:name;: Affiliate Forgot Password</title>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
 	</mvt:if>
-
-	<base href="&mvt:global:basehref;" />
-	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
-<body class="AFPW one-column">
-<div id="site-container">
-	<div id="global-header"><mvt:item name="hdft" param="global_header" /></div>
-	<div id="navigation-bar"><mvt:item name="navbar" /></div>
-	<table id="content-container">
-		<tr>
-			<td id="left-navigation"><mvt:item name="category_tree" /></td>
-			<td id="main-content">
-				<div id="page-header"><mvt:item name="hdft" param="header" /></div>
-				<div id="breadcrumbs"><mvt:item name="breadcrumbs" /></div>
-				<form id="afpw" name="afpw" action="&mvte:urls:AFED:secure;" method="post" autocomplete="off">
-				<input type="hidden" name="Action" value="AFPW" />
-				<div class="forgot-password-section">
-					<h3>Forgot Password</h3>
-					<mvt:if expr="l.settings:messages:error_message_count">
-					<div class="error-message">
-					<mvt:foreach iterator="error" array="messages:error_messages">
-						&mvt:error;
-					</mvt:foreach>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
+
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<h1 class="c-heading-delta">&mvt:page:name;</h1>
+			<mvt:item name="hdft" param="header" />
+			<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+		</div>
+	</section>
+
+	<section class="o-layout o-layout--justify-center">
+		<div class="o-layout__item u-width-12 u-width-6--m">
+			<p class="x-messages x-messages--info x-messages--with-icon">
+				<span class="x-messages__icon u-icon-info" aria-hidden="true">&nbsp;</span>
+				<span>Enter the login associated with your account.<br><br>If you do not remember your login, please contact customer support.</span>
+			</p>
+			<br>
+			<form method="post" action="&mvte:urls:AFED:secure;" autocomplete="off">
+				<fieldset>
+					<legend>&mvt:page:name;</legend>
+					<input type="hidden" name="Action" value="AFPW">
+					<div class="c-form-list">
+						<div class="c-form-list__item c-form-list__item--full">
+							<label class="c-form-label u-text-medium is-required &mvte:global:invalid_credentials;" for="l-Affiliate_Code">Affiliate Login</label>
+							<div class="c-form-inline-set">
+								<input id="l-Affiliate_Code" class="c-form-input" type="text" name="Affiliate_Code" value="&mvte:global:Affiliate_Code;" required>
+								<input class="c-button" type="submit" value="Submit">
+							</div>
+						</div>
 					</div>
-					<mvt:elseif expr="l.settings:messages:information_message_count">
-					<div class="information-message">
-					<mvt:foreach iterator="message" array="messages:information_messages">
-						&mvt:message;
-					</mvt:foreach>
-					</div>
-					</mvt:if>
-					Enter the login associated with your account.<br /><br />
-					<mvt:if expr="g.Affiliate_Code_Invalid">
-					<div class="form_row invalid">
-					<mvt:else>
-					<div class="form_row">
-					</mvt:if>
-						<label class="required" for="Affiliate_Code">Login:</label><input type="text" name="Affiliate_Code" id="Affiliate_Code" class="textfield afpw-input" autocomplete="off" /><input type="submit" value="Submit" class="button" />
-					</div>
-					<div class="clear"></div>
-				</div>
-				</form>
-				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
-			</td>
-		</tr>
-	</table>
-	<div id="bottom-wrap"></div>
-	<div id="global-footer"><mvt:item name="hdft" param="global_footer" /></div>
-</div>
+				</fieldset>
+			</form>
+		</div>
+	</section>
+	
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
+
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>
