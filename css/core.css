@@ -1129,12 +1129,12 @@ small {
 }
 
 .o-wrapper {
-	margin-left: auto;
+	/* margin-left: auto;
 	margin-right: auto;
 	max-width: var(--default-wrapper-width);
 	padding-left: var(--default-spacing-unit);
 	padding-right: var(--default-spacing-unit);
-	width: 100%;
+	width: 100%; */
 }
 
 .o-wrapper--full {
@@ -1152,7 +1152,7 @@ small {
 .c-button {
 	align-items: center;
 	align-self: start;
-	background-color: var(--black);
+	background-color: #0F4E7E;
 	border: var(--default-border-width) solid var(--transparent);
 	border-radius: var(--default-border-radius);
 	color: var(--white);
@@ -1623,7 +1623,8 @@ small {
 .c-form-input {
 	-webkit-appearance: none;
 	        appearance: none;
-	background-color: var(--white);
+	background-color: #e7f4f4;
+	color: #0F4E7E;
 	border: var(--default-border-width) solid var(--gray-400);
 	border-radius: var(--default-border-radius);
 	display: inline-block;
@@ -3198,6 +3199,8 @@ small {
 [class*=" u-icon-"]::before,
 [data-icon]::before {
 	background-color: rgba(0, 0, 0, 0);
+	color: #0F4E7E;
+	font-weight: bold;
 }
 
 .u-icon-add:before {
@@ -3249,11 +3252,11 @@ small {
 }
 
 .u-icon-cart-empty:before {
-	content: "Z";
+	/* content: "Z"; */
 }
 
 .u-icon-cart-full:before {
-	content: "[";
+	/* content: "["; */
 }
 
 .u-icon-check:before {
@@ -4214,6 +4217,12 @@ a.u-text-underline:hover {
 		flex-basis: 25%;
 		max-width: 25%;
 	}
+	.u-width-3--l-icons {
+		flex-basis: 0.5%;
+	}
+	.u-width-3--l-icons-search {
+		flex-basis: 52%;
+	}
 	.u-width-4--l {
 		flex-basis: 33.333%;
 		max-width: 33.333%;
@@ -4225,6 +4234,10 @@ a.u-text-underline:hover {
 	.u-width-6--l {
 		flex-basis: 50%;
 		max-width: 50%;
+	}
+	.u-width-6--l-logo {
+		flex-basis: 25%;
+		max-width: 58.333%;
 	}
 	.u-width-7--l {
 		flex-basis: 58.333%;
@@ -4298,6 +4311,9 @@ a.u-text-underline:hover {
 		flex-basis: 16.666%;
 		max-width: 16.666%;
 	}
+	.u-width-2--xl-icons {
+		flex-basis: 0.5%;
+	}
 	.u-width-3--xl {
 		flex-basis: 25%;
 		max-width: 25%;
@@ -4316,6 +4332,10 @@ a.u-text-underline:hover {
 	}
 	.u-width-7--xl {
 		flex-basis: 58.333%;
+		max-width: 58.333%;
+	}
+	.u-width-7--xl-logo {
+		flex-basis: 25%;
 		max-width: 58.333%;
 	}
 	.u-width-8--xl {

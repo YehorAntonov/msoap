@@ -10,19 +10,97 @@
 	</mvt:if>
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
+	<script src="modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://www.kernjs.com/js/lettering.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
 </head>
 <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
 	<mvt:item name="hdft" param="global_header" />
-	<section class="o-layout">
+	<mvt:comment> <section class="o-layout">
 		<div class="o-layout__item">
 			<mvt:item name="hdft" param="header" />
 		</div>
-	</section>
+	</section> </mvt:comment>
+	<div class="banner-home">
+		<img style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
+		<div class="bubbles">
+			<a href=""><img id="bubble1" src="graphics/00000002/1/Group 2bubble1.jpg"></a>
+			<a href=""><img id="bubble2" src="graphics/00000002/1/Group 2bubble2.jpg"></a>
+			<a href=""><img id="bubble3" src="graphics/00000002/1/Group 3bubble3.jpg"></a>
+			<a href=""><img id="bubble4" src="graphics/00000002/1/Group 3bubble4.jpg"></a>
+			<a href=""><img id="bubble5" src="graphics/00000002/1/Group 2bubble5.jpg"></a>
+			<a href="" id="products">Products</a>
+			<a href="" id="product-history">Product</a>
+			<a href="" id="history">History</a>
+			<a href="" id="testimonials">Testimonials</a>
+			<a href="" id="faqs">FAQs</a>
+			<a href="" id="contact">Contact</a>
+		</div>
+		<div class="info-banner-main">
+			<h1 class="info-banner-main__h1">EACH PRODUCT IS MIRACULOUS IN ITS OWN WAY</h1>
+			<h2 class="info-banner-main__h2">Miracle II Family of Products</h2>
+			<p class="info-banner-main__p">Made from natural minerals, sea-salts, and cold pressed virgin oils. Miracle II products are all<br> 
+			atural, non-toxic and biodegradable. We add no fragrances, colors, agents or perfumes.</p>
+			<div class="info-banner-main__annotation">
+				<div>
+					<img src="graphics/00000002/1/photo.jpg">
+				</div>
+				<div class="info-banner-main__annotation-info">
+					<p class="info-banner-main__annotation-info-p">“The formula for Miracle II was given to me in 1980. It was perfected then<br> 
+					and has not changed since. You will never read “New and Improved” on a<br> 
+					bottle of Miracle II products.”</p>
+					<p class="info-banner-main__annotation-info-p2">Clayton Tedeton, God’s Faithful Servant</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="gradient-line-ship">FREE SHIPPING AVAILABLE</div>
+	<div>
+		<div class="title-products">
+			<p>Our Products</p>
+		</div>
+		<div class="grid-products-container">
+		<mvt:foreach iterator="category" array="cattree_categories">
+			<mvt:do file="g.Module_Root $ '/modules/component/cmp-cssui-cattitle.mvc'" name="l.success" value="CSSUI_CatTitle_Load(l.settings:category:id, l.settings:loaded_category)" />
+			<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description', l.settings:category:description)" />
+			<a href="&mvt:category:href;">
+			<div class="grid-products-item">
+				<img alt="product item" src="&mvte:loaded_category:image;">
+				<p class="product-name">&mvt:category:name;</p>
+				<p class="product-description">&mvt:category:description;</p>
+			</div>
+			</a>
+			<mvt:comment> &mvt:category:catimg; </mvt:comment>
+		</mvt:foreach>
+		</div>
+	</div>
+	<div>
+		<div class="title-products">
+			<p>Main Categories</p>
+		</div>
 
+
+	</div>
+	
+	<script>
+		const circleType = new CircleType(document.getElementById('products'));
+		circleType.radius(125);
+		const circleType2 = new CircleType(document.getElementById('product-history'));
+		circleType2.radius(125);
+		const circleType3 = new CircleType(document.getElementById('history'));
+		circleType3.radius(125);
+		const circleType4 = new CircleType(document.getElementById('testimonials'));
+		circleType4.radius(125);
+		const circleType5 = new CircleType(document.getElementById('faqs'));
+		circleType5.radius(125);
+		const circleType6 = new CircleType(document.getElementById('contact'));
+		circleType6.radius(125);
+	</script>
 	<section class="o-layout">
 		<div class="o-layout__item">
 			<mvt:item name="readytheme" param="contentsection( 'paypalcp_configuration' )" />
-			<mvt:item name="sequence" />
+			<mvt:comment> <mvt:item name="sequence" /> </mvt:comment>
 		</div>
 	</section>
 

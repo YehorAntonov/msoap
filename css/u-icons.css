@@ -273,9 +273,9 @@
 }
 
 .u-icon-cart-full::before {
-	content: "\5b";
+	/* content: "\5b"; */
 }
 
 .u-icon-location::before {
-	content: "\5c";
+	/* content: "\5c"; */
 }

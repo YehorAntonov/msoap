@@ -364,7 +364,12 @@
 		flex-basis: 25%;
 		max-width: 25%;
 	}
-	
+	.u-width-3--l-icons {
+		flex-basis: 0.5%;
+	}
+	.u-width-3--l-icons-search {
+		flex-basis: 52%;
+	}
 	.u-width-4--l {
 		flex-basis: 33.333%;
 		max-width: 33.333%;
@@ -379,7 +384,10 @@
 		flex-basis: 50%;
 		max-width: 50%;
 	}
-	
+	.u-width-6--l-logo {
+		flex-basis: 25%;
+		max-width: 58.333%;
+	}
 	.u-width-7--l {
 		flex-basis: 58.333%;
 		max-width: 58.333%;
@@ -472,7 +480,9 @@
 		flex-basis: 16.666%;
 		max-width: 16.666%;
 	}
-	
+	.u-width-2--xl-icons {
+		flex-basis: 0.5%;
+	}
 	.u-width-3--xl {
 		flex-basis: 25%;
 		max-width: 25%;
@@ -497,7 +507,10 @@
 		flex-basis: 58.333%;
 		max-width: 58.333%;
 	}
-	
+	.u-width-7--xl-logo {
+		flex-basis: 25%;
+		max-width: 58.333%;
+	}
 	.u-width-8--xl {
 		flex-basis: 66.666%;
 		max-width: 66.666%;

@@ -987,9 +987,9 @@
    EXTENSIONS / SEARCH-PREVIEW / SEARCH-PREVIEW
    ========================================================================== */
 .x-search-preview {
-	background-color: var(--white);
+	background-color: #e7f4f4;
 	border-radius: 0 0 var(--default-border-radius) var(--default-border-radius);
-	color: var(--gray-600);
+	color: #0f4e7e;
 	display: none;
 	flex-direction: column;
 	font-size: var(--default-input-font-size);

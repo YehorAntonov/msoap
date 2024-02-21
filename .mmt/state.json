@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 2305,
+        "id": 2612,
         "username": "yehor",
-        "notes": "Framework 'shadows'"
+        "notes": "test"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -928,7 +928,7 @@
         },
         "templates/cssui-custlink-login.mvt": {
             "template_filename": "cssui-custlink-login.mvc",
-            "hash": "edb09d97a1218294309519f80208e893b7133f83e7f4e600f2fcbae587d1b4b2"
+            "hash": "5efb1f27ad079a943cd70ebc9e323463aeb58f2cd01bf0882df94e4f6bd7707c"
         },
         "templates/cssui-custlink-login.json": {
             "template_filename": "cssui-custlink-login.mvc",
@@ -952,7 +952,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "e8a4be29cf3c109a76051881e845d932d7c5fa925ad0e1e725cc6abacd962f63"
+            "hash": "cda022d6d80537e2953af01b8534cdd4dbbcdf779ec9e8f5f7c284afbe7f5b87"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "f4d81f6b9f4b986b1f07fcd4247aaae22d4e4eeb353caf67fef4dc55531fe037"
+            "hash": "a3e66929884a1a99701e3349be0c14c568e59a46cb4ef5ab8cd1c2ae4d3963cf"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4448,7 +4448,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "fasten_header",
-            "hash": "9e5f7f39c70c73c4222f09141aa560731d2f236a10de83788e292af2d1ecfc57"
+            "hash": "796a28dd671351f6ac614341d80b526693ff12966cd6e8fef2ac9b49e3393140"
         },
         "properties/readytheme_contentsection/fasten_header.json": {
             "property_group": "",
@@ -4664,7 +4664,7 @@
             "property_group": "",
             "property_type": "readytheme_image",
             "property_code": "fasten_header_logo",
-            "hash": "dd6ced4e54d09d8b3422a098f55eab32d9b3d2a7575aeeb4382fdedcc5628180"
+            "hash": "b614988911e547c76a975137764245175a88f2285f95f28da5fc7dced3d4111b"
         },
         "properties/readytheme_image/spotlight_image_one.json": {
             "property_group": "",
@@ -4748,7 +4748,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "disclaimer_navigation",
-            "hash": "f17095f2e73cd9fbe5005221fe57e35dd6591f3fec1506144d939c2e25deb643"
+            "hash": "dfe4d0d0f989e0b0ba6c8ab32ec50abef3e5058df753f49127b4ea65bb8946d9"
         },
         "properties/readytheme_navigationset/footer_categories.mvt": {
             "property_group": "",
@@ -5368,7 +5368,7 @@
         },
         "css/core.css": {
             "cssresource_code": "core",
-            "hash": "c596d2db1ea8ae682e04ffd089d72b0d919e52fd176824781fd71b70f2950e6f"
+            "hash": "9a4715644b47cf54c5211ca88ef4dff28d52764aafde9a19d6f6e5a33a142d17"
         },
         "css/cssui.json": {
             "cssresource_code": "cssui",
@@ -5400,7 +5400,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "c80b8060f6cff16ac85075b3ba9b1729dde9ba5946538ba0e2b102cf28002be4"
+            "hash": "08e5b2fb0a3c2781498f108a26d0e36a5dee5d478167983b6c1eacf6fe18bab5"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "2871887e47366529e792a575a03fe1f4556444d02e3e2a6122bc73ba96c17dd8"
+            "hash": "08dc0e919cd816d18e9baded495a8313b317204d3db4b91e63188a9f8b3fc415"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -5684,7 +5684,7 @@
         },
         "css/u-icons.css": {
             "cssresource_code": "u-icons",
-            "hash": "81b5fa6f2a06cc1d01cb27b9d076b69f87355cb1aa893fc4a6e65bd47a2f4ab5"
+            "hash": "05e49bc6bea06376412fd66bef8fc511b1c65b188ba8bf7fb001980dffe2c933"
         },
         "css/u-print.json": {
             "cssresource_code": "u-print",
@@ -5716,7 +5716,7 @@
         },
         "css/u-widths.css": {
             "cssresource_code": "u-widths",
-            "hash": "401129b25dfdae2c5ed31e8abbc879d3bb487b0db35282be8a23994c935c34af"
+            "hash": "507ec64eba315c908ed0d0dface0ce75ff26a09b01755d911f0f0f868a252c56"
         },
         "css/u-z-index.json": {
             "cssresource_code": "u-z-index",
@@ -6029,6 +6029,48 @@
         "css/preconnect-google-tag-manager.json": {
             "cssresource_code": "preconnect-google-tag-manager",
             "hash": "74bdc529c604363a0bc4a925c1ea13cc8aa3a48e217c7fa5adebadf3e12dacb1"
+        },
+        "properties/readytheme_image/banner.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "banner",
+            "hash": "9dfd04895256a8cc32a9e124eb8f5cee4f97246689a19e00ee8fd89934c23b3d"
+        },
+        "properties/readytheme_image/bubble1.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "bubble1",
+            "hash": "f82ae4f579eff15133f9c495056b5e3c56597fcf84ee54121eebe1307200e521"
+        },
+        "properties/readytheme_image/bubble2.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "bubble2",
+            "hash": "dd2cb075ec500b61eee73d90b6a7e9676a8a4c767f9329ebf3828b2beff58460"
+        },
+        "properties/readytheme_image/bubble3.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "bubble3",
+            "hash": "4ab7eccd316750a9402abea4bb2c255c4a0bad648b1af74143fe02764c27868f"
+        },
+        "properties/readytheme_image/bubble4.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "bubble4",
+            "hash": "42d3035e0729c64e96b54d5043677755d097bbb1cfeec2aacf828659217f5d99"
+        },
+        "properties/readytheme_image/bubble5.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "bubble5",
+            "hash": "f8415ff3d62a359fe1df2beed7c67845d65446c45a862c7726a4c271633bbb90"
+        },
+        "properties/readytheme_image/photo_banner.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "photo_banner",
+            "hash": "8ac3c7779ccee6b829f6fbc07e6d7fab87939730309fe77d2b30a54d33687aac"
         }
     }
 }
