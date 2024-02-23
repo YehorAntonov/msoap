@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 2823,
+        "id": 2842,
         "username": null,
         "notes": "test"
     },
@@ -936,7 +936,7 @@
         },
         "templates/cssui-global-footer.mvt": {
             "template_filename": "cssui-global-footer.mvc",
-            "hash": "e263106ca6565c980ea8eb6ac87ce22e1b9b7b3b0e9d9c940d705d11dc2a4146"
+            "hash": "8ab1435f903951228e3c8dcf566df7db333b9a903602f68ee47548a55b0c5cd4"
         },
         "templates/cssui-global-footer.json": {
             "template_filename": "cssui-global-footer.mvc",
@@ -4754,7 +4754,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "footer_categories",
-            "hash": "8074a3469bffc09c92cb5719e2132205b2b3a718e62c5b175f3135728a64a1ae"
+            "hash": "257ec3ffe9579506ef8ecafa238c9acb107d366f0e2765a6e15052b9c340c9ea"
         },
         "properties/readytheme_navigationset/footer_categories.json": {
             "property_group": "",
@@ -4826,7 +4826,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "quick_links",
-            "hash": "7753e306a61c1a57764a1723aeb6212f20ea913ba13b7214e657e72e305793b1"
+            "hash": "185642d3b28d6e4ad789b508978ca4e54a1e627581e6667d99daa0e926414b73"
         },
         "properties/readytheme_navigationset/quick_links.json": {
             "property_group": "",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "dfb41acbfe336fb60f538d709156b24767bff67917462cbeb1e4f7958119cde2"
+            "hash": "13ee7c8c365f57d5da350deadb2104ac08756e0c7af26fe8254e7fdea01c9697"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -6076,7 +6076,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "payment_systems",
-            "hash": "93636fa047400919d3a6fa2c57a114596546d97c9681645ed857fb014fb8fb18"
+            "hash": "fe5f9a1eec163620aaf0d9ce43a0a6b292a093c27a9f1bf504c783d82ad734c7"
         },
         "properties/readytheme_contentsection/payment_systems.json": {
             "property_group": "",

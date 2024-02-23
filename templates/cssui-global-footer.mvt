@@ -15,7 +15,7 @@
 				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l quick-links-footer">
 					<mvt:item name="readytheme" param="navigationset( 'quick_links' )" />
 				</section>
-				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-6--l">
+				<section class="o-layout__item o-layout--align-self-stretch">
           <mvt:item name="readytheme" param="navigationset( 'footer_categories' )" />
 				</section>
 				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l">

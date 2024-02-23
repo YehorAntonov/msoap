@@ -1,1 +1,20 @@
-<div></div>
+<div class="footer-pay-with">
+    <p>Pay with:</p>
+</div>
+<div class="payment-systems">
+    <a class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/image 15american-express.jpg" alt="Payment system">
+  </a>
+  <a class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/image 16diners-club.jpg" alt="Payment system">
+  </a>
+  <a class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/image 17elo.jpg" alt="Payment system">
+  </a>
+  <a class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/image 19visa.jpg" alt="Payment system">
+  </a>
+  <a class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/image 20master-card.jpg" alt="Payment system">
+  </a>
+</div>
