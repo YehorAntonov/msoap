@@ -2,17 +2,25 @@
 <!-- end t-site-content -->
 
 <mvt:if expr="l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY' AND NOT ('AMAZONPAY' CIN l.settings:page:code)">
-	<footer class="t-site-footer u-bg-white">
+	<div class="t-site-footer__first-line">
+  </div>
+  <div class="t-site-footer__second-line">
+  </div>
+  <footer class="t-site-footer bg-footer">
 		<div class="o-wrapper t-site-footer__wrapper">
 			<div class="o-layout o-layout--column o-layout--row--m t-site-footer__content">
-				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l">
-					<mvt:item name="readytheme" param="navigationset( 'footer_categories' )" />
-				</section>
-				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-6--l">
+        <section class="">
+          <img src="graphics/00000002/1/Miracle II footer logo 2footer-logo.jpg">
+        </section>
+				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l quick-links-footer">
 					<mvt:item name="readytheme" param="navigationset( 'quick_links' )" />
 				</section>
+				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-6--l">
+          <mvt:item name="readytheme" param="navigationset( 'footer_categories' )" />
+				</section>
 				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l">
-					<mvt:if expr="l.settings:readytheme:social_active">
+          <mvt:item name="readytheme" param="contentsection( 'payment_systems' )" />
+					<mvt:comment> <mvt:if expr="l.settings:readytheme:social_active">
 						<nav class="x-collapsible-content t-global-footer-social" aria-labelledby="social_active-label">
 							<p id="social_active-label" class="c-menu__title">Connect With Us</p>
 							<button class="x-collapsible-content__toggle" data-a11y-toggle="social_active" type="button">Connect With Us <span class="u-icon-add" data-toggle="<" aria-hidden="true"></span></button>
@@ -64,7 +72,7 @@
 					<mvt:if expr="g.session:cache:readytheme:lookandfeel:lookandfeel:trs_active">
 						<h5 class="c-menu__title u-text-uppercase">Safe &amp; Secure</h5>
 						<mvt:item name="readytheme" param="trustsymbol" />
-					</mvt:if>
+					</mvt:if> </mvt:comment>
 				</section>
 			</div>
 		</div>

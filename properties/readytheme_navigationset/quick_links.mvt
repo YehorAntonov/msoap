@@ -8,7 +8,7 @@
 					<a class="c-menu__link" href="&mvte:navigationitem:url;" target="&mvt:navigationitem:link_targ;">&mvt:navigationitem:name;</a>
 				</li>
 			</mvt:foreach>
-			<mvt:item name="affiliatelink" />
+			<mvt:comment> <mvt:item name="affiliatelink" /> </mvt:comment>
 		</ul>
 	</nav>
 </mvt:if>

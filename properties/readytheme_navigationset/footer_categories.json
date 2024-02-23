@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "active": 1,
+            "active": 0,
             "id": "98c3e1687fe517c75c6dde2055c8e7e9",
             "link": "<a href=\"https://miraclesoap.mivatest.com/category-1.html\" target=\"_self\">Category 1</a>",
             "link_dest": "category_01",
@@ -11,7 +11,7 @@
             "url": "https://miraclesoap.mivatest.com/category-1.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "b3b52a3294393ae5419da6f262531c9e",
             "link": "<a href=\"https://miraclesoap.mivatest.com/category-2.html\" target=\"_self\">Category 2</a>",
             "link_dest": "category_02",
@@ -21,7 +21,7 @@
             "url": "https://miraclesoap.mivatest.com/category-2.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "05507966f629d0cdde1b23d7b9d657ef",
             "link": "<a href=\"https://miraclesoap.mivatest.com/category-3.html\" target=\"_self\">Category 3</a>",
             "link_dest": "category_03",
@@ -31,7 +31,7 @@
             "url": "https://miraclesoap.mivatest.com/category-3.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "28d7d670c2e1a563d58d6b5cf6579d51",
             "link": "<a href=\"https://miraclesoap.mivatest.com/category-4.html\" target=\"_self\">Category 4</a>",
             "link_dest": "category_04",
@@ -41,7 +41,7 @@
             "url": "https://miraclesoap.mivatest.com/category-4.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "eaacc179d8a8819bbcba96c30a11e40d",
             "link": "<a href=\"https://miraclesoap.mivatest.com/sale.html\" target=\"_self\">Sale</a>",
             "link_dest": "sale",
@@ -51,7 +51,7 @@
             "url": "https://miraclesoap.mivatest.com/sale.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "3e8735cc8164c4e4f88292dd9b1d0fe1",
             "link": "<a href=\"https://miraclesoap.mivatest.com/featured-products.html\" target=\"_self\">Featured Products</a>",
             "link_dest": "featured",
@@ -59,8 +59,18 @@
             "link_type": "C",
             "name": "Featured Products",
             "url": "https://miraclesoap.mivatest.com/featured-products.html"
+        },
+        {
+            "active": 1,
+            "id": "13c62eb78e07e26a677c28e4e8a91e99",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
+            "link_dest": "PRPO",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Privacy Policy",
+            "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
         }
     ],
     "layout": "S",
-    "name": "Global Footer Category Menu"
+    "name": "Legal"
 }

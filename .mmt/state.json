@@ -1,8 +1,8 @@
 {
     "version": 1,
     "changeset": {
-        "id": 2612,
-        "username": "yehor",
+        "id": 2823,
+        "username": null,
         "notes": "test"
     },
     "files": {
@@ -936,7 +936,7 @@
         },
         "templates/cssui-global-footer.mvt": {
             "template_filename": "cssui-global-footer.mvc",
-            "hash": "6cbaa680613e7a58e8f2e77c26b08d085148d102ab5e3b3d50673006594bca1d"
+            "hash": "e263106ca6565c980ea8eb6ac87ce22e1b9b7b3b0e9d9c940d705d11dc2a4146"
         },
         "templates/cssui-global-footer.json": {
             "template_filename": "cssui-global-footer.mvc",
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "a3e66929884a1a99701e3349be0c14c568e59a46cb4ef5ab8cd1c2ae4d3963cf"
+            "hash": "2ce7c9db02cb047aaedc5d7b4e3013fedd306cfd0f350318813e40822030cf1d"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4754,13 +4754,13 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "footer_categories",
-            "hash": "eb7bbbd8a285748d6ead5153706edc1dbb22f1cbe327f69bf2e9b72b05202cb6"
+            "hash": "8074a3469bffc09c92cb5719e2132205b2b3a718e62c5b175f3135728a64a1ae"
         },
         "properties/readytheme_navigationset/footer_categories.json": {
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "footer_categories",
-            "hash": "4b493e68340a843a443a079a871b156fdc79f37e3e66b3673eed0b761bb61bbe"
+            "hash": "43feaf0fedadb3a0795de1fc5a4224a7d6d85362f4c7b9c1d0570c0701995d6e"
         },
         "properties/readytheme_navigationset/header_links.mvt": {
             "property_group": "",
@@ -4826,13 +4826,13 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "quick_links",
-            "hash": "e18dfed20485e427422f067b5ea5b6f376a318aba2f99e71d66f0b73cd2af3b0"
+            "hash": "7753e306a61c1a57764a1723aeb6212f20ea913ba13b7214e657e72e305793b1"
         },
         "properties/readytheme_navigationset/quick_links.json": {
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "quick_links",
-            "hash": "4c185eeee47e30703ca907d26b50e3432ea5ad323533dc45445150b0671c73a8"
+            "hash": "a52f94e84a6f60e05086cac20e4ba6ea48b31e299d2e51428d7d33a4b3774940"
         },
         "properties/readytheme_navigationset/static_navigation.mvt": {
             "property_group": "",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "08dc0e919cd816d18e9baded495a8313b317204d3db4b91e63188a9f8b3fc415"
+            "hash": "dfb41acbfe336fb60f538d709156b24767bff67917462cbeb1e4f7958119cde2"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -6071,6 +6071,54 @@
             "property_type": "readytheme_image",
             "property_code": "photo_banner",
             "hash": "8ac3c7779ccee6b829f6fbc07e6d7fab87939730309fe77d2b30a54d33687aac"
+        },
+        "properties/readytheme_contentsection/payment_systems.mvt": {
+            "property_group": "",
+            "property_type": "readytheme_contentsection",
+            "property_code": "payment_systems",
+            "hash": "93636fa047400919d3a6fa2c57a114596546d97c9681645ed857fb014fb8fb18"
+        },
+        "properties/readytheme_contentsection/payment_systems.json": {
+            "property_group": "",
+            "property_type": "readytheme_contentsection",
+            "property_code": "payment_systems",
+            "hash": "ec8909f5d4f1e7e28208f83e67b5e1c23742f461448c6d576180c19b967eba49"
+        },
+        "properties/readytheme_image/american_express.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "american_express",
+            "hash": "7c0a527158768e98ea008a32d6d8ad5572c2060f9d8c89fd5c2188d5000f591e"
+        },
+        "properties/readytheme_image/diners_club.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "diners_club",
+            "hash": "4a96d3efd4a2a1f54499da5ae8aa98d5ad6786ee804d2046e277fc52b0bd8003"
+        },
+        "properties/readytheme_image/elo.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "elo",
+            "hash": "317e2968137a49c8c08f7a1269072cca17a3d7065e328a5d0a4f30d26f434935"
+        },
+        "properties/readytheme_image/img-footer.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "img-footer",
+            "hash": "7d74f95ef1a4068b036326299d5626f449386656c86b74a9523e0c72ed5d729f"
+        },
+        "properties/readytheme_image/master_card.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "master_card",
+            "hash": "aa351e85b57b8157d644827b347bf58348eda5d8491f54a2ba18227e65edaa93"
+        },
+        "properties/readytheme_image/visa.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "visa",
+            "hash": "b7b92d8bf07cdcca1e62a7afca31f2df147ebf8a0a512e9f0800c9e4f55ebca5"
         }
     }
 }

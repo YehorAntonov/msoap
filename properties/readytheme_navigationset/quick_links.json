@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "active": 1,
+            "active": 0,
             "id": "7ee220610b94cd5508f622222aba50bb",
             "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
             "link_dest": "ABUS",
@@ -13,11 +13,11 @@
         {
             "active": 1,
             "id": "a9c69096d268851c9019d286c9051f26",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account.html\" target=\"_self\">Account</a>",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account.html\" target=\"_self\">Your Account</a>",
             "link_dest": "ACLN",
             "link_targ": "_self",
             "link_type": "G",
-            "name": "Account",
+            "name": "Your Account",
             "url": "https://miraclesoap.mivatest.com/customer-account.html"
         },
         {
@@ -31,7 +31,7 @@
             "url": "https://miraclesoap.mivatest.com/contact-us.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "1e892f8f4dc3a47f33cf7d9422edc48f",
             "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">FAQS</a>",
             "link_dest": "FAQS",
@@ -41,7 +41,7 @@
             "url": "https://miraclesoap.mivatest.com/faqs.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "a4b99c65028a9618d765f7da8a4c25cf",
             "link": "<a href=\"https://miraclesoap.mivatest.com/order-history-list.html\" target=\"_self\">Order Status</a>",
             "link_dest": "ORDH",
@@ -51,7 +51,7 @@
             "url": "https://miraclesoap.mivatest.com/order-history-list.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "5e8cbdf4699830377ad1981c673944cc",
             "link": "<a href=\"https://miraclesoap.mivatest.com/wish-lists.html\" target=\"_self\">Wish Lists</a>",
             "link_dest": "WLST",
@@ -61,7 +61,7 @@
             "url": "https://miraclesoap.mivatest.com/wish-lists.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "afa9789fe08f9a18b377910e5aa1aa4a",
             "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
             "link_dest": "PRPO",
@@ -73,15 +73,15 @@
         {
             "active": 1,
             "id": "7336701cdc77120e3bf540d047a3b7d3",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/shipping-and-return-policy.html\" target=\"_self\">Shipping &amp;amp; Returns</a>",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/shipping-and-return-policy.html\" target=\"_self\">Shipping Policy</a>",
             "link_dest": "SARP",
             "link_targ": "_self",
             "link_type": "G",
-            "name": "Shipping &amp; Returns",
+            "name": "Shipping Policy",
             "url": "https://miraclesoap.mivatest.com/shipping-and-return-policy.html"
         },
         {
-            "active": 1,
+            "active": 0,
             "id": "714440595181b7a874b8543000509564",
             "link": "<a href=\"https://miraclesoap.mivatest.com/sitemap.html\" target=\"_self\">Site Map</a>",
             "link_dest": "SMAP",

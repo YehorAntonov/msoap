@@ -80,9 +80,78 @@
 			<p>Main Categories</p>
 		</div>
 
+		<div class="main-categories">
+			<mvt:foreach iterator="category" array="cattree_categories">
+			<mvt:do file="g.Module_Root $ '/modules/component/cmp-cssui-cattitle.mvc'" name="l.success" value="CSSUI_CatTitle_Load(l.settings:category:id, l.settings:loaded_category)" />
+			<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'long', l.settings:category:long)" />
+			<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description_for', l.settings:category:description_for)" />
+			
+			<div class="container-category">
+				<div class="circle">
+					<img alt="main image" src="&mvte:loaded_category:image;">
+				</div>
 
+				<div class="info-category">
+					<div class="name-category">
+						<p class="name-category__name">&mvt:category:name;</p>
+						<p class="name-category__for">&mvt:category:description_for;</p>
+					</div>
+
+					<div class="long-description">
+						<p>&mvt:category:long;</p>
+					</div>
+					<div class="link-category">
+						<a href="&mvt:category:href;">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</mvt:foreach>
+		</div>
 	</div>
-	
+	<div class="other-banner-main">
+		<div class="product-tips">
+			<div class="product-tips-img">
+				<img alt="main image" src="graphics/00000002/1/skin-moisturizerb.jpg">
+			</div>
+			<div class="info-product-tips">
+				<div class="">
+					<p class="product-tips-text">Product Tips</p>
+				</div>
+
+				<div class="product-tips-text-sub">
+					<p>Auto & Truck</p>
+				</div>
+				<div class="product-tips-text-desc">
+					<p>Put Miracle Soap in the bottom of your wash bucket fill. This will create large amount of suds. If you have a hand sprayer dispenses, dilute 50/50 with water. It will make your paint shine. If you hand wax your car, you will notice Miracle Soap is gentled enough not to strip it off. People have reported their Auto/Truck looks nicer and that Miracle Soap cleans road grime off the first time washing. Great for cleaning carpets and engines also </p>
+				</div>
+				<div>
+					<a class="product-tips-link">Learn More</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="affilate-program">
+			<div>
+				<p class="affilate-program-text">Affilate Program</p>
+			</div>
+			<div>
+				<p class="affilate-program-text-desc">Our Miraclesoap Affiliate Program allows you to market and promote two of the worlds most amazing all natural products, Miracle II Soap and PTPH Essential Oils, serviced by the industries most reputable distributor.</p>
+			</div>
+			<div>
+				<a class="affilate-program-link">Get Started</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="newsletter-email">
+		<p class="title-newsletter">Miracle II Newsletter</p>
+		<p class="text-newsletter">Catch up on inspiring articles and personal testimonies from users like yourself. Signup for our free monthly subscription delivered directly in your E-Mail.</p>
+		<div class="input-with-button-letter">
+			<input type="text" class="input-field-letter" placeholder="Your E-mail Address">
+			<button class="button-letter">Get Started Now</button>
+		</div>
+	</div>
 	<script>
 		const circleType = new CircleType(document.getElementById('products'));
 		circleType.radius(125);
