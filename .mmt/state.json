@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 2842,
+        "id": 2843,
         "username": null,
         "notes": "test"
     },
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "13ee7c8c365f57d5da350deadb2104ac08756e0c7af26fe8254e7fdea01c9697"
+            "hash": "467d7e5a893e745c05c7db0bd095dd57215fec787268e038a2f8b0c42ebc09c9"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
