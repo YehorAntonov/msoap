@@ -25,11 +25,11 @@
 	<div class="banner-home">
 		<img style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
 		<div class="bubbles">
-			<a href=""><img id="bubble1" src="graphics/00000002/1/Group 2bubble1.jpg"></a>
-			<a href=""><img id="bubble2" src="graphics/00000002/1/Group 2bubble2.jpg"></a>
-			<a href=""><img id="bubble3" src="graphics/00000002/1/Group 3bubble3.jpg"></a>
-			<a href=""><img id="bubble4" src="graphics/00000002/1/Group 3bubble4.jpg"></a>
-			<a href=""><img id="bubble5" src="graphics/00000002/1/Group 2bubble5.jpg"></a>
+			<a href=""><img id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
+			<a href=""><img id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
+			<a href=""><img id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
+			<a href=""><img id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a>
+			<a href=""><img id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
 			<a href="" id="products">Products</a>
 			<a href="" id="product-history">Product</a>
 			<a href="" id="history">History</a>
@@ -44,7 +44,7 @@
 			atural, non-toxic and biodegradable. We add no fragrances, colors, agents or perfumes.</p>
 			<div class="info-banner-main__annotation">
 				<div>
-					<img src="graphics/00000002/1/photo.jpg">
+					<img src="graphics/00000002/1/photo.png">
 				</div>
 				<div class="info-banner-main__annotation-info">
 					<p class="info-banner-main__annotation-info-p">“The formula for Miracle II was given to me in 1980. It was perfected then<br> 
@@ -92,9 +92,9 @@
 				</div>
 
 				<div class="info-category">
-					<div class="name-category">
-						<p class="name-category__name">&mvt:category:name;</p>
-						<p class="name-category__for">&mvt:category:description_for;</p>
+					<div class="category-name">
+						<p class="category-name__name">&mvt:category:name;</p>
+						<p class="category-name__for">&mvt:category:description_for;</p>
 					</div>
 
 					<div class="long-description">
@@ -111,7 +111,9 @@
 	<div class="other-banner-main">
 		<div class="product-tips">
 			<div class="product-tips-img">
-				<img alt="main image" src="graphics/00000002/1/skin-moisturizerb.jpg">
+				<div class="tips-container-img">
+					<img alt="main image" src="graphics/00000002/1/skin-moisturizerb_2-fotor-bg-remover-20240229175531.png">
+				</div>
 			</div>
 			<div class="info-product-tips">
 				<div class="">
@@ -151,6 +153,7 @@
 			<input type="text" class="input-field-letter" placeholder="Your E-mail Address">
 			<button class="button-letter">Get Started Now</button>
 		</div>
+		<a class="newsletter-link">Click Here to visit our newsletter site.</a>
 	</div>
 	<script>
 		const circleType = new CircleType(document.getElementById('products'));

@@ -16,7 +16,7 @@
 						<div class="t-site-header__store-name">&mvt:readytheme:logo_name;</div>
 						<small class="t-site-header__store-tagline">&mvt:readytheme:logo_tagline;</small>
 					<mvt:elseif expr="l.settings:readytheme:logo_type EQ 'image'"> </mvt:comment>
-					<img src="graphics/00000002/1/logo.jpg" alt="&mvte:readytheme:logo_alt;" loading="lazy" width="&mvte:readytheme:logo_image_width;" height="&mvte:readytheme:logo_image_height;">
+					<img src="graphics/00000002/1/logo.png" alt="&mvte:readytheme:logo_alt;" loading="lazy" width="&mvte:readytheme:logo_image_width;" height="&mvte:readytheme:logo_image_height;">
 					<mvt:comment> </mvt:if> </mvt:comment>
 				</a>
 			</div>
@@ -84,7 +84,7 @@
 	<mvt:item name="breadcrumbs" />
 </mvt:if>
 
-<main class="o-wrapper t-main-content-element">
+<main class="o-wrapper t-main-content-element sfnt-body-container">
 	<mvt:if expr="g.Maintenance_Warning_Message">
 		<section class="o-layout">
 			<div class="o-layout__item">
