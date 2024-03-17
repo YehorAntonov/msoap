@@ -23,8 +23,8 @@
 		</div>
 	</section> </mvt:comment>
 	<div class="banner-home">
-		<img style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
-		<div class="bubbles">
+		<img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
+		<div class="bubbles desktop">
 			<a href=""><img id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
 			<a href=""><img id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
 			<a href=""><img id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
@@ -53,6 +53,7 @@
 					<p class="info-banner-main__annotation-info-p2">Clayton Tedeton, God’s Faithful Servant</p>
 				</div>
 			</div>
+			<img class="mobile" style="width: 100%; height: 100%;" src="graphics/00000002/1/photo_5456236654118426754_w.jpg">
 		</div>
 	</div>
 	<div class="gradient-line-ship">FREE SHIPPING AVAILABLE</div>

@@ -3376,7 +3376,7 @@ small {
 }
 
 .u-icon-menu:before {
-	content: "V";
+	/* content: "V"; */
 }
 
 .u-icon-minus-circle:before {

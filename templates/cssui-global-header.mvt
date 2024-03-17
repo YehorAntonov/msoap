@@ -6,10 +6,10 @@
 	<section class="o-wrapper o-wrapper--flush">
 		<div class="o-layout o-layout--align-center o-layout--flush t-site-header__masthead o-header-main">
 			<div class="o-layout__item o-layout--justify-between u-flex u-width-3 u-width-1--m u-hidden--l &mvte:global:Session:shadows:checkout_hidden;">
-				<button class="c-button c-button--flush c-button--full u-bg-white u-border-none u-color-black u-font-large u-icon-menu" data-hook="open-main-menu" aria-label="Open Menu"></button>
-				<button class="c-button c-button--flush c-button--full u-bg-white u-border-none u-color-black u-font-large u-icon-search" data-hook="open-header-search" aria-label="Open Search Form"></button>
+				<button class="c-button c-button--flush c-button--full u-border-none u-color-black u-font-large u-menu" data-hook="open-main-menu" aria-label="Open Menu"><div><img id="bubble6" src="graphics/00000002/1/Group 10142bubble6.png"></div></button>
+				<mvt:comment> <button class="c-button c-button--flush c-button--full u-bg-white u-border-none u-color-black u-font-large u-icon-search" data-hook="open-header-search" aria-label="Open Search Form"></button> </mvt:comment>
 			</div>
-      
+
 			<div class="o-layout__item u-width-6 u-width-10--m u-width-6--l-logo u-width-7--xl-logo u-text-center u-text-left--l t-site-header__logo">
 				<a href="&mvte:urls:SFNT:auto;" title="&mvte:global:store:name;">
 					<mvt:comment> <mvt:if expr="l.settings:readytheme:logo_type EQ 'text'">
@@ -21,7 +21,10 @@
 				</a>
 			</div>
 
-			<div class="o-layout__item u-width-3 u-width-1--m u-hidden--l u-text-right &mvte:global:Session:shadows:checkout_hidden;">
+			<div class="o-layout__item u-width-3 u-width-1--m u-flex--l mobile u-width-3--l-icons u-width-2--xl-icons mobile-icons t-site-header__masthead-links &mvte:global:Session:shadows:checkout_hidden;">
+        <a href="&mvte:urls:LOGN:secure;" class="t-global-account-toggle">
+	        <i class="fa-solid fa-user" style="color: #0f4e7e;"></i>
+        </a>
 				<a class="t-site-header__basket-link icon-cart" data-hook="open-mini-basket" aria-label="Open Mini-Basket" href="&mvte:urls:BASK:auto;">
 					<mvt:if expr="l.settings:global_minibasket:basket_count GT 0">
 						<span class="u-icon-cart-full" aria-hidden="true"><i class="fa-solid fa-bag-shopping" style="color: #0f4e7e; font-size: 25px;"></i></span>
@@ -33,9 +36,9 @@
 			</div>
   
 			<div class="o-layout__item u-width-12-icons u-width-3--l-icons-search t-site-header__search &mvte:global:Session:shadows:checkout_hidden; search-block" data-hook="site-header__search">
-				<div class="links-header"><a href="/about-us.html">About Us</a></div>
-        <div class="links-header"><a href="">Disclaimer</a></div>
-        <div class="links-header phone-header"><a href="tel:+18888957675">1-888-895-SOAP (7675)</a></div>
+				<div class="links-header desktop"><a href="/about-us.html">About Us</a></div>
+        <div class="links-header desktop"><a href="">Disclaimer</a></div>
+        <div class="links-header phone-header desktop"><a href="tel:+18888957675">1-888-895-SOAP (7675)</a></div>
         <form class="t-site-header__search-form" method="post" action="&mvte:urls:SRCH:rr;">
 					<fieldset>
 						<legend>Product Search</legend>
@@ -73,11 +76,11 @@
 </header>
 <!-- end t-site-header -->
 
-<mvt:comment> <div class="o-wrapper o-wrapper--full o-wrapper--flush u-bg-white t-site-navigation &mvte:global:Session:shadows:checkout_hidden;">
+<div class="o-wrapper o-wrapper--full mobile o-wrapper--flush u-bg-white t-site-navigation &mvte:global:Session:shadows:checkout_hidden;">
 	<div class="o-layout o-layout--align-center o-layout--flush o-layout--justify-center t-site-navigation__wrap">
 		<mvt:item name="readytheme" param="navigationset( 'primary_navigation' )" />
 	</div>
-</div> </mvt:comment>
+</div>
 <!-- end t-site-navigation -->
 
 <mvt:if expr="(l.settings:page:code NE 'SFNT' AND l.settings:page:code NE 'ACLN' AND l.settings:page:code NE 'BASK' AND l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY') AND (ISNULL g.Customer_Temporary_Password)">
