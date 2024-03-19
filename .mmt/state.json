@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3050,
-        "username": null,
-        "notes": "test"
+        "id": 3078,
+        "username": "yehor",
+        "notes": "Page References for page 'SFNT' updated"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "dee6a079f36a8ee3481e2c034caf5d2923fef75d3d88639c23655b6f7a300eeb"
+            "hash": "94b9bdff608eb00e29db4fc10bf564a3a4a973cce7ab5b2e5ebd60e2176dd46e"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "5c12d3432b6f670b40249f96d298400e27aa1d824681a7c80df0fdc4f98e58f7"
+            "hash": "8e869c878f3b6c4e782f8e9a2e5d5ad912b36a6e44dbade18c400b1dda7d629c"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -6119,6 +6119,26 @@
             "property_type": "readytheme_image",
             "property_code": "visa",
             "hash": "b7b92d8bf07cdcca1e62a7afca31f2df147ebf8a0a512e9f0800c9e4f55ebca5"
+        },
+        "templates/cmp-mv-clientdimensions.mvt": {
+            "template_filename": "cmp-mv-clientdimensions.mvc",
+            "hash": "86f4553bccde2e77a19923b2458bed7fee8706b401e77ffe6b53b2f1b5010def"
+        },
+        "templates/cmp-mv-clientdimensions.json": {
+            "template_filename": "cmp-mv-clientdimensions.mvc",
+            "hash": null
+        },
+        "properties/readytheme_image/bubble6.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "bubble6",
+            "hash": "e0cf452ce1194f497f9309b605b327b30784bd048d091ea38baa696ae873936a"
+        },
+        "properties/readytheme_image/mobile_banner.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "mobile_banner",
+            "hash": "b6ac39c8367ea0acf85d868d8e54af5ed9ea38a18c85fd5d28cc300519e83452"
         }
     }
 }
