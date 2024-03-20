@@ -8,14 +8,14 @@
   </div>
   <footer class="t-site-footer bg-footer">
 		<div class="o-wrapper t-site-footer__wrapper">
-			<div class="o-layout o-layout--column o-layout--row--m t-site-footer__content">
+			<div class="o-layout o-layout--column o-layout--row--m t-site-footer__content desktop">
         <section class="">
           <img src="graphics/00000002/1/Miracle II footer logo 2footer-logo.png">
         </section>
 				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l quick-links-footer">
 					<mvt:item name="readytheme" param="navigationset( 'quick_links' )" />
 				</section>
-				<section class="o-layout__item o-layout--align-self-stretch">
+				<section class="o-layout__item o-layout--align-self-stretch quick-links-footer-2">
           <mvt:item name="readytheme" param="navigationset( 'footer_categories' )" />
 				</section>
 				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l">
@@ -73,6 +73,22 @@
 						<h5 class="c-menu__title u-text-uppercase">Safe &amp; Secure</h5>
 						<mvt:item name="readytheme" param="trustsymbol" />
 					</mvt:if> </mvt:comment>
+				</section>
+			</div>
+      <div class="o-layout o-layout--column o-layout--row--m t-site-footer__content mobile">
+        <section class="">
+          <img src="graphics/00000002/1/Miracle II footer logo 2footer-logo.png">
+        </section>
+        <div class="mobile-section-footer-links">
+				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l quick-links-footer">
+					<mvt:item name="readytheme" param="navigationset( 'quick_links' )" />
+				</section>
+				<section class="o-layout__item o-layout--align-self-stretch quick-links-footer-2">
+          <mvt:item name="readytheme" param="navigationset( 'footer_categories' )" />
+				</section>
+        </div>
+				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l pay-system">
+          <mvt:item name="readytheme" param="contentsection( 'payment_systems' )" />
 				</section>
 			</div>
 		</div>

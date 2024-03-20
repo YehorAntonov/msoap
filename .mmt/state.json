@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3078,
-        "username": "yehor",
-        "notes": "Page References for page 'SFNT' updated"
+        "id": 3240,
+        "username": null,
+        "notes": "test"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -936,7 +936,7 @@
         },
         "templates/cssui-global-footer.mvt": {
             "template_filename": "cssui-global-footer.mvc",
-            "hash": "bac0672caa4613c3a6e13fac6a90884c3ba69bef8b352a57d4fe39653cf292fb"
+            "hash": "8b26b1b634b5acb3d8fe57be101f2cfddf4b4aab3f521f4f6b3e6c5a60abe5a2"
         },
         "templates/cssui-global-footer.json": {
             "template_filename": "cssui-global-footer.mvc",
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "94b9bdff608eb00e29db4fc10bf564a3a4a973cce7ab5b2e5ebd60e2176dd46e"
+            "hash": "e66460ea3a91b9105a13ed3f69bb7578145fd330fd50c414b2195b0d760c3723"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5368,7 +5368,7 @@
         },
         "css/core.css": {
             "cssresource_code": "core",
-            "hash": "6f4afb780d9bb0b2fd6315e3b6374e9d1b651f9e2eae81a006b982856df1d3e5"
+            "hash": "3c51075eec416aa2749e86eebd9a1d7004437c1a466d21b9568be9d14bca8654"
         },
         "css/cssui.json": {
             "cssresource_code": "cssui",
@@ -5400,7 +5400,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "08e5b2fb0a3c2781498f108a26d0e36a5dee5d478167983b6c1eacf6fe18bab5"
+            "hash": "d63e6ba1e750b007172a7c96e33eba36c9f36c372bc45c1521f81a035e2f3a6b"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "8e869c878f3b6c4e782f8e9a2e5d5ad912b36a6e44dbade18c400b1dda7d629c"
+            "hash": "bdad1c55a332145f1d7b3583f0b36263a8efeb5da8ef570e3982ba0f3c2e51c2"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -5716,7 +5716,7 @@
         },
         "css/u-widths.css": {
             "cssresource_code": "u-widths",
-            "hash": "507ec64eba315c908ed0d0dface0ce75ff26a09b01755d911f0f0f868a252c56"
+            "hash": "e5b26afaf2f33e1de1663e1fb99e1cd61c3d47fcb9cf16f1723f4a908266ce69"
         },
         "css/u-z-index.json": {
             "cssresource_code": "u-z-index",

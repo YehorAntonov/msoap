@@ -2716,7 +2716,7 @@ small {
 }
 /* Large Breakpoint [60em = 960px]
    =========================================== */
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 60.0625em) {
 	.u-hidden--l {
 		display: none;
 	}
@@ -3688,7 +3688,7 @@ small {
 		text-align: justify;
 	}
 }
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 60.0625em) {
 	.u-text-left--l {
 		text-align: left;
 	}
@@ -4204,7 +4204,7 @@ a.u-text-underline:hover {
 }
 /* Large Breakpoint [60em = 960px]
    =========================================== */
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 60.0625em) {
 	.u-width-1--l {
 		flex-basis: 8.333%;
 		max-width: 8.333%;

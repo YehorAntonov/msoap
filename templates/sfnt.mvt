@@ -14,6 +14,8 @@
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="https://www.kernjs.com/js/lettering.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
 	<mvt:item name="hdft" param="global_header" />
@@ -75,6 +77,88 @@
 			<mvt:comment> &mvt:category:catimg; </mvt:comment>
 		</mvt:foreach>
 		</div>
+		<mvt:if expr="l.settings:clientdimensions:width LE 960">
+			<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+			<script>
+        		function initializeSlick() {
+            		$(".grid-products-container").slick({
+                		lazyLoad: "ondemand",
+						autoplay: true,
+						autoplaySpeed: 3000,
+                		slidesToShow: 3,
+                		slidesToScroll: 1,
+                		infinite: true,
+						arrows: false,
+						centerMode: true,
+						
+						
+						responsive: [
+							{
+								breakpoint: 720,
+								settings: {
+									slidesToShow: 2
+								}
+							},
+							{
+								breakpoint: 520,
+								settings: {
+									slidesToShow: 1,
+									centerPadding: '75px'
+								}
+							},
+							{
+								breakpoint: 485,
+								settings: {
+									slidesToShow: 1,
+									centerPadding: '90px'
+								}
+							},
+							{
+								breakpoint: 480,
+								settings: {
+									slidesToShow: 1,
+									centerPadding: '80px'
+								}
+							},
+							{
+								breakpoint: 450,
+								settings: {
+									slidesToShow: 1,
+									centerPadding: '70px'
+								}
+							},
+							{
+								breakpoint: 420,
+								settings: {
+									slidesToShow: 1,
+									centerPadding: '60px'
+								}
+							},
+							{
+								breakpoint: 390,
+								settings: {
+									slidesToShow: 1,
+									centerPadding: '50px'
+								}
+							}
+						]
+            		});
+
+            		$(".grid-products-container").show();
+        		};
+				if (typeof jQuery !== 'undefined') {
+            		if ($.fn.slick) {
+                		initializeSlick();
+            		} else {
+                		$.getScript('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', function () {
+                    		initializeSlick();
+                		});
+            		};
+        		};
+        
+    		</script>
+		</mvt:if>
 	</div>
 	<div>
 		<div class="title-products">
