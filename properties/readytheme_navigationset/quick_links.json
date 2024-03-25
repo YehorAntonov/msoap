@@ -89,6 +89,26 @@
             "link_type": "G",
             "name": "Site Map",
             "url": "https://miraclesoap.mivatest.com/sitemap.html"
+        },
+        {
+            "active": 1,
+            "id": "a7931b542d3f347fb1ba88df626fe361",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/affiliate-create.html\" target=\"_self\">Affiliate Program</a>",
+            "link_dest": "AFAD",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Affiliate Program",
+            "url": "https://miraclesoap.mivatest.com/affiliate-create.html"
+        },
+        {
+            "active": 1,
+            "id": "d810f238a21298fd88b17ea956b90f33",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/partners.html\" target=\"_self\">Partners</a>",
+            "link_dest": "Partners",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Partners",
+            "url": "https://miraclesoap.mivatest.com/partners.html"
         }
     ],
     "layout": "S",

@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3281,
-        "username": null,
-        "notes": "test"
+        "id": 3320,
+        "username": "yehor",
+        "notes": "ReadyTheme Navigation Set 'footer_categories' item 'Disclaimer' created"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -952,7 +952,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "a08e20b978230da695f331597cc5873813813cb562100db875a24e18fc814763"
+            "hash": "feefb8b404974fe9a464808f6abd99a577d5911e8bc7031a98968f39eb435f13"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -4760,7 +4760,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "footer_categories",
-            "hash": "ed44269b145fa65cde31a7f91dd1212826b2ca1aab947b937a103e21464c4f30"
+            "hash": "c28c01c0850ae901bffb65cc26ee6eac8d2542cbb2524c40c12e829976ae0357"
         },
         "properties/readytheme_navigationset/header_links.mvt": {
             "property_group": "",
@@ -4832,7 +4832,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "quick_links",
-            "hash": "a52f94e84a6f60e05086cac20e4ba6ea48b31e299d2e51428d7d33a4b3774940"
+            "hash": "59b4fc0088de57d56f939aca20e2fc68b04c074401a71cce3e2cfbd5ce031470"
         },
         "properties/readytheme_navigationset/static_navigation.mvt": {
             "property_group": "",
@@ -6162,7 +6162,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "b2803e475771445b49b23958194bdf225a46a83f7d8cc00c27b329103b8e2004"
+            "hash": "676108f63bc7b6f7f046801ea74083d4ec5bb2eef97d21666f18ebab5fd3dfa1"
         },
         "templates/product-history.mvt": {
             "template_filename": "product-history.mvc",
@@ -6178,6 +6178,42 @@
         },
         "templates/testimonials.json": {
             "template_filename": "testimonials.mvc",
+            "hash": null
+        },
+        "templates/disclaimer-page-content.mvt": {
+            "template_filename": "disclaimer-page-content.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/disclaimer-page-footer.mvt": {
+            "template_filename": "disclaimer-page-footer.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/disclaimer-page-header.mvt": {
+            "template_filename": "disclaimer-page-header.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/disclaimer-page.mvt": {
+            "template_filename": "disclaimer-page.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/disclaimer-page.json": {
+            "template_filename": "disclaimer-page.mvc",
+            "hash": "d8946618a9f34c14902941821b1520a0ebcc2aa2d24f7c7dbfac73b9dd5d05b9"
+        },
+        "templates/partners.mvt": {
+            "template_filename": "partners.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/partners.json": {
+            "template_filename": "partners.mvc",
+            "hash": null
+        },
+        "templates/scpl.mvt": {
+            "template_filename": "scpl.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/scpl.json": {
+            "template_filename": "scpl.mvc",
             "hash": null
         }
     }

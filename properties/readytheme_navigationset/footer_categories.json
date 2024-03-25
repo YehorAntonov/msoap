@@ -69,6 +69,26 @@
             "link_type": "G",
             "name": "Privacy Policy",
             "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
+        },
+        {
+            "active": 1,
+            "id": "97df404b02099608056a00225da6bf76",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/security-policy.html\" target=\"_self\">Security Policy</a>",
+            "link_dest": "SCPL",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Security Policy",
+            "url": "https://miraclesoap.mivatest.com/security-policy.html"
+        },
+        {
+            "active": 1,
+            "id": "42f95933429a09b396721786cbd12b9d",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
+            "link_dest": "disclaimer-page",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Disclaimer",
+            "url": "https://miraclesoap.mivatest.com/disclaimer.html"
         }
     ],
     "layout": "S",
