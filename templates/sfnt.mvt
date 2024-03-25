@@ -27,34 +27,15 @@
 	<div class="banner-home">
 		<img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
 		<div class="bubbles desktop">
-			<a href=""><img id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
-			<a href=""><img id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
-			<a href=""><img id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
-			<a href=""><img id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a>
-			<a href=""><img id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
-			<a href="" id="products">Products</a>
-			<a href="" id="product-history">Product</a>
-			<a href="" id="history">History</a>
-			<a href="" id="testimonials">Testimonials</a>
-			<a href="" id="faqs">FAQs</a>
-			<a href="" id="contact">Contact</a>
+			<img id="bubble1" src="graphics/00000002/1/Group 2bubble1.png">
+			<img id="bubble2" src="graphics/00000002/1/Group 2bubble2.png">
+			<img id="bubble3" src="graphics/00000002/1/Group 3bubble3.png">
+			<img id="bubble4" src="graphics/00000002/1/Group 3bubble4.png">
+			<img id="bubble5" src="graphics/00000002/1/Group 2bubble5.png">
+			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
 		</div>
 		<div class="info-banner-main">
-			<h1 class="info-banner-main__h1">EACH PRODUCT IS MIRACULOUS IN ITS OWN WAY</h1>
-			<h2 class="info-banner-main__h2">Miracle II Family of Products</h2>
-			<p class="info-banner-main__p">Made from natural minerals, sea-salts, and cold pressed virgin oils. Miracle II products are all 
-			atural, non-toxic and biodegradable. We add no fragrances, colors, agents or perfumes.</p>
-			<div class="info-banner-main__annotation">
-				<div>
-					<img src="graphics/00000002/1/photo.png">
-				</div>
-				<div class="info-banner-main__annotation-info">
-					<p class="info-banner-main__annotation-info-p">“The formula for Miracle II was given to me in 1980. It was perfected then 
-					and has not changed since. You will never read “New and Improved” on a 
-					bottle of Miracle II products.”</p>
-					<p class="info-banner-main__annotation-info-p2">Clayton Tedeton, God’s Faithful Servant</p>
-				</div>
-			</div>
+			<mvt:item name="readytheme" param="contentsection( 'main_banner_text' )" />
 		</div>
 		<img class="mobile" style="width: 100%; height: 100%;" src="graphics/00000002/1/photo_5456236654118426754_w.jpg">
 	</div>
@@ -245,14 +226,14 @@
 		circleType.radius(125);
 		const circleType2 = new CircleType(document.getElementById('product-history'));
 		circleType2.radius(125);
-		const circleType3 = new CircleType(document.getElementById('history'));
-		circleType3.radius(125);
 		const circleType4 = new CircleType(document.getElementById('testimonials'));
 		circleType4.radius(125);
 		const circleType5 = new CircleType(document.getElementById('faqs'));
 		circleType5.radius(125);
 		const circleType6 = new CircleType(document.getElementById('contact'));
 		circleType6.radius(125);
+		const circleType3 = new CircleType(document.getElementById('history'));
+		circleType3.radius(125);
 	</script>
 	<section class="o-layout">
 		<div class="o-layout__item">

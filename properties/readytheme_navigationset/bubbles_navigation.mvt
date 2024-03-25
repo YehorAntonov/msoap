@@ -1,0 +1,16 @@
+<mvt:foreach iterator="navigationitem" array="readytheme:navigationitems">
+	<mvt:if expr="POS1 EQ 1">
+		<a id="products" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+	<mvt:elseif expr="POS1 EQ 2">
+		<a id="product-history" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		<mvt:foreach iterator="navigationitem2" array="navigationitem:items">
+			<a id="history" href="&mvte:navigationitem2:url;">&mvt:navigationitem2:name;</a>
+		</mvt:foreach>
+	<mvt:elseif expr="POS1 EQ 3">
+		<a id="testimonials" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+	<mvt:elseif expr="POS1 EQ 4">
+		<a id="faqs" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+	<mvt:elseif expr="POS1 EQ 5">
+		<a id="contact" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+	</mvt:if>
+</mvt:foreach>

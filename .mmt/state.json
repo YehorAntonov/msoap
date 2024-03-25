@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3240,
+        "id": 3281,
         "username": null,
         "notes": "test"
     },
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "e66460ea3a91b9105a13ed3f69bb7578145fd330fd50c414b2195b0d760c3723"
+            "hash": "b9dcd1ce2b8b50666f3ea4934e641ceae80784b192f0e0ef2b741c2a9aa211cb"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4748,7 +4748,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "disclaimer_navigation",
-            "hash": "dfe4d0d0f989e0b0ba6c8ab32ec50abef3e5058df753f49127b4ea65bb8946d9"
+            "hash": "f17095f2e73cd9fbe5005221fe57e35dd6591f3fec1506144d939c2e25deb643"
         },
         "properties/readytheme_navigationset/footer_categories.mvt": {
             "property_group": "",
@@ -4760,7 +4760,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "footer_categories",
-            "hash": "43feaf0fedadb3a0795de1fc5a4224a7d6d85362f4c7b9c1d0570c0701995d6e"
+            "hash": "ed44269b145fa65cde31a7f91dd1212826b2ca1aab947b937a103e21464c4f30"
         },
         "properties/readytheme_navigationset/header_links.mvt": {
             "property_group": "",
@@ -4820,7 +4820,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "primary_navigation",
-            "hash": "f41057dcef8795ce97bcc46525532e91cef0a50f02132d25afd97f6ac7686e82"
+            "hash": "ed2c6421f12acb2264df113e41bb1b057607ff3fd949b8ee423fab8f945421cd"
         },
         "properties/readytheme_navigationset/quick_links.mvt": {
             "property_group": "",
@@ -6139,6 +6139,46 @@
             "property_type": "readytheme_image",
             "property_code": "mobile_banner",
             "hash": "b6ac39c8367ea0acf85d868d8e54af5ed9ea38a18c85fd5d28cc300519e83452"
+        },
+        "properties/readytheme_contentsection/main_banner_text.mvt": {
+            "property_group": "",
+            "property_type": "readytheme_contentsection",
+            "property_code": "main_banner_text",
+            "hash": "cb23a62ec85a4b0a92673efa83c8ba38c6add805f9bbdb3d253402c580eaf5e3"
+        },
+        "properties/readytheme_contentsection/main_banner_text.json": {
+            "property_group": "",
+            "property_type": "readytheme_contentsection",
+            "property_code": "main_banner_text",
+            "hash": "155c1d25383da50321c45a8fcd8eb7b8d0426d87c64105c46744422467cca9a8"
+        },
+        "properties/readytheme_navigationset/bubbles_navigation.mvt": {
+            "property_group": "",
+            "property_type": "readytheme_navigationset",
+            "property_code": "bubbles_navigation",
+            "hash": "2e52eb70f99d588f6ac3e3dc04a6e8d8d413cf083b2190fed785b89b28c44cca"
+        },
+        "properties/readytheme_navigationset/bubbles_navigation.json": {
+            "property_group": "",
+            "property_type": "readytheme_navigationset",
+            "property_code": "bubbles_navigation",
+            "hash": "b2803e475771445b49b23958194bdf225a46a83f7d8cc00c27b329103b8e2004"
+        },
+        "templates/product-history.mvt": {
+            "template_filename": "product-history.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/product-history.json": {
+            "template_filename": "product-history.mvc",
+            "hash": null
+        },
+        "templates/testimonials.mvt": {
+            "template_filename": "testimonials.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/testimonials.json": {
+            "template_filename": "testimonials.mvc",
+            "hash": null
         }
     }
 }
