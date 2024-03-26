@@ -2239,6 +2239,7 @@ small {
 	font-size: var(--title-one);
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-one) * 1.2);
+	color: #0f3c62;
 }
 
 .c-heading-delta {

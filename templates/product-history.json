@@ -1,19 +1,11 @@
 {
-    "footer_sequence": {
-        "title": "Page Builder Footer"
-    },
     "hdft": {
         "footer": {
-            "template_filename": "faqs-footer.mvc",
-            "template_id": 202
+            "template_filename": "product-history-footer.mvc"
         },
         "header": {
-            "template_filename": "faqs-header.mvc",
-            "template_id": 201
+            "template_filename": "product-history-header.mvc"
         }
-    },
-    "header_sequence": {
-        "title": "Page Builder Header"
     },
     "seo_settings": {
         "cat_lit": "category",
@@ -29,7 +21,7 @@
         "suffix_choice": "html",
         "surlprefix": "https://miraclesoap.mivatest.com/",
         "url_delim": "/",
-        "urlprefix": "http://miraclesoap.mivatest.com/"
+        "urlprefix": "https://miraclesoap.mivatest.com/"
     },
     "sequence": {
         "title": "Sequence"

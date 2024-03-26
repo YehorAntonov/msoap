@@ -2002,3 +2002,38 @@
 	color: #0D3B61 !important;
 }
 /* END FOOTER */
+
+
+
+/* CTGY */
+.x-product-list__image {
+	object-fit: contain;
+	/* height: 150px; */
+}
+.x-product-list__picture, .x-subcategory-list__picture {
+	height: 260px;
+	border: 1px solid #88CBC8;
+    border-radius: 10px;
+}
+@media screen and (max-width: 400px) {
+	.x-product-list__picture, .x-subcategory-list__picture {
+		height: 200px;
+	}
+}
+.ctgy-body-container {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.prod-count {
+	color: #0F4E7E;
+}
+.x-category-tree__link, .x-category-tree__link-set {
+	color: #00817F;
+}
+.color-price {
+	color: #0f3c62;
+}
+.color-price-base {
+	color: #0F4E7E;
+}
+/* END CTGY */

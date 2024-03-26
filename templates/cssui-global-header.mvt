@@ -86,8 +86,8 @@
 <mvt:if expr="(l.settings:page:code NE 'SFNT' AND l.settings:page:code NE 'ACLN' AND l.settings:page:code NE 'BASK' AND l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY') AND (ISNULL g.Customer_Temporary_Password)">
 	<mvt:item name="breadcrumbs" />
 </mvt:if>
-
-<main class="o-wrapper t-main-content-element sfnt-body-container">
+<mvt:if expr="l.settings:page:code EQ 'SFNT'">
+  <main class="o-wrapper t-main-content-element sfnt-body-container">
 	<mvt:if expr="g.Maintenance_Warning_Message">
 		<section class="o-layout">
 			<div class="o-layout__item">
@@ -97,5 +97,31 @@
 				</div>
 			</div>
 		</section>
+  </mvt:if>
+<mvt:elseif expr="">
+  <main class="o-wrapper t-main-content-element ctgy-body-container">
+	  <mvt:if expr="g.Maintenance_Warning_Message">
+		  <section class="o-layout">
+			  <div class="o-layout__item">
+				  <div class="x-messages x-messages--info">
+					  <span class="u-icon-info"> </span>
+					  &mvt:global:Maintenance_Warning_Message;
+				  </div>
+			  </div>
+		  </section>
+    </mvt:if>
+<mvt:else>
+  <main class="o-wrapper t-main-content-element">
+	  <mvt:if expr="g.Maintenance_Warning_Message">
+		  <section class="o-layout">
+			  <div class="o-layout__item">
+				  <div class="x-messages x-messages--info">
+					  <span class="u-icon-info"> </span>
+					  &mvt:global:Maintenance_Warning_Message;
+				  </div>
+			  </div>
+		  </section>
+    </mvt:if>
+</mvt:if>
+
 		<!-- end g.Maintenance_Warning_Message -->
-	</mvt:if>

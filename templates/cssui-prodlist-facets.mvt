@@ -1,4 +1,4 @@
-<mvt:if expr="l.settings:facets:facet_count GT 0 OR l.settings:category_listing:products_on_page_count GT 1 OR l.settings:all_products:products_on_page_count GT 1 OR l.settings:search_results:products_on_page_count GT 1">
+<mvt:comment> <mvt:if expr="l.settings:facets:facet_count GT 0 OR l.settings:category_listing:products_on_page_count GT 1 OR l.settings:all_products:products_on_page_count GT 1 OR l.settings:search_results:products_on_page_count GT 1">
 	<br>
 	<nav class="x-category-tree x-collapsible-content" aria-labelledby="searchFacets-label">
 		<div class="x-category-tree__title">
@@ -249,4 +249,4 @@
 			</form>
 		</div>
 	</nav>
-</mvt:if>
+</mvt:if> </mvt:comment>

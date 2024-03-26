@@ -3,12 +3,12 @@
         {
             "active": 1,
             "id": "1359278a18e90f19fed9488b35d5d583",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/product-list.html\" target=\"_self\">Products</a>",
-            "link_dest": "PLST",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/valu-pack.html\" target=\"_self\">Products</a>",
+            "link_dest": "https://miraclesoap.mivatest.com/valu-pack.html",
             "link_targ": "_self",
-            "link_type": "G",
+            "link_type": "U",
             "name": "Products",
-            "url": "https://miraclesoap.mivatest.com/product-list.html"
+            "url": "https://miraclesoap.mivatest.com/valu-pack.html"
         },
         {
             "active": 1,
