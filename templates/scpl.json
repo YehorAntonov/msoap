@@ -1,4 +1,15 @@
 {
+    "flex": {
+        "mmx_texteditor": {
+            "component_code": "mmx-text-editor",
+            "item_code": "mmx_texteditor",
+            "settings": {
+                "content": {
+                    "value": "<font>\r\n            <ol>\r\n              <li><u><b>Protecting Your Information</b></u>. The personal customer \r\n                information you provide, including your credit card information, \r\n                to establish an account with us and to make purchases from us \r\n                is secured using secured socket layer (SSL) encryption technology. \r\n                We use this SSL technology to prevent such information from being \r\n                intercepted and randomly transmitted over the Internet. The encrypted \r\n                data goes to a secure site where your information is stored on \r\n                restricted-access computers located at restricted-access sites. \r\n                <br>\r\n                <br>\r\n              </li><li><u><b>Password Security</b></u>. To further secure your personal, \r\n                customer information, we require you to create a customer password \r\n                when you establish an account with us. We encourage you to keep \r\n                a password that is not easily guessed (i.e., don't use your name \r\n                or street name). Keep your password secret; do not share it with \r\n                anyone. <br>\r\n                <br>\r\n                If you forget your password, you can retrieve it by using the \r\n                <a href=\"https://www.miraclesoap.com/customer-account.html\">account \r\n                login page </a>(enter your personal login informaton and choose: \r\n                Please Email Me My Password), and we will send you your password. \r\n                It will be sent to the e-mail address that you entered when you \r\n                established your MiracleSoap.com account. If you want to change \r\n                your password or other account information, simply click on <font class=\"copy\"><a href=\"https://www.miraclesoap.com/customer-account.html\">account \r\n                login page</a></font> and enter your personal login information \r\n                and password, click login. On the next page, click Account. If \r\n                you changed your password, enter your new password, confirm your \r\n                new password, and click save. If changing other information, simply \r\n                enter the information you wish to change and click save. You may \r\n                change your password and other account information at the same \r\n                time. Just remember to click save after you have changed your \r\n                password, confirmed your new password and changed any other account \r\n                information. If your email address has changed and you have lost \r\n                your password please email us at: security@miraclesoap.com and \r\n                we will verify your account by contacting you by the phone number \r\n                you provided in the email which needs to match the account information \r\n                you originaly provided. If you prefer you can create a new account \r\n                here: <font class=\"copy\"><a href=\"https://www.miraclesoap.com/customer-account.html\">account \r\n                login page</a></font><br>\r\n                <br>\r\n              </li><li><u><b>Remember to Sign Out</b></u>. To further prevent unauthorized\r\n                 access to your account, remember that after you sign in, you\r\n                should \r\n                sign out once you have (1) completed\r\n                 managing your account, or (2) decided to step away from your\r\n                computer. \r\n                Anyone who accesses your computer after you have signed in but\r\n                 before you have signed out, can access your account. If you\r\n                 sign in, and follow thru with a purchase on the website, the\r\n                 system will automatically log you out once your order is completed\r\n                 and you are shown the invoice / receipt page.<br>\r\n                <br>\r\n              </li><li><u><b>Laws Relating to Credit Card Usage</b></u>. Under federal \r\n                law, a credit card issuer cannot make you liable for charges in \r\n                excess of $50 that result from the unauthorized use of your credit \r\n                card. There are similar federal laws that relate to debit cards. \r\n                Exceptions do apply, and you will have to comply with the rules \r\n                of your credit or debit card issuer, so please contact your card \r\n                issuer for further details. <br>\r\n                <br>\r\n              </li><li><u><b>Alternative Customer Purchasing Options</b></u>. If you\r\n                 do not feel comfortable sending your credit card information\r\n                to \r\n                us over the Internet, you still can shop with us. We welcome\r\n                you  to call us and complete your purchase by phone. Or use our\r\n                <a href=\"http://www.miraclesoap.com/Forms/MII_Form.pdf\">online\r\n                order form</a>. You can fill this page out right from\r\n                your browser, then click on the \"print button\" and postal mail\r\n                the form to MiracleSoap, Inc. with your form of payment. <br>\r\n                <br>\r\n              </li><li><u><b>Changes to Security</b></u>. This Security Policy was\r\n                 last changed on March 1, 2005. Miraclesoap.com reserves the\r\n                 right to modify or amend this policy at any time by posting\r\n                the\r\n                 revised Security Policy on our site. The changes will only affect\r\n                \r\n                the information we collect after the effective date of the change\r\n                 to our Security Policy unless we clearly express otherwise. \r\n            </li></ol>\r\n            </font>"
+                }
+            }
+        }
+    },
     "hdft": {
         "footer": {
             "template_filename": "scpl-footer.mvc"
@@ -24,6 +35,17 @@
         "urlprefix": "https://miraclesoap.mivatest.com/"
     },
     "sequence": {
+        "sequence": [
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "ff32f57ab5aabce1f42d4d6accd638e3",
+                "item": "flex",
+                "name": "Security Policy",
+                "param": "mmx_texteditor"
+            }
+        ],
         "title": "Sequence"
     }
 }

@@ -1,4 +1,15 @@
 {
+    "flex": {
+        "mmx_texteditor": {
+            "component_code": "mmx-text-editor",
+            "item_code": "mmx_texteditor",
+            "settings": {
+                "content": {
+                    "value": "<p>Yes, MiracleSoap.com can assist you in becoming a Miracle II Distributor. If you are in the US or international, we have a program to feet you needs. We look forward to working with you.</p>\r\n<br>\r\n<p>Please contact us at your convenience.</p>\r\n<br>\r\n<p>Toll free: <a href=\"tel:+18888957675\">1-888-895-SOAP (7675)</a></p>"
+                }
+            }
+        }
+    },
     "hdft": {
         "footer": {
             "template_filename": "partners-footer.mvc"
@@ -24,6 +35,17 @@
         "urlprefix": "https://miraclesoap.mivatest.com/"
     },
     "sequence": {
+        "sequence": [
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "8385090dc4e43493675443b2ad619170",
+                "item": "flex",
+                "name": "Partners",
+                "param": "mmx_texteditor"
+            }
+        ],
         "title": "Sequence"
     }
 }

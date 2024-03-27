@@ -31,8 +31,8 @@
 			</mvt:comment>
 			<div class="c-form-list__item c-form-list__item--full">
 				<label class="c-form-label is-required" for="contactSubject">What can we help you with?</label>
-				<div class="c-form-select">
-					<select id="contactSubject" class="c-form-select__dropdown" name="contactSubject" required aria-required="true">
+				<div class="c-form-select ctus-form">
+					<select id="contactSubject" class="c-form-select__dropdown ctus-form" name="contactSubject" required aria-required="true">
 						<mvt:if expr="g.contactSubject EQ 'Questions'">
 							<option value="Questions" selected>Questions</option>
 						<mvt:else>

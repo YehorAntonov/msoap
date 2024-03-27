@@ -1612,6 +1612,7 @@ small {
 	display: inline-flex;
 	font-size: var(--default-input-font-size);
 	margin-bottom: 0.5em;
+	color: #0F4E7E;
 }
 
 /* Form text inputs
@@ -2246,6 +2247,7 @@ small {
 	font-size: var(--title-two);
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-two) * 1.25);
+	color: #0f3c62;
 }
 
 .c-heading-echo {

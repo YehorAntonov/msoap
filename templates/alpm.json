@@ -1,4 +1,15 @@
 {
+    "flex": {
+        "mmx_texteditor": {
+            "component_code": "mmx-text-editor",
+            "item_code": "mmx_texteditor",
+            "settings": {
+                "content": {
+                    "value": "<p>The MiracleSoap.com Affiliate program is undergoing upgrades and changes to provide a better user experience.\r\n\r\nCurrently we are not accepting new affiliate signups at this time.\r\n\r\nWe will be releasing the revised Affiliate Program in the 1st QTR of 2024.\r\n\r\n<br>Thanks for your patience,\r\n\r\nMiracleSoap</p>"
+                }
+            }
+        }
+    },
     "hdft": {
         "footer": {
             "template_filename": "alpm-footer.mvc"
@@ -24,6 +35,17 @@
         "urlprefix": "https://miraclesoap.mivatest.com/"
     },
     "sequence": {
+        "sequence": [
+            {
+                "dt_end": 0,
+                "dt_start": 0,
+                "enabled": 1,
+                "id": "cc3afabb9e895126bef47f269cdcd5b2",
+                "item": "flex",
+                "name": "Affilate Program",
+                "param": "mmx_texteditor"
+            }
+        ],
         "title": "Sequence"
     }
 }
