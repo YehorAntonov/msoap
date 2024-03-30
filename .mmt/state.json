@@ -1,8 +1,8 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3549,
-        "username": "yehor",
+        "id": 3553,
+        "username": null,
         "notes": "test"
     },
     "files": {
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "f94bdb88eca6a4744cb666afcc0fe230c6894c60909a74f15a2c219e9f20156a"
+            "hash": "e685dd173c1ac9175e32a6d497684556f8c87a80c7d15e68b207a6aba7a62bb9"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
