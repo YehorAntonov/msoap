@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3684,
+        "id": 3691,
         "username": null,
         "notes": "test"
     },
@@ -1076,7 +1076,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "3a7467015bd5ee5ccb269e53afc34b8ba552fd0d1b0e911d2417b29e24a9bbb4"
+            "hash": "55e41e40dd6c7d22cd5df431a4a2c32e0384fe1dc7521b7bea97ff9d0775a3a8"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "7632d27f1b853965126b26ff247d7e5c00778248e154a6dd8920759fd6344555"
+            "hash": "f05ee0b99701184ee5ef23f5f0e2f4279b505a0698b8606115703e58dfda5853"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

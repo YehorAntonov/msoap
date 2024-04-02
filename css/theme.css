@@ -2185,3 +2185,26 @@ details {
 .add-to-cart {
 	width: 25%;
 }
+@media screen and (max-width: 960px) {
+	.add-to-cart {
+		align-self: center;
+	}
+	.product-price {
+		width: 25%;
+		text-align: start;
+	}
+	.button-product__add-to-cart {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media screen and (max-width: 604px) {
+	.add-to-cart {
+		width: 50%;
+	}
+	.product-price {
+		width: 50%;
+	}
+}

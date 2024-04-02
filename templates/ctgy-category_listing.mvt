@@ -163,6 +163,10 @@
 						<p>&mvt:product:descrip;</p>
 					</div>
 					<div class="button-product__add-to-cart">
+						<div class="product-price">
+							<span class="x-product-list__price u-text-bold color-price">&mvt:product:formatted_price;</span>
+							<span class="x-product-list__price u-text-medium color-price-base"><s>&mvt:product:formatted_base_price;</s></span>
+						</div>
 						<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
 					</div>
 				</div>
