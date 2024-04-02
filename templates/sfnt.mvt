@@ -27,11 +27,11 @@
 	<div class="banner-home">
 		<img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
 		<div class="bubbles desktop">
-			<img id="bubble1" src="graphics/00000002/1/Group 2bubble1.png">
-			<img id="bubble2" src="graphics/00000002/1/Group 2bubble2.png">
-			<img id="bubble3" src="graphics/00000002/1/Group 3bubble3.png">
-			<img id="bubble4" src="graphics/00000002/1/Group 3bubble4.png">
-			<img id="bubble5" src="graphics/00000002/1/Group 2bubble5.png">
+			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
+			<a id="bubble2Link"><img class="product__history" id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
+			<a id="bubble3Link"><img class="testimonials" id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
+			<a id="bubble4Link"><img class="faqs" id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a>
+			<a id="bubble5Link"><img class="contact" id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
 			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
 		</div>
 		<div class="info-banner-main">
@@ -48,7 +48,7 @@
 		<mvt:foreach iterator="category" array="cattree_categories">
 			<mvt:do file="g.Module_Root $ '/modules/component/cmp-cssui-cattitle.mvc'" name="l.success" value="CSSUI_CatTitle_Load(l.settings:category:id, l.settings:loaded_category)" />
 			<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description', l.settings:category:description)" />
-			<a href="&mvt:category:href;">
+			<a href="&mvt:category:link;">
 			<div class="grid-products-item">
 				<img alt="product item" src="&mvte:loaded_category:image;">
 				<p class="product-name">&mvt:category:name;</p>

@@ -770,7 +770,7 @@
 .x-product-list__link::before,
 .x-subcategory-list__link::before {
 	bottom: 0;
-	content: "";
+	/* content: ""; */
 	cursor: pointer;
 	left: 0;
 	position: absolute;
@@ -785,6 +785,7 @@
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
+	height: 50px;
 }
 
 .x-product-list__price {
@@ -793,7 +794,8 @@
 
 .x-product-list__price_set {
 	display: inline-flex;
-	gap: 1em;
+	gap: 0.5em;
+	height: 50px;
 }
 
 /**

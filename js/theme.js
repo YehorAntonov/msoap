@@ -236,8 +236,100 @@ const themeFunctionality = {
 		}
 	},
     jsSFNT() {
+		$(document).ready(function() {
+			$(".products").hover(function() {
+				$(".products").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".products").css('transform', 'scale(1)');
+			})
+			$(".product__history").hover(function() {
+				$(".product__history").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".product__history").css('transform', 'scale(1)');
+			})
+			$(".testimonials").hover(function() {
+				$(".testimonials").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".testimonials").css('transform', 'scale(1)');
+			})
+			$(".faqs").hover(function() {
+				$(".faqs").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".faqs").css('transform', 'scale(1)');
+			})
+			$(".contact").hover(function() {
+				$(".contact").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".contact").css('transform', 'scale(1)');
+			})
+		})
+		$(document).ready(function() {
+			let hrefFirstBubble = $('#products').attr('href');
+			let hrefSecondBubble = $('#product-history').attr('href');
+			let hrefThirdBubble = $('#testimonials').attr('href');
+			let hrefFourBubble = $('#faqs').attr('href');
+			let hrefFiveBubble = $('#contact').attr('href');
+
+
+			$('#bubble1Link').attr('href', hrefFirstBubble);
+			$('#bubble2Link').attr('href', hrefSecondBubble);
+			$('#bubble3Link').attr('href', hrefThirdBubble);
+			$('#bubble4Link').attr('href', hrefFourBubble);
+			$('#bubble5Link').attr('href', hrefFiveBubble);
+		})
 	},
     jsCTGY() {
+		$('[data-hook="btn-add-to-cart"]').click(function(e) {
+			var btnAddToCart = $(this);
+			console.log(btnAddToCart)
+			var product_code = btnAddToCart.data('product-code');
+			var category_code = btnAddToCart.data('category-code');
+			var qty = 1;
+	
+			$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
+			btnAddToCart.text('Processing...');
+	
+			ajaxAddToCart(product_code, qty, category_code, function() {
+				$('[data-hook="btn-add-to-cart"]').prop("disabled", false);
+				btnAddToCart.text('Add To Cart');
+			});
+		});
+
+
+
+
+		function ajaxAddToCart(Product_Code, Quantity, Category_Code, callback) {
+			//create object with type of request and options, add product to cart
+			var data = {
+			Action: "ADPR",
+			Product_Code,
+			Quantity,
+			Category_Code
+			};
+
+	
+			//create object with ajax request
+			var miniBasketRequest = $.ajax({
+			method: "POST",
+			data: data,
+			url: "https://miraclesoap.mivatest.com/basket-contents.html",
+			});
+	
+			//method done with function of response from server
+			miniBasketRequest.done(function (response) {
+				$('[data-hook="open-mini-basket"]').html($(response).find('[data-hook="open-mini-basket"]').first().html());
+				$('[data-hook="mini-basket"]').html($(response).find('[data-hook="mini-basket"]').first().html());
+				//open mini basket with click
+				$('[data-hook="open-mini-basket"]')[0].click();
+				//callback
+	
+				callback && callback();
+			});
+			//output error
+			miniBasketRequest.fail(function (jqXHR, textStatus) {
+			//console.log( "Request failed: " + textStatus );
+			});
+		};
 	},
     jsPROD() {
 		/**

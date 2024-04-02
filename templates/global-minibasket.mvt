@@ -26,7 +26,7 @@
 						<figure class="x-mini-basket__image">
 							<img src="&mvte:item:imagetypes:main;" alt="&mvte:item:name;" loading="lazy" width="&mvte:global_minibasket:b_width;" height="&mvte:global_minibasket:b_height;">
 						</figure>
-						<a class="x-mini-basket__item" href="&mvt:item:uri;">
+						<a class="x-mini-basket__item">
 							<span class="x-mini-basket__item-name">&mvt:item:name;</span>
 							<span class="x-mini-basket__item-attributes">
 								<mvt:foreach iterator="option" array="item:options">
