@@ -2218,6 +2218,9 @@ details {
 		border-radius: 20px;
 		margin-left: 0;
 	}
+	.aside-menu {
+		display: none;
+	}
 }
 @media screen and (max-width: 604px) {
 	.add-to-cart {
