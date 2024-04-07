@@ -1130,7 +1130,7 @@
 
 .x-mini-basket__image {
 	height: 2.5rem;
-	overflow: hidden;
+	/* overflow: hidden; */
 	text-align: center;
 	width: 2.5rem;
 }

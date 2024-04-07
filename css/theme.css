@@ -1902,6 +1902,9 @@
 	.payment-systems {
 		justify-content: start !important;
 	}
+	.bubbles-global {
+		height: 0;
+	}
 }
 @media screen and (max-width: 767px) {
 	.t-site-footer__wrapper {
@@ -2186,6 +2189,9 @@ details {
 	width: 25%;
 }
 @media screen and (max-width: 960px) {
+	.info-product {
+		width: 100%;
+	}
 	.add-to-cart {
 		align-self: center;
 	}
@@ -2198,6 +2204,19 @@ details {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 10px;
+	}
+	.other-banner-main {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.product-tips {
+		border-radius: 20px;
+		margin-right: 0;
+	}
+	.affilate-program {
+		border-radius: 20px;
+		margin-left: 0;
 	}
 }
 @media screen and (max-width: 604px) {

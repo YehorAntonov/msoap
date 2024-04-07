@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3691,
+        "id": 3699,
         "username": null,
         "notes": "test"
     },
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "220a9a210941bb372569255e107c7613f530baac24adae183581e04828c0e79f"
+            "hash": "86d1ad9d31bcfc09cfc09587723628c0a51489d547aa5b59dcbf1c6326d93a6c"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5400,7 +5400,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "3583d8b7569169eac9be7a471f3d54313c318a6d989b98d1ad2cd3419f011921"
+            "hash": "953035114de614df4291bb7a6a26df450a19e7169a8aea8eaa5e0e4c2a74fcec"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "f05ee0b99701184ee5ef23f5f0e2f4279b505a0698b8606115703e58dfda5853"
+            "hash": "fc28aef9aa645217c78c1675e3cdb333e7c39bceee81b743808db3557a35bf19"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -5804,7 +5804,7 @@
         },
         "css/x-mini-basket.css": {
             "cssresource_code": "x-mini-basket",
-            "hash": "6ff39231509b2dbee9380949ac88c1a04d24717a70d87cc328927b420f886651"
+            "hash": "ccdd35b0d07779312669bd89561dc9f317e2bf38a8e5679011508980f6b94515"
         },
         "css/x-omega-navigation.json": {
             "cssresource_code": "x-omega-navigation",
