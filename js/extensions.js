@@ -1330,49 +1330,7 @@ const paymentMethod = (() => {
 	}
 
 	let initA11yToggle = context => {
-		togglesMap = $('[data-a11y-toggle]', context).reduce((acc, toggle) => {
-			let selector = `#${toggle.getAttribute('data-a11y-toggle')}`;
-
-			acc[selector] = acc[selector] || [];
-			acc[selector].push(toggle);
-			return acc;
-		}, togglesMap);
-
-		let targets = Object.keys(togglesMap);
-
-		targets.length && $(targets).forEach(target => {
-			let toggles = togglesMap[`#${target.id}`];
-			let isExpanded = target.hasAttribute('data-a11y-toggle-open');
-			let labelledby = [];
-
-			if (toggles[0].offsetWidth > 0 && toggles[0].offsetHeight > 0) {
-				toggles.forEach(toggle => {
-					toggle.id || toggle.setAttribute('id', `a11y-toggle-${internalId++}`);
-					toggle.setAttribute('aria-controls', target.id);
-					toggle.setAttribute('aria-expanded', isExpanded);
-					labelledby.push(toggle.id);
-				});
-				let distinctLabel = labelledby.filter(distinct);
-
-				target.setAttribute('aria-hidden', !isExpanded);
-				target.hasAttribute('aria-labelledby') || target.setAttribute('aria-labelledby', distinctLabel.join(' '));
-				target.setAttribute('role', 'region');
-			}
-			else {
-				toggles.forEach(toggle => {
-					toggle.removeAttribute('id');
-					toggle.removeAttribute('aria-controls');
-					toggle.removeAttribute('aria-expanded');
-				});
-
-				target.removeAttribute('aria-hidden');
-				target.removeAttribute('aria-labelledby');
-				target.removeAttribute('role');
-
-			}
-
-			targetsMap[target.id] = target;
-		});
+		
 	};
 
 	let destroyA11yToggle = () => {

@@ -1029,8 +1029,8 @@
 
 .x-search-preview__image {
 	height: var(--search-preview-image-y);
-	margin-bottom: 0;
-	overflow: hidden;
+	/* margin-bottom: 0;
+	overflow: hidden; */
 	width: var(--search-preview-image-x);
 }
 

@@ -247,5 +247,19 @@
 		  </section>
     </mvt:if>
 </mvt:if>
-
+<script>
+  $(document).ready(function() {
+    $('[data-hook="global-account"]').click(function() {
+      let ariaExpanded = $(this).attr('aria-expanded');
+      if (ariaExpanded === 'false') {
+        $('#global-account').attr('aria-hidden', 'false');
+        $(this).attr('aria-expanded', 'true');
+      }
+      else {
+        $('#global-account').attr('aria-hidden', 'true');
+        $(this).attr('aria-expanded', 'false');
+      }
+    })
+  })
+</script>
 		<!-- end g.Maintenance_Warning_Message -->

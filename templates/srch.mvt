@@ -58,3 +58,17 @@
 	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>
+<style>
+	.o-layout--column-reverse {
+		align-items: center;
+	}
+	.o-layout--row-reverse--l {
+		flex-direction: column;
+	}
+	.o-layout--wide {
+		margin-left: 0;
+	}
+	.x-pagination__list {
+		margin-bottom: 20px;
+	}
+</style>
