@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3721,
-        "username": null,
-        "notes": "test"
+        "id": 3736,
+        "username": "yehor",
+        "notes": "ReadyTheme Navigation Set 'support_navigation' item 'Disclaimer' created"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -4820,7 +4820,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "primary_navigation",
-            "hash": "ed2c6421f12acb2264df113e41bb1b057607ff3fd949b8ee423fab8f945421cd"
+            "hash": "d0d14f499dd8211db781d479ef77ada7ca7493efa83351c319376ad10224fa00"
         },
         "properties/readytheme_navigationset/quick_links.mvt": {
             "property_group": "",
@@ -4856,7 +4856,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "support_navigation",
-            "hash": "56f6cb48b1a3b0923b81e8b48e9555052d595493ee7fd53a09067e43c7fe3c84"
+            "hash": "489902ec549bd209935d48dfe530e92c803909c6c2ab47c3c27429818e472a1e"
         },
         "properties/readytheme_navigationset/top_categories.mvt": {
             "property_group": "",
@@ -6162,7 +6162,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "cd9408e0a49789d03fd80d5ab5a2d18599ce80ac7fe3485098a9f4a51feb71ee"
+            "hash": "ad3bba2a849f6f86e8d6f2bed36ad8b7da5d9dcc3f447b225e689934497213cc"
         },
         "templates/product-history.mvt": {
             "template_filename": "product-history.mvc",

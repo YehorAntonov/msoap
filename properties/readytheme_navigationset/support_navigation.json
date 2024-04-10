@@ -29,6 +29,16 @@
             "link_type": "G",
             "name": "Frequent Questions",
             "url": "https://miraclesoap.mivatest.com/faqs.html"
+        },
+        {
+            "active": 1,
+            "id": "57fbd2688cc1098c971a0c504c7e8585",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
+            "link_dest": "disclaimer-page",
+            "link_targ": "_self",
+            "link_type": "G",
+            "name": "Disclaimer",
+            "url": "https://miraclesoap.mivatest.com/disclaimer.html"
         }
     ],
     "layout": "S",
