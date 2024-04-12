@@ -1450,6 +1450,9 @@
 .category-name p {
 	margin-bottom: 0;
 }
+.home-names {
+	display: block !important;
+}
 .product-name {
 	display: flex;
 }
@@ -2137,7 +2140,7 @@
 }
 @media screen and (max-width: 400px) {
 	.x-product-list__picture, .x-subcategory-list__picture {
-		height: 200px;
+		/* height: 200px; */
 	}
 }
 .ctgy-body-container {
@@ -2166,6 +2169,11 @@
 		display: block;
 		height: 70px;
 	}
+}
+.ctgy-list {
+	top: auto;
+	vertical-align: middle;
+	height: auto;
 }
 /* END CTGY */
 summary {

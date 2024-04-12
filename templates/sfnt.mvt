@@ -51,7 +51,7 @@
 			<a href="&mvt:category:link;">
 			<div class="grid-products-item">
 				<img alt="product item" src="&mvte:loaded_category:image;">
-				<p class="product-name">&mvt:category:name;</p>
+				<p class="product-name home-names">&mvt:category:name;</p>
 				<p class="product-description">&mvt:category:description;</p>
 			</div>
 			</a>

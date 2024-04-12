@@ -150,7 +150,7 @@
 		</div> </mvt:comment>
 
 		<div class="container-product">
-				<div class="circle">
+				<div class="circle ctgy-list">
 					<img src="&mvte:product:imagetypes:main;" alt="&mvte:product:name;" loading="lazy">
 				</div>
 

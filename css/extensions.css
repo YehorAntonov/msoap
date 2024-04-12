@@ -701,7 +701,7 @@
 }
 
 .x-subcategory-list {
-	grid-template-columns: repeat(auto-fit, minmax(0, 6.5rem));
+	/* grid-template-columns: repeat(auto-fit, minmax(0, 6.5rem)); */
 	justify-content: center;
 }
 
@@ -711,6 +711,7 @@
 	}
 	.x-subcategory-list {
 		grid-template-columns: repeat(auto-fit, minmax(0, 9.5rem));
+		grid-gap: 80px;
 	}
 }
 .x-product-list__heading {
@@ -720,6 +721,10 @@
 .x-product-list__item,
 .x-subcategory-list__item {
 	position: relative;
+	cursor: pointer;
+}
+.x-subcategory-list__item img {
+	object-fit: contain;
 }
 
 .x-product-list__item {

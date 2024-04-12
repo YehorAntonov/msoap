@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3736,
-        "username": "yehor",
-        "notes": "ReadyTheme Navigation Set 'support_navigation' item 'Disclaimer' created"
+        "id": 3754,
+        "username": null,
+        "notes": "test"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -952,7 +952,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "2e6ebe42f1ab40c5fa1ca457b9b1c8124ba76fe91d001281bc5c6eef35742978"
+            "hash": "13f72dac364e35f939f9f43fc88b9f3518c8d2d635038e4725c36d72c87ffc5b"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1076,7 +1076,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "55e41e40dd6c7d22cd5df431a4a2c32e0384fe1dc7521b7bea97ff9d0775a3a8"
+            "hash": "d850e5d1f0848cc3b37d11cf8856ba41048cd62c7b9cf780723f5494b2cf0a4c"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -1104,7 +1104,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "022b8932018913f85e3b252e4282246bb2f0d68b1c34afafc2b7ed8ba0f3573b"
+            "hash": "b27ec5f8cd725b3a5cf07bff0863987fd1013e709f52c6f67b577b7c0b19d28d"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -3472,7 +3472,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "86d1ad9d31bcfc09cfc09587723628c0a51489d547aa5b59dcbf1c6326d93a6c"
+            "hash": "c5e9b84dd1632ee1e90e694d2dd9591f938cd2cb2dddea65ce9125438875df33"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5400,7 +5400,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "7530cb6a4a151360251cfa31f825e927638f8cdd77ea411911266f0e17018b72"
+            "hash": "819303cf1474df94d1e84e0ffc7f3e39e9b27ba0682bae60a176a750d75fac4f"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5620,7 +5620,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "3657e3c08c714888316a9762b68dbacf531b86fbc7e8059c832d6c92cc459ba4"
+            "hash": "04dbdeb80cafa8ef0e58cf36414d39ae62fbefa13c3811c99a22e42e38f6e11e"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

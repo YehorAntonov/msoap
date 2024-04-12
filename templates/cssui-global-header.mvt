@@ -6,7 +6,7 @@
 	<section class="o-wrapper o-wrapper--flush">
 		<div class="o-layout o-layout--align-center o-layout--flush t-site-header__masthead o-header-main">
 			<div class="o-layout__item o-layout--justify-between u-flex u-width-3 u-width-1--m u-hidden--l &mvte:global:Session:shadows:checkout_hidden;">
-				<button class="c-button c-button--flush c-button--full u-border-none u-color-black u-font-large u-menu" data-hook="open-main-menu" aria-label="Open Menu"><div><img id="bubble6" src="graphics/00000002/1/Group 10142bubble6.png"></div></button>
+				<button class="c-button c-button--flush c-button--full u-border-none u-color-black u-font-large u-menu" data-hook="open-main-menu" aria-label="Open Menu"><div><img style="filter: brightness(90%);" id="bubble6" src="graphics/00000002/1/Group 10142bubble6.png"></div></button>
 				<mvt:comment> <button class="c-button c-button--flush c-button--full u-bg-white u-border-none u-color-black u-font-large u-icon-search" data-hook="open-header-search" aria-label="Open Search Form"></button> </mvt:comment>
 			</div>
 
