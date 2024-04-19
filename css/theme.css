@@ -2134,7 +2134,7 @@
 	/* height: 150px; */
 }
 .x-product-list__picture, .x-subcategory-list__picture {
-	height: 260px;
+	/* height: 260px; */
 	border: 1px solid #88CBC8;
     border-radius: 10px;
 }
