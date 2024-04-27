@@ -8,6 +8,12 @@
 			</mvt:if>
 			<button class="c-button u-bg-transparent u-color-gray-600 u-font-small u-icon-cross" data-hook="close-main-menu" aria-label="Close Menu"></button>
 		</header>
+		<div class="mobile-cattree">
+			<p class="x-category-tree__heading mobile-title-ctgy">Our Products</p>
+			<mvt:foreach array="cattree_categories" iterator="cattree_category">
+				<a class="c-navigation__link" href="&mvte:cattree_category:link;">&mvt:cattree_category:name;</a>
+			</mvt:foreach>
+		</div>
 		<div class="x-transfigure-navigation__content">
 			<ul class="c-navigation__row x-transfigure-navigation__row">
 				<mvt:foreach iterator="navigationitem" array="readytheme:navigationitems">
@@ -66,6 +72,8 @@
 						</mvt:if>
 					</li>
 				</mvt:foreach>
+				<li class="c-navigation__list ">
+				</li>
 				<li class="c-navigation__list u-hidden--l u-text-left">
 					<mvt:item name="readytheme" param="navigationset( 'support_navigation' )" />
 				</li>

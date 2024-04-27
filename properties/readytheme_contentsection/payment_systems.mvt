@@ -2,19 +2,16 @@
     <p>Pay with:</p>
 </div>
 <div class="payment-systems">
-    <a class="payment-system-item" href="/not-found.html">
-    <img src="graphics/00000002/1/image 15american-express.jpg" alt="Payment system">
-  </a>
-  <a class="payment-system-item" href="/not-found.html">
-    <img src="graphics/00000002/1/image 16diners-club.jpg" alt="Payment system">
-  </a>
-  <a class="payment-system-item" href="/not-found.html">
-    <img src="graphics/00000002/1/image 17elo.jpg" alt="Payment system">
-  </a>
-  <a class="payment-system-item" href="/not-found.html">
-    <img src="graphics/00000002/1/image 19visa.jpg" alt="Payment system">
-  </a>
-  <a class="payment-system-item" href="/not-found.html">
-    <img src="graphics/00000002/1/image 20master-card.jpg" alt="Payment system">
-  </a>
+    <span class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/amex-payment-system-img.png" alt="Payment system">
+  </span>
+  <span class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/discover-payment-system-img.png" alt="Payment system" loading="lazy">
+  </span>
+  <span class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/visa-payment-system-img.png" alt="Payment system">
+  </span>
+  <span class="payment-system-item" href="/not-found.html">
+    <img src="graphics/00000002/1/master-card-payment-system-img.png" alt="Payment system">
+  </span>
 </div>

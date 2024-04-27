@@ -1,8 +1,8 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3756,
-        "username": "yehor",
+        "id": 3833,
+        "username": null,
         "notes": "test"
     },
     "files": {
@@ -524,7 +524,7 @@
         },
         "templates/cattree.mvt": {
             "template_filename": "cattree.mvc",
-            "hash": "d339b49b0eff62f7b5adcbeb7fbe3fc7ea10710098c42c552ae99c1f99bb90d3"
+            "hash": "3e8de086f36a829b1849f4c4cfb1401682a10a7de65966392222b94e4e720e5a"
         },
         "templates/cattree.json": {
             "template_filename": "cattree.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "13f72dac364e35f939f9f43fc88b9f3518c8d2d635038e4725c36d72c87ffc5b"
+            "hash": "beee5f8a7ce662f72b6ab593ef4a64c8ab2f213498effe13f3a085ba11651651"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1100,7 +1100,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "d850e5d1f0848cc3b37d11cf8856ba41048cd62c7b9cf780723f5494b2cf0a4c"
+            "hash": "8af9559dbddfaa873bff9844c133fa283daae48d7c62678cc4c905526c2e590e"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -1128,7 +1128,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "b27ec5f8cd725b3a5cf07bff0863987fd1013e709f52c6f67b577b7c0b19d28d"
+            "hash": "4f74a2468a8de1e6dcb47d1661f3c47949e9e7ba55fb26620934866d6a137541"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -3580,7 +3580,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "c5e9b84dd1632ee1e90e694d2dd9591f938cd2cb2dddea65ce9125438875df33"
+            "hash": "37af12de105e9d12142f53d420fd570ca361f8114c31bf5292f2bbadf0393fbf"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4680,7 +4680,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "payment_systems",
-            "hash": "fe5f9a1eec163620aaf0d9ce43a0a6b292a093c27a9f1bf504c783d82ad734c7"
+            "hash": "e59e4776414e07406bf2d599744d28bb4959577cc592519350c513da623c43f6"
         },
         "properties/readytheme_contentsection/payment_systems.json": {
             "property_group": "",
@@ -5064,7 +5064,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "primary_navigation",
-            "hash": "178d896e0343111ca1e219cd9d377e82044a13c3ef77785183ba5681343eac10"
+            "hash": "c0811a4447c018de58e0ca9fb74b49367dfe9d36d22937abb0bd528ff776db74"
         },
         "properties/readytheme_navigationset/primary_navigation.json": {
             "property_group": "",
@@ -5634,7 +5634,7 @@
         },
         "css/core.css": {
             "cssresource_code": "core",
-            "hash": "939fc7bcd63b25245378b6badb958716fd5ff053a5574eb33c9911af89a6ded9"
+            "hash": "ea3d18350f3ee5314a476fe896bdf2fc2b1fb88b045b4c85baae7ab0be0d4d30"
         },
         "css/cssui.json": {
             "cssresource_code": "cssui",
@@ -5666,7 +5666,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "7f09182deda788fcd6bebe90d4bf42ee6eadb5f48de424a945127d4df8b93549"
+            "hash": "0286ead110bcbf62e8c97c3c5436fcbf31ef329fa308f4ca5f2f612d80f0a1c3"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5890,7 +5890,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "831b8a5c95f4c288fdf03636ef86c4beda7182ccf42a2fcdac0d85b66fff242c"
+            "hash": "4658d8bbcf651ddd08fce37a87bff67352fb8f4b7f3f434f8a561130bd256850"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

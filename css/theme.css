@@ -1431,7 +1431,7 @@
 .container-category {
 	position: relative;
 	display: flex;
-	background-color: #ecf7f5;
+	background-color: #f2fcfe;
 	border-radius: 150px;
 	height: 100%;
 	margin-bottom: 70px;
@@ -1439,7 +1439,7 @@
 .container-product {
 	position: relative;
 	display: flex;
-	background-color: #ecf7f5;
+	background-color: #f2fcfe;
 	border-radius: 150px;
 	height: 100%;
 	margin-bottom: 70px;
@@ -1483,7 +1483,7 @@
 }
 .category-name__name {
 	font-size: 24px;
-	color: #3375b3;
+	color: #006194;
 	font-weight: 600;
 }
 .category-name__for {
@@ -1496,7 +1496,7 @@
 }
 .product-name__name {
 	font-size: 24px;
-	color: #3375b3;
+	color: #259484;
 	font-weight: 600;
 }
 .product-name__for {
@@ -2215,15 +2215,15 @@ details {
 		margin-bottom: 10px;
 	}
 	.other-banner-main {
-		padding-left: 30px;
+		/* padding-left: 30px; */
 		padding-right: 30px;
 	}
 	.product-tips {
-		border-radius: 20px;
+		border-radius: 0 20px 20px 0;
 		margin-right: 0;
 	}
 	.affilate-program {
-		border-radius: 20px;
+		border-radius: 0 20px 20px 0;
 		margin-left: 0;
 	}
 	.aside-menu {
@@ -2237,4 +2237,27 @@ details {
 	.product-price {
 		width: 50%;
 	}
+}
+.ctgy-description {
+	font-size: 20px;
+	color: #00817F;
+	font-weight: bold;
+}
+.ctgy-description-long {
+	font-size: 15px;
+	color: #00817F;
+}
+.sub-name__miracle {
+	color: #229485;
+}
+.mobile-cattree {
+	margin-bottom: 15px;
+}
+.mobile-title-ctgy {
+	padding: 0 0 0 1rem;
+	margin-bottom: 5px;
+	color: #006194;
+}
+.side-bar-menu {
+	justify-content: start;
 }

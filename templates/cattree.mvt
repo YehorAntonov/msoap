@@ -1,6 +1,6 @@
 <nav class="x-category-tree x-collapsible-content" aria-labelledby="categoryTree-label">
 	<div class="x-category-tree__title">
-		<p id="categoryTree-label" class="x-category-tree__heading">Categories</p>
+		<p id="categoryTree-label" class="x-category-tree__heading">Our Products</p>
 	</div>
 	<button class="x-category-tree__label x-collapsible-content__toggle" data-a11y-toggle="categoryTree" type="button">Categories <span class="u-icon-add" data-toggle="<" aria-hidden="true"></span></button>
 	<ul id="categoryTree" class="x-category-tree__row x-collapsible-content__item">
@@ -17,4 +17,18 @@
 		</mvt:foreach>
 	</ul>
 </nav>
+<div class="payment-systems side-bar-menu">
+	<span style="margin: 0 4px 0 0" class="payment-system-item" href="/not-found.html">
+    	<img src="graphics/00000002/1/amex-payment-system-img.png" alt="Payment system">
+  	</span>
+  	<span class="payment-system-item" href="/not-found.html">
+    	<img src="graphics/00000002/1/discover-payment-system-img.png" alt="Payment system" loading="lazy">
+  	</span>
+  	<span class="payment-system-item" href="/not-found.html">
+    	<img src="graphics/00000002/1/visa-payment-system-img.png" alt="Payment system">
+  	</span>
+  	<span class="payment-system-item" href="/not-found.html">
+    	<img src="graphics/00000002/1/master-card-payment-system-img.png" alt="Payment system">
+  	</span>
+</div>
 <!-- end .x-category-tree -->

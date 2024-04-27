@@ -52,7 +52,17 @@
 			</mvt:foreach>
 		</section>
 	<mvt:else>
-		<h1 class="c-heading-charlie t-category-name">&mvt:category:name;</h1><br>
+		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description', l.settings:category:description)" />
+		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'long', l.settings:category:long)" />
+		<h1 class="c-heading-charlie t-category-name"><span class="sub-name__miracle">Miracle II </span>&mvt:category:name;</h1>
+		<mvt:if expr="l.settings:category:long">
+			<p style="margin-bottom: 10px;" class="t-category-name ctgy-description">&mvt:category:description;</p>
+			<div class="t-category-name ctgy-description-long">&mvt:category:long;</div>
+			<br>
+		<mvt:else>
+			<p class="t-category-name ctgy-description">&mvt:category:description;</p>
+			<br>
+		</mvt:if>
 	</mvt:if>
 
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l o-layout--wide">

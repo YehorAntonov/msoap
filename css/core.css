@@ -1152,7 +1152,7 @@ small {
 .c-button {
 	align-items: center;
 	align-self: start;
-	background-color: #0F4E7E;
+	background-color: #259484;
 	border: var(--default-border-width) solid var(--transparent);
 	border-radius: var(--default-border-radius);
 	color: var(--white);
@@ -2039,7 +2039,7 @@ small {
 
 .c-navigation__link {
 	background-color: var(--white);
-	color: var(--black);
+	color: #259484;
 	display: block;
 	padding: 0.5em 1em;
 }
@@ -2240,7 +2240,10 @@ small {
 	font-size: var(--title-one);
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-one) * 1.2);
-	color: #0f3c62;
+	color: #006194;
+	font-style: italic;
+	margin-bottom: 0;
+	margin-top: 30px;
 }
 
 .c-heading-delta {

@@ -8,7 +8,7 @@
 			</mvt:if>
 		</mvt:foreach>
 	</mvt:foreach>
-	<section class="o-layout--align-bottom o-layout--justify-between o-layout--wrap u-flex--l u-hidden">
+	<mvt:comment> <section class="o-layout--align-bottom o-layout--justify-between o-layout--wrap u-flex--l u-hidden">
 		<p class="prod-count">&mvte:category_listing:total_prod_count; Items</p>
 		<div class="x-display-list-filtering">
 			<form class="x-display-list-filtering__per-page" method="get" action="&mvte:urls:_self:auto_noparams;">
@@ -118,7 +118,7 @@
 			<!-- end .x-display-list-filtering__sort-by -->
 		</div>
 		<!-- end .x-display-list-filtering -->
-	</section>
+	</section> </mvt:comment>
 	<br>
 </mvt:if>
 <section class="main-products">

@@ -207,9 +207,9 @@
     </style>
 </div>
 </mvt:if>
-<mvt:if expr="(l.settings:page:code NE 'SFNT' AND l.settings:page:code NE 'ACLN' AND l.settings:page:code NE 'BASK' AND l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY') AND (ISNULL g.Customer_Temporary_Password)">
+<mvt:comment> <mvt:if expr="(l.settings:page:code NE 'SFNT' AND l.settings:page:code NE 'ACLN' AND l.settings:page:code NE 'BASK' AND l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY') AND (ISNULL g.Customer_Temporary_Password)">
 	<mvt:item name="breadcrumbs" />
-</mvt:if>
+</mvt:if> </mvt:comment>
 <mvt:if expr="l.settings:page:code EQ 'SFNT'">
   <main class="o-wrapper t-main-content-element sfnt-body-container">
 	<mvt:if expr="g.Maintenance_Warning_Message">
