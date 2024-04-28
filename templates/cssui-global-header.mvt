@@ -92,34 +92,34 @@
 			<a id="bubble5Link"><img class="contact" id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
 			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
 		</div>
-	  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	  <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
     <script>
       $(document).ready(function() {
 			$(".products").hover(function() {
-				$(".products").css('transform', 'scale(1.1)');
+				$(".products").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".products").css('transform', 'scale(1)');
+				$(".products").css('transform', 'scale(0.8)');
 			})
 			$(".product__history").hover(function() {
-				$(".product__history").css('transform', 'scale(1.1)');
+				$(".product__history").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".product__history").css('transform', 'scale(1)');
+				$(".product__history").css('transform', 'scale(0.8)');
 			})
 			$(".testimonials").hover(function() {
-				$(".testimonials").css('transform', 'scale(1.1)');
+				$(".testimonials").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".testimonials").css('transform', 'scale(1)');
+				$(".testimonials").css('transform', 'scale(0.8)');
 			})
 			$(".faqs").hover(function() {
-				$(".faqs").css('transform', 'scale(1.1)');
+				$(".faqs").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".faqs").css('transform', 'scale(1)');
+				$(".faqs").css('transform', 'scale(0.8)');
 			})
 			$(".contact").hover(function() {
-				$(".contact").css('transform', 'scale(1.1)');
+				$(".contact").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".contact").css('transform', 'scale(1)');
+				$(".contact").css('transform', 'scale(0.8)');
 			})
 		})
 		$(document).ready(function() {
@@ -156,46 +156,57 @@
         top: 100px;
       }
       @media screen and (max-width: 1070px) {
-        #products {
-          left: 69px;
-        }
-        #product-history {
-          left: 204px;
-        }
-        #history {
-          left: 204px;
-        }
-        #testimonials {
-          left: 339px;
-        }
-        #faqs {
-          left: 468px;
-        }
-        #contact {
-          left: 583px;
-        }
+	      #products {
+		      top: 35px;
+          left: 66px;
+	      }
+	      #product-history {
+		      top: 10px;
+		      left: 181px;
+	      }
+	      #history {
+		      top: 30px;
+		      left: 181px;
+	      }
+	      #testimonials {
+		      top: 33px;
+		      left: 297px;
+	      }
+	      #faqs {
+		      top: 20px;
+    	    left: 404px;
+	      }
+	      #contact {
+		      top: 30px;
+    	    left: 501px;
+	      }
       }
       @media screen and (max-width: 995px) {
         .bubbles {
           left: 50px;
         }
         #products {
-          left: 23px;
+          top: 30px;
+          left: 19px;
         }
         #product-history {
-          left: 140px;
+          top: 3px;
+          left: 113px;
         }
         #history {
-          left: 141px;
+          top: 20px;
+          left: 113px;
         }
         #testimonials {
-          left: 253px;
+          left: 208px;
         }
         #faqs {
-          left: 369px;
+          left: 303px;
+          top: 12px;
         }
         #contact {
-          left: 480px;
+          left: 395px;
+          top: 25px;
         }
       }
       @media screen and (min-width: 1650px) {

@@ -10,18 +10,14 @@
 	<mvt:else>
 		<title>&mvt:store:name;: &mvt:category:name;</title>
 	</mvt:if>
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<script src="../node_modules/readmore-js/readmore.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
 </head>
 </head>
 <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
-<script>
 
-console.log("Библиотека загружена:", typeof $.readmore);
-</script>
 	<mvt:item name="hdft" param="global_header" />
 	
 	<section class="o-layout">
@@ -63,15 +59,12 @@ console.log("Библиотека загружена:", typeof $.readmore);
 		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'long', l.settings:category:long)" />
 		<h1 class="c-heading-charlie t-category-name"><span class="sub-name__miracle">Miracle II </span>&mvt:category:name;</h1>
 		<mvt:if expr="l.settings:category:long">
-			<p style="margin-bottom: 10px;" class="t-category-name ctgy-description">&mvt:category:description;</p>
-			<div id="long-descrip" class="t-category-name ctgy-description-long">&mvt:category:long;</div>
-			<br>
-			<script>
-				$(document).ready(function() {
-    				$('#long-descrip').readmore({
-    				});
-				});
-			</script>
+
+			<div style="margin-bottom: 25px;">
+				<p style="margin-bottom: 10px;" class="t-category-name ctgy-description">&mvt:category:description;</p>
+				<div id="long-descrip" class="t-category-name ctgy-description-long">&mvt:category:long;</div>
+				<br>
+			</div>
 		<mvt:else>
 			<p class="t-category-name ctgy-description">&mvt:category:description;</p>
 			<br>

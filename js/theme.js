@@ -2,6 +2,24 @@
  * Use this file to all in scripts and functions you would like to have globally or on specific
  * pages. You will use this to extend your theme instead of adding code to the core framework files.
  */
+function loadScript(url, callback) {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	if (script.readyState) {
+		script.onreadystatechange = function() {
+			if (script.readyState === "loaded" || script.readyState === "complete") {
+				script.onreadystatechange = null;
+				callback();
+			}
+		};
+	} else {
+		script.onload = function() {
+			callback();
+		};
+	}
+	script.src = url;
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
 const themeFunctionality = {
 	global() {
 		/**
@@ -236,31 +254,55 @@ const themeFunctionality = {
 		}
 	},
     jsSFNT() {
+		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
+			$('.long-description').each(function() {
+				if ($(this).height() <= 50) {
+
+				}
+				else {
+					$(this).addClass('description-after-product');
+					$(this).readmore({
+						speed: 550,
+						collapsedHeight: 40,
+						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
+						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
+						beforeToggle: function(trigger, element, expanded) {
+							if (expanded) {
+								$(element).addClass('description-after-product')
+							}
+							else {
+								$(element).removeClass('description-after-product')
+							}
+						}
+					});
+				}
+			})
+		});
 		$(document).ready(function() {
 			$(".products").hover(function() {
-				$(".products").css('transform', 'scale(1.1)');
+				$(".products").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".products").css('transform', 'scale(1)');
+				$(".products").css('transform', 'scale(0.8)');
 			})
 			$(".product__history").hover(function() {
-				$(".product__history").css('transform', 'scale(1.1)');
+				$(".product__history").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".product__history").css('transform', 'scale(1)');
+				$(".product__history").css('transform', 'scale(0.8)');
 			})
 			$(".testimonials").hover(function() {
-				$(".testimonials").css('transform', 'scale(1.1)');
+				$(".testimonials").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".testimonials").css('transform', 'scale(1)');
+				$(".testimonials").css('transform', 'scale(0.8)');
 			})
 			$(".faqs").hover(function() {
-				$(".faqs").css('transform', 'scale(1.1)');
+				$(".faqs").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".faqs").css('transform', 'scale(1)');
+				$(".faqs").css('transform', 'scale(0.8)');
 			})
 			$(".contact").hover(function() {
-				$(".contact").css('transform', 'scale(1.1)');
+				$(".contact").css('transform', 'scale(0.9)');
 			}, function() {
-				$(".contact").css('transform', 'scale(1)');
+				$(".contact").css('transform', 'scale(0.8)');
 			})
 		})
 		$(document).ready(function() {
@@ -279,6 +321,50 @@ const themeFunctionality = {
 		})
 	},
     jsCTGY() {
+		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
+			if ($('#long-descrip').height() <= 50) {
+
+			}
+			else {
+				$('#long-descrip').addClass('description-after');
+				$('#long-descrip').readmore({
+					speed: 1000,
+					collapsedHeight: 20,
+					moreLink: '<a class="more-link" href="#">Show More</a>',
+					lessLink: '<a class="less-link" href="#">Show Less</a>',
+					beforeToggle: function(trigger, element, expanded) {
+						if (expanded) {
+							$(element).addClass('description-after')
+						}
+						else {
+							$(element).removeClass('description-after')
+						}
+					}
+				});
+			}
+			$('.long-description').each(function() {
+				if ($(this).height() <= 50) {
+
+				}
+				else {
+					$(this).addClass('description-after-product');
+					$(this).readmore({
+						speed: 550,
+						collapsedHeight: 40,
+						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
+						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
+						beforeToggle: function(trigger, element, expanded) {
+							if (expanded) {
+								$(element).addClass('description-after-product')
+							}
+							else {
+								$(element).removeClass('description-after-product')
+							}
+						}
+					});
+				}
+			})
+		});
 		$('[data-hook="btn-add-to-cart"]').click(function(e) {
 			var btnAddToCart = $(this);
 			console.log(btnAddToCart)

@@ -1252,10 +1252,13 @@
 #bubble1 {
 	position: relative;
 	top: -10px;
+	transform: scale(0.8);
 }
 #bubble2 {
 	position: relative;
     top: -30px;
+	left: -20px;
+	transform: scale(0.8);
 }
 /* .product__history:hover a {
 	transform: scale(1.1);
@@ -1263,50 +1266,62 @@
 #bubble3 {
 	position: relative;
     top: -10px;
+	left: -40px;
+	transform: scale(0.8);
 }
 #bubble4 {
 	position: relative;
     top: -30px;
+	left: -60px;
+	transform: scale(0.8);
 }
 #bubble5 {
 	position: relative;
     top: -20px;
+	left: -80px;
+	transform: scale(0.8);
 }
 #products {
 	position: absolute;
 	top: 45px;
 	left: 79px;
 	font-size: 17px;
+	transform: scale(0.85);
 }
 #product-history {
 	position: absolute;
 	top: 20px;
-	left: 225px;
+	left: 205px;
 	font-size: 17px;
+	transform: scale(0.85);
 }
 #history {
 	position: absolute;
 	top: 40px;
-	left: 225px;
+	left: 205px;
 	font-size: 17px;
+	transform: scale(0.85);
 }
 #testimonials {
 	position: absolute;
 	top: 45px;
-	left: 360px;
+	left: 320px;
 	font-size: 15px;
+	transform: scale(0.85);
 }
 #faqs {
 	position: absolute;
 	top: 30px;
-	left: 490px;
+	left: 430px;
 	font-size: 17px;
+	transform: scale(0.85);
 }
 #contact {
 	position: absolute;
 	top: 40px;
-	left: 605px;
+	left: 525px;
 	font-size: 15px;
+	transform: scale(0.85);
 }
 .info-banner-main {
 	position: absolute;
@@ -1464,6 +1479,11 @@
 	font-size: 14px;
 	font-weight: 400;
 	color: #0F4E7E;
+}
+.long-description {
+	display: block;
+    overflow: hidden;
+    position: relative;
 }
 .info-category {
 	flex: 1;
@@ -1670,43 +1690,44 @@
 		max-width: 20%;
 		max-height: 20%;
 	}
-	#bubble1 {
+	/* #bubble1 {
 		top: -30px;
-	}
+	} */
 	#bubble2 {
 		top: -30px;
 	}
-	#bubble3 {
+	/* #bubble3 {
 		top: -30px;
-	}
+	} */
 	#bubble4 {
 		top: -30px;
 	}
-	#bubble5 {
+	/* #bubble5 {
 		top: -30px;
-	}
+	} */
 	#products {
-		top: 20px;
+		top: 35px;
+		left: 79px;
 	}
 	#product-history {
 		top: 10px;
-		left: 214px;
+		left: 194px;
 	}
 	#history {
 		top: 30px;
-		left: 214px;
+		left: 194px;
 	}
 	#testimonials {
-		top: 18px;
-		left: 349px;
+		top: 33px;
+		left: 309px;
 	}
 	#faqs {
 		top: 20px;
-    	left: 478px;
+    	left: 416px;
 	}
 	#contact {
-		top: 23px;
-    	left: 593px;
+		top: 30px;
+    	left: 513px;
 	}
 	.info-banner-main__h2 {
 		font-size: 35px;
@@ -1724,44 +1745,43 @@
 		max-height: 17%;
 	}
 	#bubble1  {
-		left: -35px;
+		left: -40px;
 	}
 	#bubble2  {
-		left: -35px;
+		left: -60px;
 	}
 	#bubble3  {
-		left: -35px;
+		left: -80px;
 	}
 	#bubble4  {
-		left: -35px;
+		left: -100px;
 	}
 	#bubble5  {
-		left: -35px;
+		left: -120px;
 	}
 	#products {
-		top: 10px;
-    	left: 67px;
+		top: 30px;
+		left: 61px;
 	}
 	#product-history {
-		top: 5px;
-		left: 182px;
+		top: 3px;
+		left: 156px;
 	}
 	#history {
-		top: 25px;
-		left: 182px;
+		top: 20px;
+		left: 156px;
 	}
 	#testimonials {
-		top: 15px;
-		left: 295px;
-		font-size: 13px;
+		left: 250px;
+		top: 30px;
 	}
 	#faqs {
-		top: 13px;
-    	left: 413px;
+		left: 347px;
+		top: 12px;
 	}
 	#contact {
-		top: 13px;
-    	left: 526px;
+		left: 440px;
+		top: 25px;
 	}
 }
 .mobile {
@@ -2244,8 +2264,29 @@ details {
 	font-weight: bold;
 }
 .ctgy-description-long {
+	display: block;
+    overflow: hidden;
+    position: relative;
 	font-size: 15px;
 	color: #00817F;
+}
+.description-after:after {
+	content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background: linear-gradient(180deg, transparent, #FFFFFF);
+}
+.description-after-product:after {
+	content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background: linear-gradient(180deg, transparent, #f2fcfe);
 }
 .sub-name__miracle {
 	color: #229485;
@@ -2260,4 +2301,20 @@ details {
 }
 .side-bar-menu {
 	justify-content: start;
+}
+/* END CTGY */
+
+
+/* READMORE PLUGIN */
+.more-link {
+	font-size: 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #006194;
+}
+.less-link {
+	font-size: 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #006194;
 }
