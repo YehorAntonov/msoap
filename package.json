@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "circletype": "^2.3.0"
+    "circletype": "^2.3.0",
+    "readmore-js": "^2.2.1"
   }
 }

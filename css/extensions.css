@@ -801,7 +801,13 @@
 }
 
 .x-product-list__price {
-	font-size: 15px;
+	font-size: var(--default-input-font-size);
+}
+
+@media screen and (max-width: 960px) {
+	.x-product-list__price {
+		font-size: 15px;
+	}
 }
 
 .x-product-list__price_set {
@@ -1094,6 +1100,7 @@
 	max-width: 25rem;
 	padding: 1rem 0;
 	width: 100vw;
+	background-color: #f2fcfe;
 }
 
 .x-mini-basket__content :is(header, footer),
@@ -1106,6 +1113,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 1.875rem;
+	color: #006194 !important;
 }
 
 .x-mini-basket__subtotal {
@@ -1115,7 +1123,7 @@
 }
 
 .x-mini-basket__header button {
-	background-color: var(--white);
+	background-color: #f2fcfe;
 	border: 0 none;
 	cursor: pointer;
 	font-size: 0.625rem;
@@ -1163,6 +1171,7 @@
 .x-mini-basket__item-attributes {
 	display: block;
 	margin-bottom: 1rem;
+	color: #259484;
 }
 
 .x-mini-basket__item-attributes {
@@ -1175,13 +1184,14 @@
 }
 
 .x-mini-basket__item-price {
-	color: var(--black);
+	color: #006194;
 }
 
 .x-mini-basket__item-total {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+	color: #006194;
 }
 
 .x-mini-basket__charges,
@@ -1205,6 +1215,7 @@
 .x-mini-basket__total {
 	font-size: var(--subheading-small);
 	font-weight: var(--font-medium);
+	color: #006194;
 }
 
 .x-mini-basket__cta {

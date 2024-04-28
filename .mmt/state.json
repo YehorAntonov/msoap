@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 3833,
+        "id": 3902,
         "username": null,
         "notes": "test"
     },
@@ -1128,7 +1128,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "4f74a2468a8de1e6dcb47d1661f3c47949e9e7ba55fb26620934866d6a137541"
+            "hash": "618c6c9d316634c14c92a40fa63508df1b8a5f6ea28935b445ca18ae35715cfe"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -3580,7 +3580,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "37af12de105e9d12142f53d420fd570ca361f8114c31bf5292f2bbadf0393fbf"
+            "hash": "69022522247334051a75b07585d05ee813d496337b20b1cfa000c8dd5df99a28"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5666,7 +5666,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "0286ead110bcbf62e8c97c3c5436fcbf31ef329fa308f4ca5f2f612d80f0a1c3"
+            "hash": "5be9db120d0423d9cabd16e9d45f943bb3131959326a308e084aff04bbf55e78"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
