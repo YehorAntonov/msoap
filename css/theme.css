@@ -2217,6 +2217,9 @@ details {
 .add-to-cart {
 	width: 25%;
 }
+.product-price {
+	margin-bottom: 10px;
+}
 @media screen and (max-width: 960px) {
 	.info-product {
 		width: 100%;
@@ -2227,7 +2230,7 @@ details {
 	.product-price {
 		width: 25%;
 		text-align: start;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 	.button-product__add-to-cart {
 		display: flex;

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4024,
+        "id": 4034,
         "username": null,
         "notes": "test"
     },
@@ -3580,7 +3580,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "37af12de105e9d12142f53d420fd570ca361f8114c31bf5292f2bbadf0393fbf"
+            "hash": "b469f6920d868e16d471e36dea115f17012eca01e0333df90b6d5a965ba7437d"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5890,7 +5890,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "a81cc609f6c2c5f8fb1f689de3f05c43ae6e9e72d43988d2f3b5eeb0a219fd62"
+            "hash": "1c5a10e244624654bd5be2fbaae8e2b8fcc5390f5eb80e7db12b492d3270145e"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
