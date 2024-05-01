@@ -1441,7 +1441,8 @@
 	position: relative;
 	/* top: -10px; */
 	object-fit: contain;
-	height: 100%;
+	/* height: 100%; */
+	max-height: 240px;
 }
 .container-category {
 	position: relative;
@@ -2226,6 +2227,7 @@ details {
 	.product-price {
 		width: 25%;
 		text-align: start;
+		margin-bottom: 5px;
 	}
 	.button-product__add-to-cart {
 		display: flex;
@@ -2260,7 +2262,7 @@ details {
 }
 .ctgy-description {
 	font-size: 20px;
-	color: #00817F;
+	color: #006194;
 	font-weight: bold;
 }
 .ctgy-description-long {
@@ -2300,7 +2302,8 @@ details {
 	color: #006194;
 }
 .side-bar-menu {
-	justify-content: start;
+	justify-content: center;
+	margin-bottom: 50px;
 }
 /* END CTGY */
 

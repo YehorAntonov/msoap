@@ -254,16 +254,17 @@ const themeFunctionality = {
 		}
 	},
     jsSFNT() {
+		if ($(window).width() <= 960) {
 		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
 			$('.long-description').each(function() {
-				if ($(this).height() <= 50) {
+				if ($(this).height() <= 63) {
 
 				}
 				else {
 					$(this).addClass('description-after-product');
 					$(this).readmore({
 						speed: 550,
-						collapsedHeight: 40,
+						collapsedHeight: 63,
 						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
 						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
 						beforeToggle: function(trigger, element, expanded) {
@@ -278,6 +279,7 @@ const themeFunctionality = {
 				}
 			})
 		});
+		}
 		$(document).ready(function() {
 			$(".products").hover(function() {
 				$(".products").css('transform', 'scale(0.9)');
@@ -321,15 +323,16 @@ const themeFunctionality = {
 		})
 	},
     jsCTGY() {
+		if ($(window).width() <= 960) {
 		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
-			if ($('#long-descrip').height() <= 50) {
+			if ($('#long-descrip').height() <= 96) {
 
 			}
 			else {
 				$('#long-descrip').addClass('description-after');
 				$('#long-descrip').readmore({
 					speed: 1000,
-					collapsedHeight: 20,
+					collapsedHeight: 96,
 					moreLink: '<a class="more-link" href="#">Show More</a>',
 					lessLink: '<a class="less-link" href="#">Show Less</a>',
 					beforeToggle: function(trigger, element, expanded) {
@@ -343,14 +346,14 @@ const themeFunctionality = {
 				});
 			}
 			$('.long-description').each(function() {
-				if ($(this).height() <= 50) {
+				if ($(this).height() <= 63) {
 
 				}
 				else {
 					$(this).addClass('description-after-product');
 					$(this).readmore({
 						speed: 550,
-						collapsedHeight: 40,
+						collapsedHeight: 63,
 						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
 						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
 						beforeToggle: function(trigger, element, expanded) {
@@ -365,6 +368,7 @@ const themeFunctionality = {
 				}
 			})
 		});
+		}
 		$('[data-hook="btn-add-to-cart"]').click(function(e) {
 			var btnAddToCart = $(this);
 			console.log(btnAddToCart)

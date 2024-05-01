@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4011,
+        "id": 4024,
         "username": null,
         "notes": "test"
     },
@@ -5530,7 +5530,7 @@
         },
         "js/theme.js": {
             "jsresource_code": "theme",
-            "hash": "b03b5fd0d0ecb0a5373cfdbc118a4c6ccb9c9295e5c73d9f7cbb245cd1eeb309"
+            "hash": "bdd6170a25ea92b79858f64268146aba5cc63092e760e98d76ba5f4f3c36baa0"
         },
         "css/additional.json": {
             "cssresource_code": "additional",
@@ -5666,7 +5666,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "5be9db120d0423d9cabd16e9d45f943bb3131959326a308e084aff04bbf55e78"
+            "hash": "75c2fd72c77a27593af2177458aa9e96cd97972fa91a8ebfb7cbd5e5c0d727d0"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5890,7 +5890,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "48e2e620a9a0c28de67f4788a7a7f29dbba53427c09cf5f78bd23b6527fe87ef"
+            "hash": "a81cc609f6c2c5f8fb1f689de3f05c43ae6e9e72d43988d2f3b5eeb0a219fd62"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
