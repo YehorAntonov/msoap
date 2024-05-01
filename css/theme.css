@@ -1499,7 +1499,7 @@
 	color: #0F4E7E;
 }
 .button-product__add-to-cart {
-	margin-top: 40px;
+	margin-top: 30px;
 	color: #0F4E7E;
 }
 .category-name__name {
@@ -1982,7 +1982,7 @@
 		padding: 25px;
 	}
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 519px) {
 	.grid-products-item img {
 		width: 250px;
 		height: 250px;
@@ -2218,7 +2218,158 @@ details {
 	width: 25%;
 }
 .product-price {
+	padding-bottom: 20px;
 	margin-bottom: 10px;
+}
+.slick-prev, .slick-next {
+	z-index: 3;
+	top: 28% !important;
+}
+.slick-prev:before, .slick-next:before {
+	color: #229485 !important;
+	font-size: 40px !important;
+}
+.slick-prev:before {
+	padding-left: 5px;
+}
+.slick-next:before {
+	padding-right: 5px;
+}
+.slick-prev {
+	left: 0 !important;
+}
+.slick-next {
+	right: 25px !important;
+}
+@media screen and (min-width: 1350px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 80px 0 40px !important;
+	}
+}
+@media screen and (max-width: 1350px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 80px 0 50px !important;
+	}
+}
+@media screen and (max-width: 1160px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 60px 0 35px !important;
+	}
+}
+@media screen and (max-width: 1080px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 50px 0 25px !important;
+	}
+}
+@media screen and (max-width: 1020px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 30px 0 40px !important;
+	}
+}
+@media screen and (max-width: 900px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 30px !important;
+	}
+}
+@media screen and (max-width: 860px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 25px !important;
+	}
+}
+@media screen and (max-width: 830px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 20px !important;
+	}
+}
+@media screen and (max-width: 760px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 15px 0 15px !important;
+	}
+}
+@media screen and (max-width: 720px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 15px 0 45px !important;
+	}
+}
+@media screen and (max-width: 710px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 25px 0 45px !important;
+	}
+}
+@media screen and (max-width: 685px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 25px 0 40px !important;
+	}
+}
+@media screen and (max-width: 660px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 35px !important;
+	}
+}
+@media screen and (max-width: 600px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 30px !important;
+	}
+}
+@media screen and (max-width: 580px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 25px !important;
+	}
+}
+@media screen and (max-width: 540px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 20px !important;
+	}
+}
+@media screen and (max-width: 519px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 65px !important;
+	}
+}
+@media screen and (max-width: 500px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 60px !important;
+	}
+}
+@media screen and (max-width: 485px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 70px !important;
+	}
+}
+@media screen and (max-width: 475px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 65px !important;
+	}
+}
+@media screen and (max-width: 450px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 60px !important;
+	}
+}
+@media screen and (max-width: 435px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 55px !important;
+	}
+}
+@media screen and (max-width: 410px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 50px !important;
+	}
+}
+@media screen and (max-width: 395px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 45px !important;
+	}
+}
+@media screen and (max-width: 375px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 40px !important;
+	}
+}
+@media screen and (max-width: 360px) {
+	.slick-slider .slick-track, .slick-slider .slick-list {
+		margin: 0 20px 0 35px !important;
+	}
 }
 @media screen and (max-width: 960px) {
 	.info-product {

@@ -22,7 +22,7 @@
 			</div>
 
 			<div class="o-layout__item u-width-3 u-width-1--m u-flex--l mobile u-width-3--l-icons u-width-2--xl-icons mobile-icons t-site-header__masthead-links &mvte:global:Session:shadows:checkout_hidden;">
-        <a href="&mvte:urls:LOGN:secure;" class="t-global-account-toggle">
+        <a href="&mvte:urls:LOGN:secure;" aria-expanded="false" class="t-global-account-toggle">
 	        <i class="fa-solid fa-user" style="color: #0f4e7e;"></i>
         </a>
 				<a class="t-site-header__basket-link icon-cart" data-hook="open-mini-basket" aria-label="Open Mini-Basket" href="&mvte:urls:BASK:auto;">
@@ -259,7 +259,6 @@
     </mvt:if>
 </mvt:if>
 <script>
-  $(document).ready(function() {
     $('[data-hook="global-account"]').click(function() {
       let ariaExpanded = $(this).attr('aria-expanded');
       if (ariaExpanded === 'false') {
@@ -271,6 +270,5 @@
         $(this).attr('aria-expanded', 'false');
       }
     })
-  })
 </script>
 		<!-- end g.Maintenance_Warning_Message -->

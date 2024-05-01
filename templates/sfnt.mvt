@@ -48,13 +48,15 @@
 		<mvt:foreach iterator="category" array="cattree_categories">
 			<mvt:do file="g.Module_Root $ '/modules/component/cmp-cssui-cattitle.mvc'" name="l.success" value="CSSUI_CatTitle_Load(l.settings:category:id, l.settings:loaded_category)" />
 			<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description', l.settings:category:description)" />
-			<a href="&mvt:category:link;">
-			<div class="grid-products-item">
-				<img alt="product item" src="&mvte:loaded_category:image;">
-				<p class="product-name home-names">&mvt:category:name;</p>
-				<p class="product-description">&mvt:category:description;</p>
+			<div>
+				<a href="&mvt:category:link;">
+					<div class="grid-products-item">
+					<img alt="product item" src="&mvte:loaded_category:image;">
+					<p class="product-name home-names">&mvt:category:name;</p>
+					<p class="product-description">&mvt:category:description;</p>
+				</div>
+				</a>
 			</div>
-			</a>
 			<mvt:comment> &mvt:category:catimg; </mvt:comment>
 		</mvt:foreach>
 		</div>
@@ -67,18 +69,17 @@
                 		lazyLoad: "ondemand",
 						autoplay: true,
 						autoplaySpeed: 3000,
-                		slidesToShow: 6,
+                		slidesToShow: 5,
                 		slidesToScroll: 1,
                 		infinite: true,
-						arrows: false,
-						centerMode: true,
+						
 						
 						
 						responsive: [
 							{
 								breakpoint: 1350,
 								settings: {
-									slidesToShow: 5
+									slidesToShow: 4
 								}
 							},
 							{
@@ -88,57 +89,71 @@
 								}
 							},
 							{
-								breakpoint: 960,
+								breakpoint: 1020,
 								settings: {
 									slidesToShow: 3
 								}
 							},
 							{
+								breakpoint: 960,
+								settings: {
+									slidesToShow: 3,
+									arrows: false
+								}
+							},
+							{
 								breakpoint: 720,
 								settings: {
-									slidesToShow: 2
+									slidesToShow: 2,
+									arrows: false
 								}
 							},
 							{
 								breakpoint: 520,
 								settings: {
 									slidesToShow: 1,
-									centerPadding: '75px'
+									centerPadding: '75px',
+									arrows: false
 								}
 							},
 							{
 								breakpoint: 485,
 								settings: {
 									slidesToShow: 1,
-									centerPadding: '90px'
+									centerPadding: '90px',
+									arrows: false
 								}
 							},
 							{
 								breakpoint: 480,
 								settings: {
 									slidesToShow: 1,
-									centerPadding: '80px'
+									centerPadding: '80px',
+									arrows: false
 								}
 							},
 							{
 								breakpoint: 450,
 								settings: {
 									slidesToShow: 1,
-									centerPadding: '70px'
+									centerPadding: '70px',
+									arrows: false
 								}
 							},
 							{
 								breakpoint: 420,
 								settings: {
 									slidesToShow: 1,
-									centerPadding: '60px'
+									centerPadding: '60px',
+									arrows: false
 								}
 							},
 							{
 								breakpoint: 390,
 								settings: {
 									slidesToShow: 1,
-									centerPadding: '50px'
+									centerPadding: '50px',
+									arrows: false
 								}
 							}
 						]
