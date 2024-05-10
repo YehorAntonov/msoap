@@ -2234,6 +2234,16 @@ details {
 .add-to-cart {
 	width: 25%;
 }
+@media screen and (max-width: 971px) {
+	.add-to-cart {
+		width: 30%;
+	}
+}
+@media screen and (max-width: 960px) {
+	.add-to-cart {
+		width: 100%;
+	}
+}
 .product-price {
 	padding-bottom: 20px;
 	margin-bottom: 10px;
@@ -2396,7 +2406,7 @@ details {
 		align-self: center;
 	}
 	.product-price {
-		width: 25%;
+		/* width: 25%; */
 		text-align: start;
 		margin-bottom: 10px;
 	}
@@ -2425,10 +2435,10 @@ details {
 }
 @media screen and (max-width: 604px) {
 	.add-to-cart {
-		width: 50%;
+		/* width: 50%; */
 	}
 	.product-price {
-		width: 50%;
+		/* width: 50%; */
 	}
 }
 .ctgy-description {
@@ -2483,6 +2493,7 @@ details {
 	background-color: #f2fcfe;
 	color: #0f3c62 !important;
 	font-size: 16px;
+	cursor: pointer;
 }
 .input-count {
 	height: 30px;
@@ -2494,7 +2505,15 @@ details {
 	font-size: 16px;
 }
 .counting {
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	border-radius: var(--default-border-radius);
+	border: 2px solid #259484;
+}
+.addToCart-counting-block {
+	display: flex;
 }
 /* END CTGY */
 
