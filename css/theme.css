@@ -1359,8 +1359,9 @@
 .info-banner-main__p {
 	max-width: 635px;
 	font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     color: #0f3c62;
+	margin-bottom: 40px;
 }
 .info-banner-main__annotation {
 	display: flex;
@@ -1368,7 +1369,8 @@
 }
 .info-banner-main__annotation-info {
 	max-width: 503px;
-	color: #00817F;
+	color: #0f3c62;
+	padding-top: 20px;
 }
 .info-banner-main__annotation-info-p {
 	padding-left: 15px;
@@ -1378,7 +1380,7 @@
 	font-weight: 500;
 }
 .info-banner-main__annotation-info-p2 {
-	padding-left: 85px;
+	padding-left: 15px;
 	font-size: 13px;
 	font-weight: 500;
 }
