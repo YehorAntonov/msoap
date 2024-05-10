@@ -85,9 +85,9 @@
 <mvt:if expr="l.settings:page:code NE 'SFNT'">
 <div class="bubbles-global o-wrapper t-main-content-element">
   <div class="bubbles desktop">
-			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
 			<a id="bubble2Link"><img class="product__history" id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
 			<a id="bubble3Link"><img class="testimonials" id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
+			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
 			<a id="bubble4Link"><img class="faqs" id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a>
 			<a id="bubble5Link"><img class="contact" id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
 			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
@@ -138,6 +138,7 @@
 		})
     </script>
     <script>
+		if ($(window).width() >= 960) {
 		  const circleType = new CircleType(document.getElementById('products'));
 		  circleType.radius(125);
 		  const circleType2 = new CircleType(document.getElementById('product-history'));
@@ -150,69 +151,20 @@
 		  circleType6.radius(125);
 		  const circleType3 = new CircleType(document.getElementById('history'));
 		  circleType3.radius(125);
+		}
 	  </script>
     <style>
-      .bubbles {
+      /* .bubbles {
         top: 100px;
-      }
+      } */
       @media screen and (max-width: 1070px) {
-	      #products {
-		      top: 35px;
-          left: 66px;
-	      }
-	      #product-history {
-		      top: 10px;
-		      left: 181px;
-	      }
-	      #history {
-		      top: 30px;
-		      left: 181px;
-	      }
-	      #testimonials {
-		      top: 33px;
-		      left: 297px;
-	      }
-	      #faqs {
-		      top: 20px;
-    	    left: 404px;
-	      }
-	      #contact {
-		      top: 30px;
-    	    left: 501px;
-	      }
+	      
       }
       @media screen and (max-width: 995px) {
-        .bubbles {
-          left: 50px;
-        }
-        #products {
-          top: 30px;
-          left: 19px;
-        }
-        #product-history {
-          top: 3px;
-          left: 113px;
-        }
-        #history {
-          top: 20px;
-          left: 113px;
-        }
-        #testimonials {
-          left: 208px;
-        }
-        #faqs {
-          left: 303px;
-          top: 12px;
-        }
-        #contact {
-          left: 395px;
-          top: 25px;
-        }
+       
       }
       @media screen and (min-width: 1650px) {
-        .bubbles {
-          left: auto;
-        }
+    
       }
       
     </style>

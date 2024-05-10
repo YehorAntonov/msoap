@@ -369,12 +369,56 @@ const themeFunctionality = {
 			})
 		});
 		}
+		$('.counting').on('click', '.increment', function() {
+			var quantityOfProduct = $(this).parent().find('.input-count');
+			var qty = parseInt(quantityOfProduct.val());
+			quantityOfProduct.val(qty + 1);
+			updateCounter(quantityOfProduct);
+		});
+		$('.counting').on('click', '.decrement', function() {
+			var quantityOfProduct = $(this).parent().find('.input-count');
+			var qty = parseInt(quantityOfProduct.val()) - 1;
+	
+			if (qty >= 1) {
+				quantityOfProduct.val(qty);
+				updateCounter(quantityOfProduct);
+			};
+		});
+		// $('.counting').on('input', '.input-count', function() {
+		// 	updateCounter($(this));
+		// });
+		$('.counting').on('blur', '.input-count', function() {
+			var value = $(this).val();
+			
+			if (value !== "" && !isNaN(value) && parseInt(value) > 0) {
+				
+			} 
+			else {
+				$(this).val(1);
+			}
+		});
+		
+		function updateCounter(quantityOfProduct) {
+			var decrementBtn = quantityOfProduct.siblings('.decrement');
+			var qty = parseInt(quantityOfProduct.val());
+	
+			if (isNaN(qty) || qty < 1) {
+				qty = 1;
+				quantityOfProduct.val(qty);
+			}
+			else {
+				
+			};
+	
+			decrementBtn.prop('disabled', qty === 1);
+		};
+
 		$('[data-hook="btn-add-to-cart"]').click(function(e) {
 			var btnAddToCart = $(this);
 			console.log(btnAddToCart)
 			var product_code = btnAddToCart.data('product-code');
 			var category_code = btnAddToCart.data('category-code');
-			var qty = 1;
+			var qty = parseInt($(this).parent().find('.input-count').val());
 	
 			$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
 			btnAddToCart.text('Processing...');

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4114,
+        "id": 4199,
         "username": null,
         "notes": "test"
     },
@@ -960,7 +960,7 @@
         },
         "templates/cssui-global-footer.mvt": {
             "template_filename": "cssui-global-footer.mvc",
-            "hash": "8b26b1b634b5acb3d8fe57be101f2cfddf4b4aab3f521f4f6b3e6c5a60abe5a2"
+            "hash": "cc6945b7d6d459a56bc19124e8f765c7dc89c3e651ac03a92a54fc88766e2029"
         },
         "templates/cssui-global-footer.json": {
             "template_filename": "cssui-global-footer.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "2b150a498517fb409cbdacb5fe314e0fe112dc7735a5e136c425edd21fa260bc"
+            "hash": "d935478b6b4572de13f6984cb889e4037256d1826e5c2ba2a26b71390ac35d53"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1100,7 +1100,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "8af9559dbddfaa873bff9844c133fa283daae48d7c62678cc4c905526c2e590e"
+            "hash": "b0d204efd1db41c024775ca01f1b5b3c6dc53fc9ae8d13b6fc02c5ee46c2d190"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -3580,7 +3580,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "a0b8f5ca525d7e1e4bff12a8b83c18bdb385a540d4a680858108ab2810e4e269"
+            "hash": "d69d5f931caa70ce9f58b58d888274c004c7b4dbf629910c8f4c65dcd959181c"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4524,7 +4524,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "copyright",
-            "hash": "391497c4a3a03c1375045e8bbbbf716b880c51bb47ce9cf633fb53d76b534080"
+            "hash": "b8437fe600c47e0e34ab38873b260927837f6885209a8477cf79782e6dfa763d"
         },
         "properties/readytheme_contentsection/copyright.json": {
             "property_group": "",
@@ -4980,7 +4980,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "4e657c21bfdfba81fdbbd4641b1276b78fc0b4b3b93fb41e433caae50ed2eb41"
+            "hash": "a43e2752b8aacb023e6b5e8b6df56accfab658a1b3feca7a8a4a5553eb67f906"
         },
         "properties/readytheme_navigationset/bubbles_navigation.json": {
             "property_group": "",
@@ -5530,7 +5530,7 @@
         },
         "js/theme.js": {
             "jsresource_code": "theme",
-            "hash": "bdd6170a25ea92b79858f64268146aba5cc63092e760e98d76ba5f4f3c36baa0"
+            "hash": "c14dd4de4de893ce54879b0fc1feefd1d4ad71f502e509ade21f3c96e2f228cc"
         },
         "css/additional.json": {
             "cssresource_code": "additional",
@@ -5890,7 +5890,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "64e32605387194f77d18703c01fb923ddbf99d7cc4108c4bbe0a678733cdd1ff"
+            "hash": "36ab7f225fc2c72e15531c229e4aedef341f04b85bd2a001895acdb68990d66c"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

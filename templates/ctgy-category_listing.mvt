@@ -167,6 +167,13 @@
 							<span class="x-product-list__price u-text-bold color-price">&mvt:product:formatted_price;</span>
 							<span class="x-product-list__price u-text-medium color-price-base"><s>&mvt:product:formatted_base_price;</s></span>
 						</div>
+						<div class="counting">
+							<button aria-label="decrement" name="decrement" class="but-count l-min decrement"><i class="fa-solid fa-minus"></i></button>
+                				<label for="input number">
+                    				<input aria-label="input number" name="input number" class="input-count" value="1">
+                				</label>
+                			<button aria-label="increment" name="decrement" class="but-count r-pls increment"><i class="fa-solid fa-plus"></i></button>
+						</div>
 						<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
 					</div>
 				</div>

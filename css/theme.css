@@ -323,8 +323,16 @@
 
 .t-site-footer__wrapper {
 	max-width: var(--default-wrapper-width);
+	background-color: #BFE4E2;
 }
-
+@media screen and (min-width: 1600px) {
+	.bg-footer {
+		background-color: white  !important;
+	}
+	.t-site-footer {
+		padding-top: 0 !important;
+	}
+}
 .t-site-footer__content {
 	padding-top: 2em;
 }
@@ -1195,6 +1203,11 @@
 .background-header {
 	background-color: #88CBC8;
 }
+@media screen and (min-width: 1600px) {
+	.background-header {
+		background-color: white;
+	}
+}
 /* END HEADER */
 
 
@@ -1225,9 +1238,11 @@
 	background: transparent;
 }
 .bubbles {
-	position: absolute;
+	/* position: absolute;
 	top: 40px;
-	left: 10px;
+	left: 10px; */
+	display: flex;
+	justify-content: center;
 	color: #0f4e7e;
 	font-weight: bold;
 }
@@ -1251,13 +1266,13 @@
 }
 #bubble1 {
 	position: relative;
-	top: -10px;
+	top: -5px;
 	transform: scale(0.8);
 }
 #bubble2 {
 	position: relative;
-    top: -30px;
-	left: -20px;
+    top: 40px;
+	left: 30px;
 	transform: scale(0.8);
 }
 /* .product__history:hover a {
@@ -1265,61 +1280,61 @@
 } */
 #bubble3 {
 	position: relative;
-    top: -10px;
-	left: -40px;
-	transform: scale(0.8);
+    top: 20px;
+	left: 15px;
+	transform: scale(0.9);
 }
 #bubble4 {
 	position: relative;
-    top: -30px;
-	left: -60px;
+    top: 20px;
+	left: -15px;
 	transform: scale(0.8);
 }
 #bubble5 {
 	position: relative;
-    top: -20px;
-	left: -80px;
+    top: 40px;
+	left: -30px;
 	transform: scale(0.8);
 }
 #products {
-	position: absolute;
-	top: 45px;
-	left: 79px;
+	position: relative;
+	top: 35px;
+	left: -301px;
 	font-size: 17px;
 	transform: scale(0.85);
 }
 #product-history {
-	position: absolute;
-	top: 20px;
-	left: 205px;
+	position: relative;
+	top: 70px;
+    left: -545px;
 	font-size: 17px;
 	transform: scale(0.85);
 }
 #history {
-	position: absolute;
-	top: 40px;
-	left: 205px;
+	position: relative;
+	top: 85px;
+	left: -545px;
 	font-size: 17px;
 	transform: scale(0.85);
 }
 #testimonials {
-	position: absolute;
-	top: 45px;
-	left: 320px;
+	position: relative;
+	top: 50px;
+	left: -429px;
 	font-size: 15px;
 	transform: scale(0.85);
 }
 #faqs {
-	position: absolute;
-	top: 30px;
-	left: 430px;
+	position: relative;
+	top: 50px;
+    left: -180px;
 	font-size: 17px;
 	transform: scale(0.85);
 }
 #contact {
-	position: absolute;
-	top: 40px;
-	left: 525px;
+	position: relative;
+	top: 70px;
+	left: -83px;
 	font-size: 15px;
 	transform: scale(0.85);
 }
@@ -1448,7 +1463,7 @@
 	position: relative;
 	display: flex;
 	background-color: #f2fcfe;
-	border-radius: 150px;
+	border-radius: 25px;
 	height: 100%;
 	margin-bottom: 70px;
 }
@@ -1456,7 +1471,7 @@
 	position: relative;
 	display: flex;
 	background-color: #f2fcfe;
-	border-radius: 150px;
+	border-radius: 25px;
 	height: 100%;
 	margin-bottom: 70px;
 }
@@ -1687,25 +1702,25 @@
 	text-decoration: underline;
 }
 @media screen and (max-width: 1070px) {
-	.bubbles a img {
+	/* .bubbles a img {
 		max-width: 20%;
 		max-height: 20%;
-	}
+	} */
 	/* #bubble1 {
 		top: -30px;
-	} */
+	}
 	#bubble2 {
 		top: -30px;
 	}
-	/* #bubble3 {
+	#bubble3 {
 		top: -30px;
-	} */
+	}
 	#bubble4 {
 		top: -30px;
 	}
-	/* #bubble5 {
+	#bubble5 {
 		top: -30px;
-	} */
+	}
 	#products {
 		top: 35px;
 		left: 79px;
@@ -1729,7 +1744,7 @@
 	#contact {
 		top: 30px;
     	left: 513px;
-	}
+	} */
 	.info-banner-main__h2 {
 		font-size: 35px;
 	}
@@ -1741,11 +1756,11 @@
 	}
 }
 @media screen and (max-width: 995px) {
-	.bubbles a img {
+	/* .bubbles a img {
 		max-width: 17%;
 		max-height: 17%;
-	}
-	#bubble1  {
+	} */
+	/* #bubble1  {
 		left: -40px;
 	}
 	#bubble2  {
@@ -1783,7 +1798,7 @@
 	#contact {
 		left: 440px;
 		top: 25px;
-	}
+	} */
 }
 .mobile {
 	display: none;
@@ -2458,6 +2473,26 @@ details {
 .side-bar-menu {
 	justify-content: center;
 	margin-bottom: 50px;
+}
+.but-count {
+	height: 30px;
+	width: 30px;
+	border: none;
+	background-color: #f2fcfe;
+	color: #0f3c62 !important;
+	font-size: 16px;
+}
+.input-count {
+	height: 30px;
+	width: 40px;
+	text-align: center;
+	border: none;
+	background-color: #f2fcfe;
+	color: #0f3c62 !important;
+	font-size: 16px;
+}
+.counting {
+	margin-bottom: 10px;
 }
 /* END CTGY */
 

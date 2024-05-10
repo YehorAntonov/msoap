@@ -25,18 +25,26 @@
 		</div>
 	</section> </mvt:comment>
 	<div class="banner-home">
-		<img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
-		<div class="bubbles desktop">
-			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
+		<mvt:comment> <img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg"> </mvt:comment>
+		<div id="bubbles" class="bubbles desktop">
 			<a id="bubble2Link"><img class="product__history" id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
 			<a id="bubble3Link"><img class="testimonials" id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
+			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
 			<a id="bubble4Link"><img class="faqs" id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a>
 			<a id="bubble5Link"><img class="contact" id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
 			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
 		</div>
+		<img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
 		<div class="info-banner-main">
 			<mvt:item name="readytheme" param="contentsection( 'main_banner_text' )" />
 		</div>
+		<style>
+			.bubbles {
+				position: relative;
+				/* top: -640px; */
+				background-color: #e4f7f6;
+			}
+		</style>
 		<img class="mobile" style="width: 100%; height: 100%;" src="graphics/00000002/1/photo_5456236654118426754_w.jpg">
 	</div>
 	<div class="gradient-line-ship">FREE SHIPPING AVAILABLE</div>
@@ -255,17 +263,27 @@
 	</div>
 	<script>
 		const circleType = new CircleType(document.getElementById('products'));
-		circleType.radius(125);
 		const circleType2 = new CircleType(document.getElementById('product-history'));
-		circleType2.radius(125);
 		const circleType4 = new CircleType(document.getElementById('testimonials'));
-		circleType4.radius(125);
 		const circleType5 = new CircleType(document.getElementById('faqs'));
-		circleType5.radius(125);
 		const circleType6 = new CircleType(document.getElementById('contact'));
-		circleType6.radius(125);
 		const circleType3 = new CircleType(document.getElementById('history'));
+		circleType.radius(125);
+		circleType2.radius(125);
 		circleType3.radius(125);
+		circleType4.radius(125);
+		circleType5.radius(125);
+		circleType6.radius(125);
+		document.addEventListener('DOMContentLoaded', function () {
+  			if (window.innerWidth <= 960) {
+				var text = document.getElementById('bubbles');
+				text.innerHTML =  '<div id="bubbles" class="bubbles desktop"><a id="bubble2Link" href="https://miraclesoap.mivatest.com/product-history.html"><img class="product__history" id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a><a id="bubble3Link" href="https://miraclesoap.mivatest.com/testimonials.html"><img class="testimonials" id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a><a id="bubble1Link" href="https://miraclesoap.mivatest.com/category-display.html"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a><a id="bubble4Link" href="https://miraclesoap.mivatest.com/faqs.html"><img class="faqs" id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a><a id="bubble5Link" href="https://miraclesoap.mivatest.com/contact-us.html"><img class="contact" id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a><a class="product__history" id="product-history" href="https://miraclesoap.mivatest.com/product-history.html"><div aria-label="Product" style="position: relative; height: 1.72419em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.275586em) rotate(-13.2116deg); transform-origin: center 7.35294em;">P</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.168946em) rotate(-8.86002deg); transform-origin: center 7.35294em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.252734em) rotate(-4.7321deg); transform-origin: center 7.35294em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.266211em) rotate(0.347975deg); transform-origin: center 7.35294em;">d</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.256055em) rotate(5.46055deg); transform-origin: center 7.35294em;">u</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.241015em) rotate(10.3265deg); transform-origin: center 7.35294em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.164649em) rotate(14.2976deg); transform-origin: center 7.35294em;">t</span></div></a><a class="product__history" id="history" href="https://miraclesoap.mivatest.com/product-history.html"><div aria-label="History" style="position: relative; height: 1.69106em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.32207em) rotate(-11.5272deg); transform-origin: center 7.35294em;">H</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.111328em) rotate(-7.28456deg); transform-origin: center 7.35294em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.228906em) rotate(-3.95393deg); transform-origin: center 7.35294em;">s</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.163086em) rotate(-0.116633deg); transform-origin: center 7.35294em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.252734em) rotate(3.95393deg); transform-origin: center 7.35294em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.17832em) rotate(8.17362deg); transform-origin: center 7.35294em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.243164em) rotate(12.2996deg); transform-origin: center 7.35294em;">y</span></div></a><a class="testimonials" id="testimonials" href="https://miraclesoap.mivatest.com/testimonials.html"><div aria-label="Testimonials" style="position: relative; height: 1.9963em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.234635em) rotate(-20.004deg); transform-origin: center 8.33333em;">T</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.249023em) rotate(-15.9486deg); transform-origin: center 8.33333em;">e</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.233086em) rotate(-11.9062deg); transform-origin: center 8.33333em;">s</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.168893em) rotate(-8.53574deg); transform-origin: center 8.33333em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.115547em) rotate(-6.15078deg); transform-origin: center 8.33333em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.389583em) rotate(-1.91539deg); transform-origin: center 8.33333em;">m</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.256771em) rotate(3.50413deg); transform-origin: center 8.33333em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.260091em) rotate(7.83789deg); transform-origin: center 8.33333em;">n</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.115547em) rotate(10.9875deg); transform-origin: center 8.33333em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.244154em) rotate(14.0035deg); transform-origin: center 8.33333em;">a</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.118867em) rotate(17.0474deg); transform-origin: center 8.33333em;">l</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.234193em) rotate(20.0077deg); transform-origin: center 8.33333em;">s</span></div></a><a class="products" id="products" href="https://miraclesoap.mivatest.com/category-display.html"><div aria-label="Products" style="position: relative; height: 1.79092em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.275586em) rotate(-15.4429deg); transform-origin: center 7.35294em;">P</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.168945em) rotate(-11.0913deg); transform-origin: center 7.35294em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.252734em) rotate(-6.96334deg); transform-origin: center 7.35294em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.26621em) rotate(-1.88328deg); transform-origin: center 7.35294em;">d</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.256055em) rotate(3.22929deg); transform-origin: center 7.35294em;">u</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.241015em) rotate(8.09523deg); transform-origin: center 7.35294em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.162501em) rotate(12.0453deg); transform-origin: center 7.35294em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.230077em) rotate(15.8884deg); transform-origin: center 7.35294em;">s</span></div></a><a class="faqs" id="faqs" href="https://miraclesoap.mivatest.com/faqs.html"><div aria-label="FAQs" style="position: relative; height: 1.59692em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.226758em) rotate(-8.22142deg); transform-origin: center 7.35294em;">F</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.287109em) rotate(-3.19106deg); transform-origin: center 7.35294em;">A</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.322655em) rotate(2.77807deg); transform-origin: center 7.35294em;">Q</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.230079em) rotate(8.18891deg); transform-origin: center 7.35294em;">s</span></div></a><a class="contact" id="contact" href="https://miraclesoap.mivatest.com/contact-us.html"><div aria-label="Contact" style="position: relative; height: 1.69887em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.308567em) rotate(-11.2696deg); transform-origin: center 8.33333em;">C</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.256771em) rotate(-6.52941deg); transform-origin: center 8.33333em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.260091em) rotate(-2.19566deg); transform-origin: center 8.33333em;">n</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.168894em) rotate(1.40128deg); transform-origin: center 8.33333em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.244153em) rotate(4.86458deg); transform-origin: center 8.33333em;">a</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.24526em) rotate(8.96818deg); transform-origin: center 8.33333em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.168894em) rotate(12.4408deg); transform-origin: center 8.33333em;">t</span></div></a></div>';
+				console.log(text);
+			}
+			else {
+				
+			}
+		});
 	</script>
 	<style>
 		.circle {
