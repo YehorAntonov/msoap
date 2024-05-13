@@ -282,27 +282,27 @@ const themeFunctionality = {
 		}
 		$(document).ready(function() {
 			$(".products").hover(function() {
-				$(".products").css('transform', 'scale(0.9)');
+				$(".products").css('transform', 'scale(0.85)');
 			}, function() {
 				$(".products").css('transform', 'scale(0.8)');
 			})
 			$(".product__history").hover(function() {
-				$(".product__history").css('transform', 'scale(0.9)');
+				$(".product__history").css('transform', 'scale(0.85)');
 			}, function() {
 				$(".product__history").css('transform', 'scale(0.8)');
 			})
 			$(".testimonials").hover(function() {
-				$(".testimonials").css('transform', 'scale(0.9)');
+				$(".testimonials").css('transform', 'scale(0.85)');
 			}, function() {
 				$(".testimonials").css('transform', 'scale(0.8)');
 			})
 			$(".faqs").hover(function() {
-				$(".faqs").css('transform', 'scale(0.9)');
+				$(".faqs").css('transform', 'scale(0.85)');
 			}, function() {
 				$(".faqs").css('transform', 'scale(0.8)');
 			})
 			$(".contact").hover(function() {
-				$(".contact").css('transform', 'scale(0.9)');
+				$(".contact").css('transform', 'scale(0.85)');
 			}, function() {
 				$(".contact").css('transform', 'scale(0.8)');
 			})
