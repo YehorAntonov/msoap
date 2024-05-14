@@ -60,7 +60,7 @@
 		<h1 class="c-heading-charlie t-category-name"><span class="sub-name__miracle">Miracle II </span>&mvt:category:name;</h1>
 		<mvt:if expr="l.settings:category:long">
 
-			<div style="margin-bottom: 25px;">
+			<div class="descrip-main" style="margin-bottom: 25px;">
 				<p style="margin-bottom: 10px;" class="t-category-name ctgy-description">&mvt:category:description;</p>
 				<div id="long-descrip" class="t-category-name ctgy-description-long">&mvt:category:long;</div>
 				<br>
