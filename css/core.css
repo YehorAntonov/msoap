@@ -1884,6 +1884,7 @@ small {
  *    keep on our baseline grid.
  */
 .c-keyline {
+	display: none;
 	border: none;
 	border-bottom: var(--default-border-width) solid var(--gray-300);
 	margin-bottom: calc(var(--default-spacing-unit) - var(--default-border-width)); /* [1] */
@@ -2251,6 +2252,7 @@ small {
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-two) * 1.25);
 	color: #0f3c62;
+	font-style: italic;
 }
 
 .c-heading-echo {

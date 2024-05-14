@@ -1266,6 +1266,7 @@
 }
 .bubbles-global {
 	height: 170px;
+	margin-bottom: 70px;
 }
 #bubble1 {
 	position: relative;
@@ -2546,5 +2547,11 @@ details {
 	}
 	.descrip-main {
 		padding-left: 17%;
+	}
+	.names-static {
+		padding-left: 25.3%;
+	}
+	.content-static {
+		padding-top: 20px;
 	}
 }
