@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4256,
+        "id": 4260,
         "username": null,
         "notes": "test"
     },
@@ -4632,7 +4632,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "main_banner_text",
-            "hash": "cb23a62ec85a4b0a92673efa83c8ba38c6add805f9bbdb3d253402c580eaf5e3"
+            "hash": "10600db81e8aaca77bb8cb7d40dc1795881c0078162a112dbcffc913d768f42a"
         },
         "properties/readytheme_contentsection/main_banner_text.json": {
             "property_group": "",
@@ -5896,7 +5896,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "407865df5e5add104b38b5def663b6c39a0563e338f2addc646e29fd19ae380d"
+            "hash": "cd98331cce13246d520bb42685169e634c18ba390bc2029c575e2956e160cae7"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
