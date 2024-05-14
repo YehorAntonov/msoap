@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4260,
-        "username": null,
-        "notes": "test"
+        "id": 4271,
+        "username": "yehor",
+        "notes": "Page 'product-history' updated"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -3432,7 +3432,7 @@
         },
         "templates/product-history.json": {
             "template_filename": "product-history.mvc",
-            "hash": "b468976e69cf8488791fa559b6ced32200c4e44b123f54a59ba29009c573da9a"
+            "hash": "50db2be31cd9c4a503d79a95e44c9c97a50f80af01f9700d2a29e517625c63de"
         },
         "templates/prpo-footer.mvt": {
             "template_filename": "prpo-footer.mvc",
@@ -3664,7 +3664,7 @@
         },
         "templates/testimonials.json": {
             "template_filename": "testimonials.mvc",
-            "hash": "8f507d80d5d560df2c58b7d9511060b3a42e21147c4e8608ee3739d84701bd90"
+            "hash": "139b91499a225b83cf2cbb5dc028e7bae31c00dd6640475b6fe6367ff3557632"
         },
         "templates/uatm-footer.mvt": {
             "template_filename": "uatm-footer.mvc",
