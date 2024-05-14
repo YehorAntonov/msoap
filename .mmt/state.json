@@ -2,7 +2,7 @@
     "version": 1,
     "changeset": {
         "id": 4250,
-        "username": null,
+        "username": "yehor",
         "notes": "test"
     },
     "files": {
@@ -4819,6 +4819,12 @@
             "property_type": "readytheme_image",
             "property_code": "banner",
             "hash": "9dfd04895256a8cc32a9e124eb8f5cee4f97246689a19e00ee8fd89934c23b3d"
+        },
+        "properties/readytheme_image/bg_image.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "bg_image",
+            "hash": "7d67bcb0ba005e2c7d3f78940e7f92f8d59454935a8f81de74601e0ad03ebf01"
         },
         "properties/readytheme_image/bubble1.json": {
             "property_group": "",
