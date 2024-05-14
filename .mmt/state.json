@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4225,
+        "id": 4251,
         "username": null,
         "notes": "test"
     },
@@ -432,7 +432,7 @@
         },
         "templates/c18-header.mvt": {
             "template_filename": "c18-header.mvc",
-            "hash": "6251cd66c809523338284e6726a032e55ec6157efd3d4a19fb8aef03af74fbf3"
+            "hash": "52f7358a219e8e29448a3b16ca06808af38c1a87ba4b32e451070f1e7721fc63"
         },
         "templates/c18-header.json": {
             "template_filename": "c18-header.mvc",
@@ -4861,6 +4861,12 @@
             "property_type": "readytheme_image",
             "property_code": "diners_club",
             "hash": "4a96d3efd4a2a1f54499da5ae8aa98d5ad6786ee804d2046e277fc52b0bd8003"
+        },
+        "properties/readytheme_image/discovery_logo.json": {
+            "property_group": "",
+            "property_type": "readytheme_image",
+            "property_code": "discovery_logo",
+            "hash": null
         },
         "properties/readytheme_image/elo.json": {
             "property_group": "",
