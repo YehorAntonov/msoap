@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4251,
-        "username": null,
-        "notes": "test"
+        "id": 4254,
+        "username": "yehor",
+        "notes": "Reverted To: test"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -432,7 +432,7 @@
         },
         "templates/c18-header.mvt": {
             "template_filename": "c18-header.mvc",
-            "hash": "52f7358a219e8e29448a3b16ca06808af38c1a87ba4b32e451070f1e7721fc63"
+            "hash": "94d3b93100dd85a8c7f64f045040495fd86a18d5af251f491b1508124db773c2"
         },
         "templates/c18-header.json": {
             "template_filename": "c18-header.mvc",
@@ -4392,7 +4392,7 @@
             "property_group": "category",
             "property_type": "header",
             "property_code": "soap",
-            "hash": "6251cd66c809523338284e6726a032e55ec6157efd3d4a19fb8aef03af74fbf3"
+            "hash": "94d3b93100dd85a8c7f64f045040495fd86a18d5af251f491b1508124db773c2"
         },
         "properties/category/header/soap.json": {
             "property_group": "category",
@@ -4866,7 +4866,7 @@
             "property_group": "",
             "property_type": "readytheme_image",
             "property_code": "discovery_logo",
-            "hash": null
+            "hash": "7fe0712d6dd26f3d995aa4f62fb95686a84dddfdde9a9e1e5905f5f20d9c0f39"
         },
         "properties/readytheme_image/elo.json": {
             "property_group": "",
@@ -4992,7 +4992,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "ad3bba2a849f6f86e8d6f2bed36ad8b7da5d9dcc3f447b225e689934497213cc"
+            "hash": "603d548063ff358a245a2a9ef5acb719961a5966312dca55b80eeffa5c8ad0f6"
         },
         "properties/readytheme_navigationset/disclaimer_navigation.mvt": {
             "property_group": "",
@@ -5076,7 +5076,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "primary_navigation",
-            "hash": "d0d14f499dd8211db781d479ef77ada7ca7493efa83351c319376ad10224fa00"
+            "hash": "dcf9755096da78e1cc8e7000595247f8196b41ee55da831c31a13b91cec488f5"
         },
         "properties/readytheme_navigationset/quick_links.mvt": {
             "property_group": "",
