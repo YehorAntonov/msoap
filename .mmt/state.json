@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4221,
+        "id": 4225,
         "username": null,
         "notes": "test"
     },
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "b78b8b9dce2358608517701f68c8b007ab346cbcae6e93b90f57e6f0b4b7164d"
+            "hash": "86bf35637b50e0fed999c3b497117d32f3b46287e63f06f57a5d910f08c8e2cb"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1100,7 +1100,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "523b1c470e53b9757efa843e5b1cb51aeb5167cc3bbedcb7c0c8c0c5837522de"
+            "hash": "74dbb341af4b1bce9b7dd802987e72022c0877c3e9409d37876837c5b6e4d3e9"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -5890,7 +5890,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "26d473da307859da076d82678e33408b2ea2b8ca2e1770dc90eccb26b12e3c89"
+            "hash": "d4b3dbf2d48039260e765d5bafed844fea2f27db29cef55980126898c634b13b"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
