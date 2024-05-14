@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4226,
-        "username": "yehor",
-        "notes": "Branch 'MV-3138-all-product-page' created"
+        "id": 4250,
+        "username": null,
+        "notes": "test"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -436,7 +436,7 @@
         },
         "templates/c18-header.json": {
             "template_filename": "c18-header.mvc",
-            "hash": null
+            "hash": "793d44ffcdb7b8f08528d78a2a25548be54e41074b7069eb91070e4439b8733e"
         },
         "templates/cabk-addressbook.mvt": {
             "template_filename": "cabk-addressbook.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "86bf35637b50e0fed999c3b497117d32f3b46287e63f06f57a5d910f08c8e2cb"
+            "hash": "1ebf4b4b8e4cd0f7d199c24ef4dd28f014e9a4b524325934d6431c9cfe3e7440"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1128,7 +1128,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "4bc5a7558665cab352d7db95832d06f77d3fc6265e1781e0f35fbdd696ca3c70"
+            "hash": "21e7a92f2b3b00e993cc31f3bdcb19f938ee0c9149b618cb123a7a4e8daca16f"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -5896,7 +5896,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "d4b3dbf2d48039260e765d5bafed844fea2f27db29cef55980126898c634b13b"
+            "hash": "90007ebc5cc8e638425e5148289e913a20f06b4ef9195ee1e0b1771ffe51bf76"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
