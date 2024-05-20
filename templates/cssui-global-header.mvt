@@ -82,9 +82,41 @@
 	</div>
 </div>
 <!-- end t-site-navigation -->
-<mvt:if expr="l.settings:page:code NE 'SFNT'">
-<div class="bubbles-global o-wrapper t-main-content-element">
-  <div id="bubbles" class="bubbles desktop">
+<mvt:comment> <mvt:if expr="(l.settings:page:code NE 'SFNT' AND l.settings:page:code NE 'ACLN' AND l.settings:page:code NE 'BASK' AND l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY') AND (ISNULL g.Customer_Temporary_Password)">
+	<mvt:item name="breadcrumbs" />
+</mvt:if> </mvt:comment>
+<mvt:if expr="l.settings:page:code EQ 'SFNT'">
+  <main class="o-wrapper t-main-content-element sfnt-body-container">
+	<mvt:if expr="g.Maintenance_Warning_Message">
+		<section class="o-layout">
+			<div class="o-layout__item">
+				<div class="x-messages x-messages--info">
+					<span class="u-icon-info"> </span>
+					&mvt:global:Maintenance_Warning_Message;
+				</div>
+			</div>
+		</section>
+  </mvt:if>
+<mvt:elseif expr="">
+  <main class="o-wrapper t-main-content-element ctgy-body-container">
+	  <mvt:if expr="g.Maintenance_Warning_Message">
+		  <section class="o-layout">
+			  <div class="o-layout__item">
+				  <div class="x-messages x-messages--info">
+					  <span class="u-icon-info"> </span>
+					  &mvt:global:Maintenance_Warning_Message;
+				  </div>
+			  </div>
+		  </section>
+    </mvt:if>
+<mvt:else>
+	<mvt:if expr="l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials'">
+  		<main class="o-wrapper t-main-content-element background-static">
+	<mvt:else>
+		<main class="o-wrapper t-main-content-element">
+	</mvt:if>
+	<div class="bubbles-global o-wrapper t-main-content-element">
+  		<div id="bubbles" class="bubbles desktop">
 			<a id="bubble2Link"><img class="product__history" id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
 			<a id="bubble3Link"><img class="testimonials" id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
 			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
@@ -175,37 +207,7 @@
       }
       
     </style>
-</div>
-</mvt:if>
-<mvt:comment> <mvt:if expr="(l.settings:page:code NE 'SFNT' AND l.settings:page:code NE 'ACLN' AND l.settings:page:code NE 'BASK' AND l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY') AND (ISNULL g.Customer_Temporary_Password)">
-	<mvt:item name="breadcrumbs" />
-</mvt:if> </mvt:comment>
-<mvt:if expr="l.settings:page:code EQ 'SFNT'">
-  <main class="o-wrapper t-main-content-element sfnt-body-container">
-	<mvt:if expr="g.Maintenance_Warning_Message">
-		<section class="o-layout">
-			<div class="o-layout__item">
-				<div class="x-messages x-messages--info">
-					<span class="u-icon-info"> </span>
-					&mvt:global:Maintenance_Warning_Message;
-				</div>
-			</div>
-		</section>
-  </mvt:if>
-<mvt:elseif expr="">
-  <main class="o-wrapper t-main-content-element ctgy-body-container">
-	  <mvt:if expr="g.Maintenance_Warning_Message">
-		  <section class="o-layout">
-			  <div class="o-layout__item">
-				  <div class="x-messages x-messages--info">
-					  <span class="u-icon-info"> </span>
-					  &mvt:global:Maintenance_Warning_Message;
-				  </div>
-			  </div>
-		  </section>
-    </mvt:if>
-<mvt:else>
-  <main class="o-wrapper t-main-content-element">
+	</div>
 	  <mvt:if expr="g.Maintenance_Warning_Message">
 		  <section class="o-layout">
 			  <div class="o-layout__item">

@@ -1,4 +1,8 @@
-<nav class="x-category-tree x-collapsible-content" aria-labelledby="support-navigation-label">
+<mvt:if expr="l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials'">
+	<nav class="x-category-tree x-collapsible-content static-navigation" aria-labelledby="support-navigation-label">
+<mvt:else>
+	<nav class="x-category-tree x-collapsible-content" aria-labelledby="support-navigation-label">
+</mvt:if>
 	<div class="x-category-tree__title">
 		<p id="support-navigation-label" class="x-category-tree__heading">Support</p>
 	</div>

@@ -29,7 +29,7 @@
 				</div>
 			</section>
 			<section class="o-layout">
-				<div class="o-layout__item">
+				<div class="o-layout__item padding-content">
 					<mvt:item name="hdft" param="header" />
 				</div>
 			</section>

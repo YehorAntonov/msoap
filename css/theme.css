@@ -2541,6 +2541,11 @@ details {
 	font-weight: bold;
 	color: #006194;
 }
+@media screen and (min-width: 1440px) {
+	.names-static {
+        padding-left: 15.7% !important;
+    }
+}
 @media screen and (min-width: 960px) {
 	.c-heading-charlie {
 		padding-left: 17%;
@@ -2549,9 +2554,34 @@ details {
 		padding-left: 17%;
 	}
 	.names-static {
-		padding-left: 25.3%;
+		padding-left: 24%;
 	}
 	.content-static {
-		padding-top: 20px;
+		padding: 20px;
+		background-color: white;
+		border-radius: 10px;
+	}
+	.static-navigation {
+		width: 90%;
+	}
+	.padding-content {
+		padding-left: 0;
+	}
+}
+.background-static {
+	background-color: #e2f4f3;
+}
+.static-navigation {
+	background-color: white;
+}
+.content-static {
+	background-color: white;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 960px) {
+	.content-static {
+		margin-left: 0.2%;
+		padding: 20px 15px 0 0;
 	}
 }

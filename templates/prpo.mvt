@@ -35,7 +35,7 @@
 			</section>
 
 			<section class="o-layout content-static">
-				<div class="o-layout__item">
+				<div class="o-layout__item padding-content">
 					<mvt:item name="sequence" />
 				</div>
 			</section>
