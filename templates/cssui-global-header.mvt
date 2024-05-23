@@ -16,7 +16,7 @@
 						<div class="t-site-header__store-name">&mvt:readytheme:logo_name;</div>
 						<small class="t-site-header__store-tagline">&mvt:readytheme:logo_tagline;</small>
 					<mvt:elseif expr="l.settings:readytheme:logo_type EQ 'image'"> </mvt:comment>
-					<img class="main-logo" src="graphics/00000002/1/logo.png" alt="&mvte:readytheme:logo_alt;" loading="lazy" width="&mvte:readytheme:logo_image_width;" height="&mvte:readytheme:logo_image_height;">
+					<img class="main-logo" src="&mvte:readytheme:logo_image;" alt="&mvte:readytheme:logo_alt;" loading="lazy" width="&mvte:readytheme:logo_image_width;" height="&mvte:readytheme:logo_image_height;">
 					<mvt:comment> </mvt:if> </mvt:comment>
 				</a>
 			</div>
@@ -86,7 +86,7 @@
 	<mvt:item name="breadcrumbs" />
 </mvt:if> </mvt:comment>
 <mvt:if expr="l.settings:page:code EQ 'SFNT'">
-  <main class="o-wrapper t-main-content-element sfnt-body-container">
+  <main class="o-wrapper t-main-content-elements sfnt-body-container">
 	<mvt:if expr="g.Maintenance_Warning_Message">
 		<section class="o-layout">
 			<div class="o-layout__item">
@@ -110,63 +110,41 @@
 		  </section>
     </mvt:if>
 <mvt:else>
-	<mvt:if expr="l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials'">
-  		<main class="o-wrapper t-main-content-element background-static">
-	<mvt:else>
-		<main class="o-wrapper t-main-content-element">
-	</mvt:if>
-	<div class="bubbles-global o-wrapper t-main-content-element">
-  		<div id="bubbles" class="bubbles desktop">
-			<a id="bubble2Link"><img class="product__history" id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
-			<a id="bubble3Link"><img class="testimonials" id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
-			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
-			<a id="bubble4Link"><img class="faqs" id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a>
-			<a id="bubble5Link"><img class="contact" id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
-			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
-		</div>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-	  <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
-    <script>
-      $(document).ready(function() {
+  	<main class="o-wrapper background-image">
+	<div style="max-width: 1200px" class="o-wrapper t-main-content-element">
+		<div class="bubbles-global o-wrapper t-main-content-element">
+  			<div id="bubbles" class="bubbles desktop">
+				<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
+			</div>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	  	<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
+    	<script>
+      	$(document).ready(function() {
 			$(".products").hover(function() {
-				$(".products").css('transform', 'scale(0.85)');
+				$(".products").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".products").css('transform', 'scale(0.8)');
+				$(".products").css('transform', 'scale(1)');
 			})
 			$(".product__history").hover(function() {
-				$(".product__history").css('transform', 'scale(0.85)');
+				$(".product__history").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".product__history").css('transform', 'scale(0.8)');
+				$(".product__history").css('transform', 'scale(1)');
 			})
 			$(".testimonials").hover(function() {
-				$(".testimonials").css('transform', 'scale(0.85)');
+				$(".testimonials").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".testimonials").css('transform', 'scale(0.8)');
+				$(".testimonials").css('transform', 'scale(1)');
 			})
 			$(".faqs").hover(function() {
-				$(".faqs").css('transform', 'scale(0.85)');
+				$(".faqs").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".faqs").css('transform', 'scale(0.8)');
+				$(".faqs").css('transform', 'scale(1)');
 			})
 			$(".contact").hover(function() {
-				$(".contact").css('transform', 'scale(0.85)');
+				$(".contact").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".contact").css('transform', 'scale(0.8)');
+				$(".contact").css('transform', 'scale(1)');
 			})
-		})
-		$(document).ready(function() {
-			let hrefFirstBubble = $('#products').attr('href');
-			let hrefSecondBubble = $('#product-history').attr('href');
-			let hrefThirdBubble = $('#testimonials').attr('href');
-			let hrefFourBubble = $('#faqs').attr('href');
-			let hrefFiveBubble = $('#contact').attr('href');
-
-
-			$('#bubble1Link').attr('href', hrefFirstBubble);
-			$('#bubble2Link').attr('href', hrefSecondBubble);
-			$('#bubble3Link').attr('href', hrefThirdBubble);
-			$('#bubble4Link').attr('href', hrefFourBubble);
-			$('#bubble5Link').attr('href', hrefFiveBubble);
 		})
     </script>
     <script>

@@ -27,11 +27,6 @@
 	<div class="banner-home">
 		<mvt:comment> <img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg"> </mvt:comment>
 		<div id="bubbles" class="bubbles desktop">
-			<a id="bubble2Link"><img class="product__history" id="bubble2" src="graphics/00000002/1/Group 2bubble2.png"></a>
-			<a id="bubble3Link"><img class="testimonials" id="bubble3" src="graphics/00000002/1/Group 3bubble3.png"></a>
-			<a id="bubble1Link"><img class="products" id="bubble1" src="graphics/00000002/1/Group 2bubble1.png"></a>
-			<a id="bubble4Link"><img class="faqs" id="bubble4" src="graphics/00000002/1/Group 3bubble4.png"></a>
-			<a id="bubble5Link"><img class="contact" id="bubble5" src="graphics/00000002/1/Group 2bubble5.png"></a>
 			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
 		</div>
 		<img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">

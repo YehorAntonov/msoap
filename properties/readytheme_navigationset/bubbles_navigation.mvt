@@ -1,16 +1,142 @@
 <mvt:foreach iterator="navigationitem" array="readytheme:navigationitems">
 	<mvt:if expr="POS1 EQ 1">
-		<a class="product__history" id="product-history" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
-		<mvt:foreach iterator="navigationitem2" array="navigationitem:items">
-			<a class="product__history" id="history" href="&mvte:navigationitem2:url;">&mvt:navigationitem2:name;</a>
-		</mvt:foreach>
+		<div id="bubble2">
+			<a href="&mvte:navigationitem:url;" id="bubble2Link"><img style="transform: scale(1);" class="product__history" src="graphics/00000002/1/Group 2bubble2.png"></a>
+			<svg id="mini-bubble-1" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1260_1410)">
+				<rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"/>
+				<ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"/>
+				</g>
+				<defs>
+				<radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)">
+				<stop stop-color="#F2FFFF" stop-opacity="0.4"/>
+				<stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"/>
+				<stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"/>
+				<stop offset="1" stop-color="#A4C8CA"/>
+				</radialGradient>
+				<clipPath id="clip0_1260_1410">
+				<rect width="25" height="25" rx="12.5" fill="white"/>
+				</clipPath>
+				</defs>
+			</svg>
+			<a class="product__history" style="transform: scale(1);" id="product-history" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+			<mvt:foreach iterator="navigationitem2" array="navigationitem:items">
+				<a class="product__history" style="transform: scale(1);" id="history" href="&mvte:navigationitem2:url;">&mvt:navigationitem2:name;</a>
+			</mvt:foreach>
+		</div>
+		
 	<mvt:elseif expr="POS1 EQ 2">
-		<a class="testimonials" id="testimonials" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		<div id="bubble3">	
+			<a href="&mvte:navigationitem:url;" id="bubble3Link"><img style="transform: scale(1);" class="testimonials" src="graphics/00000002/1/Group 3bubble3.png"></a>
+			<svg id="mini-bubble-2" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1260_1410)">
+				<rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"/>
+				<ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"/>
+				</g>
+				<defs>
+				<radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)">
+				<stop stop-color="#F2FFFF" stop-opacity="0.4"/>
+				<stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"/>
+				<stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"/>
+				<stop offset="1" stop-color="#A4C8CA"/>
+				</radialGradient>
+				<clipPath id="clip0_1260_1410">
+				<rect width="25" height="25" rx="12.5" fill="white"/>
+				</clipPath>
+				</defs>
+			</svg>
+			<a class="testimonials" style="transform: scale(1);" id="testimonials" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		</div>
+		
 	<mvt:elseif expr="POS1 EQ 3">
-		<a class="products" id="products" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		<div id="bubble1">
+			<a href="&mvte:navigationitem:url;" id="bubble1Link"><img style="transform: scale(1);" class="products" src="graphics/00000002/1/Group 2bubble1.png"></a>
+			<svg id="mini-bubble-3" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1260_1410)">
+				<rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"/>
+				<ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"/>
+				</g>
+				<defs>
+				<radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)">
+				<stop stop-color="#F2FFFF" stop-opacity="0.4"/>
+				<stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"/>
+				<stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"/>
+				<stop offset="1" stop-color="#A4C8CA"/>
+				</radialGradient>
+				<clipPath id="clip0_1260_1410">
+				<rect width="25" height="25" rx="12.5" fill="white"/>
+				</clipPath>
+				</defs>
+			</svg>
+			<a class="products" style="transform: scale(1);" id="products" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		</div>
+		
 	<mvt:elseif expr="POS1 EQ 4">
-		<a class="faqs" id="faqs" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		<div id="bubble4">
+			<a href="&mvte:navigationitem:url;" id="bubble4Link"><img style="transform: scale(1);" class="faqs"  src="graphics/00000002/1/Group 3bubble4.png"></a>
+			<svg id="mini-bubble-4" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1260_1410)">
+				<rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"/>
+				<ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"/>
+				</g>
+				<defs>
+				<radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)">
+				<stop stop-color="#F2FFFF" stop-opacity="0.4"/>
+				<stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"/>
+				<stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"/>
+				<stop offset="1" stop-color="#A4C8CA"/>
+				</radialGradient>
+				<clipPath id="clip0_1260_1410">
+				<rect width="25" height="25" rx="12.5" fill="white"/>
+				</clipPath>
+				</defs>
+			</svg>
+			<a class="faqs" style="transform: scale(1);" id="faqs" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		</div>
+		
 	<mvt:elseif expr="POS1 EQ 5">
-		<a class="contact" id="contact" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		<div id="bubble5">	
+			<a href="&mvte:navigationitem:url;" id="bubble5Link"><img style="transform: scale(1);" class="contact" src="graphics/00000002/1/Group 2bubble5.png"></a>
+			<svg id="mini-bubble-5" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1260_1410)">
+				<rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"/>
+				<ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"/>
+				</g>
+				<defs>
+				<radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)">
+				<stop stop-color="#F2FFFF" stop-opacity="0.4"/>
+				<stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"/>
+				<stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"/>
+				<stop offset="1" stop-color="#A4C8CA"/>
+				</radialGradient>
+				<clipPath id="clip0_1260_1410">
+				<rect width="25" height="25" rx="12.5" fill="white"/>
+				</clipPath>
+				</defs>
+			</svg>
+			<svg id="mini-bubble-6" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1260_1410)">
+				<rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"/>
+				<ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"/>
+				</g>
+				<defs>
+				<radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)">
+				<stop stop-color="#F2FFFF" stop-opacity="0.4"/>
+				<stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"/>
+				<stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"/>
+				<stop offset="1" stop-color="#A4C8CA"/>
+				</radialGradient>
+				<clipPath id="clip0_1260_1410">
+				<rect width="25" height="25" rx="12.5" fill="white"/>
+				</clipPath>
+				</defs>
+			</svg>
+			<a class="contact" style="transform: scale(1);" id="contact" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+		</div>
 	</mvt:if>
 </mvt:foreach>
+				
+				
+					
+				
+				

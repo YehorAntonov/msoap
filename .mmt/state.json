@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4464,
+        "id": 4583,
         "username": null,
         "notes": "test"
     },
@@ -960,7 +960,7 @@
         },
         "templates/cssui-global-footer.mvt": {
             "template_filename": "cssui-global-footer.mvc",
-            "hash": "cc6945b7d6d459a56bc19124e8f765c7dc89c3e651ac03a92a54fc88766e2029"
+            "hash": "da8584b3d283d53eebfc64316d6b70098157c5f210d154ffd17493e17934a0ea"
         },
         "templates/cssui-global-footer.json": {
             "template_filename": "cssui-global-footer.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "ad429a219932cf7afcc47d686aece6364d4aaa1a91c81070d4c58a88ae766b6a"
+            "hash": "6bb7d78a502f882a89a3afef62f7c892882ea2fd657d9d94118db996d45b0920"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1100,7 +1100,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "74dbb341af4b1bce9b7dd802987e72022c0877c3e9409d37876837c5b6e4d3e9"
+            "hash": "75516752e62978eb719f0fb8c1522db52c63e8f2cb93c817ea146b875a609e51"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -1128,7 +1128,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "ba72f6fed13720ffba043634ac2423d2274fd0945957e23905ed041f1afafa3f"
+            "hash": "c0bbc17de491e4046c97a90d2fa56a4da825278ccc9206091c21653d7c1ca606"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -2772,7 +2772,7 @@
         },
         "templates/global-minibasket.mvt": {
             "template_filename": "global-minibasket.mvc",
-            "hash": "b1b643a98f0d5c63acd236275f305be5f9e38e3f983318585090fdb5e52a1ffa"
+            "hash": "3da3e520c551aceab92367a2236be048b9b182f194f04ee33badc7d10d8ee349"
         },
         "templates/global-minibasket.json": {
             "template_filename": "global-minibasket.mvc",
@@ -3580,7 +3580,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "0e052973acd1e6ec54e0de7d998024c062f37f8d077358b32d1a9e6032770540"
+            "hash": "d7650e84d92c14ebffba583644bf3318e49ed1722985da7a686f270ea1a34b60"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4986,7 +4986,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "a43e2752b8aacb023e6b5e8b6df56accfab658a1b3feca7a8a4a5553eb67f906"
+            "hash": "6e78690793e6f849a6f81993c25a2ab596ac22dd68b6dcc23b6e5cbc10a5dedf"
         },
         "properties/readytheme_navigationset/bubbles_navigation.json": {
             "property_group": "",
@@ -5094,7 +5094,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "static_navigation",
-            "hash": "c11fbeabd897368f425ee477df58b774be6b2b9138e7b200c5fa6eaef33e0cb5"
+            "hash": "e5b000414e4bb014dc237bcaa17a84fc6fdbab4139bf5c82feb06af9ba228e8e"
         },
         "properties/readytheme_navigationset/static_navigation.json": {
             "property_group": "",
@@ -5536,7 +5536,7 @@
         },
         "js/theme.js": {
             "jsresource_code": "theme",
-            "hash": "8a8ff8fca29c90c4e84d3c6339af2c4ae9267739ac697da3627fb83ed967c33f"
+            "hash": "81573e15de1f4a5b6f2237919ceb705117408aac36fe994a202ec46579fd2bf3"
         },
         "css/additional.json": {
             "cssresource_code": "additional",
@@ -5672,7 +5672,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "3181d22e2722b301bb7587196565e3b185b6a732925c686a78e91a083afd3d13"
+            "hash": "4cf85d7723aaf131ceb6a876e2b3ef9e4be54fb0b93e8081c390239018d286e4"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5896,7 +5896,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "1db47622973a6306ceac1442f295fe123b3288444f750707f3589d9b10a4324c"
+            "hash": "68cca41c5390f68b08eca33e35ec5fab977d5e9434601400001d731bc23c1a57"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

@@ -10,12 +10,12 @@
 				<strong id="mb-description" class="x-mini-basket__summary">Your Cart (&mvte:global_minibasket:basket_count;)</strong>
 				<button class="u-icon-cross" data-hook="close-mini-basket" aria-label="Close the Mini-Basket"></button>
 			</div>
-			<mvt:if expr="NOT l.settings:global_minibasket:empty">
+			<mvt:comment> <mvt:if expr="NOT l.settings:global_minibasket:empty">
 				<div class="x-mini-basket__subtotal">
 					<span>Subtotal:</span>
 					<span>&mvt:global_minibasket:formatted_complete_subtotal;</span>
 				</div>
-			</mvt:if>
+			</mvt:if> </mvt:comment>
 		</header>
 		<mvt:if expr="NOT l.settings:global_minibasket:empty">
 			<div class="x-mini-basket__list">

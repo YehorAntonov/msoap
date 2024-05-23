@@ -282,44 +282,30 @@ const themeFunctionality = {
 		}
 		$(document).ready(function() {
 			$(".products").hover(function() {
-				$(".products").css('transform', 'scale(0.85)');
+				$(".products").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".products").css('transform', 'scale(0.8)');
+				$(".products").css('transform', 'scale(1)');
 			})
 			$(".product__history").hover(function() {
-				$(".product__history").css('transform', 'scale(0.85)');
+				$(".product__history").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".product__history").css('transform', 'scale(0.8)');
+				$(".product__history").css('transform', 'scale(1)');
 			})
 			$(".testimonials").hover(function() {
-				$(".testimonials").css('transform', 'scale(0.85)');
+				$(".testimonials").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".testimonials").css('transform', 'scale(0.8)');
+				$(".testimonials").css('transform', 'scale(1)');
 			})
 			$(".faqs").hover(function() {
-				$(".faqs").css('transform', 'scale(0.85)');
+				$(".faqs").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".faqs").css('transform', 'scale(0.8)');
+				$(".faqs").css('transform', 'scale(1)');
 			})
 			$(".contact").hover(function() {
-				$(".contact").css('transform', 'scale(0.85)');
+				$(".contact").css('transform', 'scale(1.1)');
 			}, function() {
-				$(".contact").css('transform', 'scale(0.8)');
+				$(".contact").css('transform', 'scale(1)');
 			})
-		})
-		$(document).ready(function() {
-			let hrefFirstBubble = $('#products').attr('href');
-			let hrefSecondBubble = $('#product-history').attr('href');
-			let hrefThirdBubble = $('#testimonials').attr('href');
-			let hrefFourBubble = $('#faqs').attr('href');
-			let hrefFiveBubble = $('#contact').attr('href');
-
-
-			$('#bubble1Link').attr('href', hrefFirstBubble);
-			$('#bubble2Link').attr('href', hrefSecondBubble);
-			$('#bubble3Link').attr('href', hrefThirdBubble);
-			$('#bubble4Link').attr('href', hrefFourBubble);
-			$('#bubble5Link').attr('href', hrefFiveBubble);
 		})
 	},
     jsCTGY() {
