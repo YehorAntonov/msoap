@@ -2584,7 +2584,7 @@ details {
 	text-align: center;
 	border: 1px solid #88cbc891;
     position: relative;
-	width: 300px;
+	width: 32%;
 	padding: 15px;
 	background-color: #f2fcfe;
     border-radius: 5px;
@@ -2626,7 +2626,7 @@ details {
 }
 @media screen and (max-width: 1170px) {
 	.subcategory-container {
-		width: 250px;
+		width: 32%;
 	}
 	.subcategory-image img {
 		width: 240px;
