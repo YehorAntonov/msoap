@@ -33,7 +33,7 @@
 	</mvt:foreach>
 	<mvt:assign name="l.settings:subcategory_count" value="miva_array_elements(l.settings:subcategories)" />
 	<mvt:if expr="l.settings:subcategories GT 0">
-		<h1 class="c-heading-charlie t-category-name"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1><br>
+		<h1 class="c-heading-charlie t-category-name main-category"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1><br>
 	<mvt:else>
 		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description', l.settings:category:description)" />
 		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'long', l.settings:category:long)" />
