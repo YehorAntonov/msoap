@@ -16,7 +16,7 @@
 						<div class="t-site-header__store-name">&mvt:readytheme:logo_name;</div>
 						<small class="t-site-header__store-tagline">&mvt:readytheme:logo_tagline;</small>
 					<mvt:elseif expr="l.settings:readytheme:logo_type EQ 'image'"> </mvt:comment>
-					<img src="graphics/00000002/1/logo.png" alt="&mvte:readytheme:logo_alt;" loading="lazy" width="&mvte:readytheme:logo_image_width;" height="&mvte:readytheme:logo_image_height;">
+					<img class="main-logo" src="graphics/00000002/1/logo.png" alt="&mvte:readytheme:logo_alt;" loading="lazy" width="&mvte:readytheme:logo_image_width;" height="&mvte:readytheme:logo_image_height;">
 					<mvt:comment> </mvt:if> </mvt:comment>
 				</a>
 			</div>
@@ -36,7 +36,7 @@
 			</div>
   
 			<div class="o-layout__item u-width-12-icons u-width-3--l-icons-search t-site-header__search &mvte:global:Session:shadows:checkout_hidden; search-block" data-hook="site-header__search">
-				<div class="links-header desktop"><a href="/contact-us.html">Contact Us</a></div>
+				<div class="links-header desktop"><a href="/about-us.html">About Us</a></div>
         <div class="links-header desktop"><a href="/disclaimer.html">Disclaimer</a></div>
         <div class="links-header phone-header desktop"><a href="tel:+18888957675">1-888-895-SOAP (7675)</a></div>
         <form class="t-site-header__search-form" method="post" action="&mvte:urls:SRCH:rr;">

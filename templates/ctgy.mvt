@@ -72,7 +72,7 @@
 	</mvt:if>
 
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l o-layout--wide">
-		<div class="o-layout__item u-width-12 u-width-10--l">
+		<div class="o-layout__item u-width-12 u-width-10--l product-list-container">
 			<mvt:comment> <mvt:if expr="NOT ISNULL l.settings:category_title:image">
 				<section class="o-layout u-hidden u-flex--l">
 					<div class="o-layout__item">

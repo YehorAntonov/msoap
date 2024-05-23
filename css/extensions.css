@@ -71,6 +71,7 @@
 	background-color: #f2fcfe;
 	border-radius: 10px;
 	padding: 20px;
+	border: 1px solid #88cbc891 !important;
 }
 
 .x-category-tree__trigger {
