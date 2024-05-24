@@ -465,6 +465,101 @@ const themeFunctionality = {
     jsPLST() {
 	},
     jsSRCH() {
+		$('.counting').on('click', '.increment', function() {
+			var quantityOfProduct = $(this).parent().find('.input-count');
+			var qty = parseInt(quantityOfProduct.val());
+			quantityOfProduct.val(qty + 1);
+			updateCounter(quantityOfProduct);
+		});
+		$('.counting').on('click', '.decrement', function() {
+			var quantityOfProduct = $(this).parent().find('.input-count');
+			var qty = parseInt(quantityOfProduct.val()) - 1;
+	
+			if (qty >= 1) {
+				quantityOfProduct.val(qty);
+				updateCounter(quantityOfProduct);
+			};
+		});
+		// $('.counting').on('input', '.input-count', function() {
+		// 	updateCounter($(this));
+		// });
+		$('.counting').on('blur', '.input-count', function() {
+			var value = $(this).val();
+			
+			if (value !== "" && !isNaN(value) && parseInt(value) > 0) {
+				
+			} 
+			else {
+				$(this).val(1);
+			}
+		});
+		
+		function updateCounter(quantityOfProduct) {
+			var decrementBtn = quantityOfProduct.siblings('.decrement');
+			var qty = parseInt(quantityOfProduct.val());
+	
+			if (isNaN(qty) || qty < 1) {
+				qty = 1;
+				quantityOfProduct.val(qty);
+			}
+			else {
+				
+			};
+	
+			decrementBtn.prop('disabled', qty === 1);
+		};
+
+		$('[data-hook="btn-add-to-cart"]').click(function(e) {
+			var btnAddToCart = $(this);
+			console.log(btnAddToCart)
+			var product_code = btnAddToCart.data('product-code');
+			var category_code = btnAddToCart.data('category-code');
+			var qty = parseInt($(this).parent().find('.input-count').val());
+	
+			$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
+			btnAddToCart.text('Processing...');
+	
+			ajaxAddToCart(product_code, qty, category_code, function() {
+				$('[data-hook="btn-add-to-cart"]').prop("disabled", false);
+				btnAddToCart.text('Add To Cart');
+			});
+		});
+
+
+
+
+		function ajaxAddToCart(Product_Code, Quantity, Category_Code, callback) {
+			//create object with type of request and options, add product to cart
+			var data = {
+			Action: "ADPR",
+			Product_Code,
+			Quantity,
+			Category_Code
+			};
+
+	
+			//create object with ajax request
+			var miniBasketRequest = $.ajax({
+			method: "POST",
+			data: data,
+			url: "https://miraclesoap.mivatest.com/basket-contents.html",
+			});
+	
+			//method done with function of response from server
+			miniBasketRequest.done(function (response) {
+				$('[data-hook="open-mini-basket"]').html($(response).find('[data-hook="open-mini-basket"]').first().html());
+				$('[data-hook="mini-basket"]').html($(response).find('[data-hook="mini-basket"]').first().html());
+				//open mini basket with click
+				$('[data-hook="open-mini-basket"]')[0].click();
+				//callback
+	
+				callback && callback();
+			});
+			//output error
+			miniBasketRequest.fail(function (jqXHR, textStatus) {
+			//console.log( "Request failed: " + textStatus );
+			});
+		};
 	},
     jsBASK() {
 		/**

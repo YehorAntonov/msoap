@@ -114,3 +114,15 @@
 	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>
+<mvt:if expr="l.settings:category:code EQ 'valupack'">
+	<style>
+	.product-list-container {
+		margin-top: 0;
+	}
+</style>
+</mvt:if>
+<style>
+	.x-pagination__list {
+		margin-bottom: 20px;
+	}
+</style>
