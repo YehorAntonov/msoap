@@ -2,7 +2,7 @@
     "version": 1,
     "changeset": {
         "id": 4640,
-        "username": null,
+        "username": "yehor",
         "notes": "test"
     },
     "files": {
@@ -1093,6 +1093,10 @@
         "templates/ctfm.json": {
             "template_filename": "ctfm.mvc",
             "hash": null
+        },
+        "templates/ctgy-all_products.mvt": {
+            "template_filename": "ctgy-all_products.mvc",
+            "hash": "cf0c9ca52f01f25569e5a0d32b78dbef00ca6a18bd7c0037f4059e17b0cc70e6"
         },
         "templates/ctgy-basket.mvt": {
             "template_filename": "ctgy-basket.mvc",
@@ -3432,7 +3436,7 @@
         },
         "templates/product-history.json": {
             "template_filename": "product-history.mvc",
-            "hash": "50db2be31cd9c4a503d79a95e44c9c97a50f80af01f9700d2a29e517625c63de"
+            "hash": "0c13b6b3fc76a3e3fd45f52d923010bc6fcaab1c45d910f244526c1c3213bf62"
         },
         "templates/prpo-footer.mvt": {
             "template_filename": "prpo-footer.mvc",
@@ -4184,6 +4188,12 @@
             "property_code": "soap",
             "hash": null
         },
+        "properties/category/cssui_cattitle/all_products.json": {
+            "property_group": "category",
+            "property_type": "cssui_cattitle",
+            "property_code": "all_products",
+            "hash": null
+        },
         "properties/category/cssui_cattree/mprod.json": {
             "property_group": "category",
             "property_type": "cssui_cattree",
@@ -4260,6 +4270,12 @@
             "property_group": "category",
             "property_type": "cssui_cattree",
             "property_code": "soap",
+            "hash": null
+        },
+        "properties/category/cssui_cattree/all_products.json": {
+            "property_group": "category",
+            "property_type": "cssui_cattree",
+            "property_code": "all_products",
             "hash": null
         },
         "properties/flex/mmx-base.json": {
@@ -4968,7 +4984,7 @@
             "property_group": "",
             "property_type": "readytheme_lookandfeel",
             "property_code": "settings",
-            "hash": "5bf02baf81d51477ee0649b94359ae1f5f5738ff54174d3eb9ec0e721a438b5d"
+            "hash": "f9ec4a5ef2e18f62c6f0ef5af3bf8e446a6e75f06ec4bf4455194761559e6cf4"
         },
         "properties/readytheme_navigationset/account_navigation.mvt": {
             "property_group": "",
