@@ -1,3 +1,6 @@
+<mvt:if expr="l.settings:page:code EQ 'SFNT'">
+	</div>
+</mvt:if>
 </main>
 <!-- end t-site-content -->
 

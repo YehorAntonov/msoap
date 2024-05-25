@@ -121,6 +121,31 @@
 	</section> </mvt:comment>
 	<br>
 </mvt:if>
+<mvt:foreach array="cattree_categories" iterator="category_children">
+	<mvt:if expr="l.settings:category_children:parent_id EQ l.settings:category:id">
+		<mvt:assign name="l.null" value="miva_array_insert(l.settings:subcategories, l.settings:category_children, -1)" />
+	</mvt:if>
+
+</mvt:foreach>
+<mvt:assign name="l.settings:subcategory_count" value="miva_array_elements(l.settings:subcategories)" />
+<mvt:if expr="l.settings:subcategories GT 0">
+	<section class="subcategory-section">
+		<mvt:foreach iterator="subcategory" array="cattree_categories">
+
+			<div class="subcategory-container">
+				<div class="subcategory-image">
+					<img src="&mvte:subcategory:image;" alt="&mvte:subcategory:name;" loading="lazy">
+				</div>
+				<mvt:item name="customfields" param="Read_Category_Code(l.settings:subcategory:code, 'description', l.settings:subcategory:descriptions)" />
+				<p class="subcategory-name">&mvt:subcategory:name;</p>
+				<p class="subcategory-descrip">&mvt:subcategory:descriptions;</p>
+				<div>
+					<a href="&mvt:subcategory:link;" class="c-button subcategory-link">Explore</a>
+				</div>
+			</div>
+		</mvt:foreach>
+	</section>
+<mvt:else>
 <section class="main-products">
 	<mvt:foreach iterator="product" array="category_listing:products">
 		<mvt:comment> <div class="x-product-list__item">
@@ -203,6 +228,7 @@
 			</div>
 	</mvt:foreach>
 </section>
+</mvt:if>
 <!-- end .x-product-list -->
 
 <mvt:if expr="l.settings:category_listing:page_links:last_page GT 1">

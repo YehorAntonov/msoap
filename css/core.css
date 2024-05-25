@@ -1884,6 +1884,7 @@ small {
  *    keep on our baseline grid.
  */
 .c-keyline {
+	display: none;
 	border: none;
 	border-bottom: var(--default-border-width) solid var(--gray-300);
 	margin-bottom: calc(var(--default-spacing-unit) - var(--default-border-width)); /* [1] */
@@ -2250,7 +2251,8 @@ small {
 	font-size: var(--title-two);
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-two) * 1.25);
-	color: #0f3c62;
+	color: #347b9a;
+	font-style: italic;
 }
 
 .c-heading-echo {
@@ -2260,6 +2262,7 @@ small {
 }
 
 .c-heading-foxtrot {
+	color: #0f4e7e;
 	font-size: var(--title-four);
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-four) * 1.4);

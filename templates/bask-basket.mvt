@@ -199,6 +199,7 @@
 														</button>
 													</div>
 												</div>
+												<a class="t-basket__product-remove" href="&mvte:urls:BASK:auto_sep;Action=RGRP&Basket_Group=&mvta:group:group_id;&Restore_Name=&mvta:group:name;&Restore_Params=&mvta:group:restore:params;&quote_item=&mvta:global:quote_item;">Remove</a>
 											</div>
 										</fieldset>
 									</form>
@@ -233,7 +234,6 @@
 										<a class="t-basket__product-save" href="&mvte:urls:WISH:secure_sep;Action=MPWL&Group_ID=&mvta:group:group_id;">Save for Later</a>
 									</mvt:if>
 								</span>
-								<a class="t-basket__product-remove" href="&mvte:urls:BASK:auto_sep;Action=RGRP&Basket_Group=&mvta:group:group_id;&Restore_Name=&mvta:group:name;&Restore_Params=&mvta:group:restore:params;&quote_item=&mvta:global:quote_item;">Remove</a>
 							</td>
 						</tr>
 					</mvt:foreach>

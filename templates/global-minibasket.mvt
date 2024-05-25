@@ -10,21 +10,27 @@
 				<strong id="mb-description" class="x-mini-basket__summary">Your Cart (&mvte:global_minibasket:basket_count;)</strong>
 				<button class="u-icon-cross" data-hook="close-mini-basket" aria-label="Close the Mini-Basket"></button>
 			</div>
-			<mvt:if expr="NOT l.settings:global_minibasket:empty">
+			<mvt:comment> <mvt:if expr="NOT l.settings:global_minibasket:empty">
 				<div class="x-mini-basket__subtotal">
 					<span>Subtotal:</span>
 					<span>&mvt:global_minibasket:formatted_complete_subtotal;</span>
 				</div>
-			</mvt:if>
+			</mvt:if> </mvt:comment>
 		</header>
 		<mvt:if expr="NOT l.settings:global_minibasket:empty">
 			<div class="x-mini-basket__list">
 				<mvt:foreach iterator="item" array="global_minibasket:groups">
 					<mvt:do file="g.Module_Library_DB" name="l.success" value="Product_Load_Code(l.settings:item:code, l.settings:item_p )" />
 					<mvt:do file="g.Module_Feature_URI_UT" name="l.settings:item:uri" value="Store_Product_URL(l.settings:item_p, NULL)" />
+					<mvt:do name="l.return" file="g.Module_Library_DB" value="Runtime_Product_Load_Code( l.settings:item:code, l.settings:product )" />
+					<mvt:do name="l.success" file="g.Module_Library_DB" value="ProductImage_Load_Type(l.settings:product:id, 1, l.settings:imagetype)" />
+					<mvt:do name="l.success" file="g.Module_Library_DB" value="Image_Load_ID(l.settings:imagetype:image_id, l.settings:imagedata)" />
+					<mvt:assign name="g.socialImage" value="g.baseurl $ l.settings:imagedata:image" />
+    				<mvt:foreach iterator="data" array="imagedata">
+    				</mvt:foreach>
 					<div class="x-mini-basket__line">
 						<figure class="x-mini-basket__image">
-							<img src="&mvte:item:imagetypes:main;" alt="&mvte:item:name;" loading="lazy" width="&mvte:global_minibasket:b_width;" height="&mvte:global_minibasket:b_height;">
+							<img src="&mvt:global:socialImage;" alt="&mvte:item:name;" loading="lazy" width="&mvte:global_minibasket:b_width;" height="&mvte:global_minibasket:b_height;">
 						</figure>
 						<a class="x-mini-basket__item">
 							<span class="x-mini-basket__item-name">&mvt:item:name;</span>
@@ -47,12 +53,101 @@
 								</mvt:if>
 							</span>
 							<div class="x-mini-basket__item-total">
-								<span class="u-font-small">Qty: &mvte:item:quantity;</span>
+								<span class="u-font-small basket-qty">Qty: &mvte:item:quantity;</span>
 								<span class="u-text-medium x-mini-basket__item-price">&mvt:item:formatted_subtotal_comprehensive;</span>
 							</div>
 						</a>
 					</div>
 				</mvt:foreach>
+				<mvt:foreach iterator="item" array="global_minibasket:groups">
+					<mvt:item name="ry_toolbelt" param="Products_Related|g.length|l.all_settings:item:code" />
+					<mvt:if expr="NOT ISNULL g.length">
+						<mvt:assign name="g.relatedprod" value="g.length" />
+						<mvt:assign name="g.Product_Code" value="l.settings:item:code" />
+					</mvt:if>
+				</mvt:foreach>
+				<mvt:if expr="g.relatedprod">
+					<div class="x-mini-basket__line">
+						<div class="x-mini-basket__total">
+							<span>Customers also like:</span>
+						</div>
+						<div class="related-products-containers">
+  							<mvt:foreach iterator="item" array="related">
+								<mvt:do name="l.return" file="g.Module_Library_DB" value="Runtime_Product_Load_Code( l.settings:item:code, l.settings:product )" />
+								<mvt:do name="l.success" file="g.Module_Library_DB" value="ProductImage_Load_Type(l.settings:product:id, 1, l.settings:imagetype)" />
+								<mvt:do name="l.success" file="g.Module_Library_DB" value="Image_Load_ID(l.settings:imagetype:image_id, l.settings:imagedata)" />
+								<mvt:assign name="g.socialImage" value="g.baseurl $ l.settings:imagedata:image" />
+    							<mvt:foreach iterator="data" array="imagedata">
+    							</mvt:foreach>
+    							<div class="basket-container">
+									<div class="x-subcategory-list__picture pic-basket">
+										<img class="x-subcategory-list__image img-basket" src="&mvt:global:socialImage;" alt="&mvte:product:name;" loading="lazy">
+									</div>
+									<div class="basket-name-container">
+										<p class="basket-name">&mvt:product:name;</p>
+									</div>
+									<div>
+										<p class="basket-price">&mvt:item:formatted_price;</p>
+									</div>
+									<button aria-label="add to cart" class="c-button c-button--full basket-add-to-cart" data-hook="button-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+								</div>
+  							</mvt:foreach>
+						</div>
+					</div>
+					<script>
+		$('[data-hook="button-add-to-cart"]').click(function(e) {
+			var btnAddToCart = $(this);
+
+			console.log(btnAddToCart)
+			var product_code = btnAddToCart.data('product-code');
+			// var category_code = btnAddToCart.data('category-code');
+	
+			$('[data-hook="button-add-to-cart"]').prop("disabled", true);
+			btnAddToCart.text('Processing...');
+	
+			ajaxAddToCart(product_code, 1, function() {
+				$('[data-hook="button-add-to-cart"]').prop("disabled", false);
+				btnAddToCart.text('Add To Cart');
+			});
+		});
+
+
+
+
+		function ajaxAddToCart(Product_Code, Quantity, callback) {
+			//create object with type of request and options, add product to cart
+			var data = {
+			Action: "ADPR",
+			Product_Code,
+			Quantity
+			};
+
+	
+			//create object with ajax request
+			var miniBasketRequest = $.ajax({
+			method: "POST",
+			data: data,
+			url: "https://miraclesoap.mivatest.com/basket-contents.html",
+			});
+	
+			//method done with function of response from server
+			miniBasketRequest.done(function (response) {
+				$('[data-hook="open-mini-basket"]').html($(response).find('[data-hook="open-mini-basket"]').first().html());
+				$('[data-hook="mini-basket"]').html($(response).find('[data-hook="mini-basket"]').first().html());
+				//open mini basket with click
+				// $('[data-hook="open-mini-basket"]')[0].click();
+				//callback
+	
+				callback && callback();
+			});
+			//output error
+			miniBasketRequest.fail(function (jqXHR, textStatus) {
+			//console.log( "Request failed: " + textStatus );
+			});
+		};
+</script>
+				</mvt:if>
+
 				<div class="x-mini-basket__line">
 					<mvt:if expr="miva_array_elements(l.settings:global_minibasket:charges) GT 0">
 						<div class="x-mini-basket__charges">
@@ -69,13 +164,14 @@
 						<span>&mvt:global_minibasket:formatted_total;</span>
 					</div>
 				</div>
+				<footer class="x-mini-basket__footer">
+					<div class="x-mini-basket__cta">
+						<a class="c-button c-button--full" href="&mvte:urls:OINF:secure;">Checkout</a>
+						<a class="c-button c-button--full c-button--secondary" href="&mvte:urls:BASK:auto;">Edit Cart</a>
+					</div>
+				</footer>
 			</div>
-			<footer class="x-mini-basket__footer">
-				<div class="x-mini-basket__cta">
-					<a class="c-button c-button--full" href="&mvte:urls:OINF:secure;">Checkout</a>
-					<a class="c-button c-button--full c-button--secondary" href="&mvte:urls:BASK:auto;">Edit Cart</a>
-				</div>
-			</footer>
+			
 		<mvt:else>
 			<script>
 				function continueShopping(link) {
@@ -84,7 +180,7 @@
 					}
 				}
 			</script>
-			<footer class="x-mini-basket__footer u-text-center">
+			<footer style="padding: 0 1rem !important;" class="x-mini-basket__footer u-text-center">
 				<p class="x-mini-basket__empty-icon u-bg-gray-100" aria-hidden="true">
 					<svg width="31.972" height="32.562" xmlns="http://www.w3.org/2000/svg">
 						<defs>
@@ -107,3 +203,7 @@
 		</mvt:if>
 	</div>
 </section>
+
+
+
+
