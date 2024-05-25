@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4250,
+        "id": 4575,
         "username": "yehor",
-        "notes": "test"
+        "notes": "Category 'skinmoisturizer' updated"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -4184,6 +4184,12 @@
             "property_code": "soap",
             "hash": null
         },
+        "properties/category/cssui_cattitle/all_products.json": {
+            "property_group": "category",
+            "property_type": "cssui_cattitle",
+            "property_code": "all_products",
+            "hash": null
+        },
         "properties/category/cssui_cattree/mprod.json": {
             "property_group": "category",
             "property_type": "cssui_cattree",
@@ -4260,6 +4266,12 @@
             "property_group": "category",
             "property_type": "cssui_cattree",
             "property_code": "soap",
+            "hash": null
+        },
+        "properties/category/cssui_cattree/all_products.json": {
+            "property_group": "category",
+            "property_type": "cssui_cattree",
+            "property_code": "all_products",
             "hash": null
         },
         "properties/flex/mmx-base.json": {
