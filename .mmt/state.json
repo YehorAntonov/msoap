@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4598,
+        "id": 4640,
         "username": null,
         "notes": "test"
     },
@@ -376,7 +376,7 @@
         },
         "templates/bask-basket.mvt": {
             "template_filename": "bask-basket.mvc",
-            "hash": "7d8612b4dc3b831260487cb557f045cd057bae55f23903a91fa7e75319428b3f"
+            "hash": "aa64b40750008878c5b8eddd82d6bab61884508691f107f2f68436509da7e338"
         },
         "templates/bask-content.mvt": {
             "template_filename": "bask-content.mvc",
@@ -944,7 +944,7 @@
         },
         "templates/cssui-custlink-accnt.mvt": {
             "template_filename": "cssui-custlink-accnt.mvc",
-            "hash": "f19fd04ade25da3a51b5137347620652abc640ed0fc684f67033bca89aacbeef"
+            "hash": "374956ebc1a2e5c5f458f559ec352aee211ffb9d4e4bf44712f5f70814b6ba8c"
         },
         "templates/cssui-custlink-accnt.json": {
             "template_filename": "cssui-custlink-accnt.mvc",
@@ -952,7 +952,7 @@
         },
         "templates/cssui-custlink-login.mvt": {
             "template_filename": "cssui-custlink-login.mvc",
-            "hash": "77e0906a2be86fdf266c0dd4f81227e971ad4f643e2580240ff96b5891947fd6"
+            "hash": "f09fb0784c6e103beb6827bbe693a235f6185ac96a6fd14286f123b1926ba035"
         },
         "templates/cssui-custlink-login.json": {
             "template_filename": "cssui-custlink-login.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "6bb7d78a502f882a89a3afef62f7c892882ea2fd657d9d94118db996d45b0920"
+            "hash": "c0be1a2f4ef51806f986f83655799e2f36f462a722bfaa6cbe1a4fbfc997ac82"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1128,7 +1128,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "f0545372ec021ef9ef6ccab1dd09540647b40b81be040c1d7d8815d168c7af86"
+            "hash": "1757cc6c1f3ec49452802c692227ec90b0829200d585cacdd453abbb9bee26f3"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -2772,7 +2772,7 @@
         },
         "templates/global-minibasket.mvt": {
             "template_filename": "global-minibasket.mvc",
-            "hash": "3da3e520c551aceab92367a2236be048b9b182f194f04ee33badc7d10d8ee349"
+            "hash": "3d6a8f32d4aa3e8a4597a9f84f70d1867fd54a02fb3de9257a4d384babb2156e"
         },
         "templates/global-minibasket.json": {
             "template_filename": "global-minibasket.mvc",
@@ -5536,7 +5536,7 @@
         },
         "js/theme.js": {
             "jsresource_code": "theme",
-            "hash": "10946b2fc55298ac17fd47cd1e140a5b728cc17b69813fa028478f839572c322"
+            "hash": "877cb480e6778fdd417c6901ef22ea4eb6d2921caa19f7e73522e16f1102e344"
         },
         "css/additional.json": {
             "cssresource_code": "additional",
@@ -5640,7 +5640,7 @@
         },
         "css/core.css": {
             "cssresource_code": "core",
-            "hash": "6786c2fc6a45f4672d04b7aef36076a85d36cc994db653332b948d79527b9dd0"
+            "hash": "1cc64404086c52c7d0b24b04c5a095a6d65b64b10d3aa832148403013bb515ec"
         },
         "css/cssui.json": {
             "cssresource_code": "cssui",
@@ -5896,7 +5896,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "06b77f6d183f87d32b4f6d8c1d46021371e745756d932e6c258c67b923442503"
+            "hash": "4063c717c53753415cba1f93ca10d01a624d8adc02bed6e38dfc9e718d98c726"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

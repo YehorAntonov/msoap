@@ -309,7 +309,6 @@ const themeFunctionality = {
 		})
 	},
     jsCTGY() {
-		if ($(window).width() <= 960) {
 		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
 			if ($('#long-descrip').height() <= 96) {
 
@@ -331,6 +330,10 @@ const themeFunctionality = {
 					}
 				});
 			}
+		})
+		if ($(window).width() <= 960) {
+		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
+			
 			$('.long-description').each(function() {
 				if ($(this).height() <= 63) {
 

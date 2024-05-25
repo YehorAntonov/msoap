@@ -47,8 +47,10 @@
 					<br>
 				</div>
 			<mvt:else>
-				<p class="t-category-name ctgy-description">&mvt:category:description;</p>
-				<br>
+				<div class="descrip-main" style="margin-bottom: 25px;">
+					<p class="t-category-name ctgy-description">&mvt:category:description;</p>
+					<br>
+				</div>
 			</mvt:if>
 		</div>
 	</mvt:if>

@@ -180,7 +180,7 @@
 					}
 				}
 			</script>
-			<footer class="x-mini-basket__footer u-text-center">
+			<footer style="padding: 0 1rem !important;" class="x-mini-basket__footer u-text-center">
 				<p class="x-mini-basket__empty-icon u-bg-gray-100" aria-hidden="true">
 					<svg width="31.972" height="32.562" xmlns="http://www.w3.org/2000/svg">
 						<defs>

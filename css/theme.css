@@ -126,9 +126,21 @@
 	max-height: 50px;
 	width: auto;
 }
+@media screen and (min-width: 1240px) {
+	.t-site-header__logo img {
+		height: 80px !important;
+		max-height: none;
+	}
+}
 @media screen and (min-width: 1180px) {
 	.t-site-header__logo img {
-		height: 70px;
+		height: 70px !important;
+		max-height: none;
+	}
+}
+@media screen and (min-width: 1090px) {
+	.t-site-header__logo img {
+		height: 60px;
 		max-height: none;
 	}
 }
@@ -1178,27 +1190,31 @@
 	color: #0f4e7e;
 	margin-right: 40px;
 }
-@media screen and (max-width: 1204px) {
+@media screen and (max-width: 1259px) {
 	.links-header {
 		font-size: 11px;
 	}
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1195px) {
 	.links-header {
 		font-size: 10px;
 	}
 }
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1164px) {
 	.links-header {
 		margin-right: 10px;
 	}
 
 }
-@media screen and (max-width: 965px) {
+@media screen and (max-width: 1022px) {
 	.links-header {
 		font-size: 9px;
 	}
-
+}
+@media screen and (max-width: 991px) {
+	.links-header {
+		font-size: 8px;
+	}
 }
 .links-header a {
 	text-decoration: none;
@@ -1282,7 +1298,7 @@
 }
 .bubbles-global {
 	height: 170px;
-	margin-bottom: 70px;
+	/* margin-bottom: 70px; */
 }
 #mini-bubble-1 {
 	left: -150px;
@@ -2513,7 +2529,7 @@ details {
 	font-size: 15px;
 	color: #00817F;
 }
-.description-after:after {
+/* .description-after:after {
 	content: '';
     position: absolute;
     left: 0;
@@ -2521,7 +2537,7 @@ details {
     bottom: 0;
     height: 10px;
     background: linear-gradient(180deg, transparent, #FFFFFF);
-}
+} */
 .description-after-product:after {
 	content: '';
     position: absolute;
@@ -2587,7 +2603,7 @@ details {
 	width: 32%;
 	padding: 15px;
 	background-color: #f2fcfe;
-    border-radius: 5px;
+    border-radius: 10px;
 	margin-bottom: calc(2* var(--default-spacing-unit));
 }
 .subcategory-image {
@@ -2760,7 +2776,7 @@ details {
 		margin-top: -20px;
 	}
 	.main-logo {
-		margin-top: 10px;
+		margin-top: -5px;
 		position: absolute;
 		z-index: 2;
 	}
@@ -2783,4 +2799,13 @@ details {
 	background-repeat: no-repeat;
 	height: 100%;
 	background-color: #01334b;
+}
+.t-basket__product-remove {
+	display: flex;
+	justify-content: center;
+}
+.log-in {
+	font-size: 13px;
+   white-space: nowrap;
+	color: #0f4e7e;
 }

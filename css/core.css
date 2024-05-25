@@ -2262,6 +2262,7 @@ small {
 }
 
 .c-heading-foxtrot {
+	color: #0f4e7e;
 	font-size: var(--title-four);
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-four) * 1.4);

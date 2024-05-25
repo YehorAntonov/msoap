@@ -1,3 +1,8 @@
 <a href="&mvte:urls:LOGN:secure;" class="t-global-account-toggle" aria-expanded="false" data-a11y-toggle="global-account" data-hook="global-account">
 	<i class="fa-solid fa-user" style="color: #0f4e7e;"></i>
+	<mvt:if expr="l.settings:clientdimensions:width GE 960">
+
+	<mvt:else>
+		<span class="log-in">Log in</span>
+	</mvt:if>
 </a>
