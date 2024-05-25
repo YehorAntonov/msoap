@@ -1,10 +1,10 @@
 {
     "version": 1,
-    "remote_key": "msoap.redeseign",
+    "remote_key": "msoap.banner",
     "ignore_unsynced_templates": false,
     "ignore_unsynced_properties": false,
-    "branch_id": 1,
-    "branch_name": "Production",
-    "branch_key": "100078bbafff9cc6bc7a0ca2efd40205",
+    "branch_id": 12,
+    "branch_name": "MV-2620-banner_and_bg",
+    "branch_key": "cbff649a9fecc15d99d09c556b99ed5e",
     "branch_tags": []
 }

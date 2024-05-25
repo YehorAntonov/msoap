@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4640,
+        "id": 4641,
         "username": "yehor",
-        "notes": "test"
+        "notes": "Branch 'MV-2620-banner_and_bg' created"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
