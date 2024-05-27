@@ -29,7 +29,9 @@
 		<div id="bubbles" class="bubbles desktop">
 			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
 		</div>
-		<img class="desktop" style="width: 100%; height: 100%;" src="graphics/00000002/1/Hero Image.jpg">
+		<div class="container-banner desktop">
+			<img class="desktop" style="" src="graphics/00000002/1/Home-bck-desktop.png">
+		</div>
 		<div class="info-banner-main">
 			<mvt:item name="readytheme" param="contentsection( 'main_banner_text' )" />
 		</div>
@@ -40,7 +42,7 @@
 				background-color: #e4f7f6;
 			}
 		</style>
-		<img class="mobile" style="width: 100%; height: 100%;" src="graphics/00000002/1/photo_5456236654118426754_w.jpg">
+		<img class="mobile" style="width: 100%; height: 100%;" src="graphics/00000002/1/Home-bck-mobile.png">
 	</div>
 	<div class="gradient-line-ship">FREE SHIPPING AVAILABLE</div>
 	<div>

@@ -1,8 +1,8 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4640,
-        "username": "yehor",
+        "id": 4684,
+        "username": null,
         "notes": "test"
     },
     "files": {
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "d7650e84d92c14ebffba583644bf3318e49ed1722985da7a686f270ea1a34b60"
+            "hash": "b9884c67dc65b749433810a0bea586fce4cce91bee6892929adf0817df2466bb"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4576,7 +4576,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "faqs_content",
-            "hash": "0a920dd13fbdee4ac94fe6e9f7e87fd3403400a36db6f09ae0c39dc1d1d991b3"
+            "hash": "3bb9c10de1b3a007b7fc06de2e93ed2654abb0981cb751e77dec1f8d5060b376"
         },
         "properties/readytheme_contentsection/faqs_content.json": {
             "property_group": "",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "4063c717c53753415cba1f93ca10d01a624d8adc02bed6e38dfc9e718d98c726"
+            "hash": "0b206e7e48bd4cfbea1118f03f1eb1aeaa5b05a193e4103014723c9afe67b0f2"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

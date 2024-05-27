@@ -1133,13 +1133,28 @@
 /* FAQ Page
 =========== */
 .t-faq-content {
-	display: grid;
+	/* display: grid; */
 	gap: var(--default-spacing-unit) calc(var(--default-spacing-unit) * 2);
 	grid-template-columns: repeat(2, 1fr);
 	place-items: flex-start stretch;
 	margin-bottom: 50px;
 }
-
+.t-faq-content a {
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: dashed;
+	color: #259485;
+}
+.t-faq-content span {
+	font-weight: bold;
+	color: #259485;
+}
+.t-faq-content p {
+	color: #006194;
+}
+.t-faq-content strong {
+	color: #006194;
+}
 .t-faq-content details {
 	border: var(--default-border-width) solid var(--gray-400);
 	border-radius: calc(var(--default-border-radius) * 2);
@@ -1257,9 +1272,9 @@
 	background-repeat: no-repeat;
 	height: 300px;
 	width: 100%; */
-	object-fit: contain;
+	/* object-fit: contain;
 	max-width: 100%;
-	max-height: 100%;
+	max-height: 100%; */
 }
 .banner-first-color {
 	color: #119274;
@@ -1501,6 +1516,26 @@
 	font-size: 16px;
 	font-weight: 600;
 	color: #3475B3;
+}
+.container-banner {
+	overflow: hidden;
+	position: relative;
+	height: 480px;
+}
+@media screen and (max-width: 1180px) {
+	.container-banner {
+		height: 450px;
+	}
+}
+@media screen and (max-width: 1080px) {
+	.container-banner {
+		height: 410px;
+	}
+}
+@media screen and (max-width: 990px) {
+	.container-banner {
+		height: 380px;
+	}
 }
 .product-description {
 	font-size: 15px;
@@ -2794,11 +2829,11 @@ details {
 	font-size: 14px !important;
 }
 .background-image {
-	background-image: url('graphics/00000002/1/photo_5364324658926705138_y.jpg');
+	background-image: url('graphics/00000002/1/photo_5371011407610501676_y.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 100%;
-	background-color: #01334b;
+	/* background-color: #01334b; */
 }
 .t-basket__product-remove {
 	display: flex;
