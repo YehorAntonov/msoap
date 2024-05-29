@@ -259,18 +259,6 @@
 		<a class="newsletter-link">Click Here to visit our newsletter site.</a>
 	</div>
 	<script>
-		const circleType = new CircleType(document.getElementById('products'));
-		const circleType2 = new CircleType(document.getElementById('product-history'));
-		const circleType4 = new CircleType(document.getElementById('testimonials'));
-		const circleType5 = new CircleType(document.getElementById('faqs'));
-		const circleType6 = new CircleType(document.getElementById('contact'));
-		const circleType3 = new CircleType(document.getElementById('history'));
-		circleType.radius(125);
-		circleType2.radius(125);
-		circleType3.radius(125);
-		circleType4.radius(125);
-		circleType5.radius(125);
-		circleType6.radius(125);
 		document.addEventListener('DOMContentLoaded', function () {
   			if (window.innerWidth <= 960) {
 				var bubbleBlock = document.getElementById('bubbles');

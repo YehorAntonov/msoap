@@ -33,17 +33,24 @@
 	</mvt:foreach>
 	<mvt:assign name="l.settings:subcategory_count" value="miva_array_elements(l.settings:subcategories)" />
 	<mvt:if expr="l.settings:subcategories GT 0">
-		<h1 class="c-heading-charlie t-category-name main-category"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1><br>
+		<div class="u-width-13--l info-of-category">
+			<h1 class="c-heading-charlie t-category-name main-category"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1><br>
+		</div>
 	<mvt:else>
 		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description', l.settings:category:description)" />
 		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'long', l.settings:category:long)" />
-		<div>
-		<h1 class="c-heading-charlie t-category-name"><span class="sub-name__miracle">Miracle II </span>&mvt:category:name;</h1>
-		<mvt:if expr="l.settings:category:long">
+		<div class="u-width-13--l info-of-category">
+			<h1 class="c-heading-charlie t-category-name"><span class="sub-name__miracle">Miracle II </span>&mvt:category:name;</h1>
+			<mvt:if expr="l.settings:category:long">
 
 				<div class="descrip-main" style="margin-bottom: 25px;">
 					<p style="margin-bottom: 10px;" class="t-category-name ctgy-description">&mvt:category:description;</p>
 				<div id="long-descrip" class="t-category-name ctgy-description-long">&mvt:category:long;</div>
+					<br>
+				</div>
+			<mvt:elseif expr="l.settings:category:code EQ 'all_products'">
+				<div class="descrip-main">
+					<p class="t-category-name ctgy-description">&mvt:category:description;</p>
 					<br>
 				</div>
 			<mvt:else>
@@ -59,7 +66,7 @@
 		<mvt:if expr="l.settings:subcategories GT 0">
 			<div class="o-layout__item u-width-12 u-width-9--l">
 		<mvt:else>
-			<div class="o-layout__item u-width-12 u-width-10--l product-list-container">
+			<div class="o-layout__item u-width-12 u-width-9--l product-list-container">
 		</mvt:if>
 			<mvt:comment> <mvt:if expr="NOT ISNULL l.settings:category_title:image">
 				<section class="o-layout u-hidden u-flex--l">
@@ -101,7 +108,7 @@
 		<mvt:if expr="l.settings:subcategories GT 0">
 			<aside class="o-layout__item u-width-12 u-width-3--l aside-menu">
 		<mvt:else>
-			<aside class="o-layout__item u-width-12 u-width-2--l aside-menu">
+			<aside class="o-layout__item u-width-12 u-width-3--l aside-menu">
 		</mvt:if>
 			<mvt:item name="category_tree" />
 			<mvt:item name="facets" />
@@ -116,7 +123,7 @@
 	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>
-<mvt:if expr="l.settings:category:code EQ 'valupack'">
+<mvt:if expr="l.settings:category:code EQ 'valupack' OR l.settings:category:code EQ 'laundryball'">
 	<style>
 	.product-list-container {
 		margin-top: 0;

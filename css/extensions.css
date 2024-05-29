@@ -68,7 +68,7 @@
 .x-category-tree {
 	margin-bottom: var(--default-spacing-unit);
 	position: relative;
-	background-color: #f2fcfe;
+	background-color: white;
 	border-radius: 10px;
 	padding: 20px;
 	border: 1px solid #88cbc891 !important;

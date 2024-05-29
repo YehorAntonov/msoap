@@ -23,25 +23,27 @@
 
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
 		<div class="o-layout__item u-width-12 u-width-9--l">
-			<h1 class="c-heading-delta">&mvt:page:name;</h1>
-			<hr class="c-keyline">
-			<br>
-			<form class="o-layout o-layout--justify-center" method="post" action="&mvte:urls:_self:secure;" autocomplete="off">
-				<fieldset class="o-layout__item u-width-12 u-width-6--m">
-					<legend>&mvt:page:name;</legend>
-					<input type="hidden" name="Action" value="RDGC" />
-					<p class="c-heading-foxtrot">Current Balance: <span class="u-color-green">&mvt:customer:formatted_credit;</span></p>
-					<div class="c-form-list">
-						<div class="c-form-list__item c-form-list__item--full">
-							<label class="c-form-label u-text-medium is-required" for="l-GiftCertificate_Code">Enter Gift Certificate Code</label>
-							<div class="c-form-inline-set">
-								<input id="l-GiftCertificate_Code" class="c-form-input" type="text" name="GiftCertificate_Code" value="&mvte:global:GiftCertificate_Code;" required>
-								<input class="c-button" type="submit" value="Redeem" title="Click here to redeem your certificate code">
+			<div class="account-custom">
+				<h1 class="c-heading-delta">&mvt:page:name;</h1>
+				<hr class="c-keyline">
+				<br>
+				<form class="o-layout o-layout--justify-center" method="post" action="&mvte:urls:_self:secure;" autocomplete="off">
+					<fieldset class="o-layout__item u-width-12 u-width-6--m">
+						<legend>&mvt:page:name;</legend>
+						<input type="hidden" name="Action" value="RDGC" />
+						<p class="c-heading-foxtrot">Current Balance: <span class="u-color-green">&mvt:customer:formatted_credit;</span></p>
+						<div class="c-form-list">
+							<div class="c-form-list__item c-form-list__item--full">
+								<label class="c-form-label u-text-medium is-required" for="l-GiftCertificate_Code">Enter Gift Certificate Code</label>
+								<div class="c-form-inline-set">
+									<input id="l-GiftCertificate_Code" class="c-form-input" type="text" name="GiftCertificate_Code" value="&mvte:global:GiftCertificate_Code;" required>
+									<input class="c-button" type="submit" value="Redeem" title="Click here to redeem your certificate code">
+								</div>
 							</div>
 						</div>
-					</div>
-				</fieldset>
-			</form>
+					</fieldset>
+				</form>
+			</div>
 		</div>
 		<aside class="o-layout__item u-width-12 u-width-3--l">
 			<mvt:item name="readytheme" param="navigationset( 'account_navigation' )" />

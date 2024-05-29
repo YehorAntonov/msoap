@@ -21,7 +21,7 @@
 		</div>
 	</section>
 
-	<section class="o-layout o-layout--justify-center u-bg-white">
+	<section class="o-layout o-layout--justify-center custom-logn">
 		<mvt:if expr="g.Basket:sub_count EQ 0">
 			<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-input-font-size t-logn-block">
 				<p class="c-heading-foxtrot">Guest Checkout</p>

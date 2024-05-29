@@ -23,7 +23,9 @@
 
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
 		<div class="o-layout__item u-width-12 u-width-9--l">
-			<mvt:item name="addressbook" />
+			<div class="account-custom">
+				<mvt:item name="addressbook" />
+			</div>
 		</div>
 		<aside class="o-layout__item u-width-12 u-width-3--l">
 			<mvt:item name="readytheme" param="navigationset( 'account_navigation' )" />

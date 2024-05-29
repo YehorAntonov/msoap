@@ -14,7 +14,7 @@
 <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
 	<mvt:item name="hdft" param="global_header" />
 
-	<section class="o-layout">
+	<section class="o-layout name-page">
 		<div class="o-layout__item">
 			<h1 class="u-hide-visually">&mvt:page:name;</h1>
 			<mvt:item name="hdft" param="header" />
@@ -22,7 +22,7 @@
 		</div>
 	</section>
 
-	<section class="o-layout o-layout--justify-center">
+	<section class="o-layout o-layout--justify-center custom-logn">
 		<div class="o-layout__item u-width-12 u-width-6--l u-width-4--w t-logn-block">
 			<p class="c-heading-foxtrot">Welcome Back</p>
 			<mvt:if expr="NOT ISNULL g.QuoteCode">

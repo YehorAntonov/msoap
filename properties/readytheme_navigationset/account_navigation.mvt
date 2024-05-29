@@ -1,5 +1,5 @@
 <mvt:if expr="g.Basket:cust_id GT 0 AND g.Customer_Session_Verified">
-	<section class="x-category-tree x-collapsible-content t-account-landing-section">
+	<section class="x-category-tree x-collapsible-content t-account-landing-section static-navigation">
 		<div class="x-category-tree__title">
 			<mvt:if expr="l.settings:page:code NE 'ACLN'">
 				<a class="x-category-tree__heading" href="&mvte:urls:ACLN:auto;">My Dashboard</a>

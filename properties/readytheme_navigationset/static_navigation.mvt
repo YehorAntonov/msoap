@@ -1,11 +1,15 @@
-<mvt:if expr="l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'Partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials'">
+<mvt:if expr="l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'Partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials' OR l.settings:page:code EQ 'ALPM'">
 	<nav class="x-category-tree x-collapsible-content static-navigation" aria-labelledby="support-navigation-label">
+		<div class="x-category-tree__title support-nav">
+			<p id="support-navigation-label" class="x-category-tree__heading">Support</p>
+		</div>
 <mvt:else>
 	<nav class="x-category-tree x-collapsible-content" aria-labelledby="support-navigation-label">
+		<div class="x-category-tree__title">
+			<p id="support-navigation-label" class="x-category-tree__heading">Support</p>
+		</div>
 </mvt:if>
-	<div class="x-category-tree__title">
-		<p id="support-navigation-label" class="x-category-tree__heading">Support</p>
-	</div>
+	
 	<button class="x-category-tree__label x-collapsible-content__toggle" data-a11y-toggle="&mvte:readytheme:code;" type="button">Support <span class="u-icon-add" data-toggle="<" aria-hidden="true"></span></button>
 	<ul id="&mvte:readytheme:code;" class="x-category-tree__row x-collapsible-content__item">
 		<mvt:foreach iterator="navigationitem" array="readytheme:navigationitems">

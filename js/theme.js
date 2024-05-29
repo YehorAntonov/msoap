@@ -254,7 +254,7 @@ const themeFunctionality = {
 		}
 	},
     jsSFNT() {
-		if ($(window).width() <= 960) {
+
 		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
 			$('.long-description').each(function() {
 				if ($(this).height() <= 63) {
@@ -279,7 +279,7 @@ const themeFunctionality = {
 				}
 			})
 		});
-		}
+
 		$(document).ready(function() {
 			$(".products").hover(function() {
 				$(".products").css('transform', 'scale(1.1)');
