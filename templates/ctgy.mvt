@@ -26,41 +26,7 @@
 		</div>
 	</section>
 	
-	<mvt:foreach array="cattree_categories" iterator="category_children">
-		<mvt:if expr="l.settings:category_children:parent_id EQ l.settings:category:id">
-			<mvt:assign name="l.null" value="miva_array_insert(l.settings:subcategories, l.settings:category_children, -1)" />
-		</mvt:if>
-	</mvt:foreach>
-	<mvt:assign name="l.settings:subcategory_count" value="miva_array_elements(l.settings:subcategories)" />
-	<mvt:if expr="l.settings:subcategories GT 0">
-		<div class="u-width-13--l info-of-category">
-			<h1 class="c-heading-charlie t-category-name main-category"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1><br>
-		</div>
-	<mvt:else>
-		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description', l.settings:category:description)" />
-		<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'long', l.settings:category:long)" />
-		<div class="u-width-13--l info-of-category">
-			<h1 class="c-heading-charlie t-category-name"><span class="sub-name__miracle">Miracle II </span>&mvt:category:name;</h1>
-			<mvt:if expr="l.settings:category:long">
-
-				<div class="descrip-main" style="margin-bottom: 25px;">
-					<p style="margin-bottom: 10px;" class="t-category-name ctgy-description">&mvt:category:description;</p>
-				<div id="long-descrip" class="t-category-name ctgy-description-long">&mvt:category:long;</div>
-					<br>
-				</div>
-			<mvt:elseif expr="l.settings:category:code EQ 'all_products'">
-				<div class="descrip-main">
-					<p class="t-category-name ctgy-description">&mvt:category:description;</p>
-					<br>
-				</div>
-			<mvt:else>
-				<div class="descrip-main" style="margin-bottom: 25px;">
-					<p class="t-category-name ctgy-description">&mvt:category:description;</p>
-					<br>
-				</div>
-			</mvt:if>
-		</div>
-	</mvt:if>
+	
 
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l o-layout--wide">
 		<mvt:if expr="l.settings:subcategories GT 0">

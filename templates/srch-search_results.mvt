@@ -121,7 +121,9 @@
 	</section>
 	<br>
 </mvt:if> </mvt:comment>
-
+<div style="margin-left: 0;" class="u-width-13--l info-of-category">
+	<h1 class="c-heading-charlie t-category-name">You searched for &ldquo;&mvte:global:search;&rdquo;</h1><br>
+</div>
 <section class="main-products">
 	<mvt:foreach iterator="product" array="search_results:products">
 		<div class="container-product">

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4814,
+        "id": 4862,
         "username": null,
         "notes": "test"
     },
@@ -960,7 +960,7 @@
         },
         "templates/cssui-global-footer.mvt": {
             "template_filename": "cssui-global-footer.mvc",
-            "hash": "da8584b3d283d53eebfc64316d6b70098157c5f210d154ffd17493e17934a0ea"
+            "hash": "cbf53f99003bf848d3a0e3c718945131538a2c662a218c91658603459eb375d3"
         },
         "templates/cssui-global-footer.json": {
             "template_filename": "cssui-global-footer.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "2c4d7b0492a35679fd705569048755f6de423cab5172dba27314109395f95ec3"
+            "hash": "4b6b235e31216b188afa72d044739cfe1218836cc8886e72e1d364f34b22783f"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1104,7 +1104,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "75516752e62978eb719f0fb8c1522db52c63e8f2cb93c817ea146b875a609e51"
+            "hash": "fc8c55684c66afa38837f8d5c398640d5eb5910d0836c593a8c4e6239ff12cb3"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -1132,7 +1132,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "19e9b09f92f9458d78cb81615db4300a7422db83d770ccbcaecbe236bccf4a79"
+            "hash": "c6c4da39a9dfaa32fa0fad1182383ea668012079a4c7143304010753e8e200ba"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -3016,7 +3016,7 @@
         },
         "templates/opay.mvt": {
             "template_filename": "opay.mvc",
-            "hash": "eb7a4c47e2fd48b042649bb544269eafb5b54a05c6ad532b972da72d87d3d241"
+            "hash": "f74b73ae378372773de30467424c6bcfb286eaac0ffc47ec67b21723300b04a1"
         },
         "templates/opay.json": {
             "template_filename": "opay.mvc",
@@ -3636,7 +3636,7 @@
         },
         "templates/srch-search_results.mvt": {
             "template_filename": "srch-search_results.mvc",
-            "hash": "5c9891a2ad801c72dc7fc7ce465a762d4866fa31623f9a4a6cb7acd5c45376ab"
+            "hash": "4b4be7bf6019a802ffd519fe54c9ae0362eb5e55ff0160b15aa731b996dc3bfd"
         },
         "templates/srch-shipestimate.mvt": {
             "template_filename": "srch-shipestimate.mvc",
@@ -3648,7 +3648,7 @@
         },
         "templates/srch.mvt": {
             "template_filename": "srch.mvc",
-            "hash": "3d7167f82c5bcf9f79a2048333270259e8e79d1627822538bf119ac89fba8ea5"
+            "hash": "03109e3f3980f5b91cfb0d2ab988e02d06781307e9dcfa213b725ee847f3ccec"
         },
         "templates/srch.json": {
             "template_filename": "srch.mvc",
@@ -3724,7 +3724,7 @@
         },
         "templates/wish.mvt": {
             "template_filename": "wish.mvc",
-            "hash": "ee775c82f9eb1518ca898a142f918e8733f59354a5ea9f02c6cdcc1cef4f5fa3"
+            "hash": "d06484a9f3ecc7722c64500475abad2db9103d471a106a9b163b51b199853007"
         },
         "templates/wish.json": {
             "template_filename": "wish.mvc",
@@ -3744,7 +3744,7 @@
         },
         "templates/wlad.mvt": {
             "template_filename": "wlad.mvc",
-            "hash": "53d899d9b3b3d37a0042df52c876624912ea118ebad180fcd14ba0688c321cbd"
+            "hash": "17be3d65250cd86ad52777a6e11952d9998c96cbd0bda9ed71db26eeaf474879"
         },
         "templates/wlad.json": {
             "template_filename": "wlad.mvc",
@@ -3780,7 +3780,7 @@
         },
         "templates/wlgn.mvt": {
             "template_filename": "wlgn.mvc",
-            "hash": "8aba51ad9d9ecbf6a71135beee7fb23f1a1f8070a6c53a3d3cfb77e60d814ce5"
+            "hash": "d7b111db61f3482fc02a8fabd17556b8f647e5bac7cad8471bdbf91f4bc54a7f"
         },
         "templates/wlgn.json": {
             "template_filename": "wlgn.mvc",
@@ -3816,7 +3816,7 @@
         },
         "templates/wpck.mvt": {
             "template_filename": "wpck.mvc",
-            "hash": "b7ee72f57037cc23c7bb0ae80dfa1eff9cbf3e67c144471c016a36a6215140cc"
+            "hash": "477bead8df1df071dd11718d95b51e33535a35d587f7cab414aa8c6f4fd41cb0"
         },
         "templates/wpck.json": {
             "template_filename": "wpck.mvc",
@@ -4636,7 +4636,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "helpful_info",
-            "hash": "938f3c50786b73402b285bfb5a411f78cf9699882fbf0a373ad890595fd4f9ee"
+            "hash": "3240da0839416918f41627476f7e1d6e41f70536ab3605710ea914dc3cd05e70"
         },
         "properties/readytheme_contentsection/helpful_info.json": {
             "property_group": "",
@@ -5656,7 +5656,7 @@
         },
         "css/core.css": {
             "cssresource_code": "core",
-            "hash": "1cc64404086c52c7d0b24b04c5a095a6d65b64b10d3aa832148403013bb515ec"
+            "hash": "75f997b7f73d848f4b4aca3e734331ee49941f3c99a59e632c005a1dd43f6468"
         },
         "css/cssui.json": {
             "cssresource_code": "cssui",
@@ -5672,7 +5672,7 @@
         },
         "css/customize_gowsikan.css": {
             "cssresource_code": "customize_gowsikan",
-            "hash": "0cb1b896f0d5e99b524babcd71157dfab151c5d8e2fdc913def5dee7d0b56c76"
+            "hash": "28e13b71aa8526f17fe77edfdea8a7fb8b73eb2f13c08f432496ed58ddfb0a6c"
         },
         "css/edit-basket-attributes.json": {
             "cssresource_code": "edit-basket-attributes",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "a12387cc6ff8fd218d069e03f206a80afa89585d30d0babfc4f3f694de5e47c5"
+            "hash": "cca793a14371526e7c35a5b984abda3a679773869be65fade395ddaa84ffd1e9"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

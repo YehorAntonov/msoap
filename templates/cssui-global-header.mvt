@@ -1,6 +1,10 @@
 <mvt:item name="readytheme" param="contentsection( 'mini_basket' )" />
 <script src="https://kit.fontawesome.com/94513b47fb.js" crossorigin="anonymous" data-swup-reload-script></script>
-<header class="t-site-header background-header" data-hook="site-header">
+<mvt:if expr="l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY' AND NOT ('AMAZONPAY' CIN l.settings:page:code)">
+	<header class="t-site-header background-header" data-hook="site-header">
+<mvt:else>
+	<header class="t-site-header background-header secure-checkout" data-hook="site-header">
+</mvt:if>
 	<mvt:comment> <mvt:item name="readytheme" param="contentsection( 'fasten_header' )" /> </mvt:comment>
 	<mvt:comment> <mvt:item name="navbar" /> </mvt:comment>
 	<section class="o-wrapper o-wrapper--flush">
@@ -69,7 +73,7 @@
 			</div>
 
 			<div class="o-layout__item u-width-6 u-width-8--l u-width-5--w u-hidden u-text-right t-site-header__secure &mvte:global:Session:shadows:checkout_shown;">
-				<span class="u-color-gray-600 u-text-medium u-text-uppercase"><span class="c-heading--subheading--x-small u-icon-secure" aria-hidden="true"></span> <span class="u-font-small">Secure Checkout</span></span>
+				<span class="u-color-gray-600 u-text-medium u-text-uppercase"><span class="c-heading--subheading--x-small u-icon-secure" aria-hidden="true"></span> <span class="secure-checkout-text">Secure Checkout</span></span>
 			</div>
 		</div>
 	</section>

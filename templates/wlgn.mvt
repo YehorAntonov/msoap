@@ -24,7 +24,7 @@
 		</div>
 	</section>
 
-	<section class="o-layout o-layout--justify-center">
+	<section class="o-layout o-layout--justify-center custom-logn">
 		<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-logn-block">
 			<p class="c-heading-foxtrot">Welcome Back</p>
 			<form method="post" action="&mvte:urls:WISH:secure;" autocomplete="off">

@@ -126,6 +126,11 @@
 	max-height: 50px;
 	width: auto;
 }
+@media screen and (min-width: 960px) {
+	.t-site-header__logo img {
+		margin-top: 15px;
+	}
+}
 @media screen and (min-width: 1090px) {
 	.t-site-header__logo img {
 		margin-top: 10px;
@@ -286,7 +291,7 @@
 	/* min-width: 4ch; */
 	color: #0f4e7e;
 	opacity: 1;
-	padding: 0.5rem 0 0.5em 0.25em;
+	padding: 0.7rem 0 0.5em 0.7em;
 }
 
 .t-site-header__basket-link-quantity {
@@ -875,7 +880,7 @@
 }
 @media (min-width: 90em) {
 	:is(.t-page-ocst, .t-page-opay, .t-page-ordl, .t-page-osel, .t-page-ous1, .t-page-ousm, .t-page-uatm, .t-page-uatr) .t-main-content-element {
-		padding-top: 2rem;
+		/* padding-top: 2rem; */
 	}
 	.t-checkout-basket-summary {
 		height: 100%;
@@ -930,7 +935,7 @@
 }
 
 .t-payment-form__fields {
-	display: flex;
+	/* display: flex; */
 	flex-wrap: wrap;
 	gap: 1rem;
 	justify-content: space-between;
@@ -946,11 +951,11 @@
 }
 
 .t-payment-form__field-exp {
-	max-width: calc(70% - 1em);
+	max-width: 60%;
 }
 
 .t-payment-form__field-cvv {
-	max-width: calc(30% - 1em);
+	max-width: 35%;
 }
 
 .t-payment-form .t-data-cvv {
@@ -975,10 +980,10 @@
 		max-width: calc(50% - 1em);
 	}
 	.t-payment-form__field-exp {
-		max-width: calc(40% - 1em);
+		/* max-width: calc(40% - 1em); */
 	}
 	.t-payment-form__field-cvv {
-		max-width: calc(10% - 1em);
+		/* max-width: calc(10% - 1em); */
 	}
 }
 .t-paypalcp .t-payment-form__field-set {
@@ -1245,22 +1250,22 @@
 		font-size: 10px;
 	}
 }
-@media screen and (max-width: 1164px) {
+/* @media screen and (max-width: 1164px) {
 	.links-header {
 		margin-right: 10px;
 	}
 
 }
-@media screen and (max-width: 1022px) {
+@media screen and (max-width: 1106px) {
 	.links-header {
 		font-size: 9px;
 	}
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1075px) {
 	.links-header {
 		font-size: 8px;
 	}
-}
+} */
 .links-header a {
 	text-decoration: none;
 
@@ -2930,12 +2935,12 @@ details {
 }
 @media screen and (min-width: 960px) {
 	.info-of-category {
-		margin-left: 4.3%;
+		/* margin-left: 4.3%; */
 		margin-top: 0;
 		padding: 10px 45px;
 	}
 	.t-global-account-toggle {
-		margin-left: 20px;
+		/* margin-left: 20px; */
 		margin-right: 10px;
 	}
 	.container-banner {
@@ -2955,6 +2960,12 @@ details {
 .support-nav {
 	display: block !important;
 }
+@media screen and (min-width: 980px) {
+	.t-global-account-toggle {
+		margin-left: 20px;
+		margin-right: 10px;
+	}
+}
 @media screen and (max-width: 960px) {
 	.static-navigation {
 		margin-top: 15px;
@@ -2964,6 +2975,18 @@ details {
 	}
 	.account-custom {
 		margin-bottom: 20px;
+	}
+	.t-payment-form__field-cvv {
+		max-width: 100%;
+	}
+	.opay-fields {
+		display: block !important;
+	}
+	.t-payment-form__field-exp {
+		max-width: 100%;
+	}
+	.t-site-header__basket-link .u-icon-cart-full + .t-site-header__basket-link-quantity {
+		padding: 0.5rem 0 0.5em 0.25em;
 	}
 }
 .custom-logn {
@@ -2979,4 +3002,24 @@ details {
 	border: 1px solid #88CBC8;
 	border-radius: 10px;
 	padding: 15px;
+}
+.opay-fields {
+	display: flex;
+	justify-content: space-between;
+}
+.secure-checkout {
+	background-color: #f5f5f5;
+}
+.secure-checkout-text {
+	color: #0F4E7E;
+}
+@media screen and (max-width: 1293px) {
+	.links-header {
+		margin-right: 20px;
+	}
+}
+@media screen and (max-width: 1106px) {
+	.t-site-header__search-form {
+		width: auto;
+	}
 }

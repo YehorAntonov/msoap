@@ -239,20 +239,21 @@
 									<mvt:foreach array="payment:fields" iterator="field">
 										<!-- &mvte:field:code; -->
 										<mvt:if expr="'exp' CIN l.settings:field:code">
-											<div class="t-payment-form__field-set t-payment-form__field-exp" data-hook="mvt-select" data-mvt-id="&mvte:field:code;" data-mvt-classlist="c-form-select__dropdown">
-												<mvt:if expr="l.settings:field:invalid">
-													<label class="c-form-label u-color-red u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
-												<mvt:else>
-													<label class="c-form-label u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
-												</mvt:if>
-												<div class="c-form-inline-set">
-													<mvt:item name="payment" param="field:code" />
+											<div class="opay-fields">
+												<div class="t-payment-form__field-set t-payment-form__field-exp" data-hook="mvt-select" data-mvt-id="&mvte:field:code;" data-mvt-classlist="c-form-select__dropdown">
+													<mvt:if expr="l.settings:field:invalid">
+														<label class="c-form-label u-color-red u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
+													<mvt:else>
+														<label class="c-form-label u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
+													</mvt:if>
+													<div class="c-form-inline-set">
+														<mvt:item name="payment" param="field:code" />
+													</div>
 												</div>
-											</div>
 										<mvt:elseif expr="l.settings:field:code EQ 'cc_number'">
 											<div class="t-payment-form__field-set t-payment-form__field-number" data-hook="mvt-input" data-mvt-id="&mvte:field:code;" data-mvt-classlist="c-form-input" data-mvt-autocomplete="cc-number" data-dataHook="detect-card">
 												<mvt:if expr="l.settings:field:invalid">
-													<label class="c-form-label u-color-red u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
+													<label class="c-form-label u-color-red u-text-boldπ" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
 												<mvt:else>
 													<label class="c-form-label u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
 												</mvt:if>
@@ -268,43 +269,44 @@
 												</script>
 											</div>
 										<mvt:elseif expr="'cvv' CIN l.settings:field:code">
-											<div class="t-payment-form__field-set t-payment-form__field-cvv">
-												<mvt:if expr="l.settings:field:invalid">
-													<label class="c-form-label u-color-red u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
-												<mvt:else>
-													<label class="c-form-label u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
-												</mvt:if>
-												<div data-hook="mvt-input" data-mvt-id="&mvte:field:code;" data-mvt-classlist="c-form-input c-form-input--cvv" data-mvt-autocomplete="cc-csc">
-													<mvt:item name="payment" param="field:code"/>
-													<script id="&mvte:field:code;-script">
-														(() => {
-															let thisFunction = document.querySelector('#&mvte:field:code;-script');
-															let ccCvv = thisFunction.previousElementSibling;
-														
-															ccCvv.setAttribute('inputmode', 'numeric');
-															ccCvv.setAttribute('pattern', '[0-9]*');
-														})();
-													</script>
-												</div>
-												<button class="c-button c-button--as-link c-button--small t-data-cvv" data-dialog-trigger="cvv-info" title="Card Security Code Information" type="button">What's This?</button>
-		
-												<div class="c-dialog" data-dialog="cvv-info" aria-hidden="true">
-													<div class="c-dialog__overlay" tabindex="-1">
-														<div class="c-dialog__container" aria-labelledby="cvv-info-title" aria-modal="true" role="dialog">
-															<header class="c-dialog__header">
-																<p id="cvv-info-title" class="c-dialog__title c-heading-foxtrot">Credit Card Security Code</p>
-																<button class="c-dialog__close" aria-label="Close Dialog" data-dialog-close></button>
-															</header>
-															<div class="c-dialog__content">
-																<p><strong>What is the CVV2 and what does it look like?</strong><br />For your protection, we ask that you enter an extra 3-4 digit number called the CVV2. The CVV2 is NOT your PIN and is not the last 3 or 4 digits of your credit card number. It is an extra ID printed on your Visa, MasterCard, Discover or American Express Card.<br />We request this code as a security measure to our customers. Requiring this information helps to ensure that the credit card is present at the time of purchase. If you cannot find this code, or it is illegible, please contact your credit card issuer.</p>
-																<p><strong>Visa, MasterCard and Discover:</strong><br />On the back of the card in the top-right corner of the signature box. Enter the three-digit number following the credit card number. (See below.)</p>
-																<p><strong>American Express:</strong><br />On the front of the card. Enter the four-digit number on the right directly above the credit card number. (See below.)</p>
-																<p class="u-text-center"><img src="&mvte:global:theme_path;/core/images/img_cvv.png" alt="CID/CVV/CVV2 Locations" loading="lazy"></p>
+												<div class="t-payment-form__field-set t-payment-form__field-cvv">
+													<mvt:if expr="l.settings:field:invalid">
+														<label class="c-form-label u-color-red u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
+													<mvt:else>
+														<label class="c-form-label u-text-bold" for="&mvte:field:code;" title="&mvte:field:prompt;">&mvt:field:prompt;</label>
+													</mvt:if>
+													<div data-hook="mvt-input" data-mvt-id="&mvte:field:code;" data-mvt-classlist="c-form-input c-form-input--cvv" data-mvt-autocomplete="cc-csc">
+														<mvt:item name="payment" param="field:code"/>
+														<script id="&mvte:field:code;-script">
+															(() => {
+																let thisFunction = document.querySelector('#&mvte:field:code;-script');
+																let ccCvv = thisFunction.previousElementSibling;
+															
+																ccCvv.setAttribute('inputmode', 'numeric');
+																ccCvv.setAttribute('pattern', '[0-9]*');
+															})();
+														</script>
+													</div>
+													<button class="c-button c-button--as-link c-button--small t-data-cvv" data-dialog-trigger="cvv-info" title="Card Security Code Information" type="button">What's This?</button>
+			
+													<div class="c-dialog" data-dialog="cvv-info" aria-hidden="true">
+														<div class="c-dialog__overlay" tabindex="-1">
+															<div class="c-dialog__container" aria-labelledby="cvv-info-title" aria-modal="true" role="dialog">
+																<header class="c-dialog__header">
+																	<p id="cvv-info-title" class="c-dialog__title c-heading-foxtrot">Credit Card Security Code</p>
+																	<button class="c-dialog__close" aria-label="Close Dialog" data-dialog-close></button>
+																</header>
+																<div class="c-dialog__content">
+																	<p><strong>What is the CVV2 and what does it look like?</strong><br />For your protection, we ask that you enter an extra 3-4 digit number called the CVV2. The CVV2 is NOT your PIN and is not the last 3 or 4 digits of your credit card number. It is an extra ID printed on your Visa, MasterCard, Discover or American Express Card.<br />We request this code as a security measure to our customers. Requiring this information helps to ensure that the credit card is present at the time of purchase. If you cannot find this code, or it is illegible, please contact your credit card issuer.</p>
+																	<p><strong>Visa, MasterCard and Discover:</strong><br />On the back of the card in the top-right corner of the signature box. Enter the three-digit number following the credit card number. (See below.)</p>
+																	<p><strong>American Express:</strong><br />On the front of the card. Enter the four-digit number on the right directly above the credit card number. (See below.)</p>
+																	<p class="u-text-center"><img src="&mvte:global:theme_path;/core/images/img_cvv.png" alt="CID/CVV/CVV2 Locations" loading="lazy"></p>
+																</div>
 															</div>
 														</div>
 													</div>
+													
 												</div>
-												
 											</div>
 										<mvt:elseif expr="'fname' CIN l.settings:field:code">
 											<div class="t-payment-form__field-set t-payment-form__field-fname" data-hook="mvt-input" data-mvt-id="&mvte:field:code;" data-mvt-classlist="c-form-input" data-mvt-autocomplete="cc-given-name">

@@ -19,9 +19,6 @@
 			<mvt:item name="header_sequence" />
 		</div>
 	</section>
-	<div style="margin-left: 0;" class="u-width-13--l info-of-category">
-		<h1 class="c-heading-charlie t-category-name">You searched for &ldquo;&mvte:global:search;&rdquo;</h1><br>
-	</div>
 	
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l o-layout--wide">
 		<div class="o-layout__item u-width-12 u-width-10--l">

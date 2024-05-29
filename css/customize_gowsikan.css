@@ -162,7 +162,7 @@
 	/* [2] */
 	line-height: calc(2.5em - 2px);
 	/* [2] */
-	background-color: #fff;
+	background-color: white;
 	border: 1px solid #c0c0c0;
 	border-radius: 0.125em;
 	-webkit-appearance: none;

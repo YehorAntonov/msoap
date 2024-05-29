@@ -1624,7 +1624,8 @@ small {
 .c-form-input {
 	-webkit-appearance: none;
 	        appearance: none;
-	background-color: #e7f4f4;
+	/* background-color: #e7f4f4; */
+	background-color: white;
 	color: #0F4E7E;
 	border: var(--default-border-width) solid var(--gray-400);
 	border-radius: var(--default-border-radius);

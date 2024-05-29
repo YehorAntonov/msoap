@@ -99,12 +99,17 @@
 	</footer>
 	<!-- end t-site-footer -->
 <mvt:else>
-	<footer class="t-site-footer">
-		<div class="o-wrapper">
+	<footer style="padding-top: 0;" class="t-site-footer">
+		<div class="">
 			<mvt:item name="readytheme" param="contentsection( 'copyright' )" />
 		</div>
 	</footer>
 	<!-- end t-site-footer -->
+	<style>
+		.o-layout--wide {
+			margin-bottom: 50px;
+		}
+	</style>
 </mvt:if>
 
 <mvt:item name="head" param="footer_js" />
