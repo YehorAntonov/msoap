@@ -1299,6 +1299,7 @@
 .sfnt-body-container {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+	background-color: #ddf5f2;
 }
 .banner-home .container-banner img{
 	/* background-image: url('graphics/00000002/1/Background_Herobanner_(1)-transformed.jpeg');
@@ -1622,6 +1623,8 @@
 	border-radius: 10px;
 	height: 100%;
 	margin-bottom: 70px;
+	min-height: 240px;
+	border: 1px solid #88CBC8;
 }
 .container-product {
 	border: 1px solid #88cbc891;
@@ -1706,12 +1709,16 @@
 	margin-bottom: 50px;
 }
 .product-tips {
-	background-color: #e8f6f5;
 	margin-right: 30px;
 	border-radius: 0 20px 20px 0;
+	/* border-left: none; */
 	display: flex;
 	padding: 40px;
 	max-width: 70%;
+	background-color: #D6E8F9;
+	border-top: 1px solid #2F73B4;
+	border-right: 1px solid #2F73B4;
+	border-bottom: 1px solid #2F73B4;
 }
 .product-tips-img {
 	min-width: 200px;
@@ -1767,10 +1774,14 @@
 	color: #3475B3;
 }
 .affilate-program {
-	background-color: #eff4fd;
+	/* background-color: #eff4fd; */
 	border-radius: 20px 0 0 20px;
 	text-align: center;
 	padding: 40px;
+	background-color: #B2ECEA;
+	border-top: 1px solid #259484;
+	border-bottom: 1px solid #259484;
+	border-left: 1px solid #259484;
 }
 .affilate-program-text {
 	font-size: 26px;
@@ -1799,12 +1810,18 @@
 	color: #eff4fd;
 }
 .newsletter-email {
-	background-color: #EEFCFF;
+	/* background-color: #EEFCFF; */
+	margin-right: 70px;
+	margin-left: 70px;
+	margin-bottom: 50px;
 	text-align: center;
-	padding-left: 350px;
-	padding-right: 350px;
+	padding-left: 300px;
+	padding-right: 300px;
 	padding-top: 50px;
 	padding-bottom: 30px;
+	border-radius: 20px;
+	background-color: #F8F9FD;
+	border: 1px solid #DADBDF;
 }
 .title-newsletter {
 	font-size: 35px;
@@ -1823,7 +1840,7 @@
 .input-field-letter {
 	border-radius: 50px 0 0 50px;
 	flex: 1;
-	border: none;
+	border: 1px solid #89CBC9;
 	padding: 15px 30px 15px 30px;
 	color: #1D629A;
 	font-weight: 400;
@@ -1847,8 +1864,24 @@
 }
 @media screen and (max-width: 1099px) {
 	.newsletter-email {
-		padding-left: 150px;
-		padding-right: 150px;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.newsletter-email {
+		margin-left: 20px;
+		margin-right: 20px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.newsletter-email {
+		margin-left: 5px;
+		margin-right: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 }
 .tips-container-img {
@@ -2944,7 +2977,7 @@ details {
 		margin-right: 10px;
 	}
 	.container-banner {
-		z-index: -2;
+		z-index: 0;
 		display: grid;
     	transform: translateY(-100px);
 	}
@@ -2967,6 +3000,12 @@ details {
 	}
 }
 @media screen and (max-width: 960px) {
+	.affilate-program {
+		border-right: 1px solid #259484;
+		border-top: 1px solid #259484;
+		border-bottom: 1px solid #259484;
+		border-left: none;
+	}
 	.static-navigation {
 		margin-top: 15px;
 	}

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4862,
+        "id": 4886,
         "username": null,
         "notes": "test"
     },
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "3bf5a5c2dc20f1d55f760a9ca05951275330b544318b4efbbbbeb84fd7716662"
+            "hash": "e5174b457c2cf22b00e6c406a5df264b91dc7f34e82a62041055098dbeb36e63"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5828,7 +5828,7 @@
         },
         "css/p-slick.css": {
             "cssresource_code": "p-slick",
-            "hash": "72531c331feeba45cbc3f7ffb8ab4e21468c364cceef35fd9d909fa1446cd04e"
+            "hash": "0750a87070edb35a98caffc602190ee9d666bcb22c6b74a5dc7454a265408b30"
         },
         "css/page.json": {
             "cssresource_code": "page",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "cca793a14371526e7c35a5b984abda3a679773869be65fade395ddaa84ffd1e9"
+            "hash": "85a2855019dc9afa824b497b4471f2c471ad9169ae7365a65fd91ca37a85fc92"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

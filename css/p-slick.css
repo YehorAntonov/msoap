@@ -91,6 +91,7 @@
 
 .slick-slide img {
 	display: block;
+	background-color: white;
 }
 
 .slick-slide.slick-loading img {
