@@ -35,12 +35,12 @@
         {
             "active": 1,
             "id": "aeb716ff48a79ac9f6c9fdd3c22f4589",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/category-display.html\" target=\"_self\">Products</a>",
-            "link_dest": "CTGY",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/product-display.html\" target=\"_self\">Products</a>",
+            "link_dest": "PROD",
             "link_targ": "_self",
             "link_type": "G",
             "name": "Products",
-            "url": "https://miraclesoap.mivatest.com/category-display.html"
+            "url": "https://miraclesoap.mivatest.com/product-display.html"
         },
         {
             "active": 1,

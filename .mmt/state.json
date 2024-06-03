@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 4886,
-        "username": null,
-        "notes": "test"
+        "id": 4900,
+        "username": "yehor",
+        "notes": "ReadyTheme Navigation Set 'bubbles_navigation' item 'Products' updated"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -1136,7 +1136,7 @@
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
-            "hash": "aca87c1124fff21a064b5e58abe6f0f76d5bacffd3dbb21691cb13a21cb1be71"
+            "hash": "592835ac9d97990af3a2fd9dab019dead43653e380e55849e354d1379342a7f2"
         },
         "templates/ctgy_a-basket.mvt": {
             "template_filename": "ctgy_a-basket.mvc",
@@ -3668,7 +3668,7 @@
         },
         "templates/testimonials.json": {
             "template_filename": "testimonials.mvc",
-            "hash": "139b91499a225b83cf2cbb5dc028e7bae31c00dd6640475b6fe6367ff3557632"
+            "hash": "23c970afcb594a36d10f390ae69f9df6660ee3e80c1a5c2206031bfcf8a46a31"
         },
         "templates/uatm-footer.mvt": {
             "template_filename": "uatm-footer.mvc",
@@ -5008,7 +5008,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "603d548063ff358a245a2a9ef5acb719961a5966312dca55b80eeffa5c8ad0f6"
+            "hash": "6a7ccd54ad81ad2c9053d1a1515c129b8d4025ce6d74d385760407d2cf84e2a6"
         },
         "properties/readytheme_navigationset/disclaimer_navigation.mvt": {
             "property_group": "",
@@ -5092,7 +5092,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "primary_navigation",
-            "hash": "dcf9755096da78e1cc8e7000595247f8196b41ee55da831c31a13b91cec488f5"
+            "hash": "f7ee414758e1c48b971c80134b407d5a867a14b29d8ee42b843d4d2b510cdd62"
         },
         "properties/readytheme_navigationset/quick_links.mvt": {
             "property_group": "",
