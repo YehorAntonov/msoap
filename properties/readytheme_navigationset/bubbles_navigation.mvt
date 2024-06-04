@@ -1,3 +1,33 @@
+<style>
+	#bubble1 {
+		position: relative;
+		transform: scale(0.8);
+	}
+	#bubble2 {
+		position: relative;
+		top: 20px;
+		left: 100px;
+		transform: scale(0.8);
+	}
+	#bubble3 {
+		position: relative;
+		top: -25px;
+		left: 50px;
+		transform: scale(0.8);
+	}
+	#bubble4 {
+		position: relative;
+		top: -15px;
+		left: -45px;
+		transform: scale(0.8);
+	}
+	#bubble5 {
+		position: relative;
+		top: 10px;
+		left: -90px;
+		transform: scale(0.8);
+	}
+</style>
 <mvt:foreach iterator="navigationitem" array="readytheme:navigationitems">
 	<mvt:if expr="POS1 EQ 1">
 		<div id="bubble2">

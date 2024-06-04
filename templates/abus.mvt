@@ -20,7 +20,7 @@
 		</div>
 	</section>
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
-		<div class="o-layout__item u-width-12 u-width-9--l u-width-10--w">
+		<div class="o-layout__item u-width-12 u-width-10--l u-width-10--w">
 			
 			<section class="o-layout mobile">
 				<div class="o-layout__item">
@@ -46,9 +46,10 @@
 				</div>
 			</section>
 		</div>
-		<aside class="o-layout__item u-width-12 u-width-3--l u-width-2--w">
+		<aside class="o-layout__item u-width-12 u-width-2--l aside-menu">
 			<mvt:item name="readytheme" param="navigationset( 'static_navigation' )" />
 		</aside>
+
 	</section>
 
 	<mvt:item name="hdft" param="global_footer" />

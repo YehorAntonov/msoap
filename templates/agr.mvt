@@ -10,8 +10,6 @@
 	<link rel="canonical" href="&mvte:urls:_self:auto;" />
 	<mvt:item name="head" param="css_list" />
 	<mvt:item name="head" param="head_tag" />
-
-</script>
 </head>
 <body class="AGR" id="js-&mvte:page:code;">
 <div id="site-container"  class="clearfix">
@@ -22,12 +20,7 @@
 			<div id="sidebar"><mvt:item name="sidebar" /></div>
 			<div id="main-content">			
 				<div class="affilate-container">
-					<mvt:comment><mvt:item name="affilate-content" /></mvt:comment>
-<p>The MiracleSoap.com Affiliate program is undergoing upgrades and changes to provide a better user experience.</p>
-<p>Currently we are not accepting new affiliate signups at this time.</p>
-<p>We will be releasing the revised Affiliate Program in the 1st QTR of 2024.</p>
-<p>Thanks for your patience,</p>
-<p>MiracleSoap</p>
+					<mvt:item name="affilate-content" />
 				</div>
 				<div id="page-footer"><mvt:item name="hdft" param="footer" /></div>
 			</td>

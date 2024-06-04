@@ -1,7 +1,7 @@
 <noscript>
 	<p class="x-messages x-messages--error" data-hook="contact-us__warning">You must javascript enabled to use this form.</p>
 </noscript>
-<form class="x-contact-form u-hidden" data-hook="contact-form" data-action="&mvte:urls:CTFM:auto;" method="post" accept-charset="UTF-8">
+<form action="contact-form-action" class="x-contact-form u-hidden" data-hook="contact-form" data-action="&mvte:urls:CTFM:auto;" method="post" accept-charset="UTF-8">
 	<fieldset>
 		<legend>Contact &mvte:global:store:name; Form</legend>
 		<mvt:comment>
@@ -50,16 +50,10 @@
 				<label class="c-form-label is-required" for="contactMessage">Message</label>
 				<textarea id="contactMessage" class="c-form-input c-form-input--long" name="contactMessage" placeholder="Type your message here...">&mvte:global:contactMessage;</textarea>
 			</div>
-			<div class="c-form-list__item &mvte:global:fault;">
+			<mvt:comment> <div class="c-form-list__item &mvte:global:fault;">
 				<label class="c-form-label is-required" for="contactHuman">Are you human?</label>
 				<div class="c-control-group">
-					<mvt:comment>
-						<!--
-						This is a basic math challenge to confirm there is a person
-						entering the information. The numbers are random and the
-						answer key is passed to the process in Base64 for comparison.
-						-->
-					</mvt:comment>
+					
 					<mvt:assign name="l.settings:humanOne" value="random('25')" />
 					<mvt:assign name="l.settings:humanTwo" value="random('25')" />
 					<mvt:assign name="l.settings:verify" value="crypto_base64_encode(l.settings:humanOne + l.settings:humanTwo)" />
@@ -67,10 +61,20 @@
 					<input id="contactHuman" class="c-form-input c-control-group__field" type="text" inputmode="decimal" name="human" value="" required aria-required="true">
 					<input type="hidden" name="verify" value="&mvte:verify;">
 				</div>
-			</div>
+			</div> </mvt:comment>
+  			<script src="https://www.google.com/recaptcha/enterprise.js?render=6LexQO8pAAAAAMuldLJRVIPDpx87MPpwD_tIdsq8"></script>
+			<div style="margin-bottom: 15px;" class="g-recaptcha" data-sitekey="6LexQO8pAAAAAMuldLJRVIPDpx87MPpwD_tIdsq8"></div>
 			<div class="c-form-list__item">
-				<button class="c-button c-button--full" data-hook="contact-form__submit" type="submit" disabled>Submit</button>
+				<button class="c-button c-button--full" data-hook="contact-form__submit" type="submit">Submit</button>
 			</div>
 		</div>
 	</fieldset>
 </form>
+<script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LexQO8pAAAAAMuldLJRVIPDpx87MPpwD_tIdsq8', {action: 'contact-form-action'});
+    });
+  }
+</script>

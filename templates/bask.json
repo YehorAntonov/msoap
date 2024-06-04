@@ -1,4 +1,12 @@
 {
+    "amazonpay": {
+        "template_filename": "bask-amazonpay.mvc"
+    },
+    "amazonpay_button": {
+        "color": "orange",
+        "size": "medium",
+        "template_filename": "bask-amazonpay_button.mvc"
+    },
     "basket": {
         "advanced": 1,
         "applycoupons": 1,

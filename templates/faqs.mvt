@@ -13,16 +13,16 @@
 </head>
 <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
 	<mvt:item name="hdft" param="global_header" />
-	<section class="o-layout desktop">
+	<mvt:comment> <section class="o-layout desktop">
 		<div class="o-layout__item">
 			<h1 class="c-heading-delta names-static">&mvt:page:name;</h1>
 			<hr class="c-keyline">
 		</div>
-	</section>
+	</section> </mvt:comment>
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
-		<div class="o-layout__item u-width-12 u-width-9--l u-width-10--w">
+		<div class="o-layout__item u-width-12 u-width-10--l u-width-10--w">
 			
-			<section class="o-layout mobile">
+			<mvt:comment> <section class="o-layout mobile">
 				<div class="o-layout__item">
 					<h1 class="c-heading-delta">&mvt:page:name;</h1>
 					<hr class="c-keyline">
@@ -33,8 +33,34 @@
 					<mvt:item name="header_sequence" />
 					<mvt:item name="hdft" param="header" />
 				</div>
-			</section>
-
+			</section> </mvt:comment>
+			
+			<div class="o-layout u-width-13--l info-of-category faq-container">
+				<div>
+					<p class="faq-first">MiracleSoap.com</p>
+					<div style="margin-left: -3%;">
+						<svg class="faq-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="2.51318" width="25.7137" height="16.5895" rx="6.63579" transform="rotate(-5.60912 0 2.51318)" fill="#02618D"/>
+<rect width="24.5762" height="15.8556" rx="6.34226" transform="matrix(-0.997709 -0.0676469 -0.0676469 0.997709 43.2295 20.1094)" fill="#259484"/>
+<path d="M9.90935 23.7221L1.39103 12.833C1.04362 12.3889 1.23098 11.7351 1.76086 11.5424L9.73306 8.64318C10.261 8.45118 10.8231 8.82853 10.8454 9.38988L11.3915 23.1782C11.4234 23.9828 10.4055 24.3563 9.90935 23.7221Z" fill="#02618D"/>
+<path d="M34.3746 40.6565L42.1982 30.008C42.5172 29.5738 42.3194 28.9546 41.8076 28.7858L34.1079 26.2461C33.5979 26.0779 33.0718 26.4546 33.0668 26.9915L32.943 40.1797C32.9358 40.9492 33.9189 41.2767 34.3746 40.6565Z" fill="#259484"/>
+</svg>
+						<span class="faq-second">FAQ Knowledge Base</span>
+					</div>
+					<p class="faq-third">online questions and answers</p>
+				</div>
+				<form style="margin-top: 6%;"class="t-site-header__search-form search-form-faq">
+					<fieldset>
+						<legend>Product Search</legend>
+						<div class="c-form-list">
+							<div style="border: 1px solid #006194;" class="c-form-list__item c-form-list__item--full c-control-group u-flex search-field">
+								<span class="u-bg-white u-color-gray-50 u-icon-search t-site-header__search-icon srch-icon"></span>
+								<input class="c-form-input c-control-group__field u-bg-transparent u-border-none t-site-header__search-field search-field-padding" type="search" name="Search" placeholder="Search">
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
 			<section class="o-layout content-static">
 				<div class="o-layout__item padding-content">
 					<mvt:item name="readytheme" param="contentsection( 'faqs_content' )" />
@@ -48,7 +74,7 @@
 				</div>
 			</section>
 		</div>
-		<aside class="o-layout__item u-width-12 u-width-3--l u-width-2--w">
+		<aside class="o-layout__item u-width-12 u-width-2--l aside-menu">
 			<mvt:item name="readytheme" param="navigationset( 'static_navigation' )" />
 		</aside>
 	</section>

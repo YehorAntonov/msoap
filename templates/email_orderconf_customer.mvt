@@ -3,75 +3,37 @@
 <base href="&mvt:global:baseurl;">
 <title>Miracle II Soap - Invoice</title>
 
-<style type="text/css"><!-- 
- body,p,li,td,th,blockquote {font-family:arial,helvetica,sans-serif; font-size:x-small; background-color:white; color:#000000; vertical-align:top;}
- th {font-size:small; background-color:#dddddd; color:#000000}
- td {background-color:white; color:#000000;}
- blockquote {margin: 0.3em 2em 0.3em 2em;}
- .small {font-size:xx-small;}
- .hili  {background-color:#dddddd; font-size:small; color:#000000;}
- .hili th, .hili td, th, td {padding:0 3px 0 3px}
- .prodLn0 td {background-color:#ffffff;}
- .prodLn1 td {background-color:#f5f5f5;}
- .attrLn0 td {background-color:#ffffff; font-style:italic;}
- .attrLn1 td {background-color:#f5f5f5; font-style:italic;}
- .attr {font-size:xx-small; color:#004477}
- .alert {color:red}
-</style>
-<style type="text/css" media="screen">
- .print {display:none;}
-</style>
-<style type="text/css" media="print">
- .noprint {display:none;}
- --></style>
-
-<style type="text/css" media="print"><!--
- @page {
-   width: 8.500in;
-   height: 11.000in;
-   padding: 0.75in 0.75in 0.75in 0.75in;
-   position:relative;
-   left: -0.1in;
-   top: -0.1in;
+<style>
+  .email-customer {
+    background-image: url('https://i.ibb.co/0XH9hbr/Mail-Header-1.png');
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	  height: 100%;
+	  position: relative;
   }
- @page :header {content: "";}
- @page :footer {content: "";}
---></style>
-
-<style type="text/css" media="screen"><!--
- .invPage {
-   width: 8.500in;
-   height: 11.000in;
-   padding: 0.75in 0.75in 0.75in 0.75in;
-   margin:5px;
-   border: 1px solid #226688;
-   background-color: #ffffff;
-  }
---></style>
-
+</style>
 </head>
 <body bgcolor="white" color="black">
-<TABLE cellspacing="0">
-  <TR> 
-    <TD VALIGN="top" width="180"><a href="https://www.miraclesoap.com"><IMG SRC="https://www.miraclesoap.com/images/email-order.jpg" WIDTH="150" HEIGHT="140" BORDER="0" ALT="Miracle II Store" HSPACE="10"></a></td>
-    <TD WIDTH="247"> 
-      <p><b style="font-size: large;"><font face="Arial, Helvetica, sans-serif" color="006699">Miracle II Soap</font></b>
-       <font face="Arial, Helvetica, sans-serif"><br>
-        888-895-SOAP (7627)</font><br>
-        <a href="mailto:orders@miraclesoap.com"><font face="Arial, Helvetica, sans-serif" size="2">orders@miraclesoap.com</font></a><font face="Arial, Helvetica, sans-serif"><br>
-        </font>
-      <h3><font face="Arial, Helvetica, sans-serif" size="3">Thank you for your 
-        order!</font></h3>
+<table style="height: 100%; text-align: center; width: 100%;" cellspacing="0">
+  <tr>
+    <td>
+      <img style="object-fit: contain;
+    height: 32px;" src="https://i.ibb.co/ZzrSstR/Miracle2-logo2.png" alt="Miracle2-logo2" border="0">
     </td>
-    <TD VALIGN="top" width="13"> </td>
-    <TD VALIGN="top" width="200"> 
-      <P><b style="font-size: medium;"><font face="Arial, Helvetica, sans-serif">ORDER 
-        # &mvt:order:id;</font></b> </p>
-      <p><font face="Arial, Helvetica, sans-serif" size="2"><b><font color="#006666"><a href="https://www.miraclesoap.com/shipping.htm"><font color="#006699">Shipping 
-        Policy</font></a><br>
-        </font></b></font><font color="#006666"><b><font face="Arial, Helvetica, sans-serif" size="2"><a href="https://www.miraclesoap.com/privacy.htm"><font color="#006699">Privacy 
-        Policy</font></a></font></b></font></p>
-      </td>
+  </tr>
+  <tr> 
+    <td style="background-image: url('https://i.ibb.co/0XH9hbr/Mail-Header-1.png');
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	  height: 200px;
+	  position: relative;
+    text-align: center;
+    width: 100%;
+    background-position: center center;">
+      <h1 style="text-align: center;"><a href="https://imgbb.com/"><img style="object-fit: contain; width: 20px; height: 20px;" src="https://i.ibb.co/6Rs4tKL/FAQ-Icon.png" alt="FAQ-Icon" border="0"></a>Your Order Has Been Recieved</h1><br>
+      <font>Your Order # &mvt:order:id;</font><br>
+      <font>Order Date: &mvt:order:date; &mvt:order:time;</font>
+    </td>
   </tr>
 </table>
 <table border="0" cellspacing="0" cellpadding="0" width="650" height="20">

@@ -310,14 +310,14 @@ const themeFunctionality = {
 	},
     jsCTGY() {
 		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
-			if ($('#long-descrip').height() <= 96) {
+			if ($('#long-descrip').height() <= 76) {
 
 			}
 			else {
 				$('#long-descrip').addClass('description-after');
 				$('#long-descrip').readmore({
 					speed: 1000,
-					collapsedHeight: 96,
+					collapsedHeight: 76,
 					moreLink: '<a class="more-link" href="#">Show More</a>',
 					lessLink: '<a class="less-link" href="#">Show Less</a>',
 					beforeToggle: function(trigger, element, expanded) {

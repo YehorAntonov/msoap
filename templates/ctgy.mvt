@@ -30,9 +30,9 @@
 
 	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l o-layout--wide">
 		<mvt:if expr="l.settings:subcategories GT 0">
-			<div class="o-layout__item u-width-12 u-width-9--l">
+			<div class="o-layout__item u-width-12 u-width-10--l">
 		<mvt:else>
-			<div class="o-layout__item u-width-12 u-width-9--l product-list-container">
+			<div class="o-layout__item u-width-12 u-width-10--l product-list-container">
 		</mvt:if>
 			<mvt:comment> <mvt:if expr="NOT ISNULL l.settings:category_title:image">
 				<section class="o-layout u-hidden u-flex--l">
@@ -72,9 +72,9 @@
 			</section>
 		</div>
 		<mvt:if expr="l.settings:subcategories GT 0">
-			<aside class="o-layout__item u-width-12 u-width-3--l aside-menu">
+			<aside class="o-layout__item u-width-12 u-width-2--l aside-menu">
 		<mvt:else>
-			<aside class="o-layout__item u-width-12 u-width-3--l aside-menu">
+			<aside class="o-layout__item u-width-12 u-width-2--l aside-menu">
 		</mvt:if>
 			<mvt:item name="category_tree" />
 			<mvt:item name="facets" />

@@ -368,7 +368,7 @@
 		flex-basis: 0.5%;
 	}
 	.u-width-3--l-icons-search {
-		flex-basis: 52%;
+		flex-basis: 50%;
 	}
 	.u-width-4--l {
 		flex-basis: 33.333%;
@@ -635,8 +635,8 @@
 	}
 	
 	.u-width-10--w {
-		flex-basis: 83.333%;
-		max-width: 83.333%;
+		/* flex-basis: 83.333%;
+		max-width: 83.333%; */
 	}
 	
 	.u-width-11--w {

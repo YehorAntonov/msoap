@@ -1,4 +1,7 @@
 <mvt:item name="readytheme" param="contentsection( 'mini_basket' )" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=EB+Garamond&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:wght@100&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/94513b47fb.js" crossorigin="anonymous" data-swup-reload-script></script>
 <mvt:if expr="l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY' AND NOT ('AMAZONPAY' CIN l.settings:page:code)">
 	<header class="t-site-header background-header" data-hook="site-header">
@@ -115,7 +118,7 @@
     </mvt:if>
 <mvt:else>
   	<main class="o-wrapper background-image">
-	<div style="max-width: 1200px" class="o-wrapper t-main-content-element">
+	<div style="max-width: 1600px" class="o-wrapper t-main-content-element">
 		<div class="bubbles-global o-wrapper t-main-content-element">
   			<div id="bubbles" class="bubbles desktop">
 				<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
@@ -162,21 +165,57 @@
 			}
 		});
 	  </script>
-    <style>
-      /* .bubbles {
-        top: 100px;
-      } */
-      @media screen and (max-width: 1070px) {
-	      
-      }
-      @media screen and (max-width: 995px) {
-       
-      }
-      @media screen and (min-width: 1650px) {
-    
-      }
-      
-    </style>
+	<mvt:if expr="l.settings:page:code EQ 'CTGY' OR l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'ALPM' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials' OR l.settings:page:code EQ 'SRCH'">
+		<style>
+			@media screen and (max-width: 1200px) {
+				#bubble1 {
+					position: relative;
+					left: 10%;
+				}
+				#bubble2 {
+					position: relative;
+					top: 20px;
+					left: calc(100px + 10%);
+				}
+				#bubble3 {
+					position: relative;
+					top: -25px;
+					left: calc(50px + 10%);
+				}
+				#bubble4 {
+					position: relative;
+					top: -15px;
+					left: calc(-45px + 10%);
+				}
+				#bubble5 {
+					position: relative;
+					top: 10px;
+					left: calc(-90px + 10%);
+				}
+			}
+			@media screen and (max-width: 1200px) and (min-width: 1180px) {
+				.t-site-header__logo img {
+					margin-left: 1%;
+				}
+			}
+			@media screen and (max-width: 1180px) and (min-width: 1090px) {
+				.t-site-header__logo img {
+					margin-left: 3%;
+				}
+			}
+			@media screen and (max-width: 1090px) and (min-width: 1040px) {
+				.t-site-header__logo img {
+					margin-left: 5%;
+				}
+			}
+			@media screen and (max-width: 1040px) and (min-width: 960px) {
+				.t-site-header__logo img {
+					margin-left: 3%;
+				}
+			}
+		
+		</style>
+	</mvt:if>
 	</div>
 	  <mvt:if expr="g.Maintenance_Warning_Message">
 		  <section class="o-layout">

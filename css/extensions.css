@@ -70,7 +70,7 @@
 	position: relative;
 	background-color: white;
 	border-radius: 10px;
-	padding: 20px;
+	padding: 40px 20px 20px;
 	border: 1px solid #88cbc891 !important;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .x-category-tree__heading {
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-four) * 1.4);
 	margin-bottom: var(--title-four);

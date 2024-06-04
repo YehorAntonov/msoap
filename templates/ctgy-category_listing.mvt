@@ -128,7 +128,7 @@
 	</mvt:foreach>
 	<mvt:assign name="l.settings:subcategory_count" value="miva_array_elements(l.settings:subcategories)" />
 	<mvt:if expr="l.settings:subcategories GT 0">
-		<div class="u-width-13--l info-of-category">
+		<div class="u-width-13--l info-of-category main-ctgy">
 			<h1 class="c-heading-charlie t-category-name main-category"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1><br>
 		</div>
 		<style>
