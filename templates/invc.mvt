@@ -25,7 +25,7 @@
 			<div class="o-layout__item">
 				<div class="t-order-complete-heading">
 					<p class="c-heading-foxtrot">Thank You, &mvte:order:ship_fname;</p>
-					<p class="c-heading--subheading--x-small u-color-gray-600">Order Confirmation #&mvt:order:id;</p>
+					<p style="font-size: 20px; color: black;" class="c-heading--subheading--x-small">Order Confirmation #&mvt:order:id;</p>
 					<p class="u-font-small">Email confirmation will be sent shortly.</p>
 					<mvt:if expr="g.Basket:cust_id EQ 0">
 						<form class="t-account-at-checkout" method="post" action="&mvte:urls:ACLN:secure;">

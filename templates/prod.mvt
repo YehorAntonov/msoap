@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="refresh" content="0;url=https://miraclesoap.mivatest.com/category-display.html">
+	<meta http-equiv="refresh" content="0;url=&mvt:category:link;">
 	<base href="&mvte:global:basehref;">
 	<mvt:if expr="NOT ISNULL l.settings:product:page_title">
 		<title>&mvt:product:page_title;</title>

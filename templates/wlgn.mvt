@@ -16,7 +16,7 @@
 
 	<section class="o-layout">
 		<div class="o-layout__item">
-			<h1 class="u-hide-visually">&mvt:page:name;</h1>
+			<mvt:comment> <h1 class="u-hide-visually">&mvt:page:name;</h1> </mvt:comment>
 			<br>
 			<p class="c-heading--subheading--large u-text-center">You must have a customer account to create a wish list.</p>
 			<mvt:item name="hdft" param="header" />

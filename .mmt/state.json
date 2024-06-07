@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 5219,
-        "username": "yehor",
-        "notes": "Page 'testimonials' updated"
+        "id": 5323,
+        "username": null,
+        "notes": "test"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -264,7 +264,7 @@
         },
         "templates/afcl.mvt": {
             "template_filename": "afcl.mvc",
-            "hash": "4a84bdddec0cc3e4bab023b56b6bfe2025001664f6b5e76c8170e473e764e76c"
+            "hash": "b3ea314652568f40ad63f9fe09510837643912c832b326c4e0479a1d8e73ce8c"
         },
         "templates/afcl.json": {
             "template_filename": "afcl.mvc",
@@ -2344,11 +2344,11 @@
         },
         "templates/email_orderconf_customer-toe_order_contents.mvt": {
             "template_filename": "email_orderconf_customer-toe_order_contents.mvc",
-            "hash": "52bdc0e96f29d5c97e146344ff0a8c793adae2b6997cbe627f25b0ba08b6c4c3"
+            "hash": "32c9c8079f3e98a800089bcd01441deaf2cebfbe8fc891d129edcb0068f0a17b"
         },
         "templates/email_orderconf_customer.mvt": {
             "template_filename": "email_orderconf_customer.mvc",
-            "hash": "8efb55988ee31745991ff4f50eaba68eaef721d455d2e174d6c358e9aa1c317a"
+            "hash": "678a45f95f24e18bf724b8ea2c90f1cc212206c510a264140fbe3fbae29cdc0e"
         },
         "templates/email_orderconf_customer.json": {
             "template_filename": "email_orderconf_customer.mvc",
@@ -2768,7 +2768,7 @@
         },
         "templates/gftl.mvt": {
             "template_filename": "gftl.mvc",
-            "hash": "e785111487ad0ac3c7e8708759a7d44144ba3894e34f7388a1ae8dac9cde6eab"
+            "hash": "d1db73f124bf23d46b4fabe90401a9ae40f94f6b9443626189fd74c78da597d9"
         },
         "templates/gftl.json": {
             "template_filename": "gftl.mvc",
@@ -2824,7 +2824,7 @@
         },
         "templates/invc.mvt": {
             "template_filename": "invc.mvc",
-            "hash": "5cbe6c4687c179a854aa9fc7d8ef56e3cfd0426070969f1c18cb6654e8e974fc"
+            "hash": "3685d797f2d20f0f4b3c56b6034af57adeb1b6e5219a9fe54584865409f06eba"
         },
         "templates/invc.json": {
             "template_filename": "invc.mvc",
@@ -2904,7 +2904,7 @@
         },
         "templates/logn.mvt": {
             "template_filename": "logn.mvc",
-            "hash": "793badde922d94efeadd950e41245610c0b57a3230fbbebba5c10294b067e179"
+            "hash": "af582e332d409f789be2fcb26153d70a269f7bbeeaa9dc82bee4c96fd4922432"
         },
         "templates/logn.json": {
             "template_filename": "logn.mvc",
@@ -3136,7 +3136,7 @@
         },
         "templates/ords.mvt": {
             "template_filename": "ords.mvc",
-            "hash": "4bc0a6bb8fe568f6f4a2d568fe9c95dd22099554f176941ab68bd030fe2dd2b3"
+            "hash": "b15bf07e18d5cd34cad3a9b1f202ea897010036dd11ac7ac98bc8662eee096cf"
         },
         "templates/ords.json": {
             "template_filename": "ords.mvc",
@@ -3156,7 +3156,7 @@
         },
         "templates/orhl.mvt": {
             "template_filename": "orhl.mvc",
-            "hash": "dd5846b64cfba9dbbc30c296f07cd1c0ae94f32ae2300102732adc30bcc8fcda"
+            "hash": "9f6d4b0e256347aa7b0365d29fd43f9d10e2917201c6f9fe13789078cf44aea5"
         },
         "templates/orhl.json": {
             "template_filename": "orhl.mvc",
@@ -3416,7 +3416,7 @@
         },
         "templates/prod.mvt": {
             "template_filename": "prod.mvc",
-            "hash": "f890858e462a90166ec34107b7bbfc113f28e318df4cd8ce91436bdabfd6fd25"
+            "hash": "820b4e3b54c04a517f98c99f142143bfc10710cb574833656930801be9d14888"
         },
         "templates/prod.json": {
             "template_filename": "prod.mvc",
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "3bc2a71288fff1554400c42fc8522d0844f1490bb3fc9a57c8b34a173ca8600a"
+            "hash": "80fb103341fd49657f4d97384bc5e21a8f604c51eabdf41df5b7225edccdc605"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -3780,7 +3780,7 @@
         },
         "templates/wlgn.mvt": {
             "template_filename": "wlgn.mvc",
-            "hash": "d7b111db61f3482fc02a8fabd17556b8f647e5bac7cad8471bdbf91f4bc54a7f"
+            "hash": "b15860807957285463ff269694edfe6c435ec536c2c4501b6198f29115b2d891"
         },
         "templates/wlgn.json": {
             "template_filename": "wlgn.mvc",
@@ -3800,7 +3800,7 @@
         },
         "templates/wlst.mvt": {
             "template_filename": "wlst.mvc",
-            "hash": "6ba5d2b44b8220a37fd825633d7eb371eb425620ad19368a3ea17f1dd7914d75"
+            "hash": "bb24631149bbb48ff2ef28db689586c9b6a6508e7b050570a3ae3ecdfc146d81"
         },
         "templates/wlst.json": {
             "template_filename": "wlst.mvc",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "f2026e5c8b1417af964d022d3e1bb7b7743f2d2e09f56e019762dbb8cd9f66d4"
+            "hash": "3fb78e1426535fb5a96056ddaa464186b1e278fc477d5d5d1ba8bc31605bea09"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

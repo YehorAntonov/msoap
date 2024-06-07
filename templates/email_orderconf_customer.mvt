@@ -1,156 +1,217 @@
+<!DOCTYPE html> 
 <html> 
-<head>
-<base href="&mvt:global:baseurl;">
-<title>Miracle II Soap - Invoice</title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <base href="&mvt:global:baseurl;">
+    <title>Miracle II Soap - Invoice</title>
+    <style type="text/css">
+    @media screen and (min-width: 1010px) {
+      /* #tdpayment {
+        min-width: 293.5px;
+      }
+      #tdpayment2 {
+        min-width: 293.5px;
+      } */
 
-<style>
-  .email-customer {
-    background-image: url('https://i.ibb.co/0XH9hbr/Mail-Header-1.png');
-	  background-size: contain;
-	  background-repeat: no-repeat;
-	  height: 100%;
-	  position: relative;
-  }
-</style>
-</head>
-<body bgcolor="white" color="black">
-<table style="height: 100%; text-align: center; width: 100%;" cellspacing="0">
-  <tr>
-    <td>
-      <img style="object-fit: contain;
-    height: 32px;" src="https://i.ibb.co/ZzrSstR/Miracle2-logo2.png" alt="Miracle2-logo2" border="0">
-    </td>
-  </tr>
-  <tr> 
-    <td style="background-image: url('https://i.ibb.co/0XH9hbr/Mail-Header-1.png');
-	  background-size: contain;
-	  background-repeat: no-repeat;
-	  height: 200px;
-	  position: relative;
-    text-align: center;
-    width: 100%;
-    background-position: center center;">
-      <h1 style="text-align: center;"><a href="https://imgbb.com/"><img style="object-fit: contain; width: 20px; height: 20px;" src="https://i.ibb.co/6Rs4tKL/FAQ-Icon.png" alt="FAQ-Icon" border="0"></a>Your Order Has Been Recieved</h1><br>
-      <font>Your Order # &mvt:order:id;</font><br>
-      <font>Order Date: &mvt:order:date; &mvt:order:time;</font>
-    </td>
-  </tr>
-</table>
-<table border="0" cellspacing="0" cellpadding="0" width="650" height="20">
-  <tr>
-     <td><font face="Arial, Helvetica, sans-serif" size="2">When your order 
-      has shipped you will receive an email with your tracking number. To check the status online <a href="&mvte:global:Domain:mm_url;Store_Code=&mvta:global:Store:code;&amp;Screen=ORHL&amp;Order_BillEmail=&mvte:order:bill_email;&amp;Order_BillZip=&mvte:order:bill_zip;">click here</a>.</font></td>
-  </tr>
-</table>
+    }
+    @media screen and (max-width: 1009px) {
+      /* #tdpayment {
+        min-width: 250px;
+      }
+      #tdpayment2 {
+        min-width: 250px;
+      } */
 
-
-  <table width="100%" border="0" cellspacing="5" cellpadding="0"><tr>
-   
-     <td>
-      <table width="100%" border="0" cellspacing="1" cellpadding="1">
-       <tr class="hili"><th align="left" nowrap>&nbsp;Ship To:</th></tr>
-       <tr><td><mvt:if expr="l.settings:order:ship_fname OR l.settings:ship_lname">&mvte:order:ship_fname; &mvte:order:ship_lname;<mvt:else>&nbsp;</mvt:if><mvt:if expr="l.settings:order:ship_comp"><br>&mvte:order:ship_comp;<mvt:else>&nbsp;</mvt:if><br>&mvte:order:ship_addr1; &mvte:order:ship_addr2;<br /><mvt:if expr="( NOT ISNULL l.settings:order:ship_city ) AND ( NOT ISNULL l.settings:order:ship_state )">	&mvte:order:ship_city;,<mvt:else>	&mvte:order:ship_city;</mvt:if> &mvte:order:ship_state; &mvte:order:ship_zip;<br /> &mvte:order:ship_cntry;<br></td></tr>
-       <tr><td>&nbsp;</td></tr>
-       <tr><td class="small"><mvt:if expr="l.settings:order:ship_phone">&mvte:order:ship_phone;<mvt:else>&nbsp;</mvt:if></td></tr>
-       
-       <tr><td class="small"><mvt:if expr="l.settings:order:ship_email">&mvte:order:ship_email;<mvt:else>&nbsp;</mvt:if></td></tr>
-      </table>
-     </td>
-   
-   
-     <td>
-      <table width="100%" border="0" cellspacing="1" cellpadding="1">
-       <tr class="hili"><th align="left" nowrap>&nbsp;Bill To:</th></tr>
-       <tr><td><mvt:if expr="l.settings:order:bill_fname OR l.settings:bill_lname">&mvte:order:bill_fname; &mvte:order:bill_lname;<mvt:else>&nbsp;</mvt:if><mvt:if expr="l.settings:order:bill_comp"><br>&mvte:order:bill_comp;<mvt:else>&nbsp;</mvt:if><br>&mvte:order:bill_addr1; &mvte:order:bill_addr2;<br /><mvt:if expr="( NOT ISNULL l.settings:order:bill_city ) AND ( NOT ISNULL l.settings:order:bill_state )">	&mvte:order:bill_city;,<mvt:else>	&mvte:order:bill_city;</mvt:if> &mvte:order:bill_state; &mvte:order:bill_zip;<br /> &mvte:order:bill_cntry;<br></td></tr>
-       <tr><td>&nbsp;</td></tr>
-       <tr><td class="small"><mvt:if expr="l.settings:order:bill_phone">&mvte:order:bill_phone;<mvt:else>&nbsp;</mvt:if></td></tr>
-       
-       <tr><td class="small"><mvt:if expr="l.settings:order:bill_email">&mvte:order:bill_email;<mvt:else>&nbsp;</mvt:if></td></tr>
-      </table>
-     </td>
-   
-  </tr></table>
-
-
-
-  <br>
-  <mvt:item name="toe_order_contents" />
-<!--
-  <table width="100%" border="0" cellspacing="1" cellpadding="1">
-   <tr><td nowrap><b>Order Number:</b>&nbsp;</td><td width="80%">&mvt:order:id;</td></tr>
-   <tr><td><b>Placed:</b>&nbsp;</td><td width="80%">&mvt:order:date; &mvt:order:time;</td></tr>
-  </table>&nbsp;<br>
-  <table width="100%" border="0" cellspacing="0" cellpadding="2">
-   <tr class="hili">
-    <th align="left" nowrap>&nbsp;Code&nbsp;</th>
-    <th align="left" nowrap>&nbsp;</th>
-    <th width="60%" align="left">&nbsp;Name&nbsp;</th>
-    <th align="right" nowrap>&nbsp;Quantity&nbsp;</th>
-    <th align="right" nowrap>&nbsp;Price/Ea.&nbsp;</th>
-    <th align="right" nowrap>&nbsp;Total&nbsp;</th>
-   </tr>
-
-
-  <tr class="prodLn0">
-    <td align="left" nowrap>&nbsp;1014&nbsp;</td>
-    <td align="left" nowrap>&nbsp;<img src="graphics/00000001/moisturizingsoap_22oz_smb.jpg" border="0">&nbsp;</td>
-    <td width="60%" align="left">&nbsp;Miracle II Moisturizing Soap - 22 oz.<span class="attr"></span>&nbsp;</td>
-    <td align="right" nowrap>&nbsp;1&nbsp;</td>
-    <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
-    <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
-  </tr>
-
-  <tr class="prodLn1">
-    <td align="left" nowrap>&nbsp;1013&nbsp;</td>
-    <td align="left" nowrap>&nbsp;<img src="graphics/00000001/soap_22oz_smb.jpg" border="0">&nbsp;</td>
-    <td width="60%" align="left">&nbsp;Miracle II Soap - 22 oz.<span class="attr"></span>&nbsp;</td>
-    <td align="right" nowrap>&nbsp;1&nbsp;</td>
-    <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
-    <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
-  </tr>
-
-
-   <tr class="hili">
-    <th align="left" nowrap>&nbsp;</th>
-    <th align="left" nowrap>&nbsp;</th>
-    <th width="60%" align="left">&nbsp;Subtotal:&nbsp;</th>
-    <th align="right" nowrap>&nbsp;&nbsp;</th>
-    <th align="right" nowrap>&nbsp;</th>
-    <th align="right" nowrap>&nbsp;$29.90&nbsp;</th>
-   </tr>
-   
-     <tr><td align="right" colspan="5">&nbsp;Shipping: Ground:&nbsp;</td><td align="right" nowrap>&nbsp;$17.07&nbsp;</td></tr>
-   
-     <tr><td align="right" colspan="5">&nbsp;Sales Tax:&nbsp;</td><td align="right" nowrap>&nbsp;$0.00&nbsp;</td></tr>
-   
-   <tr class="hili">
-    <th align="left" nowrap>&nbsp;</th>
-    <th align="left" nowrap>&nbsp;</th>
-    <th width="60%" align="left">&nbsp;TOTAL:&nbsp;</th>
-    <th align="right" nowrap>&nbsp;&nbsp;</th>
-    <th align="right" nowrap>&nbsp;</th>
-    <th align="right" nowrap>&nbsp;$46.97&nbsp;</th>
-   </tr>
+    }
+    @media screen and (max-width: 920px) {
+      #titleemail {
+        font-size: 20px !important;
+      }
+      #imgapprove {
+        height: 25px !important;
+        width: 25px !important;
+      }
+    }
+  </style>
+  
+  </head>
+  <body bgcolor="white" color="black">
+  <table style="color: black; height: 100%; text-align: center; width: 100%;" cellspacing="0">
+    <tr>
+      <td>
+        <img style="object-fit: contain;
+      height: 37px;" src="https://i.ibb.co/ZzrSstR/Miracle2-logo2.png" alt="Miracle2-logo2" border="0">
+      </td>
+    </tr>
+    <tr> 
+      <td style="background-image: url('https://i.ibb.co/d5pz84y/Bubbles-email.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 200px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      background-position: center center;">
+        <h1 id="titleemail" style="text-align: center;"><a href="https://imgbb.com/"><img id="imgapprove" style="object-fit: contain; width: 30px; height: 30px; vertical-align: sub; padding-right: 10px;" src="https://i.ibb.co/6Rs4tKL/FAQ-Icon.png" alt="FAQ-Icon" border="0"></a>Your Order Has Been Recieved</h1>
+        <p><strong style="font-size: 16px;">Your Order # <span style="color: #487989;">&mvt:order:id;</span></strong></p>
+        <font style="font-size: 16px;"><strong>Order Date:</strong> &mvt:order:date; &mvt:order:time;</font>
+      </td>
+    </tr>
   </table>
--->
-
-<BR><TR>
-<TD VALIGN="TOP" BGCOLOR="#FFFFFF"><IMG SRC="https://www.miraclesoap.com/images/footerbar.jpg" WIDTH=740 HEIGHT=26 HSPACE=0 VSPACE=0 BORDER=0></td>
-</tr>
-<TR>
-<TD VALIGN="top" WIDTH="737">
-<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=737>
-<TR>
-<TD ALIGN="right" VALIGN="MDDLE" WIDTH="250"><IMG SRC="https://www.miraclesoap.com/images/footerlogo.jpg" ALT="MIRACLE SOAP II" WIDTH=142 HEIGHT=51 VSPACE=10></td>
-<TD WIDTH="87" VALIGN="MIDDLE" ALIGN="center"><IMG SRC="https://www.miraclesoap.com/images/footerdivider.gif" WIDTH=2 HEIGHT=47></td>
-<TD WIDTH="440" VALIGN="middle" ALIGN="CENTER"><FONT FACE="Verdana, Arial" SIZE=1><A HREF="https://www.miraclesoap.com/privacy.asp">Privacy Policy</a> | <A HREF="https://www.miraclesoap.com/security.asp">Security Policy</a><BR><BR>miraclesoap.com : <A HREF="mailto:orders@miraclesoap.com"><B>orders@miraclesoap.com</b></a> : 1.888.895.Soap</font></td>
-</tr>
-</table></td>
-</tr>
-</table>
+  <div align="center" style="color: black; height: 100%; width: 100%;" width="100%">
+      <div style="max-width: 593px; text-align: start;">
+        <h1 style="color: #4a4c56; font-size: 18px;">Hello Customer,</h1>
+        <font class="fonts" face="Arial, Helvetica, sans-serif" size="2">Thank you for your order! Below is a summary for your records. You will be notified once your order ships.</font></td>
+      </div>
+  </div>
 
 
-</body>
-</html>
-</body>
+  <div align="center" style="color: grey; margin-bottom: 15px; height: 100%; width: 100%;" width="100%">
+    <div style="max-width: 593px; text-align: start;">
+      <h1 style="color: #4a4c56;font-size: 18px;">Order Details</h1>
+      <hr>
+      <h2 style="color: black; font-size: 16px;">Ship To</h2>
+      <div>
+        <p style="margin: 0;"><mvt:if expr="l.settings:order:ship_fname OR l.settings:ship_lname">&mvte:order:ship_fname; &mvte:order:ship_lname;<mvt:else>&nbsp;</mvt:if></p>
+        <p style="margin: 0;"><mvt:if expr="l.settings:order:ship_comp">&mvte:order:ship_comp;</mvt:if></p>
+        <p style="margin: 0;">&mvte:order:ship_addr1;</p>
+        <p style="margin: 0;">&mvte:order:ship_city;, &mvte:order:ship_state; &mvte:order:ship_zip;</p>
+        <p style="margin: 0;">&mvte:order:ship_cntry;</p>
+      </div>
+    </div>
+  </div>
+
+  <div align="center" style="color: grey; margin-bottom: 30px; height: 100%; width: 100%;" width="100%">
+    <div style="max-width: 593px; text-align: start;">
+      <table style="width: 100%;">
+        <tr>
+          <td id="tdpayment" style="color: black; padding: 0;">
+            <h2 style="margin: 0; margin-bottom: 10px; font-size: 16px;">Payment Method</h2>
+          </td>
+          <td style="padding: 0;color: black; ">
+            <h2 style="margin: 0; margin-bottom: 10px; font-size: 16px;">Shipping Method</h2>
+          </td>
+        </tr>
+        <tr>
+          <td id="tdpayment2" style="padding: 0;">
+            <mvt:foreach iterator="payment" array="order:payments">
+              <p style="margin: 0;">&mvte:payment:desc; (&mvt:payment:formatted_amount;)</p>
+            </mvt:foreach>
+          </td>
+          <td style="padding: 0;">
+            <mvt:foreach iterator="charge" array="order:charges">
+              <mvt:if expr="l.settings:charge:type EQ 'SHIPPING'">
+                <p style="margin: 0;">&mvt:charge:descrip;</p>
+                <mvt:assign name="l.settings:shipping_method_found" value="1" />
+              </mvt:if>
+            </mvt:foreach>
+            <mvt:if expr="NOT l.settings:shipping_method_found">
+              <p style="margin: 0;">Unknown</p>
+            </mvt:if>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <mvt:comment> <mvt:item name="ry_toolbelt" param="varlist|local" />
+<mvt:item name="ry_toolbelt" param="varlist|global" /> </mvt:comment>
+  <div align="center" style="color: grey; margin-bottom: 30px; height: 100%; width: 100%;" width="100%">
+    <div style="max-width: 593px; text-align: start;">
+      <mvt:item name="toe_order_contents" />
+    </div>
+  </div>
+  <div align="center" style="color: black; margin-bottom: 50px; height: 100%; width: 100%;" width="100%">
+    <div style="max-width: 593px; text-align: center;">
+      <a style="padding: 15px 50px; background-color: #3072b1; color: white; border-radius: 5px; text-align: center; text-decoration: none;" href="&mvte:global:Domain:mm_url;Store_Code=&mvta:global:Store:code;&amp;Screen=ORHL&amp;Order_BillEmail=&mvte:order:bill_email;&amp;Order_BillZip=&mvte:order:bill_zip;">Check Order Status</a>
+    </div>
+  </div>
+  <div align="center" style="color: black; margin-bottom: 30px; height: 100%; width: 100%;" width="100%">
+    <div style="max-width: 593px; text-align: start;">
+      <p>We hope to see you again soon.</p>
+    </div>
+  </div>
+  <div align="center" style="color: black; height: 100%; width: 100%;" width="100%">
+    <div style="max-width: 593px; text-align: center; background-color: #bfe3e2; padding: 10px 0">
+      <p style="font-size: 10px;">© 2024 Miracle II, Inc. All Rights Reserved</p>
+    </div>
+  </div>
+    
+  <!--
+    <table width="100%" border="0" cellspacing="1" cellpadding="1">
+    <tr><td nowrap><b>Order Number:</b>&nbsp;</td><td width="80%">&mvt:order:id;</td></tr>
+    <tr><td><b>Placed:</b>&nbsp;</td><td width="80%">&mvt:order:date; &mvt:order:time;</td></tr>
+    </table>&nbsp;<br>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+    <tr class="hili">
+      <th align="left" nowrap>&nbsp;Code&nbsp;</th>
+      <th align="left" nowrap>&nbsp;</th>
+      <th width="60%" align="left">&nbsp;Name&nbsp;</th>
+      <th align="right" nowrap>&nbsp;Quantity&nbsp;</th>
+      <th align="right" nowrap>&nbsp;Price/Ea.&nbsp;</th>
+      <th align="right" nowrap>&nbsp;Total&nbsp;</th>
+    </tr>
+
+
+    <tr class="prodLn0">
+      <td align="left" nowrap>&nbsp;1014&nbsp;</td>
+      <td align="left" nowrap>&nbsp;<img src="graphics/00000001/moisturizingsoap_22oz_smb.jpg" border="0">&nbsp;</td>
+      <td width="60%" align="left">&nbsp;Miracle II Moisturizing Soap - 22 oz.<span class="attr"></span>&nbsp;</td>
+      <td align="right" nowrap>&nbsp;1&nbsp;</td>
+      <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
+      <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
+    </tr>
+
+    <tr class="prodLn1">
+      <td align="left" nowrap>&nbsp;1013&nbsp;</td>
+      <td align="left" nowrap>&nbsp;<img src="graphics/00000001/soap_22oz_smb.jpg" border="0">&nbsp;</td>
+      <td width="60%" align="left">&nbsp;Miracle II Soap - 22 oz.<span class="attr"></span>&nbsp;</td>
+      <td align="right" nowrap>&nbsp;1&nbsp;</td>
+      <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
+      <td align="right" nowrap>&nbsp;$14.95&nbsp;</td>
+    </tr>
+
+
+    <tr class="hili">
+      <th align="left" nowrap>&nbsp;</th>
+      <th align="left" nowrap>&nbsp;</th>
+      <th width="60%" align="left">&nbsp;Subtotal:&nbsp;</th>
+      <th align="right" nowrap>&nbsp;&nbsp;</th>
+      <th align="right" nowrap>&nbsp;</th>
+      <th align="right" nowrap>&nbsp;$29.90&nbsp;</th>
+    </tr>
+    
+      <tr><td align="right" colspan="5">&nbsp;Shipping: Ground:&nbsp;</td><td align="right" nowrap>&nbsp;$17.07&nbsp;</td></tr>
+    
+      <tr><td align="right" colspan="5">&nbsp;Sales Tax:&nbsp;</td><td align="right" nowrap>&nbsp;$0.00&nbsp;</td></tr>
+    
+    <tr class="hili">
+      <th align="left" nowrap>&nbsp;</th>
+      <th align="left" nowrap>&nbsp;</th>
+      <th width="60%" align="left">&nbsp;TOTAL:&nbsp;</th>
+      <th align="right" nowrap>&nbsp;&nbsp;</th>
+      <th align="right" nowrap>&nbsp;</th>
+      <th align="right" nowrap>&nbsp;$46.97&nbsp;</th>
+    </tr>
+    </table>
+  -->
+
+  <mvt:comment> <BR><TR>
+  <TD VALIGN="TOP" BGCOLOR="#FFFFFF"><IMG SRC="https://www.miraclesoap.com/images/footerbar.jpg" WIDTH=740 HEIGHT=26 HSPACE=0 VSPACE=0 BORDER=0></td>
+  </tr>
+  <TR>
+  <TD VALIGN="top" WIDTH="737">
+  <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=737>
+  <TR>
+  <TD ALIGN="right" VALIGN="MDDLE" WIDTH="250"><IMG SRC="https://www.miraclesoap.com/images/footerlogo.jpg" ALT="MIRACLE SOAP II" WIDTH=142 HEIGHT=51 VSPACE=10></td>
+  <TD WIDTH="87" VALIGN="MIDDLE" ALIGN="center"><IMG SRC="https://www.miraclesoap.com/images/footerdivider.gif" WIDTH=2 HEIGHT=47></td>
+  <TD WIDTH="440" VALIGN="middle" ALIGN="CENTER"><FONT FACE="Verdana, Arial" SIZE=1><A HREF="https://www.miraclesoap.com/privacy.asp">Privacy Policy</a> | <A HREF="https://www.miraclesoap.com/security.asp">Security Policy</a><BR><BR>miraclesoap.com : <A HREF="mailto:orders@miraclesoap.com"><B>orders@miraclesoap.com</b></a> : 1.888.895.Soap</font></td>
+  </tr>
+  </table></td>
+  </tr>
+  </table> </mvt:comment>
+
+
+  </body>
 </html>

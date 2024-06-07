@@ -67,11 +67,11 @@
 	<mvt:else>
 		<section class="o-layout">
 			<div class="o-layout__item">
-				<h1 class="c-heading-delta">&mvt:page:name;</h1>
+				<mvt:comment> <h1 class="c-heading-delta">&mvt:page:name;</h1> </mvt:comment>
 			</div>
 		</section>
 
-		<section class="o-layout o-layout--justify-center">
+		<section class="o-layout o-layout--justify-center custom-logn">
 			<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-logn-block">
 				<p class="c-heading-foxtrot">Please sign in to create or access your wish list.</p>
 				<form method="post" action="&mvte:urls:WLST:secure;">
