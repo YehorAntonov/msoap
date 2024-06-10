@@ -19,7 +19,7 @@
 			<hr class="c-keyline">
 		</div>
 	</section> </mvt:comment>
-	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l static-pages">
 		<div class="o-layout__item u-width-12 u-width-10--l u-width-10--w">
 			
 			<mvt:comment> <section class="o-layout mobile">

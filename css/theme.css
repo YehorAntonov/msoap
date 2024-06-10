@@ -1289,7 +1289,7 @@
 }
 @media screen and (max-width: 60em) {
 	.icon-cart {
-		margin-top: -0.5em;
+		margin-top: -0.7em;
 		margin-left: 0.5em;
 		margin-right: 5%;
 	}
@@ -2647,8 +2647,14 @@ details {
 		border-radius: 0 20px 20px 0;
 		margin-left: 0;
 	}
-	.aside-menu {
+	.aside-menu .static-navigation {
 		display: none;
+	}
+	.aside-menu .newsletter-banner {
+		display: block;
+	}
+	.static-pages {
+		flex-direction: column;
 	}
 }
 @media screen and (max-width: 604px) {
@@ -2825,6 +2831,9 @@ details {
 	text-decoration: none;
 	font-weight: bold;
 	color: #006194;
+}
+.names-static {
+	margin-top: 15px;
 }
 @media screen and (min-width: 1600px) {
 	.names-static {
@@ -3215,4 +3224,26 @@ body {
 	.faq-svg {
 		padding-top: 10px;
 	}
+}
+.fa-location-dot:before, .fa-map-marker-alt:before {
+	vertical-align: -webkit-baseline-middle;
+}
+/* .fa-phone:before  {
+	vertical-align: sub;
+} */
+.ctus-annotation {
+	border: 1px solid #88cbc891;
+    border-radius: 5px;
+    background: linear-gradient(0deg, #d9f8f5, white);
+    padding: 20px;
+    max-width: 325px;
+	margin-top: 35px;
+}
+.static-input-newsletter {
+	width: 100%;
+	font-size: 9px;
+    padding: 10px 0 10px 5px;
+}
+.newsletter-banner {
+	padding: 15px;
 }

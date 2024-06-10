@@ -100,4 +100,9 @@
 	.x-pagination__list {
 		margin-bottom: 20px;
 	}
+	@media screen and (max-width: 960px) {
+		.aside-menu {
+			display: none;
+		}
+	}
 </style>

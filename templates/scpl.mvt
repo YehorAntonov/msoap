@@ -19,10 +19,10 @@
 			<hr class="c-keyline">
 		</div>
 	</section>
-	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l">
+	<section class="o-layout o-layout--column-reverse o-layout--row-reverse--l static-pages">
 		<div class="o-layout__item u-width-12 u-width-10--l u-width-10--w">
 			
-			<section class="o-layout mobile">
+			<section style="margin-top: 15px;" class="o-layout mobile">
 				<div class="o-layout__item">
 					<h1 class="c-heading-delta">&mvt:page:name;</h1>
 					<hr class="c-keyline">

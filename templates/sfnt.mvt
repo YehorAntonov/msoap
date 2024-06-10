@@ -253,10 +253,29 @@
 	<div class="newsletter-email">
 		<p class="title-newsletter">Miracle II Newsletter</p>
 		<p class="text-newsletter">Catch up on inspiring articles and personal testimonies from users like yourself. Signup for our free monthly subscription delivered directly in your E-Mail.</p>
-		<div class="input-with-button-letter">
-			<input type="text" class="input-field-letter" placeholder="Your E-mail Address">
-			<button class="button-letter">Get Started Now</button>
+		
+		
+
+		<div id="mc_embed_shell">
+			<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+			<div id="">
+			<form action="https://mivatest.us22.list-manage.com/subscribe/post?u=d0ae1b6b66943d083c1560dd0&amp;id=35a461f68f&amp;f_id=005fcde1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+				<div class="input-with-button-letter" id="mc_embed_signup_scroll">
+					<label for="mce-EMAIL"></label>
+					<input type="email" name="EMAIL" placeholder="Your E-mail Address" class="input-field-letter" id="mce-EMAIL" required="" value="">
+					<mvt:comment> <div aria-hidden="true" style="position: absolute; left: -5000px;">
+						/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+						<input type="text" name="b_d0ae1b6b66943d083c1560dd0_35a461f68f" tabindex="-1" value="">
+					</div> </mvt:comment>
+					<input type="submit" name="subscribe" id="" class="button-letter" value="Get Strated Now">
+				</div>
+				<div id="mce-responses" class="">
+					<div class="response" id="mce-error-response" style="display: none;"></div>
+					<div class="response" id="mce-success-response" style="display: none;"></div>
+				</div>
+			</form>
 		</div>
+		<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
 		<a class="newsletter-link">Click Here to visit our newsletter site.</a>
 	</div>
 	<script>
