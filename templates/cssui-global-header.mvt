@@ -126,33 +126,7 @@
 	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	  	<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
     	<script>
-      	$(document).ready(function() {
-			$(".products").hover(function() {
-				$(".products").css('transform', 'scale(1.1)');
-			}, function() {
-				$(".products").css('transform', 'scale(1)');
-			})
-			$(".product__history").hover(function() {
-				$(".product__history").css('transform', 'scale(1.1)');
-			}, function() {
-				$(".product__history").css('transform', 'scale(1)');
-			})
-			$(".testimonials").hover(function() {
-				$(".testimonials").css('transform', 'scale(1.1)');
-			}, function() {
-				$(".testimonials").css('transform', 'scale(1)');
-			})
-			$(".faqs").hover(function() {
-				$(".faqs").css('transform', 'scale(1.1)');
-			}, function() {
-				$(".faqs").css('transform', 'scale(1)');
-			})
-			$(".contact").hover(function() {
-				$(".contact").css('transform', 'scale(1.1)');
-			}, function() {
-				$(".contact").css('transform', 'scale(1)');
-			})
-		})
+      	
     </script>
     <script>
 		document.addEventListener('DOMContentLoaded', function () {
@@ -193,7 +167,7 @@
 					left: calc(-90px + 10%);
 				}
 			}
-			@media screen and (max-width: 1200px) and (min-width: 1180px) {
+			/* @media screen and (max-width: 1200px) and (min-width: 1180px) {
 				.t-site-header__logo img {
 					margin-left: 1%;
 				}
@@ -212,8 +186,15 @@
 				.t-site-header__logo img {
 					margin-left: 3%;
 				}
-			}
+			} */
 		
+		</style>
+	</mvt:if>
+	<mvt:if expr="l.settings:page:code EQ 'BASK' OR l.settings:page:code EQ 'BSKE'">
+		<style>
+			main {
+				min-height: 800px;
+			}
 		</style>
 	</mvt:if>
 	</div>

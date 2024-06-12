@@ -30,7 +30,7 @@
 			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
 		</div>
 		<div class="container-banner desktop">
-			<img class="desktop" style="" src="graphics/00000002/1/redes-desktop-fotor-20240603193158.png">
+			<img class="desktop" style="" src="graphics/00000002/1/Home-bck-desktop (1).png">
 		</div>
 		<div class="info-banner-main">
 			<mvt:item name="readytheme" param="contentsection( 'main_banner_text' )" />
@@ -39,7 +39,8 @@
 			.bubbles {
 				position: relative;
 				/* top: -640px; */
-				background-color: #e4f7f6;
+				/* background-color: #e4f7f6; */
+				z-index: 1;
 			}
 		</style>
 		<img class="mobile" style="width: 100%; height: 100%;" src="graphics/00000002/1/Home-bck-mobile (2).png">
@@ -267,7 +268,7 @@
 						/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
 						<input type="text" name="b_d0ae1b6b66943d083c1560dd0_35a461f68f" tabindex="-1" value="">
 					</div> </mvt:comment>
-					<input type="submit" name="subscribe" id="" class="button-letter" value="Get Strated Now">
+					<input type="submit" name="subscribe" id="" class="button-letter" value="Get Started Now">
 				</div>
 				<div id="mce-responses" class="">
 					<div class="response" id="mce-error-response" style="display: none;"></div>
@@ -291,7 +292,7 @@
 	</script>
 	<style>
 		.circle {
-			top: -20px;
+			top: -35px;
 		}
 	</style>
 	<section class="o-layout">

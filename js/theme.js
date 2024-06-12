@@ -98,7 +98,33 @@ const themeFunctionality = {
 		if (_hook('global-account') && _hook('global-account').length !== 0) {
 			a11yToggleClose(_hook('global-account')); // Close the global account box when clicking on a different target.
 		}
-
+		$(document).ready(function() {
+			$(".products").hover(function() {
+				$(".products").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".products").css('transform', 'scale(1)');
+			})
+			$(".product__history").hover(function() {
+				$(".product__history").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".product__history").css('transform', 'scale(1)');
+			})
+			$(".testimonials").hover(function() {
+				$(".testimonials").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".testimonials").css('transform', 'scale(1)');
+			})
+			$(".faqs").hover(function() {
+				$(".faqs").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".faqs").css('transform', 'scale(1)');
+			})
+			$(".contact").hover(function() {
+				$(".contact").css('transform', 'scale(1.1)');
+			}, function() {
+				$(".contact").css('transform', 'scale(1)');
+			})
+		})
 		/**
 		 * Initialize Quantify extension
 		 */
@@ -333,7 +359,28 @@ const themeFunctionality = {
 		})
 		if ($(window).width() <= 960) {
 		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
-			
+			$('.ctgy-description-long').each(function() {
+				if ($(this).height() <= 60) {
+
+				}
+				else {
+					$(this).addClass('description-after-product');
+					$(this).readmore({
+						speed: 550,
+						collapsedHeight: 60,
+						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
+						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
+						beforeToggle: function(trigger, element, expanded) {
+							if (expanded) {
+								$(element).addClass('description-after-product')
+							}
+							else {
+								$(element).removeClass('description-after-product')
+							}
+						}
+					});
+				}
+			})
 			$('.long-description').each(function() {
 				if ($(this).height() <= 63) {
 

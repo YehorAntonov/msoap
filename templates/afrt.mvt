@@ -16,27 +16,29 @@
 
 	<section class="o-layout">
 		<div class="o-layout__item">
-			<h1 class="c-heading-delta">&mvt:page:name;</h1>
+			<h1 class="c-heading-delta name-password">&mvt:page:name;</h1>
 			<mvt:item name="hdft" param="header" />
 		</div>
 	</section>
 
 	<section class="o-layout o-layout--justify-center">
-		<div class="o-layout__item u-width-12 u-width-6--m">
-			<form method="post" action="&mvte:urls:AFCL:secure;">
-				<fieldset>
-					<legend>&mvt:page:name;</legend>
-					<input type="hidden" name="Affiliate_Temporary_Password" value="&mvte:global:Customer_Temporary_Password;" autocomplete="off">
-					<input type="hidden" name="Affiliate_Password" value="&mvte:global:Customer_Temporary_Password;" autocomplete="off">
-					<p class="x-messages x-messages--info x-messages--with-icon">
-						<span class="x-messages__icon u-icon-info" aria-hidden="true">&nbsp;</span>
-						<span>Your password has been reset.<br><br>Your temporary password is &mvte:global:Affiliate_Temporary_Password;</span>
-					</p>
-					<p>
-						<input class="c-button" type="submit" value="Click Here to Log In">
-					</p>
-				</fieldset>
-			</form>
+		<div class="o-layout__item u-width-12 u-width-6--m layout-min-height">
+			<div class="account-custom">
+				<form method="post" action="&mvte:urls:AFCL:secure;">
+					<fieldset>
+						<legend>&mvt:page:name;</legend>
+						<input type="hidden" name="Affiliate_Temporary_Password" value="&mvte:global:Customer_Temporary_Password;" autocomplete="off">
+						<input type="hidden" name="Affiliate_Password" value="&mvte:global:Customer_Temporary_Password;" autocomplete="off">
+						<p class="x-messages x-messages--info x-messages--with-icon">
+							<span class="x-messages__icon u-icon-info" aria-hidden="true">&nbsp;</span>
+							<span>Your password has been reset.<br><br>Your temporary password is &mvte:global:Affiliate_Temporary_Password;</span>
+						</p>
+						<p>
+							<input class="c-button" type="submit" value="Click Here to Log In">
+						</p>
+					</fieldset>
+				</form>
+			</div>
 		</div>
 	</section>
 	

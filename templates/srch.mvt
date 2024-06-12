@@ -65,5 +65,11 @@
 		.aside-menu {
 			display: none;
 		}
+		.c-heading-charlie {
+			margin-top: 0 !important;
+		}
+		.descrip-main {
+			margin-bottom: 0 !important;
+		}
 	}
 </style>

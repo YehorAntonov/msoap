@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 5377,
+        "id": 5450,
         "username": null,
         "notes": "test"
     },
@@ -136,7 +136,7 @@
         },
         "templates/acad-customer.mvt": {
             "template_filename": "acad-customer.mvc",
-            "hash": "b6bceb4abac57e418d378d2d57ca1b81bb734b76c2e0a296bd6d710a662f3853"
+            "hash": "b1a7a02b960cbb690bf32fdb671be3458fdc10ca3c27e4742f4c4cd02d8dddb3"
         },
         "templates/acad-footer.mvt": {
             "template_filename": "acad-footer.mvc",
@@ -220,7 +220,7 @@
         },
         "templates/acrt.mvt": {
             "template_filename": "acrt.mvc",
-            "hash": "722def1fd13b454ec369dea642d8f05773a4bcd150c6e62c4b25363dfb987426"
+            "hash": "6a639929920ef577393f81aab32f4d1e389f7d0e18ed401404eff63cadfac7ec"
         },
         "templates/acrt.json": {
             "template_filename": "acrt.mvc",
@@ -228,7 +228,7 @@
         },
         "templates/afad-affiliate.mvt": {
             "template_filename": "afad-affiliate.mvc",
-            "hash": "2466966f97ee227355f909ad21706b79aabde6a39efd1103bab81ef3cc69a45c"
+            "hash": "deb5c99f17a73a5af0ec02f2545d3681ef105a7114d917597673febec5ec9596"
         },
         "templates/afad-footer.mvt": {
             "template_filename": "afad-footer.mvc",
@@ -272,7 +272,7 @@
         },
         "templates/afed-affiliate.mvt": {
             "template_filename": "afed-affiliate.mvc",
-            "hash": "baf5f10a050e13e5e4b1f7c7921690c4baae139cbe69c2c14334b4087ede8b10"
+            "hash": "a95428a4c21701eb50393a6e3028d2b1a74e0b63d7f318be3100587f7478a729"
         },
         "templates/afed-footer.mvt": {
             "template_filename": "afed-footer.mvc",
@@ -332,7 +332,7 @@
         },
         "templates/afrt.mvt": {
             "template_filename": "afrt.mvc",
-            "hash": "654355b724a8f234ec5c2fda3b38846860ccde056b62d5af7ba3203dae8591f1"
+            "hash": "7ec7c160687da0db7b4da87b2495c673191566d4e94aa88d43b83d62b86d3163"
         },
         "templates/afrt.json": {
             "template_filename": "afrt.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "844e426260cbcf18a954dc24de6d6e4f1ecdcfab1808ce90e22e1f8cd01be198"
+            "hash": "65a3760be8d90df0bf15787c711f4640b20333a28ac91c8e534b0033bd781079"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1104,7 +1104,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "d314b85803a6184bae40a13f554cc877cea2400fcd83904a6d5e7523c37089f7"
+            "hash": "f947c08734acb01d1482f6fbe1f28287557e7e4387a9f5ff68edb98360a917dd"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -1132,7 +1132,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "182435722bb5d39b393c256474cd473fb1a14bd4abba091742d66aac38756cfe"
+            "hash": "9df974e90724b3ef37927ed63d7df8d8d3334ee6b8762dab81c6e49c7471291c"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "56bedcaf19df2b624dcee83f5eff74dd6055a50fb3f4dd340a757f1e32b964b4"
+            "hash": "2be03e2d6e0316ecb90beb1b00d9a998e20137c4e3cafa88a1ab885a5bcf6492"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -3636,7 +3636,7 @@
         },
         "templates/srch-search_results.mvt": {
             "template_filename": "srch-search_results.mvc",
-            "hash": "d3481a34f84b6ca6a81e936a21a9e6a421e303986e31bf93459f90ae9ab0f893"
+            "hash": "1bd9e457dec9d84aab8350d8ac7349f0fe6c321ce89c5f0f9ce0cac4fd4e4a51"
         },
         "templates/srch-shipestimate.mvt": {
             "template_filename": "srch-shipestimate.mvc",
@@ -3648,7 +3648,7 @@
         },
         "templates/srch.mvt": {
             "template_filename": "srch.mvc",
-            "hash": "5008da0e7ebf353d9b9d30ac86a429fc01c39e2da62fb7f198179161b7a9ed5e"
+            "hash": "8ebe0538b36166e4e3cb009460bb68c33487b248d6c814ab61fa5a4859b1fb7f"
         },
         "templates/srch.json": {
             "template_filename": "srch.mvc",
@@ -4576,7 +4576,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "faqs_content",
-            "hash": "90c4597948fcc80ddd36a84aa4bed64bf483af41c9c3515a475c2adc828a3c86"
+            "hash": "cf242edfefbb8ef9245119631f7d1a0d849adfb2ff6df250b9c223268ff57e51"
         },
         "properties/readytheme_contentsection/faqs_content.json": {
             "property_group": "",
@@ -5110,7 +5110,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "static_navigation",
-            "hash": "e3b98fc7ea7e91fdc9d7610c65cd2a808ebcdeaa4c3e80fca82730d19cf1da29"
+            "hash": "8fae4d7a677c0fb4b51e39c665b2f264ba05736c6f50ce704d5359e3c78b95e9"
         },
         "properties/readytheme_navigationset/static_navigation.json": {
             "property_group": "",
@@ -5552,7 +5552,7 @@
         },
         "js/theme.js": {
             "jsresource_code": "theme",
-            "hash": "e4f6900c0fff76fa17e2b1932508f60dda886dc9276461c0a6ca2eb5751b2144"
+            "hash": "fd422e1d5b9fad439a053d028ba97c7f036f68822f3efb5769a746af145e7251"
         },
         "css/additional.json": {
             "cssresource_code": "additional",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "2ba7c236ec634e72d267ef2e12a9d5824e57c47ab1f5de47bcd268a1a24883e2"
+            "hash": "3a354af0ad31b2aadc4b22c558c5039b241698c91de329a35dcc1ea76d1047ff"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

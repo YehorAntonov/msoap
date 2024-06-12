@@ -1,4 +1,4 @@
-<section style="margin-bottom: 20px;" class="o-layout o-layout--justify-center">
+<section style="margin-top: 20px; margin-bottom: 20px;" class="o-layout o-layout--justify-center">
 	<div class="o-layout__item u-width-12 u-width-9--m">
 		<div class="account-custom">
 			<h1 class="c-heading-delta">&mvt:page:name;</h1>

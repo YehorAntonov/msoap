@@ -30,7 +30,7 @@
 	<div style="margin-top: 15px;">
 		<strong style="color: #006194;">Miracle II Newsletter</strong>
 	</div>
-	<div style="margin-top: 5px; color: #00817F; text-align: left; font-size: 14px;">
+	<div style="margin-top: 5px; color: #00817F; text-align: justify; font-size: 14px;">
 		<span>Catch up on inspiring articles and personal testimonies from users like yourself. Sign up for our free monthly subscription delivered directly in your E-Mail</span>
 	</div>
 	<div style="margin-top: 15px;" id="mc_embed_shell">
@@ -40,7 +40,7 @@
 				<div id="mc_embed_signup_scroll">
 					<label for="mce-EMAIL"></label>
 					<input type="email" name="EMAIL" placeholder="Your E-mail Address" class="static-input-newsletter" id="mce-EMAIL" required="" value="">
-					<input style="margin-top: 10px; font-size: 12px;" type="submit" name="subscribe" id="" class="c-button c-button--full" value="Get Strated Now">
+					<input style="margin-top: 10px; font-size: 12px;" type="submit" name="subscribe" id="" class="c-button c-button--full" value="Get Started Now">
 				</div>
 				<div id="mce-responses" style="text-align: center; margin-top: 5px;" class="">
 					<div class="response" id="mce-error-response" style="display: none; font-size: 12px; color: red;"></div>
@@ -52,7 +52,7 @@
 	</div>
 
 	<div style="margin-top: 15px; text-align: center;">
-		<a style="color: #00817F; font-size: 12px;" href="">Click Here to visit our newsletter site</a>
+		<a class="newsletter-link-bar" style="color: #00817F; font-size: 12px;" href="">Click Here to visit our newsletter site</a>
 	</div>
 </nav>
 <style>
