@@ -105,10 +105,10 @@
 								<mvt:if expr="NOT ISNULL g.order_instructions">
 									<mvt:assign name="l.settings:open" value="'open'"/>
 								</mvt:if>
-								<details class="t-order-instructions-toggle" &mvte:open;>
+								<mvt:comment> <details class="t-order-instructions-toggle" &mvte:open;>
 									<summary><span>Add Delivery Notes</span></summary>
 									<textarea class="c-form-input c-form-input--long" aria-label="Add Delivery Notes" name="order_instructions">&mvte:global:order_instructions;</textarea>
-								</details>
+								</details> </mvt:comment>
 							</div>
 						</div>
 						<br>

@@ -336,7 +336,11 @@
 			}, 10)
 		})
 	})
-
+	$('#clear-search').click(function() {
+		$('.faq-question').each(function() {
+			$(this).fadeIn();
+		})
+	})
 	$.extend({
 		debounced: function(fn, timeout, invokeAsap, ctx)  {
 			/**

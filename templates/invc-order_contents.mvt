@@ -17,7 +17,11 @@
 			<mvt:foreach iterator="group" array="order:groups">
 				<tr class="t-basket__product-information">
 					<td class="t-basket__product-image" data-label="">
-						<img src="&mvte:group:imagetypes:main;" alt="&mvte:group:name;" loading="lazy" width="&mvte:basket:b_width;" height="&mvte:basket:b_height;">
+						<mvt:if expr="l.settings:group:code EQ '1050'">
+							<img style="transform: scale(50%);" src="&mvte:group:imagetypes:main;" alt="&mvte:group:name;" loading="lazy" width="&mvte:basket:b_width;" height="&mvte:basket:b_height;">
+						<mvt:else>
+							<img src="&mvte:group:imagetypes:main;" alt="&mvte:group:name;" loading="lazy" width="&mvte:basket:b_width;" height="&mvte:basket:b_height;">
+						</mvt:if>
 					</td>
 					<td class="t-basket__product-details" data-label="">
 						<mvt:if expr="ISNULL l.settings:group:link">

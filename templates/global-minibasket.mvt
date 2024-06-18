@@ -30,7 +30,11 @@
     				</mvt:foreach>
 					<div class="x-mini-basket__line">
 						<figure class="x-mini-basket__image">
-							<img src="&mvt:global:socialImage;" alt="&mvte:item:name;" loading="lazy" width="&mvte:global_minibasket:b_width;" height="&mvte:global_minibasket:b_height;">
+							<mvt:if expr="l.settings:item:code EQ '1050'">
+								<img style="transform: scale(50%);" src="&mvt:global:socialImage;" alt="&mvte:item:name;" loading="lazy" width="&mvte:global_minibasket:b_width;" height="&mvte:global_minibasket:b_height;">
+							<mvt:else>
+								<img src="&mvt:global:socialImage;" alt="&mvte:item:name;" loading="lazy" width="&mvte:global_minibasket:b_width;" height="&mvte:global_minibasket:b_height;">
+							</mvt:if>
 						</figure>
 						<a class="x-mini-basket__item">
 							<span class="x-mini-basket__item-name">&mvt:item:name;</span>

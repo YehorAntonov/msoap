@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 5450,
+        "id": 5541,
         "username": null,
         "notes": "test"
     },
@@ -228,7 +228,7 @@
         },
         "templates/afad-affiliate.mvt": {
             "template_filename": "afad-affiliate.mvc",
-            "hash": "deb5c99f17a73a5af0ec02f2545d3681ef105a7114d917597673febec5ec9596"
+            "hash": "ce38e1741fd177dc68453c4be54a7da49024f73355bc41f1e58eaa12a50af5c0"
         },
         "templates/afad-footer.mvt": {
             "template_filename": "afad-footer.mvc",
@@ -240,7 +240,7 @@
         },
         "templates/afad.mvt": {
             "template_filename": "afad.mvc",
-            "hash": "e597a88dc6ffacc0ef390e671587e4a4dc47a269c8efa5275a4a06631a3515b9"
+            "hash": "72037627d0cd0de0b4fbeeb499ec35b21f3507ff2c5ce585f0fcae0fc16499ab"
         },
         "templates/afad.json": {
             "template_filename": "afad.mvc",
@@ -376,7 +376,7 @@
         },
         "templates/bask-basket.mvt": {
             "template_filename": "bask-basket.mvc",
-            "hash": "aa64b40750008878c5b8eddd82d6bab61884508691f107f2f68436509da7e338"
+            "hash": "16ace0baa0c32edf5a552f0e2a22f6c42b1e53065a42d692243c93fdd8c3ac26"
         },
         "templates/bask-content.mvt": {
             "template_filename": "bask-content.mvc",
@@ -1104,7 +1104,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "f947c08734acb01d1482f6fbe1f28287557e7e4387a9f5ff68edb98360a917dd"
+            "hash": "85098dfafff5f9551498867c7052913fb93a41c7efb0bc771b98c5f684aca3d2"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -2344,11 +2344,11 @@
         },
         "templates/email_orderconf_customer-toe_order_contents.mvt": {
             "template_filename": "email_orderconf_customer-toe_order_contents.mvc",
-            "hash": "32c9c8079f3e98a800089bcd01441deaf2cebfbe8fc891d129edcb0068f0a17b"
+            "hash": "7a1f65e30d2b6e4629b58e7470b3fa35b99446bab8721eb1d0437e22641d2beb"
         },
         "templates/email_orderconf_customer.mvt": {
             "template_filename": "email_orderconf_customer.mvc",
-            "hash": "678a45f95f24e18bf724b8ea2c90f1cc212206c510a264140fbe3fbae29cdc0e"
+            "hash": "0231c0a5c0419fe377c3d4bc1aecc61198603d9619c4f2aeb1a272c4d31db78f"
         },
         "templates/email_orderconf_customer.json": {
             "template_filename": "email_orderconf_customer.mvc",
@@ -2528,7 +2528,7 @@
         },
         "templates/faqs.mvt": {
             "template_filename": "faqs.mvc",
-            "hash": "70008f4c34f0ccf5e8bc08d8ca648c252d74ca14b502228fdcf4cbaad490e39d"
+            "hash": "532fc11754792fb3ee5eb7a91f4a80f20e0665a94189172649962cd1cc1a82d5"
         },
         "templates/faqs.json": {
             "template_filename": "faqs.mvc",
@@ -2592,7 +2592,7 @@
         },
         "templates/flex-initialization-template-mmx-quick-order.mvt": {
             "template_filename": "flex-initialization-template-mmx-quick-order.mvc",
-            "hash": "71e6f98be7c7549a58e71aeacf6dadf5faa1632c275c8085ee7eec6f25c61211"
+            "hash": "8e745506b33d41aaf27ee36b6ec60c657b17f0af153b53a2aad3a73c8627c9ff"
         },
         "templates/flex-initialization-template-mmx-quick-order.json": {
             "template_filename": "flex-initialization-template-mmx-quick-order.mvc",
@@ -2664,7 +2664,7 @@
         },
         "templates/flex-instance-template-mmx-image-across.mvt": {
             "template_filename": "flex-instance-template-mmx-image-across.mvc",
-            "hash": "0a7e3f6cd1bf5c3972a87d1a0736ec36948fd8ff8866a0783443c310a68c7eae"
+            "hash": "63042f74e7fab60e04f42b0a5a4a18163286c514225d2a8e17805ca9b818f9c0"
         },
         "templates/flex-instance-template-mmx-image-across.json": {
             "template_filename": "flex-instance-template-mmx-image-across.mvc",
@@ -2712,7 +2712,7 @@
         },
         "templates/flex-instance-template-mmx-text-editor.mvt": {
             "template_filename": "flex-instance-template-mmx-text-editor.mvc",
-            "hash": "48d95be1e43a135f389c8a5114ba3c1ddd4de9a5658d964991622104ef8fd65d"
+            "hash": "2543feea16bdce81923ab08e34f31aabd5a99b1dcd27abaa2fd1ab942b0ae27f"
         },
         "templates/flex-instance-template-mmx-text-editor.json": {
             "template_filename": "flex-instance-template-mmx-text-editor.mvc",
@@ -2776,7 +2776,7 @@
         },
         "templates/global-minibasket.mvt": {
             "template_filename": "global-minibasket.mvc",
-            "hash": "3d6a8f32d4aa3e8a4597a9f84f70d1867fd54a02fb3de9257a4d384babb2156e"
+            "hash": "040fca9b15bfe2a7659391dd1ad34b450a6c26d0cc220f99b93073c4c05290e8"
         },
         "templates/global-minibasket.json": {
             "template_filename": "global-minibasket.mvc",
@@ -2812,7 +2812,7 @@
         },
         "templates/invc-order_contents.mvt": {
             "template_filename": "invc-order_contents.mvc",
-            "hash": "a4abdfc037b0a492cb5882b0e7f2d717c78469d141f2ca1aff380896f0c412f9"
+            "hash": "14cd0da01dfbc970bc7475b189bc62e61727546bff6b43031ddd6bb27c99ad92"
         },
         "templates/invc-order_customer.mvt": {
             "template_filename": "invc-order_customer.mvc",
@@ -2920,7 +2920,7 @@
         },
         "templates/mntn.mvt": {
             "template_filename": "mntn.mvc",
-            "hash": "adb2d7f61b2b4f6f88f00a88ddc90e140a12be6fd2705c462bf348c294f0c3f1"
+            "hash": "8c729cdc273095b342135bfcbd3288d3760c48e8894ae2ab048f0b0863261889"
         },
         "templates/mntn.json": {
             "template_filename": "mntn.mvc",
@@ -3132,7 +3132,7 @@
         },
         "templates/ords-view_order.mvt": {
             "template_filename": "ords-view_order.mvc",
-            "hash": "61d824148cc19979404728edae0c33e7396a41026f1d31aa40564d0e1030b1cb"
+            "hash": "24620810a26233e11f72660588a73ac7f7e724999d02461903e21609fe9e2286"
         },
         "templates/ords.mvt": {
             "template_filename": "ords.mvc",
@@ -3180,7 +3180,7 @@
         },
         "templates/osel.mvt": {
             "template_filename": "osel.mvc",
-            "hash": "fe4fc53fbbd2a93793b2c45e3ac69b0873d24b40838f35dad4a816c929f24a31"
+            "hash": "fe8bfb61dddf109deb2cad4d717fc8d8732037e0d5ec7ab75e3b4eda49f52807"
         },
         "templates/osel.json": {
             "template_filename": "osel.mvc",
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "2be03e2d6e0316ecb90beb1b00d9a998e20137c4e3cafa88a1ab885a5bcf6492"
+            "hash": "119d4cf060770412cd6986910a903cf6257add22a97cd2670eaf65f29226a993"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -3668,7 +3668,7 @@
         },
         "templates/testimonials.json": {
             "template_filename": "testimonials.mvc",
-            "hash": "ae20dd73d717f2579e590109f2cbf0c8e1a2aee9a023f07fba9ba6d4937086b5"
+            "hash": "38905a3e6564b9d13b9a8c05357094e92cecb62d08d06194d460e2713b88ad35"
         },
         "templates/uatm-footer.mvt": {
             "template_filename": "uatm-footer.mvc",
@@ -4282,103 +4282,103 @@
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-base",
-            "hash": "6c2d5adb9d70f5df61bc3fc07ecdfe6b96f6cc61b8456972d85450633342384b"
+            "hash": "2b6ca2de1bdcb132b063f1a10cdb9b8de0f75cb228549b324c4d0718cfa3db88"
         },
         "properties/flex/mmx-button.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-button",
-            "hash": "cf9c18a97804c45dd9a361d9c334b95766b577052059cf01aff4d10f2849da1c"
+            "hash": "5349e232c86367510097ceb7249bc8f2661abe2ad2e39179cac27aa4cee47fda"
         },
         "properties/flex/mmx-category-carousel.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-category-carousel",
-            "hash": "78fea7ae05a5169953bf5ad821d4db39e26954592ba436962a112f1dec58a6ea"
+            "hash": "e25cac243dd97a1884b0bef9c9ccfc4679380f8897a27498978e4b12760297a1"
         },
         "properties/flex/mmx-csv.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-csv",
-            "hash": "0822c4def5a1609f0dd53c740ec65802fec17972b4a04e9f7a3d881546e3802c"
+            "hash": "092a69dda60abf471c3a35492a58bfbeb19e55c97c994012bec506bc2e10b7b4"
         },
         "properties/flex/mmx-featured-product.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-featured-product",
-            "hash": "4f76d2c7e258b2ce1ee947dcfa284afe4c65067b17bd8ed78603c53a38a5dbdb"
+            "hash": "e48939647a6801a58264faf4b73f37782129e32d721fb4b3e3e1200e9435b24f"
         },
         "properties/flex/mmx-hero.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-hero",
-            "hash": "9311388e8b65c28998ef58fa4f2bcdc8e7679d8cfccbdcb62f0861908269ab63"
+            "hash": "949d17f7deb1d60169c7942dca60ec19e763d01bde939f765ab8885a2cb8f0f5"
         },
         "properties/flex/mmx-hero-slider.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-hero-slider",
-            "hash": "bf2341f6ae53c4572a7f0bd2027c4d4194db168d47cb9e105ead83cda91eaeca"
+            "hash": "53f0dfeda473908a591dff7083162012c32e85e6388d87dfc1a697c6115b2ba2"
         },
         "properties/flex/mmx-icons.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-icons",
-            "hash": "51f6ddeb3e8ef8576dc743331304dab57f4431beafc406d6cb95acc84a3c1ae2"
+            "hash": "ff867dcef97c02fccb494aff59a58ddd031ac5b376ff5f0d327e921253f9e326"
         },
         "properties/flex/mmx-image-across.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-image-across",
-            "hash": "6c5b9c23dc9cbef4e33bf8eb0a81d22ba0d420fc9460732ed2e92c9cc98242d9"
+            "hash": "e008e3d607b67073978ff0a7726168652ea9daa248df76b5505bb99c8108dc40"
         },
         "properties/flex/mmx-image-and-text.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-image-and-text",
-            "hash": "dc090b1ded25613320c639d54a5bb12ec90b67f12b76d6f6184eb77691000e8c"
+            "hash": "50092a4abf8b65b2f1f3d649102eba6b0f47ca4dda83fb13a440a4f37ff69072"
         },
         "properties/flex/mmx-product-carousel.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-product-carousel",
-            "hash": "a425820c7ae9a08e65e067766dd2c325251c31085ef0edc33cd7b832d6cc782b"
+            "hash": "16d0d55f052f582ba3c4f68d834d1f86dd0dd0ae51a321a27905e2d3786cfe0c"
         },
         "properties/flex/mmx-quick-order.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-quick-order",
-            "hash": "929a48be66dc5e831c97f8e3de6ca5c4af57814d98197692cc223d090ecda821"
+            "hash": "4666b8e15d9c5a8e381b0f3e0f5bf2144f6e21b482caced12db0cc644525b593"
         },
         "properties/flex/mmx-text.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-text",
-            "hash": "51bd9b269040fcab8517dc7441f414db73a441f868dae0444b2d265949a0e648"
+            "hash": "7382c6b2fb8a38e5fc991e9569ccc27cb3d9f397144a0b822b08f98cf90c300d"
         },
         "properties/flex/mmx-text-area.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-text-area",
-            "hash": "dd5521f6d973a1446c05782c9696584021c3d7c63eee792e2b4e682086a8e8a3"
+            "hash": "4cfa00c357938d6461d478b72fb646f1f830198ccef03523a5b3e6f5ef8b00ab"
         },
         "properties/flex/mmx-text-banner.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-text-banner",
-            "hash": "d0af6f806137f4fb70e0b6bce112ce5ba543e4e50d122ad190b19fa1967e28fb"
+            "hash": "529a3797638999bf7b58dcd45d3112a193d53802347e1e77b2e92e33ba9f6a91"
         },
         "properties/flex/mmx-text-editor.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-text-editor",
-            "hash": "30fde324fb1b37b5a1c517245b5eb762fdd85a7702500b0c0120d2d7a84c59be"
+            "hash": "0899d66a1df8e963e0622089681eae42daca3c51352953d711c6012088092757"
         },
         "properties/flex/mmx-video.json": {
             "property_group": "",
             "property_type": "flex",
             "property_code": "mmx-video",
-            "hash": "01ca2f9578e43e486ee79c2f0079eaf37c3bbae2e8dbf5256166dac929344a93"
+            "hash": "7a2699d81772c645c617df3a1cfa837ef0b3eb9576017da4e0360940b9921e92"
         },
         "properties/category/header/mprod.mvt": {
             "property_group": "category",
@@ -4504,7 +4504,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "checkout_basket_summary",
-            "hash": "035ea0fc0b286761469991e33d650f0a00df5d35963253f44a9a06af93ab6727"
+            "hash": "b4facfc9127a649f8bb3be986628c3d620433c2f584803c549edc5d64f894949"
         },
         "properties/readytheme_contentsection/checkout_basket_summary.json": {
             "property_group": "",
@@ -4576,7 +4576,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "faqs_content",
-            "hash": "cf242edfefbb8ef9245119631f7d1a0d849adfb2ff6df250b9c223268ff57e51"
+            "hash": "0b1f42c0d3d36737eb9898e097d5c7f15902c8796f9aaf987dc9c6a885147784"
         },
         "properties/readytheme_contentsection/faqs_content.json": {
             "property_group": "",
@@ -4996,7 +4996,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "account_navigation",
-            "hash": "d839e654b5ba31f50ee01fd7b8e87f6435a50504532c98019d50ae8e5da73b6a"
+            "hash": "0ee51fbec85ae0c4855daf4bea3a1a4c87083ab10aa2b831257d4adfac8b3fc3"
         },
         "properties/readytheme_navigationset/bubbles_navigation.mvt": {
             "property_group": "",
@@ -5008,7 +5008,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "6a7ccd54ad81ad2c9053d1a1515c129b8d4025ce6d74d385760407d2cf84e2a6"
+            "hash": "e58ce2b9cdfe82f2e2d4f9ac81c006f040d275ed770d905fec317194e7c969bb"
         },
         "properties/readytheme_navigationset/disclaimer_navigation.mvt": {
             "property_group": "",
@@ -5020,7 +5020,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "disclaimer_navigation",
-            "hash": "f17095f2e73cd9fbe5005221fe57e35dd6591f3fec1506144d939c2e25deb643"
+            "hash": "e701e473b5576e5197af62f897778e6e6367e4552ba419329bdc084686bd5843"
         },
         "properties/readytheme_navigationset/footer_categories.mvt": {
             "property_group": "",
@@ -5032,7 +5032,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "footer_categories",
-            "hash": "c28c01c0850ae901bffb65cc26ee6eac8d2542cbb2524c40c12e829976ae0357"
+            "hash": "232c6bee3cfe61a2b12371ca1c9d101742e6f6cfb7492e6a9281cacccc43ec2d"
         },
         "properties/readytheme_navigationset/header_links.mvt": {
             "property_group": "",
@@ -5044,7 +5044,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "header_links",
-            "hash": "f4ef1040d55aac661d54f02c2eb46d998f99af8d59411cff1682ce0b9f4ec1d4"
+            "hash": "a2640c1be2fe6116ae5e4df4dea94733665f2788381d5dd2125bf7cdc9f4e970"
         },
         "properties/readytheme_navigationset/links_help.mvt": {
             "property_group": "",
@@ -5056,7 +5056,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "links_help",
-            "hash": "92211eccc61aac2b838976b0fb7cb1924ddad16cc6d4421386f7c2760dfbff49"
+            "hash": "09fd4c136eb6ad9c172550639b1f3252425b6ad2e832abea62951140cb1e7c7f"
         },
         "properties/readytheme_navigationset/links_our_company.mvt": {
             "property_group": "",
@@ -5068,7 +5068,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "links_our_company",
-            "hash": "94bfbfed3689e981998e798f6eb73c66bc75ef8c144680dd902e020584bdd573"
+            "hash": "a8649409c2fdf38759bf41afe16cc6fa79ba5befabcffeba812f783360dde04b"
         },
         "properties/readytheme_navigationset/links_resources.mvt": {
             "property_group": "",
@@ -5080,7 +5080,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "links_resources",
-            "hash": "32ef340158779130088f54d009fe6eced8e48ca8fde4ef8fb6c3f67674226b90"
+            "hash": "84386eb00887378bf29c6823423ead769d32485479f5d6389334bdfeb61ad1c2"
         },
         "properties/readytheme_navigationset/primary_navigation.mvt": {
             "property_group": "",
@@ -5092,7 +5092,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "primary_navigation",
-            "hash": "f7ee414758e1c48b971c80134b407d5a867a14b29d8ee42b843d4d2b510cdd62"
+            "hash": "ba9e9bed2a19869b2761ba66d55d4732b30e3b578f9be95024d0029e11d7f76a"
         },
         "properties/readytheme_navigationset/quick_links.mvt": {
             "property_group": "",
@@ -5104,19 +5104,19 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "quick_links",
-            "hash": "a5f1fa2bad63704ea9c6b63c8b4cf7b6f0de6afd679367bac41356608eecc2b4"
+            "hash": "2e514c80597bf7c1772ed6d7a0d09ffd8fb4814447c9daef39112f0866d9bc3e"
         },
         "properties/readytheme_navigationset/static_navigation.mvt": {
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "static_navigation",
-            "hash": "8fae4d7a677c0fb4b51e39c665b2f264ba05736c6f50ce704d5359e3c78b95e9"
+            "hash": "41894cc7eba351b72e2508aa5da5d6ab234415c9214396306fb55b7d0b821bb9"
         },
         "properties/readytheme_navigationset/static_navigation.json": {
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "static_navigation",
-            "hash": "3b314b5a93b006327bb54b566c21b2f55e312822edb0a9c17caec246064da556"
+            "hash": "b616ae2bf7cdb5251bdc9409809fa9d3e83399dbb93ebf9170b456a800e73624"
         },
         "properties/readytheme_navigationset/support_navigation.mvt": {
             "property_group": "",
@@ -5128,7 +5128,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "support_navigation",
-            "hash": "489902ec549bd209935d48dfe530e92c803909c6c2ab47c3c27429818e472a1e"
+            "hash": "e0b3fd206fcdeb51beec5081ab88b1e05b0800682973e937886fc08b71a6f413"
         },
         "properties/readytheme_navigationset/top_categories.mvt": {
             "property_group": "",
@@ -5140,7 +5140,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "top_categories",
-            "hash": "094b942353c805aae2aa116ec19ccb556431790c3ac205fecc6a6de224e8db8b"
+            "hash": "254747e73712565829789696627ca9402237d8f606725172677f536b819502c4"
         },
         "properties/readytheme_productlisting/featured_products.mvt": {
             "property_group": "",
@@ -5392,15 +5392,15 @@
         },
         "js/mmx-base.json": {
             "jsresource_code": "mmx-base",
-            "hash": "5331127e9ba85a35df904be56aa9900621964acaef547728b036e512ab7dde40"
+            "hash": "6037949df929248c6f44fdbbd0a5964e6643922ecba57489d29d2b9a3ece67be"
         },
         "js/mmx-button.json": {
             "jsresource_code": "mmx-button",
-            "hash": "9851e0073f6ef861c178384046cd8183b7660493a612cb12ddc25135e609f2af"
+            "hash": "79acda3518f56a8278262758d34341b731ea17c782e5805138b8d14f06d8230e"
         },
         "js/mmx-category-carousel.json": {
             "jsresource_code": "mmx-category-carousel",
-            "hash": "dbcf982279030bf818119f68a41b5c028e946ebf40e8cb9b4e7b33f8b2fdbcda"
+            "hash": "91f1385e6ef011c5860f530a964f34469ac92fe0535bf5ea7e2b5e7d1de3a7cf"
         },
         "js/mmx-csv.json": {
             "jsresource_code": "mmx-csv",
@@ -5408,15 +5408,15 @@
         },
         "js/mmx-featured-product.json": {
             "jsresource_code": "mmx-featured-product",
-            "hash": "91652e002b5f29473e349302bf1b86e07985b41e63e66eeca89a72ae7a176d9c"
+            "hash": "9cdd1a91db9203f1bdf3da1e5557d77bc2ee8c37481727f3207482ba0aeee6df"
         },
         "js/mmx-hero.json": {
             "jsresource_code": "mmx-hero",
-            "hash": "5297c6e70567f467f4684c23b20e27d74ee21fcd4e413ba8f9f5f954f3d4d273"
+            "hash": "9651e3900107bc57156ee7a3859a526f928b327e200ec8096925fe63911dbf1a"
         },
         "js/mmx-hero-slider.json": {
             "jsresource_code": "mmx-hero-slider",
-            "hash": "6d2554a12b28feb5d3eb2c2ead21b68b990ddd3a2f3e660fe623ef3e2baed5fc"
+            "hash": "3a40584374f36c69000a683f691bdb666a8c62531987e2c4d830ef39f586de13"
         },
         "js/mmx-icons.json": {
             "jsresource_code": "mmx-icons",
@@ -5432,11 +5432,11 @@
         },
         "js/mmx-product-carousel.json": {
             "jsresource_code": "mmx-product-carousel",
-            "hash": "61dcc1e1f8c28935d4b0917de488374fcde883572d0c1dce252d3f55e847ad77"
+            "hash": "06f5ac7ab20502fcd7b5dbbd794d0701404982276dd016c3a74b47193648b324"
         },
         "js/mmx-quick-order.json": {
             "jsresource_code": "mmx-quick-order",
-            "hash": "78ee1c5ebbc8ec95633528c502bc5e35e7ef2a46647deb5de1e782d39eb24718"
+            "hash": "eb4808b8fbf3558ecfdcddeaad4082be3eeb551f92a7b3589275e0f698e14b5f"
         },
         "js/mmx-text.json": {
             "jsresource_code": "mmx-text",
@@ -5688,7 +5688,7 @@
         },
         "css/extensions.css": {
             "cssresource_code": "extensions",
-            "hash": "d33915300e402536374ff59fce159ab17eb0455b71386fd4a9aebe294375224d"
+            "hash": "8dc2e32d23a4adf7906764405893dbdb0c5b8938ccd4007e7ccea20a15c55560"
         },
         "css/forms.json": {
             "cssresource_code": "forms",
@@ -5740,7 +5740,7 @@
         },
         "css/mmx-base.json": {
             "cssresource_code": "mmx-base",
-            "hash": "47d737437c98d08bf047d955929a7f901ba95f10786927c57168eeba209b05e4"
+            "hash": "bc4c509447a404e95eb6eeaf425e004fa98c9c75a634a472d67c7ff4f2434df2"
         },
         "css/mmx-button.json": {
             "cssresource_code": "mmx-button",
@@ -5760,11 +5760,11 @@
         },
         "css/mmx-hero.json": {
             "cssresource_code": "mmx-hero",
-            "hash": "47774f051003a3fb03188cb51f3316e634e9ecd2487bb2e7dfa0093354759f56"
+            "hash": "c06ea29047bb25e1a0efbc5f669fc6c9db1d177c7714baa00886c9bf2e81a43a"
         },
         "css/mmx-hero-slider.json": {
             "cssresource_code": "mmx-hero-slider",
-            "hash": "f0ff1bcfe9dac9112d6fe2d1bd134a6a2929bd2318efe46b64ae804b5eba84d5"
+            "hash": "121187fdf02500bc5f52ebcfbda35fd106045b4e5103cc673d2f4270601f4c05"
         },
         "css/mmx-image-across.json": {
             "cssresource_code": "mmx-image-across",
@@ -5772,7 +5772,7 @@
         },
         "css/mmx-quick-order.json": {
             "cssresource_code": "mmx-quick-order",
-            "hash": "e90c2b151411edd214ae731bbc8c26c8e50b9f96e7dd58a663008b2642968458"
+            "hash": "308cd6510ab56c1dcadaaae4c16cd9964d836fab7cb7f934846020b3b7db15be"
         },
         "css/mmx-text.json": {
             "cssresource_code": "mmx-text",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "3a354af0ad31b2aadc4b22c558c5039b241698c91de329a35dcc1ea76d1047ff"
+            "hash": "f7440ac69f73b367513b2d54a1647f528936f1fab710c67dc1feab2f4e492e3f"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -6260,7 +6260,7 @@
         },
         "resourcegroups/modules.json": {
             "resourcegroup_code": "modules",
-            "hash": "cdfeb715d8cf259c8654a47a9306095917191b468781d9fa3b6289d4c2e3c901"
+            "hash": "444b817141aa0234d52bbb050197dabccb92e8b88d1fe20640a6185d58e1c3fd"
         },
         "resourcegroups/mmx-base.json": {
             "resourcegroup_code": "mmx-base",
@@ -6403,6 +6403,84 @@
         "js/recaptcha_v3.json": {
             "jsresource_code": "recaptcha_v3",
             "hash": "0a2e7e09839d3ea585fa2041d51ffb95730767673b6939c6d392c8047ae8382a"
+        },
+        "templates/flex-initialization-template-mmx-combination-facet.mvt": {
+            "template_filename": "flex-initialization-template-mmx-combination-facet.mvc",
+            "hash": "51659885f670f745daf9cf00388daa2d7a1b191473e0c8739245c67c04f2ab8d"
+        },
+        "templates/flex-initialization-template-mmx-combination-facet.json": {
+            "template_filename": "flex-initialization-template-mmx-combination-facet.mvc",
+            "hash": null
+        },
+        "templates/flex-instance-template-mmx-combination-facet.mvt": {
+            "template_filename": "flex-instance-template-mmx-combination-facet.mvc",
+            "hash": "0fefbe578fb91efec24f92cdd64cefa6dfdb529061dd9c69f6383075a977553b"
+        },
+        "templates/flex-instance-template-mmx-combination-facet.json": {
+            "template_filename": "flex-instance-template-mmx-combination-facet.mvc",
+            "hash": null
+        },
+        "templates/mailchimp-newsletter-signup-template.mvt": {
+            "template_filename": "mailchimp-newsletter-signup-template.mvc",
+            "hash": "a48a75de75eb7e118d7b3e9aeb52b2af0bc2574bca5b46e41a538ed77562c501"
+        },
+        "templates/mailchimp-newsletter-signup-template.json": {
+            "template_filename": "mailchimp-newsletter-signup-template.mvc",
+            "hash": null
+        },
+        "properties/flex/mmx-combination-facet.json": {
+            "property_group": "",
+            "property_type": "flex",
+            "property_code": "mmx-combination-facet",
+            "hash": "b739abd96481e7ea1d8d8b3e6431f84975dc7ef24f0e3283be0bf53fe248f0aa"
+        },
+        "js/mailchimp.json": {
+            "jsresource_code": "mailchimp",
+            "hash": "50104138de50d8b9a082d6dcf9e22689938be855aef7d771fa89a1971042fbed"
+        },
+        "js/mailchimp.js": {
+            "jsresource_code": "mailchimp",
+            "hash": "dda8639919a70d07ce81af8546dac307a95380250191c4bd2a75dacf1b6cdbfc"
+        },
+        "js/mmx-combination-facet.json": {
+            "jsresource_code": "mmx-combination-facet",
+            "hash": "81df2269da72a98a2741694ad7d237924acfc38847eb75f0c1580d54ee6a9c3c"
+        },
+        "css/mailchimp.json": {
+            "cssresource_code": "mailchimp",
+            "hash": "be9a88b5290b5eb19fea7f9d11455e5e9c51331963d5f6e28ebe13f211ac7dcb"
+        },
+        "css/mailchimp.css": {
+            "cssresource_code": "mailchimp",
+            "hash": "984c02a49bfe806c5e4172426b68d31e7abdd7d6846a4edf866199fb0b0cc16d"
+        },
+        "css/mmx-combination-facet.json": {
+            "cssresource_code": "mmx-combination-facet",
+            "hash": "e587d91a0a1457f81506b532b64d61ef2d91708f1f38dc48bcd9d7aa20786fa9"
+        },
+        "resourcegroups/mmx-combination-facet.json": {
+            "resourcegroup_code": "mmx-combination-facet",
+            "hash": "393720b4c3f53fcbc9d3e6ac7eeb64db4e1d362c953a34890776ce0aa1360db7"
+        },
+        "templates/testimony-category_listing.mvt": {
+            "template_filename": "testimony-category_listing.mvc",
+            "hash": "b804138312bf82cc194209b3a03fcd6a2270a97fb5604bede11215d81f453703"
+        },
+        "templates/testimony-footer.mvt": {
+            "template_filename": "testimony-footer.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/testimony-header.mvt": {
+            "template_filename": "testimony-header.mvc",
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "templates/testimony.mvt": {
+            "template_filename": "testimony.mvc",
+            "hash": "b6d37a3d5dd121902d98500677c5f19a530ddee49c3b251a03fdccfb780d2973"
+        },
+        "templates/testimony.json": {
+            "template_filename": "testimony.mvc",
+            "hash": "a5e31801eaca15fbe876bfcad8d7563967619c2b0c00db1ebd70864fab5c2207"
         }
     }
 }

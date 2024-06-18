@@ -1,6 +1,6 @@
 {
     "depends": {
-        "mmx-base": "10.08.03"
+        "mmx-base": "10.09.01"
     },
     "initialization_template_disabled": 1,
     "instance_template_disabled": 1,
@@ -13,5 +13,5 @@
         }
     ],
     "type": "library",
-    "version": "10.08.03"
+    "version": "10.09.01"
 }

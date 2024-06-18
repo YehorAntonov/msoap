@@ -1,7 +1,10 @@
 {
     "code": "modules",
     "linked_js_resources": [
-        "recaptcha_v3"
+        "recaptcha_v3",
+        "mailchimp"
     ],
-    "linked_css_resources": []
+    "linked_css_resources": [
+        "mailchimp"
+    ]
 }

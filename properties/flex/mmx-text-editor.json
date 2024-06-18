@@ -37,7 +37,7 @@
         }
     },
     "depends": {
-        "mmx-base": "10.08.03"
+        "mmx-base": "10.09.01"
     },
     "initialization_template_disabled": 0,
     "initialization_template_filename": "692_flex-initialization-template-mmx-text-editor.mvc",
@@ -65,5 +65,5 @@
         }
     ],
     "type": "component",
-    "version": "10.08.03"
+    "version": "10.09.01"
 }

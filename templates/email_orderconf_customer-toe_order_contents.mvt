@@ -13,13 +13,13 @@
       <div>
          <mvt:if expr="ISNULL l.settings:item:imagetypes:main">
          <mvt:else>
-            <img style="object-fit: contain; width: 100px; height: 100px;" src="&mvte:item:imagetypes:main;" alt="&mvte:item:name;" border="0">
+            <img style="object-fit: contain; width: 60px; height: 60px;" src="&mvte:item:imagetypes:main;" alt="&mvte:item:name;" border="0">
          </mvt:if>
       </div>
    </td>
    <td style="padding: 15px 0; border-top: 1px solid lightgrey;">
       <p>&mvt:item:name;</p>
-      <p>&mvt:item:code;</p>
+      <mvt:comment> <p>&mvt:item:code;</p> </mvt:comment>
     </td>
     <td style="padding: 15px 0; border-top: 1px solid lightgrey;" align="center">&mvte:item:quantity;</td>
     <td style="padding: 15px 0; border-top: 1px solid lightgrey;" align="center">&mvt:item:formatted_price;</td>

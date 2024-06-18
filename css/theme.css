@@ -3206,18 +3206,21 @@ body {
 }
 @media screen and (max-width: 1132px) and (min-width: 1107px) {
 	.search-form-faq  {
-		margin-top: 0 !important;
+		/* margin-top: 0 !important; */
 	}
 	
 }
 @media screen and (max-width: 992px) and (min-width: 960px) {
 	.search-form-faq  {
-		margin-top: 0 !important;
+		/* margin-top: 0 !important; */
 	}
 	
 }
 .srch-icon {
 	display: block;
+}
+.search-form-faq  {
+	display: flex;
 }
 @media screen and (max-width: 960px) {
 	.faq-container {
@@ -3278,4 +3281,18 @@ body {
 	.newsletter-link-bar {
 		font-size: 13px !important;
 	}
+}
+.laundaryball-cat {
+	overflow: visible;
+	top: -85px !important;
+}
+.laundaryball-cat img {
+	transform: scale(1.5);
+}
+.valuepack-cat {
+	overflow: visible;
+	top: 10px !important;
+}
+.valuepack-cat img {
+	transform: scale(1.2);
 }

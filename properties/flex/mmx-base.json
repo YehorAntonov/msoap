@@ -1,18 +1,18 @@
 {
     "conflicts": {
-        "mmx-category-carousel": "<10.08.03",
-        "mmx-featured-product": "<10.08.03",
-        "mmx-hero": "<10.08.03",
-        "mmx-hero-slider": "<10.08.03",
-        "mmx-icons": "<10.08.03",
-        "mmx-image-across": "<10.08.03",
-        "mmx-image-and-text": "<10.08.03",
-        "mmx-product-carousel": "<10.08.03",
-        "mmx-quick-order": "<10.08.03",
-        "mmx-text-area": "<10.08.03",
-        "mmx-text-banner": "<10.08.03",
-        "mmx-text-editor": "<10.08.03",
-        "mmx-video": "<10.08.03"
+        "mmx-category-carousel": "<10.09.01",
+        "mmx-featured-product": "<10.09.01",
+        "mmx-hero": "<10.09.01",
+        "mmx-hero-slider": "<10.09.01",
+        "mmx-icons": "<10.09.01",
+        "mmx-image-across": "<10.09.01",
+        "mmx-image-and-text": "<10.09.01",
+        "mmx-product-carousel": "<10.09.01",
+        "mmx-quick-order": "<10.09.01",
+        "mmx-text-area": "<10.09.01",
+        "mmx-text-banner": "<10.09.01",
+        "mmx-text-editor": "<10.09.01",
+        "mmx-video": "<10.09.01"
     },
     "initialization_template_disabled": 1,
     "instance_template_disabled": 1,
@@ -30,5 +30,5 @@
         }
     ],
     "type": "library",
-    "version": "10.08.03"
+    "version": "10.09.01"
 }

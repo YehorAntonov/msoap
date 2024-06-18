@@ -15,7 +15,11 @@
 					<mvt:foreach iterator="group" array="basket:groups">
 						<div class="x-mini-basket__line">
 							<figure class="x-mini-basket__image">
-								<img src="&mvte:group:imagetypes:main;" alt="&mvte:group:name;" loading="lazy" width="&mvte:basket:b_width;" height="&mvte:basket:b_height;">
+								<mvt:if expr="l.settings:group:code EQ '1050'">
+									<img style="transform: scale(50%);" src="&mvte:group:imagetypes:main;" alt="&mvte:group:name;" loading="lazy" width="&mvte:basket:b_width;" height="&mvte:basket:b_height;">
+								<mvt:else>
+									<img src="&mvte:group:imagetypes:main;" alt="&mvte:group:name;" loading="lazy" width="&mvte:basket:b_width;" height="&mvte:basket:b_height;">
+								</mvt:if>
 							</figure>
 							<div class="x-mini-basket__item">
 								<span class="x-mini-basket__item-name">

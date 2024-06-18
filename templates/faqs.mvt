@@ -50,6 +50,7 @@
 					<p class="faq-third">online questions and answers</p>
 				</div>
 				<form style="margin-top: 6%;"class="t-site-header__search-form search-form-faq">
+					<div>
 					<fieldset>
 						<legend>Product Search</legend>
 						<div class="c-form-list">
@@ -59,6 +60,10 @@
 							</div>
 						</div>
 					</fieldset>
+					</div>
+					<div style="margin-left: 10px;">
+						<button id="clear-search" style="padding: 7px;" class="c-button c-button--full">Clear</button>
+					</div>
 				</form>
 			</div>
 			<section class="o-layout content-static">

@@ -38,11 +38,13 @@
   
   </head>
   <body bgcolor="white" color="black">
+  <mvt:comment> <mvt:item name="ry_toolbelt" param="varlist|local" />
+  <mvt:item name="ry_toolbelt" param="varlist|global" /> </mvt:comment>
   <table style="color: black; height: 100%; text-align: center; width: 100%;" cellspacing="0">
     <tr>
       <td>
         <img style="object-fit: contain;
-      height: 37px;" src="https://i.ibb.co/ZzrSstR/Miracle2-logo2.png" alt="Miracle2-logo2" border="0">
+      height: 60px;" src="https://i.ibb.co/ZzrSstR/Miracle2-logo2.png" alt="Miracle2-logo2" border="0">
       </td>
     </tr>
     <tr> 
@@ -54,62 +56,77 @@
       text-align: center;
       width: 100%;
       background-position: center center;">
-        <h1 id="titleemail" style="text-align: center;"><a href="https://imgbb.com/"><img id="imgapprove" style="object-fit: contain; width: 30px; height: 30px; vertical-align: sub; padding-right: 10px;" src="https://i.ibb.co/6Rs4tKL/FAQ-Icon.png" alt="FAQ-Icon" border="0"></a>Your Order Has Been Recieved</h1>
-        <p><strong style="font-size: 16px;">Your Order # <span style="color: #487989;">&mvt:order:id;</span></strong></p>
-        <font style="font-size: 16px;"><strong>Order Date:</strong> &mvt:order:date; &mvt:order:time;</font>
+        <h1 id="titleemail" style="text-align: center; font-size: 25px;"><a href="https://imgbb.com/"><img id="imgapprove" style="object-fit: contain; width: 30px; height: 30px; vertical-align: sub; padding-right: 10px;" src="https://i.ibb.co/6Rs4tKL/FAQ-Icon.png" alt="FAQ-Icon" border="0"></a>Your Order Has Been Recieved</h1>
+        <p><strong style="font-size: 18px;">Your Order # <span style="color: #487989;">&mvt:order:id;</span></strong></p>
+        <font style="font-size: 15px;"><strong>Order Date:</strong> &mvt:order:date; &mvt:order:time;</font>
       </td>
     </tr>
   </table>
   <div align="center" style="color: black; height: 100%; width: 100%;" width="100%">
-      <div style="max-width: 593px; text-align: start;">
-        <h1 style="color: #4a4c56; font-size: 18px;">Hello Customer,</h1>
-        <font class="fonts" face="Arial, Helvetica, sans-serif" size="2">Thank you for your order! Below is a summary for your records. You will be notified once your order ships.</font></td>
+      <div style=" color: black; max-width: 593px; text-align: start;">
+        <h1 style="color: #4a4c56; font-size: 18px;">Hello &mvt:order:bill_fname;,</h1>
+        <font class="fonts" style="color: black;" face="" size="2">Thank you for your order! Below is a summary for your records. You will be notified once your order ships.</font></td>
       </div>
   </div>
 
 
   <div align="center" style="color: grey; margin-bottom: 15px; height: 100%; width: 100%;" width="100%">
     <div style="max-width: 593px; text-align: start;">
-      <h1 style="color: #4a4c56;font-size: 18px;">Order Details</h1>
-      <hr>
-      <h2 style="color: black; font-size: 16px;">Ship To</h2>
-      <div>
-        <p style="margin: 0;"><mvt:if expr="l.settings:order:ship_fname OR l.settings:ship_lname">&mvte:order:ship_fname; &mvte:order:ship_lname;<mvt:else>&nbsp;</mvt:if></p>
-        <p style="margin: 0;"><mvt:if expr="l.settings:order:ship_comp">&mvte:order:ship_comp;</mvt:if></p>
-        <p style="margin: 0;">&mvte:order:ship_addr1;</p>
-        <p style="margin: 0;">&mvte:order:ship_city;, &mvte:order:ship_state; &mvte:order:ship_zip;</p>
-        <p style="margin: 0;">&mvte:order:ship_cntry;</p>
-      </div>
+        <h1 style="color: #4a4c56;font-size: 18px;">Order Details</h1>
+        <hr>
+        <table style="width: 100%;">
+          <tr>
+            <td style="color: black; padding: 0;">
+              <h2 style="margin: 0; margin-bottom: 10px; font-size: 16px;">Ship To</h2>
+            </td>
+            <td style="color: black; padding: 0;">
+              <h2 style="margin: 0; margin-bottom: 10px; font-size: 16px;">Shipping Method</h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <p style="margin: 0;"><mvt:if expr="l.settings:order:ship_fname OR l.settings:ship_lname">&mvte:order:ship_fname; &mvte:order:ship_lname;<mvt:else>&nbsp;</mvt:if></p>
+                <p style="margin: 0;"><mvt:if expr="l.settings:order:ship_comp">&mvte:order:ship_comp;</mvt:if></p>
+                <p style="margin: 0;">&mvte:order:ship_addr1;</p>
+                <p style="margin: 0;">&mvte:order:ship_city;, &mvte:order:ship_state; &mvte:order:ship_zip;</p>
+                <p style="margin: 0;">&mvte:order:ship_cntry;</p>
+              </div>
+            </td>
+            <td style="vertical-align: baseline;">
+              <mvt:foreach iterator="charge" array="order:charges">
+                <mvt:if expr="l.settings:charge:type EQ 'SHIPPING'">
+                  <p style="margin: 0;">&mvt:charge:descrip;</p>
+                  <mvt:assign name="l.settings:shipping_method_found" value="1" />
+                </mvt:if>
+              </mvt:foreach>
+              <mvt:if expr="NOT l.settings:shipping_method_found">
+                <p style="margin: 0;">Unknown</p>
+              </mvt:if>
+            </td>
+          </tr>
+      </table>
     </div>
   </div>
 
   <div align="center" style="color: grey; margin-bottom: 30px; height: 100%; width: 100%;" width="100%">
     <div style="max-width: 593px; text-align: start;">
-      <table style="width: 100%;">
+      <table style="padding-left: 50%; width: 100%;">
         <tr>
           <td id="tdpayment" style="color: black; padding: 0;">
-            <h2 style="margin: 0; margin-bottom: 10px; font-size: 16px;">Payment Method</h2>
           </td>
           <td style="padding: 0;color: black; ">
-            <h2 style="margin: 0; margin-bottom: 10px; font-size: 16px;">Shipping Method</h2>
+            <h2 style="margin: 0; margin-bottom: 10px; font-size: 16px;">Payment Method</h2>
           </td>
         </tr>
         <tr>
           <td id="tdpayment2" style="padding: 0;">
+            
+          </td>
+          <td style="padding: 0; vertical-align: baseline;">
             <mvt:foreach iterator="payment" array="order:payments">
               <p style="margin: 0;">&mvte:payment:desc; (&mvt:payment:formatted_amount;)</p>
             </mvt:foreach>
-          </td>
-          <td style="padding: 0;">
-            <mvt:foreach iterator="charge" array="order:charges">
-              <mvt:if expr="l.settings:charge:type EQ 'SHIPPING'">
-                <p style="margin: 0;">&mvt:charge:descrip;</p>
-                <mvt:assign name="l.settings:shipping_method_found" value="1" />
-              </mvt:if>
-            </mvt:foreach>
-            <mvt:if expr="NOT l.settings:shipping_method_found">
-              <p style="margin: 0;">Unknown</p>
-            </mvt:if>
           </td>
         </tr>
       </table>

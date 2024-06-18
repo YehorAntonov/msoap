@@ -257,9 +257,9 @@
         }
     },
     "depends": {
-        "mmx-base": "10.08.03",
-        "mmx-button": "10.08.03",
-        "mmx-text": "10.08.03"
+        "mmx-base": "10.09.01",
+        "mmx-button": "10.09.01",
+        "mmx-text": "10.09.01"
     },
     "initialization_template_disabled": 0,
     "initialization_template_filename": "680_flex-initialization-template-mmx-hero.mvc",
@@ -1144,5 +1144,5 @@
         }
     ],
     "type": "component",
-    "version": "10.08.03"
+    "version": "10.09.01"
 }

@@ -1,0 +1,21 @@
+{
+    "code": "mailchimp",
+    "type": "L",
+    "branchless_filepath": "scripts/00000002/mailchimp.js",
+    "is_global": true,
+    "active": true,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        },
+        {
+            "name": "async",
+            "value": ""
+        },
+        {
+            "name": "defer",
+            "value": ""
+        }
+    ]
+}

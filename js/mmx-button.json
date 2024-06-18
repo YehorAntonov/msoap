@@ -10,7 +10,7 @@
         },
         {
             "name": "integrity",
-            "value": "sha256-JOFPT0pFFGlDS6jpRN/gRywryTiJRn8ptm4mWp3LVp0= sha384-93Ud5RWRwMlg//aK71rAHDlMXIaETol97vgdeeXYHQfK0dk5jl8l4m/jcVZLly+A sha512-VcrceQUQGpbTKer7SEZtG0RFehx/f7W5sXWAGFnTK/mtqQWWvMGPQ7KWNFAo723nUHu/TSNx3CcIfwIp3qF39w=="
+            "value": "sha256-b+dD1IonA+rgDnDyVahh5mWua9qmOHtHYkDM13JIagg= sha384-kZMYlOYCIRLfH+UOg6uXvCtcqWbqDb3o90uxA1fNT3foTNJKassmEGQOoj2RbplQ sha512-M0zWB27YCG01r8/am0OEfyA4m0sSLq5tDii7VEKYhHWY6zIYW9q56OrumEhAC6mIxEpChXE9CM8r/Hs5cl8d8w=="
         },
         {
             "name": "crossorigin",

@@ -192,9 +192,19 @@
 			<mvt:item name="customfields" param="Read_Category_Code(l.settings:category:code, 'description_for', l.settings:category:description_for)" />
 			
 			<div class="container-category">
-				<div class="circle">
-					<img alt="main image" src="&mvte:loaded_category:image;">
-				</div>
+				<mvt:if expr="l.settings:category:code EQ 'laundryball'">
+					<div class="circle laundaryball-cat">
+						<img alt="main image" src="&mvte:loaded_category:image;">
+					</div>
+				<mvt:elseif expr="l.settings:category:code EQ 'valupack' OR l.settings:category:code EQ 'paks'">
+					<div class="circle valuepack-cat">
+						<img alt="main image" src="&mvte:loaded_category:image;">
+					</div>
+				<mvt:else>
+					<div class="circle">
+						<img alt="main image" src="&mvte:loaded_category:image;">
+					</div>
+				</mvt:if>
 
 				<div class="info-category">
 					<div class="category-name">
