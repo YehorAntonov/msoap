@@ -1,8 +1,8 @@
 {
     "version": 1,
     "changeset": {
-        "id": 5983,
-        "username": null,
+        "id": 5985,
+        "username": "yehor",
         "notes": "test"
     },
     "files": {
@@ -1176,7 +1176,7 @@
         },
         "templates/ctgy_a.mvt": {
             "template_filename": "ctgy_a.mvc",
-            "hash": "03f3aa7a97b2bcb413d461858255351993b7a6b1d6f5f47b2bbdc654f210fe5c"
+            "hash": "5e80a755334839b097b27ae27865d6f361c0a9ab31653795107b766807eab77d"
         },
         "templates/ctgy_a.json": {
             "template_filename": "ctgy_a.mvc",
@@ -3436,7 +3436,7 @@
         },
         "templates/product-history.json": {
             "template_filename": "product-history.mvc",
-            "hash": "0c13b6b3fc76a3e3fd45f52d923010bc6fcaab1c45d910f244526c1c3213bf62"
+            "hash": "6c601a722e2fca240bf19f29dcc9e58e939f18da772db1297ffb7d3916fc824d"
         },
         "templates/prpo-footer.mvt": {
             "template_filename": "prpo-footer.mvc",
@@ -3668,7 +3668,7 @@
         },
         "templates/testimonials.json": {
             "template_filename": "testimonials.mvc",
-            "hash": "38905a3e6564b9d13b9a8c05357094e92cecb62d08d06194d460e2713b88ad35"
+            "hash": "027f0ffb8f9ae01477f78a3b494ff478b3d9bd188ba8f5909507cd598807b0d1"
         },
         "templates/uatm-footer.mvt": {
             "template_filename": "uatm-footer.mvc",
@@ -5008,7 +5008,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "e58ce2b9cdfe82f2e2d4f9ac81c006f040d275ed770d905fec317194e7c969bb"
+            "hash": "2f83380ddaa9bc68a019c6a39a1320f5c85e12521edf5c45ecce36a1db4146c2"
         },
         "properties/readytheme_navigationset/disclaimer_navigation.mvt": {
             "property_group": "",
@@ -6476,11 +6476,15 @@
         },
         "templates/testimony.mvt": {
             "template_filename": "testimony.mvc",
-            "hash": "b6d37a3d5dd121902d98500677c5f19a530ddee49c3b251a03fdccfb780d2973"
+            "hash": "c2d9e04735965a445336d8087baed6c7ddfd5b35d939c556e72c9ded9ae57e3c"
         },
         "templates/testimony.json": {
             "template_filename": "testimony.mvc",
-            "hash": "a5e31801eaca15fbe876bfcad8d7563967619c2b0c00db1ebd70864fab5c2207"
+            "hash": "e2804c6b4ef05b9a313a21c7062bf265c4d399c283827ca5a6f3a348064414fa"
+        },
+        "resourcegroups/mmx-main-banner-slider.json": {
+            "resourcegroup_code": "mmx-main-banner-slider",
+            "hash": "d46b6794896b00ff3bec2e03fa8b3f64b0349156782c9d65d73e111741cb5c56"
         }
     }
 }

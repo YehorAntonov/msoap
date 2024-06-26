@@ -52,19 +52,13 @@
         },
         {
             "active": 1,
-            "branch_data": {
-                "1": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/catgeory-display-ctgy.html\" target=\"_self\">Products</a>",
-                    "url": "https://miraclesoap.mivatest.com/catgeory-display-ctgy.html"
-                }
-            },
             "id": "aeb716ff48a79ac9f6c9fdd3c22f4589",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/catgeory-display-ctgy.html\" target=\"_self\">Products</a>",
-            "link_dest": "CTGY",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/ctgy-accessories.html\" target=\"_self\">Products</a>",
+            "link_dest": "CTGY_A",
             "link_targ": "_self",
             "link_type": "G",
             "name": "Products",
-            "url": "https://miraclesoap.mivatest.com/catgeory-display-ctgy.html"
+            "url": "https://miraclesoap.mivatest.com/ctgy-accessories.html"
         },
         {
             "active": 1,
