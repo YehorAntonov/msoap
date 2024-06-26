@@ -17,7 +17,12 @@
 </head>
 </head>
 <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
-
+	<mvt:item name="ry_toolbelt" param="category_children|l.all_settings:category:code" />
+  <mvt:foreach iterator="subcat" array="category_children">
+    <div>
+     &mvte:subcat:name;
+    </div>
+  </mvt:foreach>
 	<mvt:item name="hdft" param="global_header" />
 	
 	<section class="o-layout">
