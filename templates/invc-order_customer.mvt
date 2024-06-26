@@ -43,11 +43,11 @@
 	<br>
 	<mvt:item name="customfields" param="Read_Basket('order_instructions', l.settings:order_instructions)" />
 	<mvt:item name="customfields" param="Write_Order(l.settings:order:id, 'order_instructions', l.settings:order_instructions)" />
-	<mvt:if expr="l.settings:order_instructions">
+	<mvt:comment> <mvt:if expr="l.settings:order_instructions">
 		<p class="c-heading--subheading--x-small u-color-black">Delivery Notes</p>
 		<p class="u-font-small">&mvte:order_instructions;</p>
 		<br>
-	</mvt:if>
+	</mvt:if> </mvt:comment>
 	<p class="c-heading--subheading--x-small u-color-black">Billing To</p>
 	<p class="u-font-small">
 		<mvt:if expr="NOT ISNULL l.settings:order:bill_fname OR NOT ISNULL l.settings:order:bill_lname">

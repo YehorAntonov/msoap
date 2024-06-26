@@ -27,7 +27,102 @@
 		left: -90px;
 		transform: scale(0.8);
 	}
+	#mini-bubble-1 {
+		left: -150px;
+		top: -55px;
+		position: relative;
+		transform: scale(1.3);
+	}
+	#mini-bubble-2 {
+		position: relative;
+		top: -40px;
+		left: -15px;
+	}
+	#mini-bubble-3 {
+		position: relative;
+		left: -200px;
+		top: 20px;
+		transform: scale(1.3);
+	}
+	#mini-bubble-4 {
+		position: relative;
+		transform: scale(1.3);
+		top: -55px;
+		left: -130px;
+	}
+	#mini-bubble-5 {
+		position: relative;
+		top: 45px;
+		left: -140px;
+	}
+	#mini-bubble-6 {
+		position: relative;
+		top: -30px;
+		left: -55px;
+	}
+
+	#products {
+		position: relative;
+		top: -95px;
+		left: -13px;
+		font-size: 20px;
+		transform: scale(0.85);
+	}
+	#product-history {
+		position: relative;
+		top: -95px;
+		left: -13px;
+		font-size: 19px;
+		transform: scale(0.85);
+	}
+	#history {
+		position: relative;
+		top: -100px;
+		left: -13px;
+		font-size: 19px;
+		transform: scale(0.85);
+	}
+	#testimonials {
+		position: relative;
+		top: -80px;
+		left: -13px;
+		font-size: 17px;
+		transform: scale(0.85);
+	}
+	#faqs {
+		position: relative;
+		top: -75px;
+		left: -13px;
+		font-size: 19px;
+		transform: scale(0.85);
+	}
+	#contact {
+		position: relative;
+		top: -70px;
+		left: -28px;
+		font-size: 19px;
+		transform: scale(0.85);
+	}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>				
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const circleType = new CircleType(document.getElementById('products'));
+		const circleType2 = new CircleType(document.getElementById('product-history'));
+		const circleType4 = new CircleType(document.getElementById('testimonials'));
+		const circleType5 = new CircleType(document.getElementById('faqs'));
+		const circleType6 = new CircleType(document.getElementById('contact'));
+		const circleType3 = new CircleType(document.getElementById('history'));
+		circleType.radius(125);
+		circleType2.radius(125);
+		circleType3.radius(125);
+		circleType4.radius(125);
+		circleType5.radius(125);
+		circleType6.radius(125);
+	})
+	
+</script>
 <mvt:foreach iterator="navigationitem" array="readytheme:navigationitems">
 	<mvt:if expr="POS1 EQ 1">
 		<div id="bubble2">
@@ -165,23 +260,7 @@
 		</div>
 	</mvt:if>
 </mvt:foreach>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>				
-<script>
 
-	const circleType = new CircleType(document.getElementById('products'));
-	const circleType2 = new CircleType(document.getElementById('product-history'));
-	const circleType4 = new CircleType(document.getElementById('testimonials'));
-	const circleType5 = new CircleType(document.getElementById('faqs'));
-	const circleType6 = new CircleType(document.getElementById('contact'));
-	const circleType3 = new CircleType(document.getElementById('history'));
-	circleType.radius(125);
-	circleType2.radius(125);
-	circleType3.radius(125);
-	circleType4.radius(125);
-	circleType5.radius(125);
-	circleType6.radius(125);
-</script>
 				
 					
 				

@@ -99,13 +99,13 @@
 						</mvt:if>
 					</div>
 					<br>
-					<div class="c-form-list">
+					<mvt:comment> <div class="c-form-list">
 						<div class="c-form-list__item c-form-list__item--full">
 							<mvt:item name="customfields" param="Read_Basket('order_instructions', g.order_instructions)" />
 							<label class="c-form-label c-heading-echo u-text-bold u-text-uppercase" for="order_instructions" title="Delivery Notes">Delivery Notes <span class="c-heading--subheading">(Optional)</span></label>
 							<textarea id="order_instructions" class="c-form-input c-form-input--long" name="order_instructions">&mvte:global:order_instructions;</textarea>
 						</div>
-					</div>
+					</div> </mvt:comment>
 					<hr class="c-keyline">
 					<div class="c-form-list">
 						<div class="c-form-list__item c-form-list__item--full u-text-right">

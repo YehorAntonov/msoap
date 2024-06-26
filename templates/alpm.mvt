@@ -243,12 +243,12 @@
 							</div>
 						</layer>
 					</ilayer>
-					<form method="post" action="https://miraclesoap.mivatest.com/affiliate-create.html" onsubmit="return validate(this)">
+					<form method="post" action="https://miraclesoap.mivatest.com/affiliate-login.html" onsubmit="return validate(this)">
 						<input type="hidden" name="Action" value="ALPM" />
 						<label for="agree">*By checking the following checkbox, I certify that I have read and agree to the Terms and Conditions specified in the above Statement.</label>
 						<input name="agree" value="yes" type="checkbox" required><p></p>
 						<div style="text-align: center;">
-							<button onclick="location.href('https://miraclesoap.mivatest.com/affiliate-create.html')" class="c-button c-button--full add-to-cart" style="text-align: center;" align="center">Create Your Account</button>
+							<button onclick="location.href('https://miraclesoap.mivatest.com/affiliate-login.html')" class="c-button c-button--full add-to-cart" style="text-align: center;" align="center">Create Your Account</button>
 						</div>
 					</form>
 				</div>

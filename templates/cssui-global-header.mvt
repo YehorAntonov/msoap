@@ -78,6 +78,30 @@
 			<div class="o-layout__item u-width-6 u-width-8--l u-width-5--w u-hidden u-text-right t-site-header__secure &mvte:global:Session:shadows:checkout_shown;">
 				<span class="u-color-gray-600 u-text-medium u-text-uppercase"><span class="c-heading--subheading--x-small u-icon-secure" aria-hidden="true"></span> <span class="secure-checkout-text">Secure Checkout</span></span>
 			</div>
+			<mvt:if expr="g.Session:shadows:checkout_shown EQ 'u-shown'">
+				<style>
+					@media screen and (min-width: 961px) {
+						.t-site-header__logo img {
+							margin-top: 3px;
+						}
+					}
+					@media screen and (min-width: 1090px) {
+						.t-site-header__logo img {
+							margin-top: 0;
+						}
+					}
+					@media screen and (min-width: 1180px) {
+						.t-site-header__logo img {
+							margin-top: -3px;
+						}
+					}
+					@media screen and (min-width: 1240px) {
+						.t-site-header__logo img {
+							margin-top: -8px;
+						}
+					}
+				</style>
+			</mvt:if>
 		</div>
 	</section>
 </header>
@@ -117,7 +141,7 @@
 		  </section>
     </mvt:if>
 <mvt:else>
-  	<main class="o-wrapper background-image">
+  	<main style="padding-bottom: 50px; min-height: 1000px;" class="o-wrapper background-image">
 	<div style="max-width: 1600px" class="o-wrapper t-main-content-element">
 		<div class="bubbles-global o-wrapper t-main-content-element">
   			<div id="bubbles" class="bubbles desktop">

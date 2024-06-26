@@ -9,7 +9,7 @@
 
 <mvt:foreach iterator="item" array="order:groups">
   <tr>
-    <td style="padding: 15px 0; border-top: 1px solid lightgrey;" align="left">
+    <td style="padding: 0; border-top: 1px solid lightgrey;" align="left">
       <div>
          <mvt:if expr="ISNULL l.settings:item:imagetypes:main">
          <mvt:else>
@@ -21,9 +21,9 @@
       <p>&mvt:item:name;</p>
       <mvt:comment> <p>&mvt:item:code;</p> </mvt:comment>
     </td>
-    <td style="padding: 15px 0; border-top: 1px solid lightgrey;" align="center">&mvte:item:quantity;</td>
-    <td style="padding: 15px 0; border-top: 1px solid lightgrey;" align="center">&mvt:item:formatted_price;</td>
-    <td style="padding: 15px 0; border-top: 1px solid lightgrey;" align="right">&mvt:item:formatted_subtotal;</td>
+    <td style="padding: 0; border-top: 1px solid lightgrey;" align="center">&mvte:item:quantity;</td>
+    <td style="padding: 0; border-top: 1px solid lightgrey;" align="center">&mvt:item:formatted_price;</td>
+    <td style="padding: 0; border-top: 1px solid lightgrey;" align="right">&mvt:item:formatted_subtotal;</td>
   </tr>
 </mvt:foreach>
 

@@ -121,8 +121,18 @@
 	</section>
 	<br>
 </mvt:if> </mvt:comment>
-<div style="margin-left: 0;" class="u-width-13--l info-of-category">
-	<h1 style="margin-top: 10px;" class="c-heading-charlie t-category-name">You searched for &ldquo;&mvte:global:search;&rdquo;</h1>
+<div class="u-width-13--l info-of-category main-ctgy">
+	<style>
+		@media screen and (min-width: 960px) {
+			.main-ctgy {
+				padding-bottom: 0;
+			}
+			.main-category {
+				margin-bottom: 30px;
+			}
+		}
+	</style>
+	<h1 class="c-heading-charlie t-category-name main-category">You searched for &ldquo;&mvte:global:search;&rdquo;</h1>
 </div>
 <section class="main-products">
 	<mvt:foreach iterator="product" array="search_results:products">

@@ -56,7 +56,7 @@
       text-align: center;
       width: 100%;
       background-position: center center;">
-        <h1 id="titleemail" style="text-align: center; font-size: 25px;"><a href="https://imgbb.com/"><img id="imgapprove" style="object-fit: contain; width: 30px; height: 30px; vertical-align: sub; padding-right: 10px;" src="https://i.ibb.co/6Rs4tKL/FAQ-Icon.png" alt="FAQ-Icon" border="0"></a>Your Order Has Been Recieved</h1>
+        <h1 id="titleemail" style="text-align: center; font-size: 25px;"><a href="https://imgbb.com/"><img id="imgapprove" style="object-fit: contain; width: 30px; height: 30px; vertical-align: sub; padding-right: 10px;" src="https://i.ibb.co/6Rs4tKL/FAQ-Icon.png" alt="FAQ-Icon" border="0"></a><span style="margin-bottom: 0; margin-top: 0; margin-right: 35px; font-weight: 700;">Your Order Has Been Recieved</span></h1>
         <p><strong style="font-size: 18px;">Your Order # <span style="color: #487989;">&mvt:order:id;</span></strong></p>
         <font style="font-size: 15px;"><strong>Order Date:</strong> &mvt:order:date; &mvt:order:time;</font>
       </td>

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "changeset": {
-        "id": 5541,
+        "id": 5642,
         "username": null,
         "notes": "test"
     },
@@ -264,7 +264,7 @@
         },
         "templates/afcl.mvt": {
             "template_filename": "afcl.mvc",
-            "hash": "b3ea314652568f40ad63f9fe09510837643912c832b326c4e0479a1d8e73ce8c"
+            "hash": "86b8c1d3df79550cc2e3f00d3173e9aa941d42398e2f278a7e0672c2e850c41f"
         },
         "templates/afcl.json": {
             "template_filename": "afcl.mvc",
@@ -368,7 +368,7 @@
         },
         "templates/alpm.mvt": {
             "template_filename": "alpm.mvc",
-            "hash": "c7c1aacfed1c7a88117136bc55d84b5c3e9396e25eeb7b637fcc06a6ce52212e"
+            "hash": "c2795ce28c7e0e5c1f221ee3baf0d8d0d772ba1d383b143ea1442c36cc876652"
         },
         "templates/alpm.json": {
             "template_filename": "alpm.mvc",
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "65a3760be8d90df0bf15787c711f4640b20333a28ac91c8e534b0033bd781079"
+            "hash": "4c80ecf379393818e56d8082ceaf86685df54521ec3b54aca90d3dc1db842721"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1104,7 +1104,7 @@
         },
         "templates/ctgy-category_listing.mvt": {
             "template_filename": "ctgy-category_listing.mvc",
-            "hash": "85098dfafff5f9551498867c7052913fb93a41c7efb0bc771b98c5f684aca3d2"
+            "hash": "e5ab6f77f4d2065b133eda6f73be1bf5d27c01882ec07cc644512ef64ba78ca6"
         },
         "templates/ctgy-footer.mvt": {
             "template_filename": "ctgy-footer.mvc",
@@ -2344,11 +2344,11 @@
         },
         "templates/email_orderconf_customer-toe_order_contents.mvt": {
             "template_filename": "email_orderconf_customer-toe_order_contents.mvc",
-            "hash": "7a1f65e30d2b6e4629b58e7470b3fa35b99446bab8721eb1d0437e22641d2beb"
+            "hash": "e375eaaa6d2eac51604e07df86a46f7b5c7371ed2ae1a26d0415707984a7cebb"
         },
         "templates/email_orderconf_customer.mvt": {
             "template_filename": "email_orderconf_customer.mvc",
-            "hash": "0231c0a5c0419fe377c3d4bc1aecc61198603d9619c4f2aeb1a272c4d31db78f"
+            "hash": "b12209e8e7d83bfa519c0dd08dc24443399e3101662f3d37fcbf535ecc846c93"
         },
         "templates/email_orderconf_customer.json": {
             "template_filename": "email_orderconf_customer.mvc",
@@ -2528,7 +2528,7 @@
         },
         "templates/faqs.mvt": {
             "template_filename": "faqs.mvc",
-            "hash": "532fc11754792fb3ee5eb7a91f4a80f20e0665a94189172649962cd1cc1a82d5"
+            "hash": "bc2df4d2a19c436f9ba10ff251a06bf483fb5e887eaf14781718df6ab18f4347"
         },
         "templates/faqs.json": {
             "template_filename": "faqs.mvc",
@@ -2736,7 +2736,7 @@
         },
         "templates/fpwd.mvt": {
             "template_filename": "fpwd.mvc",
-            "hash": "a9b7eb003979ef901f7167c9f9b5e8644c7041101b7c606dba5d36d088d26fab"
+            "hash": "1092f707eab38a0e8bd6d73c47604b238f962383e141832b2cce0e49ca2277ce"
         },
         "templates/fpwd.json": {
             "template_filename": "fpwd.mvc",
@@ -2816,7 +2816,7 @@
         },
         "templates/invc-order_customer.mvt": {
             "template_filename": "invc-order_customer.mvc",
-            "hash": "925f2997dd33fad890b1e18e33a93a6c92dd3f5912234dfc4389b64a492a959c"
+            "hash": "eee55b54ef78427458a4fdb2bfb64d5c720741db711254e32d0f2beb297cb3f9"
         },
         "templates/invc-printer_friendly_content.mvt": {
             "template_filename": "invc-printer_friendly_content.mvc",
@@ -2996,7 +2996,7 @@
         },
         "templates/opay-customer.mvt": {
             "template_filename": "opay-customer.mvc",
-            "hash": "2bce5211b4ef8987022fc353ce6c47ad57ec5e8871bb4c1ba010e04bf27ec7d7"
+            "hash": "8016319c642a36ce545be40d806dc4d7ce3ad2a34c7187f9fa7e1b1bc1bc0dcf"
         },
         "templates/opay-footer.mvt": {
             "template_filename": "opay-footer.mvc",
@@ -3124,7 +3124,7 @@
         },
         "templates/ords-order_customer.mvt": {
             "template_filename": "ords-order_customer.mvc",
-            "hash": "12dd1f5c94daba512ceb23c392d8ee63738b4dbd5719f5fcab4181542b9ee9f8"
+            "hash": "fa3c51c73d99f752dc89ae3f1f40da7f875768c4d225edef99e5e70c168646ae"
         },
         "templates/ords-printer_friendly_content.mvt": {
             "template_filename": "ords-printer_friendly_content.mvc",
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "119d4cf060770412cd6986910a903cf6257add22a97cd2670eaf65f29226a993"
+            "hash": "20bab4de2e4306c771698269bd02185c233c324ddbcd3172cb6ad8f9eaa75ae6"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -3636,7 +3636,7 @@
         },
         "templates/srch-search_results.mvt": {
             "template_filename": "srch-search_results.mvc",
-            "hash": "1bd9e457dec9d84aab8350d8ac7349f0fe6c321ce89c5f0f9ce0cac4fd4e4a51"
+            "hash": "412c4357d9e0ba77f7a2a6b79939d62534be26a32d9d14156ca8d1a08c06b57b"
         },
         "templates/srch-shipestimate.mvt": {
             "template_filename": "srch-shipestimate.mvc",
@@ -4528,7 +4528,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "contact_form",
-            "hash": "c57c177b7ca8e28507e4db4e9efcb1c96c3f2eb40f669ccb59385fcfc7262c30"
+            "hash": "3b1c6515fc57417ea748e1bc91dffcd249945ca932df61046d170d5525ef39ad"
         },
         "properties/readytheme_contentsection/contact_form.json": {
             "property_group": "",
@@ -4576,7 +4576,7 @@
             "property_group": "",
             "property_type": "readytheme_contentsection",
             "property_code": "faqs_content",
-            "hash": "0b1f42c0d3d36737eb9898e097d5c7f15902c8796f9aaf987dc9c6a885147784"
+            "hash": "79db295ded8da523cf8cb4c48a7fce0f9e33d73a255e8cc03ab5e439a6c6adf3"
         },
         "properties/readytheme_contentsection/faqs_content.json": {
             "property_group": "",
@@ -5002,7 +5002,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "199d632a3f9412f29be28b1708133f5a2b457995a341df802d38d39fde7aa9b2"
+            "hash": "3fe0c0a6da9ede1e4d59f76f0143512ffe8d6eb4deaaf0667cf34d5a26e4b5d4"
         },
         "properties/readytheme_navigationset/bubbles_navigation.json": {
             "property_group": "",
@@ -5110,7 +5110,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "static_navigation",
-            "hash": "41894cc7eba351b72e2508aa5da5d6ab234415c9214396306fb55b7d0b821bb9"
+            "hash": "682d5810029980e4fdd679f89f1bfaa85547f445ce736312b984dac490c1ef96"
         },
         "properties/readytheme_navigationset/static_navigation.json": {
             "property_group": "",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "f7440ac69f73b367513b2d54a1647f528936f1fab710c67dc1feab2f4e492e3f"
+            "hash": "407a155600d24e230825b785e4e8771347ffd241db150dcd9d45635f3a0ef000"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",
@@ -6340,7 +6340,7 @@
         },
         "templates/amazonpay_opay.mvt": {
             "template_filename": "amazonpay_opay.mvc",
-            "hash": "c1d3b35ac31105a74e44df7662d37843666cf12c055e41208cc84634dffc502b"
+            "hash": "a4516ae5371090cbcbbfb7db6db3802b7017b2cc16c55384e0b6c7865bee5b2c"
         },
         "templates/amazonpay_opay.json": {
             "template_filename": "amazonpay_opay.mvc",
@@ -6368,7 +6368,7 @@
         },
         "templates/amazonpay_osel.mvt": {
             "template_filename": "amazonpay_osel.mvc",
-            "hash": "523a49092230ab0f0bdbdecceaafd17f4af6f92ad2986da5d5a82d35a6f4e28d"
+            "hash": "1132cbbd74930a67b70171c24ad3e2d3b39f99881986c6ebf1e83f11a2b79c31"
         },
         "templates/amazonpay_osel.json": {
             "template_filename": "amazonpay_osel.mvc",

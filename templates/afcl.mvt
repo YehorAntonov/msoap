@@ -56,9 +56,9 @@
 				</fieldset>
 			</form>
 		</div>
-		<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-logn-block">
+		<div class="o-layout__item u-width-12 u-width-6--m u-width-4--l t-logn-block logn-block-align">
 			<p class="c-heading-foxtrot">New Affiliate</p>
-			<p><a class="c-button c-button--secondary" href="&mvte:urls:AFAD:secure;" title="Register for an Affiliate Account">Register</a></p>
+			<p><a class="c-button c-button--full" href="&mvte:urls:AFAD:secure;" title="Register for an Affiliate Account">Create New Account</a></p>
 		</div>
 	</section>
 	

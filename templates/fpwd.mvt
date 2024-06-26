@@ -22,7 +22,7 @@
 	</section>
 
 	<section class="o-layout o-layout--justify-center">
-		<div style="min-height: 600px;" class="o-layout__item u-width-12 u-width-6--m">
+		<div style="min-height: 800px;" class="o-layout__item u-width-12 u-width-6--m">
 			<div style="margin-top: 20px; margin-bottom: 20px;" class="account-custom">
 				<p class="x-messages x-messages--info x-messages--with-icon">
 					<span class="x-messages__icon u-icon-info" aria-hidden="true"></span>

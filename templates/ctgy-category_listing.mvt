@@ -129,11 +129,21 @@
 	<mvt:assign name="l.settings:subcategory_count" value="miva_array_elements(l.settings:subcategories)" />
 	<mvt:if expr="l.settings:subcategories GT 0">
 		<div class="u-width-13--l info-of-category main-ctgy">
-			<h1 class="c-heading-charlie t-category-name main-category"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1><br>
+			<h1 class="c-heading-charlie t-category-name main-category"><span class="sub-name__miracle">Miracle II </span>Main Categories</h1>
 		</div>
 		<style>
 			.info-of-category {
 				margin-top: 20px;
+			}
+		</style>
+		<style>
+			@media screen and (min-width: 960px) {
+				.main-ctgy {
+					padding-bottom: 0;
+				}
+				.main-category {
+					margin-bottom: 30px;
+				}
 			}
 		</style>
 	<mvt:else>

@@ -62,8 +62,8 @@
 					<input type="hidden" name="verify" value="&mvte:verify;">
 				</div>
 			</div> </mvt:comment>
-  			<script src="https://www.google.com/recaptcha/enterprise.js?render=6LexQO8pAAAAAMuldLJRVIPDpx87MPpwD_tIdsq8"></script>
-			<div style="margin-bottom: 15px;" class="g-recaptcha" data-sitekey="6LexQO8pAAAAAMuldLJRVIPDpx87MPpwD_tIdsq8"></div>
+  			<script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTcP0pAAAAAEvpX3qiVtfXJ8yyvhPt8sCnbk51"></script>
+			<div style="margin-bottom: 15px;" class="g-recaptcha" data-sitekey="6LdTcP0pAAAAAEvpX3qiVtfXJ8yyvhPt8sCnbk51"></div>
 			<div class="c-form-list__item">
 				<button class="c-button c-button--full" data-hook="contact-form__submit" type="submit">Submit</button>
 			</div>
@@ -74,7 +74,7 @@
   function onClick(e) {
     e.preventDefault();
     grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LexQO8pAAAAAMuldLJRVIPDpx87MPpwD_tIdsq8', {action: 'contact-form-action'});
+      const token = await grecaptcha.enterprise.execute('6LdTcP0pAAAAAEvpX3qiVtfXJ8yyvhPt8sCnbk51', {action: 'contact-form-action'});
     });
   }
 </script>

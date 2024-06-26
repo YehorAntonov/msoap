@@ -49,20 +49,20 @@
 					</div>
 					<p class="faq-third">online questions and answers</p>
 				</div>
-				<form style="margin-top: 6%;"class="t-site-header__search-form search-form-faq">
+				<form id="search-id" style="margin-top: 6%;" class="t-site-header__search-form search-form-faq">
 					<div>
 					<fieldset>
 						<legend>Product Search</legend>
 						<div class="c-form-list">
 							<div style="border: 1px solid #006194;" class="c-form-list__item c-form-list__item--full c-control-group u-flex search-field">
 								<span class="u-bg-white u-color-gray-50 u-icon-search t-site-header__search-icon srch-icon"></span>
-								<input class="c-form-input c-control-group__field u-bg-transparent u-border-none t-site-header__search-field search-field-padding" type="search" name="Search" placeholder="Search">
+								<input class="c-form-input c-control-group__field u-bg-transparent u-border-none t-site-header__search-field search-field-padding" name="Search" placeholder="Search">
 							</div>
 						</div>
 					</fieldset>
 					</div>
 					<div style="margin-left: 10px;">
-						<button id="clear-search" style="padding: 7px;" class="c-button c-button--full">Clear</button>
+						<button id="clear-search" style="padding: 7px;" type="button" class="c-button c-button--full">Clear</button>
 					</div>
 				</form>
 			</div>

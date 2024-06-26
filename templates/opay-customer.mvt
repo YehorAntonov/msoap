@@ -80,7 +80,7 @@
 			<a href="&mvte:urls:OSEL:secure;" title="Edit Shipping Method">Edit</a>
 		</p>
 	</div>
-	<div class="o-layout__item">
+	<mvt:comment> <div class="o-layout__item">
 		<p class="u-color-black u-text-medium">Delivery Notes</p>
 		<p class="u-font-small">
 			<mvt:if expr="g.order_instructions">
@@ -90,5 +90,5 @@
 		<p class="u-font-small">
 			<a href="&mvte:urls:OSEL:secure;" title="Edit Delivery Notes">Edit</a>
 		</p>
-	</div>
+	</div> </mvt:comment>
 </section>
