@@ -14,6 +14,10 @@
                 "12": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
                     "url": "https://miraclesoap.mivatest.com/about-us.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
+                    "url": "https://miraclesoap.mivatest.com/about-us.html"
                 }
             },
             "id": "1e9729f7115c0ebf16d4492816450586",
@@ -36,6 +40,10 @@
                     "url": "https://miraclesoap.mivatest.com/contact-us.html"
                 },
                 "12": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact Us</a>",
+                    "url": "https://miraclesoap.mivatest.com/contact-us.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact Us</a>",
                     "url": "https://miraclesoap.mivatest.com/contact-us.html"
                 }
@@ -62,6 +70,10 @@
                 "12": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">Frequent Questions</a>",
                     "url": "https://miraclesoap.mivatest.com/faqs.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">Frequent Questions</a>",
+                    "url": "https://miraclesoap.mivatest.com/faqs.html"
                 }
             },
             "id": "e405c7819ac6be75fc143c8ffcc5b090",
@@ -84,6 +96,10 @@
                     "url": "https://miraclesoap.mivatest.com/disclaimer.html"
                 },
                 "12": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
+                    "url": "https://miraclesoap.mivatest.com/disclaimer.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
                     "url": "https://miraclesoap.mivatest.com/disclaimer.html"
                 }

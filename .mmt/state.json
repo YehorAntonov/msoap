@@ -1,8 +1,8 @@
 {
     "version": 1,
     "changeset": {
-        "id": 5985,
-        "username": "yehor",
+        "id": 5991,
+        "username": null,
         "notes": "test"
     },
     "files": {
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "4c80ecf379393818e56d8082ceaf86685df54521ec3b54aca90d3dc1db842721"
+            "hash": "6c93009cde1a5235e65888402af6e37e6313f5443958b229d0e380ec7cc14074"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -1132,7 +1132,7 @@
         },
         "templates/ctgy.mvt": {
             "template_filename": "ctgy.mvc",
-            "hash": "14a354acd2c88ec7caaea3330b3f14e9d306a3769f059210924b176966f2e93c"
+            "hash": "d0b125a4a8cfdbbafdd2891e7c8cf60ff29657e28f0b5ecdcd8b8b033be86d1f"
         },
         "templates/ctgy.json": {
             "template_filename": "ctgy.mvc",
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "20bab4de2e4306c771698269bd02185c233c324ddbcd3172cb6ad8f9eaa75ae6"
+            "hash": "731f97d6a099b52e4374aebac56ff63418ec4384d2722a00083cc6b1b33af48f"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -4996,19 +4996,19 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "account_navigation",
-            "hash": "0ee51fbec85ae0c4855daf4bea3a1a4c87083ab10aa2b831257d4adfac8b3fc3"
+            "hash": "a2d33d01c32a51a59568c8687429a41ee21bd3a048a49ced8ac808be60cb31fa"
         },
         "properties/readytheme_navigationset/bubbles_navigation.mvt": {
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "3fe0c0a6da9ede1e4d59f76f0143512ffe8d6eb4deaaf0667cf34d5a26e4b5d4"
+            "hash": "bb169c8a23eb578ff4d8d0b29f8bb97a29dc388f44b1307c84f1e1d998842fc9"
         },
         "properties/readytheme_navigationset/bubbles_navigation.json": {
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "2f83380ddaa9bc68a019c6a39a1320f5c85e12521edf5c45ecce36a1db4146c2"
+            "hash": "37a4eb375531be12872a4791fd6189f20de6ae1834bb5a82b688b7c1ab449eb9"
         },
         "properties/readytheme_navigationset/disclaimer_navigation.mvt": {
             "property_group": "",
@@ -5020,7 +5020,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "disclaimer_navigation",
-            "hash": "e701e473b5576e5197af62f897778e6e6367e4552ba419329bdc084686bd5843"
+            "hash": "9da5e9a6e9881bc722ca93b26355854d3e7c80cf22b1727ba244468761c631da"
         },
         "properties/readytheme_navigationset/footer_categories.mvt": {
             "property_group": "",
@@ -5032,7 +5032,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "footer_categories",
-            "hash": "232c6bee3cfe61a2b12371ca1c9d101742e6f6cfb7492e6a9281cacccc43ec2d"
+            "hash": "957664035999bf76529c5520df71c0ecb65d279919376719f480bb538566ebdb"
         },
         "properties/readytheme_navigationset/header_links.mvt": {
             "property_group": "",
@@ -5044,7 +5044,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "header_links",
-            "hash": "a2640c1be2fe6116ae5e4df4dea94733665f2788381d5dd2125bf7cdc9f4e970"
+            "hash": "e939f7ce551e467066b7ed489dc9f9503618ba759f69cebc14cc454c6e4742fa"
         },
         "properties/readytheme_navigationset/links_help.mvt": {
             "property_group": "",
@@ -5056,7 +5056,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "links_help",
-            "hash": "09fd4c136eb6ad9c172550639b1f3252425b6ad2e832abea62951140cb1e7c7f"
+            "hash": "95e3ebc6299d2cd7beb7fe4587b258f64061065de25ca9c77560e17b5e6cfb42"
         },
         "properties/readytheme_navigationset/links_our_company.mvt": {
             "property_group": "",
@@ -5068,7 +5068,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "links_our_company",
-            "hash": "a8649409c2fdf38759bf41afe16cc6fa79ba5befabcffeba812f783360dde04b"
+            "hash": "0e8138180866ce6dd92fae19e3230ca87634c875e5450cf9b4aabe3cf3b45cd6"
         },
         "properties/readytheme_navigationset/links_resources.mvt": {
             "property_group": "",
@@ -5080,7 +5080,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "links_resources",
-            "hash": "84386eb00887378bf29c6823423ead769d32485479f5d6389334bdfeb61ad1c2"
+            "hash": "fd4447ec78bd92f4c9dec4552405b10ae9cbd3944a84ebd88cb741a5ca960770"
         },
         "properties/readytheme_navigationset/primary_navigation.mvt": {
             "property_group": "",
@@ -5092,7 +5092,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "primary_navigation",
-            "hash": "ba9e9bed2a19869b2761ba66d55d4732b30e3b578f9be95024d0029e11d7f76a"
+            "hash": "4a38d982d69678212ec71f88793178a75ad7ea9788901eb5f81818ea1989d83d"
         },
         "properties/readytheme_navigationset/quick_links.mvt": {
             "property_group": "",
@@ -5104,7 +5104,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "quick_links",
-            "hash": "2e514c80597bf7c1772ed6d7a0d09ffd8fb4814447c9daef39112f0866d9bc3e"
+            "hash": "ee7418913fdff7205b0cbc76bfe63dc02221c4fb75588f0cc266674353575897"
         },
         "properties/readytheme_navigationset/static_navigation.mvt": {
             "property_group": "",
@@ -5116,7 +5116,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "static_navigation",
-            "hash": "b616ae2bf7cdb5251bdc9409809fa9d3e83399dbb93ebf9170b456a800e73624"
+            "hash": "64d2325bc7a5928ca5cedfba69b4e3eba9fd70d054b761dbbaf652ca9a2f0dce"
         },
         "properties/readytheme_navigationset/support_navigation.mvt": {
             "property_group": "",
@@ -5128,7 +5128,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "support_navigation",
-            "hash": "e0b3fd206fcdeb51beec5081ab88b1e05b0800682973e937886fc08b71a6f413"
+            "hash": "1c887e7e9d2bf5ded22e5b22f5bd1245d86d8fd43d0329e51227719eb6cc9375"
         },
         "properties/readytheme_navigationset/top_categories.mvt": {
             "property_group": "",
@@ -5140,7 +5140,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "top_categories",
-            "hash": "254747e73712565829789696627ca9402237d8f606725172677f536b819502c4"
+            "hash": "dd94762986aeed4d12c20a6c463ace910e1363e9dfef3029b553847ee4b862f1"
         },
         "properties/readytheme_productlisting/featured_products.mvt": {
             "property_group": "",

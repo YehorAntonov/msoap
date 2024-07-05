@@ -14,6 +14,10 @@
                 "12": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_01\" target=\"_self\">Category 1</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_01"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_01\" target=\"_self\">Category 1</a>",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_01"
                 }
             },
             "id": "98c3e1687fe517c75c6dde2055c8e7e9",
@@ -36,6 +40,10 @@
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_02"
                 },
                 "12": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_02\" target=\"_self\">Category 2</a>",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_02"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_02\" target=\"_self\">Category 2</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_02"
                 }
@@ -62,6 +70,10 @@
                 "12": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_03\" target=\"_self\">Category 3</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_03"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_03\" target=\"_self\">Category 3</a>",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_03"
                 }
             },
             "id": "05507966f629d0cdde1b23d7b9d657ef",
@@ -84,6 +96,10 @@
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_04"
                 },
                 "12": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_04\" target=\"_self\">Category 4</a>",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_04"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_04\" target=\"_self\">Category 4</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=category_04"
                 }
@@ -110,6 +126,10 @@
                 "12": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/sale.html\" target=\"_self\">Sale</a>",
                     "url": "https://miraclesoap.mivatest.com/sale.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/sale.html\" target=\"_self\">Sale</a>",
+                    "url": "https://miraclesoap.mivatest.com/sale.html"
                 }
             },
             "id": "eaacc179d8a8819bbcba96c30a11e40d",
@@ -132,6 +152,10 @@
                     "url": "https://miraclesoap.mivatest.com/featured-products.html"
                 },
                 "12": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/featured-products.html\" target=\"_self\">Featured Products</a>",
+                    "url": "https://miraclesoap.mivatest.com/featured-products.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/featured-products.html\" target=\"_self\">Featured Products</a>",
                     "url": "https://miraclesoap.mivatest.com/featured-products.html"
                 }
@@ -158,6 +182,10 @@
                 "12": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
                     "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
+                    "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
                 }
             },
             "id": "13c62eb78e07e26a677c28e4e8a91e99",
@@ -182,6 +210,10 @@
                 "12": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/security-policy.html\" target=\"_self\">Security Policy</a>",
                     "url": "https://miraclesoap.mivatest.com/security-policy.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/security-policy.html\" target=\"_self\">Security Policy</a>",
+                    "url": "https://miraclesoap.mivatest.com/security-policy.html"
                 }
             },
             "id": "97df404b02099608056a00225da6bf76",
@@ -204,6 +236,10 @@
                     "url": "https://miraclesoap.mivatest.com/disclaimer.html"
                 },
                 "12": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
+                    "url": "https://miraclesoap.mivatest.com/disclaimer.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
                     "url": "https://miraclesoap.mivatest.com/disclaimer.html"
                 }

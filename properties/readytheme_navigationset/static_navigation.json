@@ -7,6 +7,10 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
                     "url": "https://miraclesoap.mivatest.com/about-us.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/about-us.html\" target=\"_self\">About Us</a>",
+                    "url": "https://miraclesoap.mivatest.com/about-us.html"
                 }
             },
             "id": "85e3206402740fc55e1c8cf32ab84e53",
@@ -21,6 +25,10 @@
             "active": 1,
             "branch_data": {
                 "1": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact</a>",
+                    "url": "https://miraclesoap.mivatest.com/contact-us.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact</a>",
                     "url": "https://miraclesoap.mivatest.com/contact-us.html"
                 }
@@ -39,6 +47,10 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">FAQs</a>",
                     "url": "https://miraclesoap.mivatest.com/faqs.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">FAQs</a>",
+                    "url": "https://miraclesoap.mivatest.com/faqs.html"
                 }
             },
             "id": "ebc63f1718f1135533d7d449bf2651d8",
@@ -53,6 +65,10 @@
             "active": 1,
             "branch_data": {
                 "1": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
+                    "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/privacy-policy.html\" target=\"_self\">Privacy Policy</a>",
                     "url": "https://miraclesoap.mivatest.com/privacy-policy.html"
                 }
@@ -71,6 +87,10 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/shipping-and-return-policy.html\" target=\"_self\">Shipping Policy</a>",
                     "url": "https://miraclesoap.mivatest.com/shipping-and-return-policy.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/shipping-and-return-policy.html\" target=\"_self\">Shipping Policy</a>",
+                    "url": "https://miraclesoap.mivatest.com/shipping-and-return-policy.html"
                 }
             },
             "id": "3323d5dda68d40586ec8bec5f1f38976",
@@ -85,6 +105,10 @@
             "active": 1,
             "branch_data": {
                 "1": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
+                    "url": "https://miraclesoap.mivatest.com/disclaimer.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/disclaimer.html\" target=\"_self\">Disclaimer</a>",
                     "url": "https://miraclesoap.mivatest.com/disclaimer.html"
                 }
@@ -103,6 +127,10 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/security-policy.html\" target=\"_self\">Security Policy</a>",
                     "url": "https://miraclesoap.mivatest.com/security-policy.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/security-policy.html\" target=\"_self\">Security Policy</a>",
+                    "url": "https://miraclesoap.mivatest.com/security-policy.html"
                 }
             },
             "id": "1e2c7f4e2d3b4d4308aa35e57fde062d",
@@ -117,6 +145,10 @@
             "active": 1,
             "branch_data": {
                 "1": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/product-history.html\" target=\"_self\">Product History</a>",
+                    "url": "https://miraclesoap.mivatest.com/product-history.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/product-history.html\" target=\"_self\">Product History</a>",
                     "url": "https://miraclesoap.mivatest.com/product-history.html"
                 }
@@ -135,6 +167,10 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/affilate-program.html\" target=\"_self\">Affiliate Program</a>",
                     "url": "https://miraclesoap.mivatest.com/affilate-program.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/affilate-program.html\" target=\"_self\">Affiliate Program</a>",
+                    "url": "https://miraclesoap.mivatest.com/affilate-program.html"
                 }
             },
             "id": "bcf50d4fa0cd29795d5f745b7acec45f",
@@ -151,6 +187,10 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/testimonials.html\" target=\"_self\">Testimonials</a>",
                     "url": "https://miraclesoap.mivatest.com/testimonials.html"
+                },
+                "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/testimonials.html\" target=\"_self\">Testimonials</a>",
+                    "url": "https://miraclesoap.mivatest.com/testimonials.html"
                 }
             },
             "id": "cefe276c545c1e2cd1cc27d525090787",
@@ -165,6 +205,10 @@
             "active": 1,
             "branch_data": {
                 "1": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/partners.html\" target=\"_self\">Partners</a>",
+                    "url": "https://miraclesoap.mivatest.com/partners.html"
+                },
+                "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/partners.html\" target=\"_self\">Partners</a>",
                     "url": "https://miraclesoap.mivatest.com/partners.html"
                 }
