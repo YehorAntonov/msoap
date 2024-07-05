@@ -1,0 +1,21 @@
+{
+    "code": "mmx-main-banner-slider",
+    "type": "Z",
+    "is_global": false,
+    "active": true,
+    "attributes": [
+        {
+            "name": "type",
+            "value": "text/javascript"
+        },
+        {
+            "name": "integrity",
+            "value": "sha256-Wb2kXI8OWJ+mchChPvF4Kl9nsFqLLao0IUKtNUdrp+4= sha384-HyERx2p32Vb+uPALJvRvD9oWVz4nkvCUS51XTRV9GaLOdJzqTJ6jH7vITisSLsEw sha512-Gpga3uzUKOsk9AEtjYDVE7/zaGJR6gKgaxvY+/+2wR5lKKZupwBgtkUigd7hylG5t9QzELwKmqa/z3Iwjvss4g=="
+        },
+        {
+            "name": "crossorigin",
+            "value": "anonymous"
+        }
+    ],
+    "linked_pages": []
+}

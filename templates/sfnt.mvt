@@ -45,6 +45,11 @@
 		</style>
 		<img class="mobile" style="width: 100%; height: 100%;" src="graphics/00000002/1/Home-bck-mobile (2).png">
 	</div>
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="header_sequence" />
+		</div>
+	</section>
 	<div class="gradient-line-ship">FREE SHIPPING AVAILABLE</div>
 	<div>
 		<div class="title-products">

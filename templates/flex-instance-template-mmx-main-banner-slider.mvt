@@ -1,0 +1,40 @@
+<mvt:comment> Determine Lazy Loading & Fetch Priority </mvt:comment>
+<mvt:if expr="l.settings:total_sequence_item_pos EQ 1">
+	<mvt:assign name="l.settings:instance:fetchpriority" value="'high'" />
+	<mvt:assign name="l.settings:instance:loading" value="'eager'" />
+<mvt:else>
+	<mvt:assign name="l.settings:instance:fetchpriority" value="'low'" />
+	<mvt:assign name="l.settings:instance:loading" value="'lazy'" />
+</mvt:if>
+
+<mvt:comment> Determine The Size Of The Main Banner Image </mvt:comment>
+<mvt:assign name="l.settings:instance:banner:image_height" value="'528'" />
+<mvt:assign name="l.settings:instance:banner:image_width" value="'1568'" />
+
+<mvt:comment> Render Component </mvt:comment>
+<mmx-main-banner-slider
+	id="&mvte:instance_item:component_code;__&mvte:instance_item:item_code;"
+	data-flex-component="&mvte:instance_item:component_code;"
+	data-flex-item="&mvte:instance_item:item_code;"
+	style="margin-top: &mvte:instance:advanced:spacing:top:value;px; margin-bottom: &mvte:instance:advanced:spacing:bottom:value;px;"
+	data-delay="&mvte:instance:advanced:controls:delay:value;"
+	data-autoplay="&mvte:instance:advanced:controls:autoplay:value;"
+	data-pause-on-hover="&mvte:instance:advanced:controls:pause_on_hover:value;"
+	data-infinite-sliding="&mvte:instance:advanced:controls:infinite_sliding:value;"
+	data-speed="&mvte:instance:advanced:controls:speed:value;"
+	data-show-arrows-on-desktop="&mvte:instance:advanced:controls:show_arrows_on_desktop:value;"
+	data-show-dots-on-desktop="&mvte:instance:advanced:controls:show_dots_on_desktop:value;"
+	data-show-arrows-on-mobile="&mvte:instance:advanced:controls:show_arrows_on_mobile:value;"
+	data-show-dots-on-mobile="&mvte:instance:advanced:controls:show_dots_on_mobile:value;"
+	data-init="script"
+>
+	<mvt:comment> Init Script </mvt:comment>
+	<script type="application/json">
+		<mvt:eval expr="miva_json_encode( l.settings:instance, '')" />
+	</script>
+
+	<mvt:comment>
+									Slides Are Rendered Using JavaScript
+	</mvt:comment>
+
+</mmx-main-banner-slider>

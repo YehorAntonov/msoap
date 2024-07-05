@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 5991,
-        "username": null,
-        "notes": "test"
+        "id": 6051,
+        "username": "roma",
+        "notes": "Page 'SFNT' updated"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -3584,11 +3584,11 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "731f97d6a099b52e4374aebac56ff63418ec4384d2722a00083cc6b1b33af48f"
+            "hash": "f56d11faf3536b87efae1eadc2bed04cba62ba689bf5e7d14363bf72507e6c16"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
-            "hash": "01c118097fbea5d9b082f5cb1d7e7f80b87cfe5d3ca0a9b36cd824d5e4bd6832"
+            "hash": "fcc2263faf6b4af59e554b61560fa88c5912b940300e17c775e4105463b90ab1"
         },
         "templates/shipment_picklist-inline_css.mvt": {
             "template_filename": "shipment_picklist-inline_css.mvc",
@@ -6484,7 +6484,37 @@
         },
         "resourcegroups/mmx-main-banner-slider.json": {
             "resourcegroup_code": "mmx-main-banner-slider",
-            "hash": "d46b6794896b00ff3bec2e03fa8b3f64b0349156782c9d65d73e111741cb5c56"
+            "hash": "7fdfee0275a0781d12f5fa3435adfb0ac4682c513958974be2f524afc1c720e5"
+        },
+        "templates/flex-initialization-template-mmx-main-banner-slider.mvt": {
+            "template_filename": "flex-initialization-template-mmx-main-banner-slider.mvc",
+            "hash": "5fee30483464c44aac5a9a1fbcefae3f1ba35beff3314ae5b272cc9e27d8178a"
+        },
+        "templates/flex-initialization-template-mmx-main-banner-slider.json": {
+            "template_filename": "flex-initialization-template-mmx-main-banner-slider.mvc",
+            "hash": null
+        },
+        "templates/flex-instance-template-mmx-main-banner-slider.mvt": {
+            "template_filename": "flex-instance-template-mmx-main-banner-slider.mvc",
+            "hash": "c76b442c4b579582568fe4d26172a02e3438c91e68b3204ef5ece57502cbe961"
+        },
+        "templates/flex-instance-template-mmx-main-banner-slider.json": {
+            "template_filename": "flex-instance-template-mmx-main-banner-slider.mvc",
+            "hash": null
+        },
+        "properties/flex/mmx-main-banner-slider.json": {
+            "property_group": "",
+            "property_type": "flex",
+            "property_code": "mmx-main-banner-slider",
+            "hash": "a33bfb56bdd367a296e8382370e6c607cf0199d5bce6eeb3a1e284f1cc2676ca"
+        },
+        "js/mmx-main-banner-slider.json": {
+            "jsresource_code": "mmx-main-banner-slider",
+            "hash": "f6c70673bfef0332b2d91be2c7cb4ff1d4cc5c115d25783fa5fe92fd903cf762"
+        },
+        "css/mmx-main-banner-slider.json": {
+            "cssresource_code": "mmx-main-banner-slider",
+            "hash": "cd99145afffa4771368284dea40c15becb7c4af943581bedde8dd362d422ed8c"
         }
     }
 }
