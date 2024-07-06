@@ -1316,6 +1316,7 @@
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 	background-color: #ddf5f2;
+	position: relative;
 }
 .banner-home .container-banner img{
 	/* background-image: url('graphics/00000002/1/Background_Herobanner_(1)-transformed.jpeg');
@@ -1345,6 +1346,7 @@
 	top: 40px;
 	left: 10px; */
 	display: flex;
+	z-index: 999;
 	justify-content: center;
 	color: #0f4e7e;
 	font-weight: bold;
@@ -2630,7 +2632,7 @@ details {
     right: 0;
     bottom: 0;
     height: 10px;
-    background: linear-gradient(180deg, transparent, white);
+    /* background: linear-gradient(180deg, transparent, white); */
 }
 .sub-name__miracle {
 	color: #229485;

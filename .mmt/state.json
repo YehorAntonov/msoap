@@ -1,9 +1,9 @@
 {
     "version": 1,
     "changeset": {
-        "id": 6051,
-        "username": "roma",
-        "notes": "Page 'SFNT' updated"
+        "id": 6140,
+        "username": null,
+        "notes": "test"
     },
     "files": {
         "templates/680_flex-initialization-template-mmx-hero.mvt": {
@@ -976,7 +976,7 @@
         },
         "templates/cssui-global-header.mvt": {
             "template_filename": "cssui-global-header.mvc",
-            "hash": "6c93009cde1a5235e65888402af6e37e6313f5443958b229d0e380ec7cc14074"
+            "hash": "901e23c1f21ba7ff2dec0d486de4161ae82468618af4de6b7288eacf6acf0eb9"
         },
         "templates/cssui-global-header.json": {
             "template_filename": "cssui-global-header.mvc",
@@ -3584,7 +3584,7 @@
         },
         "templates/sfnt.mvt": {
             "template_filename": "sfnt.mvc",
-            "hash": "f56d11faf3536b87efae1eadc2bed04cba62ba689bf5e7d14363bf72507e6c16"
+            "hash": "b19be2bb17add70af7b5e0026b147214376052e2c48160b1cff44a385e4b67af"
         },
         "templates/sfnt.json": {
             "template_filename": "sfnt.mvc",
@@ -5002,7 +5002,7 @@
             "property_group": "",
             "property_type": "readytheme_navigationset",
             "property_code": "bubbles_navigation",
-            "hash": "bb169c8a23eb578ff4d8d0b29f8bb97a29dc388f44b1307c84f1e1d998842fc9"
+            "hash": "5f9fc4f7352fdd9b888f5db69763ab3ff654b438d008410fe3d25834e2cf16de"
         },
         "properties/readytheme_navigationset/bubbles_navigation.json": {
             "property_group": "",
@@ -5912,7 +5912,7 @@
         },
         "css/theme.css": {
             "cssresource_code": "theme",
-            "hash": "407a155600d24e230825b785e4e8771347ffd241db150dcd9d45635f3a0ef000"
+            "hash": "73c00b9f7c5767c5fd32bf723bfe4754124a5ea56f727675ac38f30829fce174"
         },
         "css/theme-styles.json": {
             "cssresource_code": "theme-styles",

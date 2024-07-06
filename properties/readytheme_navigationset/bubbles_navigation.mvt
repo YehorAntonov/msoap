@@ -120,6 +120,8 @@
 		circleType4.radius(125);
 		circleType5.radius(125);
 		circleType6.radius(125);
+		var bubbles = document.getElementById('bubbles');
+		bubbles.style.opacity = '1';
 	})
 	
 </script>
