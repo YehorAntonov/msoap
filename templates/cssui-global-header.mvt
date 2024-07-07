@@ -112,6 +112,10 @@
 				</style>
 			</mvt:if>
 		</div>
+
+		<div style="opacity: 0;" id="bubbles" class="bubbles desktop">
+			<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
+		</div>
 	</section>
 </header>
 <!-- end t-site-header -->
@@ -150,107 +154,100 @@
 		  </section>
     </mvt:if>
 <mvt:else>
-  	<main style="padding-bottom: 50px; min-height: 1000px;" class="o-wrapper background-image">
-	<div style="max-width: 1600px" class="o-wrapper t-main-content-element">
-		<div class="bubbles-global o-wrapper t-main-content-element">
-  			<div style="opacity: 0;" id="bubbles" class="bubbles desktop">
-				<mvt:item name="readytheme" param="navigationset( 'bubbles_navigation' )" />
-			</div>
-    	<script>
-      	
-    </script>
-    <script>
-		document.addEventListener('DOMContentLoaded', function () {
-  			if (window.innerWidth <= 960) {
-				var bubbleBlock = document.getElementById('bubbles');
-				bubbleBlock.innerHTML =  '<div id="bubbles" class="bubbles desktop"><div id="bubble2"><a href="https://miraclesoap.mivatest.com/product-history.html" id="bubble2Link"><img style="transform: scale(1);" class="product__history" src="graphics/00000002/1/Group 2bubble2.png"></a><svg id="mini-bubble-1" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="product__history" style="transform: scale(1);" id="product-history" href="https://miraclesoap.mivatest.com/product-history.html"><div aria-label="Product" style="position: relative; height: 1.69874em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.259375em) rotate(-12.4345deg); transform-origin: center 7.35294em;">P</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.159007em) rotate(-8.33884deg); transform-origin: center 7.35294em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.237867em) rotate(-4.45374deg); transform-origin: center 7.35294em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.250551em) rotate(0.327502deg); transform-origin: center 7.35294em;">d</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.240993em) rotate(5.13934deg); transform-origin: center 7.35294em;">u</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.226838em) rotate(9.71904deg); transform-origin: center 7.35294em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.154964em) rotate(13.4566deg); transform-origin: center 7.35294em;">t</span></div></a><a class="product__history" style="transform: scale(1);" id="history" href="https://miraclesoap.mivatest.com/product-history.html"><div aria-label="History" style="position: relative; height: 1.66935em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.303125em) rotate(-10.8491deg); transform-origin: center 7.35294em;">H</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.104779em) rotate(-6.85606deg); transform-origin: center 7.35294em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.215442em) rotate(-3.72134deg); transform-origin: center 7.35294em;">s</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.153493em) rotate(-0.109762deg); transform-origin: center 7.35294em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.237867em) rotate(3.72135deg); transform-origin: center 7.35294em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.167831em) rotate(7.69282deg); transform-origin: center 7.35294em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.22886em) rotate(11.5761deg); transform-origin: center 7.35294em;">y</span></div></a></div><div id="bubble3">	<a href="https://miraclesoap.mivatest.com/testimonials.html" id="bubble3Link"><img style="transform: scale(1);" class="testimonials" src="graphics/00000002/1/Group 3bubble3.png"></a><svg id="mini-bubble-2" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="testimonials" style="transform: scale(1);" id="testimonials" href="https://miraclesoap.mivatest.com/testimonials.html"><div aria-label="Testimonials" style="position: relative; height: 1.94024em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.220833em) rotate(-18.8273deg); transform-origin: center 8.33333em;">T</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.234375em) rotate(-15.0105deg); transform-origin: center 8.33333em;">e</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.219375em) rotate(-11.2059deg); transform-origin: center 8.33333em;">s</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.158959em) rotate(-8.03364deg); transform-origin: center 8.33333em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.108749em) rotate(-5.78898deg); transform-origin: center 8.33333em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.366667em) rotate(-1.80273deg); transform-origin: center 8.33333em;">m</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.241667em) rotate(3.29799deg); transform-origin: center 8.33333em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.244792em) rotate(7.37682deg); transform-origin: center 8.33333em;">n</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.108751em) rotate(10.3412deg); transform-origin: center 8.33333em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.229791em) rotate(13.1798deg); transform-origin: center 8.33333em;">a</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.111875em) rotate(16.0446deg); transform-origin: center 8.33333em;">l</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.220416em) rotate(18.8308deg); transform-origin: center 8.33333em;">s</span></div></a></div><div id="bubble1"><a href="https://miraclesoap.mivatest.com/category-display.html" id="bubble1Link"><img style="transform: scale(1);" class="products" src="graphics/00000002/1/Group 2bubble1.png"></a><svg id="mini-bubble-3" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="products" style="transform: scale(1);" id="products" href="https://miraclesoap.mivatest.com/category-display.html"><div aria-label="Products" style="position: relative; height: 1.79315em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.25806em) rotate(-16.6506deg); transform-origin: center 6.57895em;">P</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.157072em) rotate(-11.9675deg); transform-origin: center 6.57895em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.236842em) rotate(-7.52376deg); transform-origin: center 6.57895em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.249341em) rotate(-2.03911deg); transform-origin: center 6.57895em;">d</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.239802em) rotate(3.47894deg); transform-origin: center 6.57895em;">u</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.225822em) rotate(8.73166deg); transform-origin: center 6.57895em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.15181em) rotate(12.9917deg); transform-origin: center 6.57895em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.215295em) rotate(17.1331deg); transform-origin: center 6.57895em;">s</span></div></a></div><div id="bubble4"><a href="https://miraclesoap.mivatest.com/faqs.html" id="bubble4Link"><img style="transform: scale(1);" class="faqs" src="graphics/00000002/1/Group 3bubble4.png"></a><svg id="mini-bubble-4" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="faqs" style="transform: scale(1);" id="faqs" href="https://miraclesoap.mivatest.com/faqs.html"><div aria-label="FAQs" style="position: relative; height: 1.58588em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.213418em) rotate(-7.73781deg); transform-origin: center 7.35294em;">F</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.270221em) rotate(-3.00336deg); transform-origin: center 7.35294em;">A</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.303677em) rotate(2.61466deg); transform-origin: center 7.35294em;">Q</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.216544em) rotate(7.70721deg); transform-origin: center 7.35294em;">s</span></div></a></div><div id="bubble5">	<a href="https://miraclesoap.mivatest.com/contact-us.html" id="bubble5Link"><img style="transform: scale(1);" class="contact" src="graphics/00000002/1/Group 2bubble5.png"></a><svg id="mini-bubble-5" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><svg id="mini-bubble-6" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="contact" style="transform: scale(1);" id="contact" href="https://miraclesoap.mivatest.com/contact-us.html"><div aria-label="Contact" style="position: relative; height: 1.67626em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.290417em) rotate(-10.6067deg); transform-origin: center 8.33333em;">C</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.241667em) rotate(-6.1453deg); transform-origin: center 8.33333em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.244792em) rotate(-2.06647deg); transform-origin: center 8.33333em;">n</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.158958em) rotate(1.31887deg); transform-origin: center 8.33333em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.229791em) rotate(4.57843deg); transform-origin: center 8.33333em;">a</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.230833em) rotate(8.44065deg); transform-origin: center 8.33333em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.158958em) rotate(11.7089deg); transform-origin: center 8.33333em;">t</span></div></a></div></div>';
-			}
-			else {
+	<main style="padding-top: 200px; padding-bottom: 50px; min-height: 1000px;" class="o-wrapper background-image">
+		<div style="max-width: 1600px" class="o-wrapper t-main-content-element">
+			<div class="bubbles-global o-wrapper t-main-content-element">
+				<mvt:if expr="g.Maintenance_Warning_Message">
+					<section class="o-layout">
+						<div class="o-layout__item">
+							<div class="x-messages x-messages--info">
+								<span class="u-icon-info"> </span>
+								&mvt:global:Maintenance_Warning_Message;
+							</div>
+						</div>
+					</section>
+				</mvt:if>
+			</mvt:if>
+			<script>
+					$('[data-hook="global-account"]').click(function() {
+						let ariaExpanded = $(this).attr('aria-expanded');
+						if (ariaExpanded === 'false') {
+							$('#global-account').attr('aria-hidden', 'false');
+							$(this).attr('aria-expanded', 'true');
+						}
+						else {
+							$('#global-account').attr('aria-hidden', 'true');
+							$(this).attr('aria-expanded', 'false');
+						}
+					});
+
+					document.addEventListener('DOMContentLoaded', function () {
+						if (window.innerWidth <= 960) {
+							var bubbleBlock = document.getElementById('bubbles');
+							bubbleBlock.innerHTML =  '<div id="bubbles" class="bubbles desktop"><div id="bubble2"><a href="https://miraclesoap.mivatest.com/product-history.html" id="bubble2Link"><img style="transform: scale(1);" class="product__history" src="graphics/00000002/1/Group 2bubble2.png"></a><svg id="mini-bubble-1" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="product__history" style="transform: scale(1);" id="product-history" href="https://miraclesoap.mivatest.com/product-history.html"><div aria-label="Product" style="position: relative; height: 1.69874em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.259375em) rotate(-12.4345deg); transform-origin: center 7.35294em;">P</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.159007em) rotate(-8.33884deg); transform-origin: center 7.35294em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.237867em) rotate(-4.45374deg); transform-origin: center 7.35294em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.250551em) rotate(0.327502deg); transform-origin: center 7.35294em;">d</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.240993em) rotate(5.13934deg); transform-origin: center 7.35294em;">u</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.226838em) rotate(9.71904deg); transform-origin: center 7.35294em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.154964em) rotate(13.4566deg); transform-origin: center 7.35294em;">t</span></div></a><a class="product__history" style="transform: scale(1);" id="history" href="https://miraclesoap.mivatest.com/product-history.html"><div aria-label="History" style="position: relative; height: 1.66935em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.303125em) rotate(-10.8491deg); transform-origin: center 7.35294em;">H</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.104779em) rotate(-6.85606deg); transform-origin: center 7.35294em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.215442em) rotate(-3.72134deg); transform-origin: center 7.35294em;">s</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.153493em) rotate(-0.109762deg); transform-origin: center 7.35294em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.237867em) rotate(3.72135deg); transform-origin: center 7.35294em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.167831em) rotate(7.69282deg); transform-origin: center 7.35294em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.22886em) rotate(11.5761deg); transform-origin: center 7.35294em;">y</span></div></a></div><div id="bubble3">	<a href="https://miraclesoap.mivatest.com/testimonials.html" id="bubble3Link"><img style="transform: scale(1);" class="testimonials" src="graphics/00000002/1/Group 3bubble3.png"></a><svg id="mini-bubble-2" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="testimonials" style="transform: scale(1);" id="testimonials" href="https://miraclesoap.mivatest.com/testimonials.html"><div aria-label="Testimonials" style="position: relative; height: 1.94024em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.220833em) rotate(-18.8273deg); transform-origin: center 8.33333em;">T</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.234375em) rotate(-15.0105deg); transform-origin: center 8.33333em;">e</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.219375em) rotate(-11.2059deg); transform-origin: center 8.33333em;">s</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.158959em) rotate(-8.03364deg); transform-origin: center 8.33333em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.108749em) rotate(-5.78898deg); transform-origin: center 8.33333em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.366667em) rotate(-1.80273deg); transform-origin: center 8.33333em;">m</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.241667em) rotate(3.29799deg); transform-origin: center 8.33333em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.244792em) rotate(7.37682deg); transform-origin: center 8.33333em;">n</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.108751em) rotate(10.3412deg); transform-origin: center 8.33333em;">i</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.229791em) rotate(13.1798deg); transform-origin: center 8.33333em;">a</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.111875em) rotate(16.0446deg); transform-origin: center 8.33333em;">l</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.220416em) rotate(18.8308deg); transform-origin: center 8.33333em;">s</span></div></a></div><div id="bubble1"><a href="https://miraclesoap.mivatest.com/category-display.html" id="bubble1Link"><img style="transform: scale(1);" class="products" src="graphics/00000002/1/Group 2bubble1.png"></a><svg id="mini-bubble-3" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="products" style="transform: scale(1);" id="products" href="https://miraclesoap.mivatest.com/category-display.html"><div aria-label="Products" style="position: relative; height: 1.79315em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.25806em) rotate(-16.6506deg); transform-origin: center 6.57895em;">P</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.157072em) rotate(-11.9675deg); transform-origin: center 6.57895em;">r</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.236842em) rotate(-7.52376deg); transform-origin: center 6.57895em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.249341em) rotate(-2.03911deg); transform-origin: center 6.57895em;">d</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.239802em) rotate(3.47894deg); transform-origin: center 6.57895em;">u</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.225822em) rotate(8.73166deg); transform-origin: center 6.57895em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.15181em) rotate(12.9917deg); transform-origin: center 6.57895em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.215295em) rotate(17.1331deg); transform-origin: center 6.57895em;">s</span></div></a></div><div id="bubble4"><a href="https://miraclesoap.mivatest.com/faqs.html" id="bubble4Link"><img style="transform: scale(1);" class="faqs" src="graphics/00000002/1/Group 3bubble4.png"></a><svg id="mini-bubble-4" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="faqs" style="transform: scale(1);" id="faqs" href="https://miraclesoap.mivatest.com/faqs.html"><div aria-label="FAQs" style="position: relative; height: 1.58588em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.213418em) rotate(-7.73781deg); transform-origin: center 7.35294em;">F</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.270221em) rotate(-3.00336deg); transform-origin: center 7.35294em;">A</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.303677em) rotate(2.61466deg); transform-origin: center 7.35294em;">Q</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.216544em) rotate(7.70721deg); transform-origin: center 7.35294em;">s</span></div></a></div><div id="bubble5">	<a href="https://miraclesoap.mivatest.com/contact-us.html" id="bubble5Link"><img style="transform: scale(1);" class="contact" src="graphics/00000002/1/Group 2bubble5.png"></a><svg id="mini-bubble-5" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><svg id="mini-bubble-6" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1260_1410)"><rect width="25" height="25" rx="12.5" fill="url(#paint0_radial_1260_1410)"></rect><ellipse cx="8.5" cy="2.74268" rx="2.30018" ry="1.01262" transform="rotate(-17.884 8.5 2.74268)" fill="white"></ellipse></g><defs><radialGradient id="paint0_radial_1260_1410" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.5 12.5) rotate(90) scale(12.5)"><stop stop-color="#F2FFFF" stop-opacity="0.4"></stop><stop offset="0.755" stop-color="#E2F0F1" stop-opacity="0.4"></stop><stop offset="0.88" stop-color="#BADEE0" stop-opacity="0.7"></stop><stop offset="1" stop-color="#A4C8CA"></stop></radialGradient><clipPath id="clip0_1260_1410"><rect width="25" height="25" rx="12.5" fill="white"></rect></clipPath></defs></svg><a class="contact" style="transform: scale(1);" id="contact" href="https://miraclesoap.mivatest.com/contact-us.html"><div aria-label="Contact" style="position: relative; height: 1.67626em;"><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.290417em) rotate(-10.6067deg); transform-origin: center 8.33333em;">C</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.241667em) rotate(-6.1453deg); transform-origin: center 8.33333em;">o</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.244792em) rotate(-2.06647deg); transform-origin: center 8.33333em;">n</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.158958em) rotate(1.31887deg); transform-origin: center 8.33333em;">t</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.229791em) rotate(4.57843deg); transform-origin: center 8.33333em;">a</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.230833em) rotate(8.44065deg); transform-origin: center 8.33333em;">c</span><span style="position: absolute; bottom: auto; left: 50%; transform: translateX(-0.158958em) rotate(11.7089deg); transform-origin: center 8.33333em;">t</span></div></a></div></div>';
+						}
+						else {
+							
+						}
+					});
+			</script>
+
+			<mvt:if expr="l.settings:page:code EQ 'CTGY' OR l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'ALPM' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials' OR l.settings:page:code EQ 'SRCH'">
+				<style>
+					@media screen and (max-width: 1200px) {
+						#bubble1 {
+							position: relative;
+							left: 10%;
+						}
+						#bubble2 {
+							position: relative;
+							top: 20px;
+							left: calc(100px + 10%);
+						}
+						#bubble3 {
+							position: relative;
+							top: -25px;
+							left: calc(50px + 10%);
+						}
+						#bubble4 {
+							position: relative;
+							top: -15px;
+							left: calc(-45px + 10%);
+						}
+						#bubble5 {
+							position: relative;
+							top: 10px;
+							left: calc(-90px + 10%);
+						}
+					}
+					/* @media screen and (max-width: 1200px) and (min-width: 1180px) {
+						.t-site-header__logo img {
+							margin-left: 1%;
+						}
+					}
+					@media screen and (max-width: 1180px) and (min-width: 1090px) {
+						.t-site-header__logo img {
+							margin-left: 3%;
+						}
+					}
+					@media screen and (max-width: 1090px) and (min-width: 1040px) {
+						.t-site-header__logo img {
+							margin-left: 5%;
+						}
+					}
+					@media screen and (max-width: 1040px) and (min-width: 960px) {
+						.t-site-header__logo img {
+							margin-left: 3%;
+						}
+					} */
 				
-			}
-		});
-	  </script>
-	<mvt:if expr="l.settings:page:code EQ 'CTGY' OR l.settings:page:code EQ 'ABUS' OR l.settings:page:code EQ 'ALPM' OR l.settings:page:code EQ 'CTUS' OR l.settings:page:code EQ 'disclaimer-page' OR l.settings:page:code EQ 'FAQS' OR l.settings:page:code EQ 'partners' OR l.settings:page:code EQ 'product-history' OR l.settings:page:code EQ 'PRPO' OR l.settings:page:code EQ 'SARP' OR l.settings:page:code EQ 'SCPL' OR l.settings:page:code EQ 'testimonials' OR l.settings:page:code EQ 'SRCH'">
-		<style>
-			@media screen and (max-width: 1200px) {
-				#bubble1 {
-					position: relative;
-					left: 10%;
-				}
-				#bubble2 {
-					position: relative;
-					top: 20px;
-					left: calc(100px + 10%);
-				}
-				#bubble3 {
-					position: relative;
-					top: -25px;
-					left: calc(50px + 10%);
-				}
-				#bubble4 {
-					position: relative;
-					top: -15px;
-					left: calc(-45px + 10%);
-				}
-				#bubble5 {
-					position: relative;
-					top: 10px;
-					left: calc(-90px + 10%);
-				}
-			}
-			/* @media screen and (max-width: 1200px) and (min-width: 1180px) {
-				.t-site-header__logo img {
-					margin-left: 1%;
-				}
-			}
-			@media screen and (max-width: 1180px) and (min-width: 1090px) {
-				.t-site-header__logo img {
-					margin-left: 3%;
-				}
-			}
-			@media screen and (max-width: 1090px) and (min-width: 1040px) {
-				.t-site-header__logo img {
-					margin-left: 5%;
-				}
-			}
-			@media screen and (max-width: 1040px) and (min-width: 960px) {
-				.t-site-header__logo img {
-					margin-left: 3%;
-				}
-			} */
-		
-		</style>
-	</mvt:if>
-	<mvt:if expr="l.settings:page:code EQ 'BASK' OR l.settings:page:code EQ 'BSKE'">
-		<style>
-			main {
-				min-height: 800px;
-			}
-		</style>
-	</mvt:if>
-	</div>
-	  <mvt:if expr="g.Maintenance_Warning_Message">
-		  <section class="o-layout">
-			  <div class="o-layout__item">
-				  <div class="x-messages x-messages--info">
-					  <span class="u-icon-info"> </span>
-					  &mvt:global:Maintenance_Warning_Message;
-				  </div>
-			  </div>
-		  </section>
-    </mvt:if>
-</mvt:if>
-<script>
-    $('[data-hook="global-account"]').click(function() {
-      let ariaExpanded = $(this).attr('aria-expanded');
-      if (ariaExpanded === 'false') {
-        $('#global-account').attr('aria-hidden', 'false');
-        $(this).attr('aria-expanded', 'true');
-      }
-      else {
-        $('#global-account').attr('aria-hidden', 'true');
-        $(this).attr('aria-expanded', 'false');
-      }
-    })
-</script>
-		<!-- end g.Maintenance_Warning_Message -->
+				</style>
+			</mvt:if>
+			<mvt:if expr="l.settings:page:code EQ 'BASK' OR l.settings:page:code EQ 'BSKE'">
+				<style>
+					main {
+						min-height: 800px;
+					}
+				</style>
+			</mvt:if>
+			<!-- end g.Maintenance_Warning_Message -->

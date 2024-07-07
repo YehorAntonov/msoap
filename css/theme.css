@@ -129,6 +129,7 @@
 @media screen and (min-width: 961px) {
 	.t-site-header__logo img {
 		margin-top: 9px;
+		z-index: 1000;
 	}
 }
 @media screen and (min-width: 1090px) {
@@ -1342,9 +1343,9 @@
 	background: transparent;
 }
 .bubbles {
-	/* position: absolute;
-	top: 40px;
-	left: 10px; */
+	position: absolute;
+	left: 0;
+	right: 0;
 	display: flex;
 	z-index: 999;
 	justify-content: center;
