@@ -25,3 +25,8 @@ mmx-featured-product::part(button__inner) {
 	text-transform: uppercase;
 }
 */
+
+mmx-main-banner-slider {
+	--mmx-main-banner-slide__min-height: 650px;
+	--mmx-main-banner-slide__max-height: 700px;
+}

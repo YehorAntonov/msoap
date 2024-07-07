@@ -2,7 +2,7 @@
     "code": "mmx-customizations",
     "type": "I",
     "is_global": false,
-    "active": false,
+    "active": true,
     "attributes": [
         {
             "name": "type",
