@@ -1346,7 +1346,7 @@
 	top: 40px;
 	left: 10px; */
 	display: flex;
-	z-index: 999;
+	z-index: 1;
 	justify-content: center;
 	color: #0f4e7e;
 	font-weight: bold;
