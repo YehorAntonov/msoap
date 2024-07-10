@@ -1801,6 +1801,7 @@ input[type=password]:invalid + .x-toggle-password {
 	overflow: visible;
 	transition: visibility 0s ease, max-height 0.3s ease, opacity 0.3s ease;
 	visibility: visible;
+	z-index: 999;
 }
 
 .x-collapsible-content__item {
