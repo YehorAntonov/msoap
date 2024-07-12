@@ -88,19 +88,6 @@ const themeFunctionality = {
 				});
 			}
 		})();
-		loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js", function() {
-		$('[data-hook="global-account"]').click(function() {
-		let ariaExpanded = $(this).attr('aria-expanded');
-		if (ariaExpanded === 'false') {
-			$('#global-account').attr('aria-hidden', 'false');
-			$(this).attr('aria-expanded', 'true');
-		}
-		else {
-			$('#global-account').attr('aria-hidden', 'true');
-			$(this).attr('aria-expanded', 'false');
-		}
-		})
-	});
 
 	},
 	init() {

@@ -10,7 +10,7 @@
 	<style>
 		@media screen and (min-width: 960px) {
 			.t-site-header {
-				/* z-index: 999; */
+				z-index: 1;
 			}
 		}
 	</style>
