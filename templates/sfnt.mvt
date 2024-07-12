@@ -48,7 +48,7 @@
 				position: relative;
 				/* top: 0px; */
 				/* background-color: #e4f7f6; */
-				z-index: 999;
+				z-index: 1;
 				
 				/* max-height: 210px; */
 			}
