@@ -7,13 +7,7 @@
 <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js" defer></script>
 <mvt:if expr="l.settings:page:code NE 'ORDL' AND l.settings:page:code NE 'OCST' AND l.settings:page:code NE 'OUS1' AND l.settings:page:code NE 'OUSM' AND l.settings:page:code NE 'UATM' AND l.settings:page:code NE 'UATR' AND l.settings:page:code NE 'OSEL' AND l.settings:page:code NE 'OPAY' AND NOT ('AMAZONPAY' CIN l.settings:page:code)">
 	<header class="t-site-header background-header" data-hook="site-header">
-	<style>
-		@media screen and (min-width: 960px) {
-			.t-site-header {
-				z-index: 1;
-			}
-		}
-	</style>
+	
 <mvt:else>
 	<header class="t-site-header background-header secure-checkout" data-hook="site-header">
 </mvt:if>

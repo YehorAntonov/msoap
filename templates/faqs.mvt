@@ -62,7 +62,7 @@
 					</fieldset>
 					</div>
 					<div style="margin-left: 10px;">
-						<button id="clear-search" style="padding: 7px;" type="button" class="c-button c-button--full">Clear</button>
+						<button id="clear-search" style="padding: 7px; width: 35px;" type="button" class="c-button c-button--full">X</button>
 					</div>
 				</form>
 			</div>
