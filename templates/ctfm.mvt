@@ -8,7 +8,7 @@
 <mvt:else>
 	<mvt:assign name="g.eol" value="asciichar(13) $ asciichar(10)"/>
 	
-	<mvt:if expr="(ISNULL g.website) AND (NOT ISNULL g.human) AND (isdigit(g.human)) AND (g.human EQ crypto_base64_decode(g.verify))">
+	<mvt:if expr="(ISNULL g.website)">
 
 		<mvt:comment>
 			<!--
