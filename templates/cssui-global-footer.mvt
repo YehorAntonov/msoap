@@ -13,7 +13,7 @@
 		<div class="o-wrapper t-site-footer__wrapper">
 			<div class="o-layout o-layout--column o-layout--row--m t-site-footer__content desktop">
         <section class="">
-          <img src="graphics/00000002/1/Miracle II footer logo 2footer-logo.png">
+          <img alt="logo" src="graphics/00000002/1/Miracle II footer logo 2footer-logo.png">
         </section>
 				<section class="o-layout__item o-layout--align-self-stretch u-width-4--m u-width-3--l quick-links-footer">
 					<mvt:item name="readytheme" param="navigationset( 'quick_links' )" />

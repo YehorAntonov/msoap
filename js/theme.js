@@ -292,7 +292,115 @@ const themeFunctionality = {
 		}
 	},
     jsSFNT() {
+		loadScript("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js", function() {
+			function initializeSlick() {
+				$(".grid-products-container").slick({
+					lazyLoad: "ondemand",
+					autoplay: true,
+					autoplaySpeed: 3000,
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					infinite: true,
+					
+					
+					
+					
+					responsive: [
+						{
+							breakpoint: 1350,
+							settings: {
+								slidesToShow: 4
+							}
+						},
+						{
+							breakpoint: 1150,
+							settings: {
+								slidesToShow: 4
+							}
+						},
+						{
+							breakpoint: 1020,
+							settings: {
+								slidesToShow: 3
+							}
+						},
+						{
+							breakpoint: 960,
+							settings: {
+								slidesToShow: 3,
+								arrows: false
+							}
+						},
+						{
+							breakpoint: 720,
+							settings: {
+								slidesToShow: 2,
+								arrows: false
+							}
+						},
+						{
+							breakpoint: 520,
+							settings: {
+								slidesToShow: 1,
+								centerPadding: '75px',
+								arrows: false
+							}
+						},
+						{
+							breakpoint: 485,
+							settings: {
+								slidesToShow: 1,
+								centerPadding: '90px',
+								arrows: false
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1,
+								centerPadding: '80px',
+								arrows: false
+							}
+						},
+						{
+							breakpoint: 450,
+							settings: {
+								slidesToShow: 1,
+								centerPadding: '70px',
+								arrows: false
+							}
+						},
+						{
+							breakpoint: 420,
+							settings: {
+								slidesToShow: 1,
+								centerPadding: '60px',
+								arrows: false
+							}
+						},
+						{
+							breakpoint: 390,
+							settings: {
+								slidesToShow: 1,
+								centerPadding: '50px',
+								arrows: false
+							}
+						}
+					]
+				});
 
+				$(".grid-products-container").show();
+			};
+			if (typeof jQuery !== 'undefined') {
+				if ($.fn.slick) {
+					initializeSlick();
+				} else {
+					$.getScript('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', function () {
+						initializeSlick();
+					});
+				};
+			};
+		});
 		loadScript("https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.js", function() {
 			$('.long-description').each(function() {
 				if ($(this).height() <= 63) {

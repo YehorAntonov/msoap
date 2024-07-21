@@ -78,113 +78,7 @@
 			<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 			<script>
-        		function initializeSlick() {
-            		$(".grid-products-container").slick({
-                		lazyLoad: "ondemand",
-						autoplay: true,
-						autoplaySpeed: 3000,
-                		slidesToShow: 5,
-                		slidesToScroll: 1,
-                		infinite: true,
-						
-						
-						
-						
-						responsive: [
-							{
-								breakpoint: 1350,
-								settings: {
-									slidesToShow: 4
-								}
-							},
-							{
-								breakpoint: 1150,
-								settings: {
-									slidesToShow: 4
-								}
-							},
-							{
-								breakpoint: 1020,
-								settings: {
-									slidesToShow: 3
-								}
-							},
-							{
-								breakpoint: 960,
-								settings: {
-									slidesToShow: 3,
-									arrows: false
-								}
-							},
-							{
-								breakpoint: 720,
-								settings: {
-									slidesToShow: 2,
-									arrows: false
-								}
-							},
-							{
-								breakpoint: 520,
-								settings: {
-									slidesToShow: 1,
-									centerPadding: '75px',
-									arrows: false
-								}
-							},
-							{
-								breakpoint: 485,
-								settings: {
-									slidesToShow: 1,
-									centerPadding: '90px',
-									arrows: false
-								}
-							},
-							{
-								breakpoint: 480,
-								settings: {
-									slidesToShow: 1,
-									centerPadding: '80px',
-									arrows: false
-								}
-							},
-							{
-								breakpoint: 450,
-								settings: {
-									slidesToShow: 1,
-									centerPadding: '70px',
-									arrows: false
-								}
-							},
-							{
-								breakpoint: 420,
-								settings: {
-									slidesToShow: 1,
-									centerPadding: '60px',
-									arrows: false
-								}
-							},
-							{
-								breakpoint: 390,
-								settings: {
-									slidesToShow: 1,
-									centerPadding: '50px',
-									arrows: false
-								}
-							}
-						]
-            		});
-
-            		$(".grid-products-container").show();
-        		};
-				if (typeof jQuery !== 'undefined') {
-            		if ($.fn.slick) {
-                		initializeSlick();
-            		} else {
-                		$.getScript('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', function () {
-                    		initializeSlick();
-                		});
-            		};
-        		};
+        		
     		</script>
 		</mvt:if>
 	</div>
@@ -220,11 +114,11 @@
 						<p class="category-name__for">&mvt:category:description_for;</p>
 					</div>
 
-					<div class="long-description">
+					<div role="region" aria-labelledby="categoryDescriptionTitle" class="long-description">
 						<p>&mvt:category:long;</p>
 					</div>
 					<div class="link-category">
-						<a href="&mvt:category:link;">Learn More</a>
+						<a aria-label="link on category" href="&mvt:category:link;">Learn More</a>
 					</div>
 				</div>
 			</div>
@@ -295,7 +189,7 @@
 			</form>
 		</div>
 		<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-		<a class="newsletter-link">Click Here to visit our newsletter site.</a>
+		<a href="empty" class="newsletter-link">Click Here to visit our newsletter site.</a>
 	</div>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {

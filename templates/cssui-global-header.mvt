@@ -26,7 +26,7 @@
 						<div class="t-site-header__store-name">&mvt:readytheme:logo_name;</div>
 						<small class="t-site-header__store-tagline">&mvt:readytheme:logo_tagline;</small>
 					<mvt:elseif expr="l.settings:readytheme:logo_type EQ 'image'"> </mvt:comment>
-					<img class="main-logo" src="&mvte:readytheme:logo_image;" alt="&mvte:readytheme:logo_alt;" loading="lazy" width="&mvte:readytheme:logo_image_width;" height="&mvte:readytheme:logo_image_height;">
+					<img class="main-logo" src="&mvte:readytheme:logo_image;" alt="logo" loading="lazy">
 					<mvt:comment> </mvt:if> </mvt:comment>
 				</a>
 			</div>
@@ -163,18 +163,6 @@
 				</mvt:if>
 			</mvt:if>
 			<script>
-					$('[data-hook="global-account"]').click(function() {
-						let ariaExpanded = $(this).attr('aria-expanded');
-						if (ariaExpanded === 'false') {
-							$('#global-account').attr('aria-hidden', 'false');
-							$(this).attr('aria-expanded', 'true');
-						}
-						else {
-							$('#global-account').attr('aria-hidden', 'true');
-							$(this).attr('aria-expanded', 'false');
-						}
-					});
-
 					document.addEventListener('DOMContentLoaded', function () {
 						if (window.innerWidth <= 960) {
 							var bubbleBlock = document.getElementById('bubbles');

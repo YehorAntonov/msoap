@@ -155,7 +155,7 @@
 
 				<div class="descrip-main" style="margin-bottom: 25px;">
 					<p style="margin-bottom: 10px;" class="t-category-name ctgy-description">&mvt:category:description;</p>
-				<div id="long-descrip" class="t-category-name ctgy-description-long">&mvt:category:long;</div>
+				<div role="region" aria-labelledby="productDescriptionTitle" id="long-descrip" class="t-category-name ctgy-description-long">&mvt:category:long;</div>
 					
 				</div>
 			<mvt:elseif expr="l.settings:category:code EQ 'all_products'">
