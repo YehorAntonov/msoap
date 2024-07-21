@@ -1,4 +1,8 @@
 {
+    "amazonpay_button": {
+        "v2_color": "Gold",
+        "v2_placement": "Checkout"
+    },
     "hdft": {
         "footer": {
             "template_filename": "ordl-footer.mvc",

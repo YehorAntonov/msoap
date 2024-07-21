@@ -1,4 +1,7 @@
 <style>
+	.bubbles {
+ 		color: #006194 !important;
+	}
 	#bubble1 {
 		position: relative;
 		transform: scale(0.8);
@@ -63,44 +66,44 @@
 
 	#products {
 		position: relative;
-		top: -95px;
+		top: -100px;
 		left: -13px;
-		font-size: 20px;
+		font-size: 23px;
 		transform: scale(0.85);
 	}
 	#product-history {
 		position: relative;
 		top: -95px;
 		left: -13px;
-		font-size: 19px;
+		font-size: 22px;
 		transform: scale(0.85);
 	}
 	#history {
 		position: relative;
-		top: -100px;
+		top: -110px;
 		left: -13px;
-		font-size: 19px;
+		font-size: 22px;
 		transform: scale(0.85);
 	}
 	#testimonials {
 		position: relative;
-		top: -80px;
+		top: -85px;
 		left: -13px;
-		font-size: 17px;
+		font-size: 20px;
 		transform: scale(0.85);
 	}
 	#faqs {
 		position: relative;
-		top: -75px;
-		left: -13px;
-		font-size: 19px;
+		top: -80px;
+		left: -12px;
+		font-size: 22px;
 		transform: scale(0.85);
 	}
 	#contact {
 		position: relative;
-		top: -70px;
+		top: -75px;
 		left: -28px;
-		font-size: 19px;
+		font-size: 22px;
 		transform: scale(0.85);
 	}
 </style>
@@ -117,7 +120,7 @@
 		circleType.radius(125);
 		circleType2.radius(125);
 		circleType3.radius(125);
-		circleType4.radius(125);
+		circleType4.radius(160);
 		circleType5.radius(125);
 		circleType6.radius(125);
 		var bubbles = document.getElementById('bubbles');

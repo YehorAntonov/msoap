@@ -1,4 +1,8 @@
 {
+    "amazonpay_button": {
+        "v2_color": "Gold",
+        "v2_placement": "Product"
+    },
     "attributemachine": {
         "additional_price_element_id": "price-value-additional",
         "additionalprice": "base",

@@ -1,4 +1,41 @@
-<p class="u-text-bold">Have an Amazon account?</p>
-<mvt:item name="amazonpay_button" param="body" />
-<br>
-<hr class="c-keyline">
+<mvt:if expr="l.settings:page:code EQ 'BASK'">
+	<mvt:if expr="( g.Basket:sub_count EQ 0 )                        AND
+				  ( l.settings:amazonpay_button:order_total GT 0 )   AND
+				  ( l.settings:amazonpay_button:basket_quantity GT 0 )">
+		<p class="u-text-bold">Have an Amazon account?</p>
+		<mvt:item name="amazonpay_button" param="basket" />
+		<br>
+		<hr class="c-keyline">
+	</mvt:if>
+<mvt:elseif expr="l.settings:page:code EQ 'OCST'">
+	<mvt:if expr="( g.Basket:sub_count EQ 0 )                        AND
+				  ( l.settings:amazonpay_button:order_total GT 0 )   AND
+				  ( l.settings:amazonpay_button:basket_quantity GT 0 )">
+		<p class="u-text-bold">Have an Amazon account?</p>
+		<mvt:item name="amazonpay_button" param="basket" />
+		<br>
+		<hr class="c-keyline">
+	</mvt:if>
+<mvt:elseif expr="l.settings:page:code EQ 'ORDL'">
+	<mvt:if expr="( g.Basket:sub_count EQ 0 )                        AND
+				  ( l.settings:amazonpay_button:order_total GT 0 )   AND
+				  ( l.settings:amazonpay_button:basket_quantity GT 0 )">
+		<p class="u-text-bold">Have an Amazon account?</p>
+		<mvt:item name="amazonpay_button" param="basket" />
+		<br>
+		<hr class="c-keyline">
+	</mvt:if>
+<mvt:elseif expr="l.settings:page:code EQ 'OPAY'">
+	<style>
+	.t-payment-cta > .o-list-inline__item {
+		width: 275px;
+	}
+	</style>
+	<div class="o-list-inline__item">
+		<mvt:item name="amazonpay_button" param="order" />
+	</div>
+<mvt:elseif expr="l.settings:page:code EQ 'PROD'">
+	<br>
+	<hr class="c-keyline">
+	<mvt:item name="amazonpay_button" param="product" />
+</mvt:if>

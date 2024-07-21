@@ -1,4 +1,8 @@
 {
+    "amazonpay_button": {
+        "v2_color": "Gold",
+        "v2_placement": "Checkout"
+    },
     "basket": {
         "advanced": 1,
         "applycoupons": 0,

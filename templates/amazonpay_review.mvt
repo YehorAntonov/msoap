@@ -1,0 +1,305 @@
+<mvt:item name="html_profile" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="&mvte:global:basehref;">
+	<mvt:if expr="NOT ISNULL l.settings:page:title">
+		<title>&mvt:page:title;</title>
+	<mvt:else>
+		<title>&mvt:store:name;: &mvt:page:name;</title>
+	</mvt:if>
+	<mvt:item name="head" param="css_list" />
+	<mvt:item name="head" param="head_tag" />
+
+	<script src="https://static-na.payments-amazon.com/checkout.js"></script>
+	<script type="text/javascript">
+		document.addEventListener( 'DOMContentLoaded', () =>
+		{
+			const button_change_shipping    = document.getElementById( 'amazonpay_review-shipping-change' );
+			const button_change_payment     = document.getElementById( 'amazonpay_review-payment-change' );
+			const form                      = document.querySelector( '.t-amazonpay_review-form' );
+			const input_methods             = form?.querySelectorAll( 'input[name="ShippingMethod"]' );
+			const submit_button             = form?.querySelector( 'input[type="submit"]' );
+			const amazonPayRedirectUrl      = '&mvtj:amazonpay_review:amazonPayRedirectUrl;';
+
+			let form_can_submit             = false;
+
+			button_change_shipping?.addEventListener( 'click', ( e ) =>
+			{
+				AmazonPay_ChangeShippingAddress( '&mvtj:amazonpay_review:checkoutSessionId;' );
+
+				e.preventDefault();
+				return false;
+			} );
+
+			button_change_payment?.addEventListener( 'click', ( e ) =>
+			{
+				AmazonPay_ChangePaymentMethod( '&mvtj:amazonpay_review:checkoutSessionId;' );
+
+				e.preventDefault();
+				return false;
+			} );
+
+			form?.addEventListener( 'submit', ( e ) =>
+			{
+				if ( form_can_submit && amazonPayRedirectUrl.length )
+				{
+					window.location.href = amazonPayRedirectUrl;
+				}
+
+				e?.preventDefault();
+				return false;
+			} );
+
+			for ( const input_method of input_methods )
+			{
+				if ( input_method.checked )
+				{
+					form_can_submit = true;
+				}
+
+				input_method.addEventListener( 'change', () =>
+				{
+					form_can_submit = false;
+
+					if ( submit_button )
+					{
+						submit_button.disabled			= !form_can_submit;
+						submit_button.original_value	= submit_button.value;
+						submit_button.value				= 'Please Wait...';
+					}
+
+					AmazonPay_Runtime_SetShippingMethod( form.ShippingMethod.value, ( response ) =>
+					{
+						if ( !response.success )
+						{
+							alert( response.error_message );
+
+							if ( response.error_code === 'redirect_to_basket' )
+							{
+								window.location.href = '&mvtj:urls:BASK:secure;';
+							}
+
+							return;
+						}
+
+						AmazonPay_ReloadBasketContents( '&mvtj:global:secure_sessionurl;', ( response ) =>
+						{
+							form_can_submit = true;
+
+							if ( submit_button )
+							{
+								submit_button.disabled	= !form_can_submit;
+								submit_button.value		= submit_button.original_value;
+							}
+
+							if ( response.success )
+							{
+								document.querySelector( '.t-basket__order-summary' ).innerHTML = response?.data?.basket?.[ 0 ]?.content ?? '';
+							}
+						} );
+					} );
+				} )
+			}
+
+			if ( !form_can_submit && submit_button )
+			{
+				submit_button.disabled = !form_can_submit;
+			}
+		} );
+	</script>
+
+	<style type="text/css">
+		.t-page-amazonpay_review .t-main-content-element {
+		    padding-top: 2rem;
+		}
+		.t-checkout-step {
+			grid-column: span 3;
+		}
+	</style>
+</head>
+<body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
+	<mvt:item name="hdft" param="global_header" />
+
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="header" />
+		</div>
+	</section>
+
+	<section class="o-layout o-layout--wide">
+		<div class="o-layout__item u-width-12 u-width-8--l u-width-9--w">
+			<div class="t-basket__product-contents">
+				<mvt:item name="readytheme" param="contentsection( 'messages' )" />
+				<h1 class="t-checkout-steps">
+					<span class="t-checkout-step--mobile">Amazon Pay: Review</span>
+					<span class="t-checkout-step t-checkout-step--complete"><span class="u-hidden u-inline--m">Amazon Pay: Review</span></span>
+				</h1>
+				<form class="t-amazonpay_review-form" method="post" action="&mvte:urls:INVC:secure;">
+					<fieldset>
+						<legend>&mvt:page:name;</legend>
+						<input type="hidden" name="Action" value="AUTH" />
+						<input data-hook="payment-method" type="hidden" name="PaymentMethod" value="amazonpayv2:">
+						<mvt:item name="tax" />
+						<div class="t-payment-method">
+							<div>
+								<h2 class="c-heading-echo u-inline-block">Payment Method</h2>
+								&emsp;<a href="#" id="amazonpay_review-payment-change" class="u-color-gray-600" title="Edit Payment Card">Edit</a>
+							</div>
+							&mvte:amazonpay_review:paymentDescriptor;
+						</div>
+						<br>
+						<div class="t-payment-address">
+							<h2 class="u-text-bold">Billing Address</h2>
+							<mvt:if expr="(NOT ISNULL l.settings:amazonpay_review:bill_address:fname) OR (NOT ISNULL l.settings:amazonpay_review:bill_address:lname)">
+								<div>&mvte:amazonpay_review:bill_address:fname; &mvte:amazonpay_review:bill_address:lname;</div>
+							</mvt:if>
+								<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:bill_address:comp">
+									<div>&mvte:amazonpay_review:bill_address:comp;</div>
+								</mvt:if>
+								<mvt:if expr="(NOT ISNULL l.settings:amazonpay_review:bill_address:addr1) OR (NOT ISNULL l.settings:amazonpay_review:bill_address:addr2) OR (NOT ISNULL l.settings:amazonpay_review:bill_address:city) OR (NOT ISNULL l.settings:amazonpay_review:bill_address:state) OR (NOT ISNULL l.settings:amazonpay_review:bill_address:zip) OR (NOT ISNULL l.settings:amazonpay_review:bill_address:cntry)">
+									<div>
+										&mvte:amazonpay_review:bill_address:addr1;
+										<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:bill_address:addr2">
+											&mvte:amazonpay_review:bill_address:addr2;
+										</mvt:if>
+									</div>
+									<mvt:if expr="(NOT ISNULL l.settings:amazonpay_review:bill_address:city) AND (NOT ISNULL l.settings:amazonpay_review:bill_address:state)">
+										<div>&mvte:amazonpay_review:bill_address:city;, &mvte:amazonpay_review:bill_address:state; &mvte:amazonpay_review:bill_address:zip; &mvte:amazonpay_review:bill_address:cntry;</div>
+									<mvt:else>
+										<div>&mvte:amazonpay_review:bill_address:zip; &mvte:amazonpay_review:bill_address:cntry;</div>
+									</mvt:if>
+								</mvt:if>
+							</span>
+							<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:bill_address:email">
+								<div>Email: &mvte:amazonpay_review:bill_address:email;</div>
+							</mvt:if>
+							<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:bill_address:phone">
+								<div>Phone: &mvte:amazonpay_review:bill_address:phone;</div>
+							</mvt:if>
+						</div>
+						<br>
+						<div class="t-shipping-address">
+							<div>
+								<h2 class="c-heading-echo u-inline-block">Shipping Address</h2>
+								&emsp;<a href="#" id="amazonpay_review-shipping-change" class="u-color-gray-600" title="Edit Shipping Address">Edit</a>
+							</div>
+							<mvt:if expr="(NOT ISNULL l.settings:amazonpay_review:ship_address:fname) OR (NOT ISNULL l.settings:amazonpay_review:ship_address:lname)">
+								<div>&mvte:amazonpay_review:ship_address:fname; &mvte:amazonpay_review:ship_address:lname;</div>
+							</mvt:if>
+								<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:ship_address:comp">
+									<div>&mvte:amazonpay_review:ship_address:comp;</div>
+								</mvt:if>
+								<mvt:if expr="l.settings:amazonpay_review:ship_address:addr1 OR l.settings:amazonpay_review:ship_address:addr2 OR l.settings:amazonpay_review:ship_address:city OR l.settings:amazonpay_review:ship_address:state OR l.settings:amazonpay_review:ship_address:zip OR l.settings:amazonpay_review:ship_address:cntry">
+									<div>
+										&mvte:amazonpay_review:ship_address:addr1;
+										<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:ship_address:addr2">
+											&mvte:amazonpay_review:ship_address:addr2;
+										</mvt:if>
+									</div>
+									<mvt:if expr="(NOT ISNULL l.settings:amazonpay_review:ship_address:city) AND (NOT ISNULL l.settings:amazonpay_review:ship_address:state)">
+										<div>&mvte:amazonpay_review:ship_address:city;, &mvte:amazonpay_review:ship_address:state; &mvte:amazonpay_review:ship_address:zip; &mvte:amazonpay_review:ship_address:cntry;</div>
+									<mvt:else>
+										<div>&mvte:amazonpay_review:ship_address:zip; &mvte:amazonpay_review:ship_address:cntry;</div>
+									</mvt:if>
+								</mvt:if>
+							</span>
+							<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:ship_address:email">
+								<div>Email: &mvte:amazonpay_review:ship_address:email;</div>
+							</mvt:if>
+							<mvt:if expr="NOT ISNULL l.settings:amazonpay_review:ship_address:phone">
+								<div>Phone: &mvte:amazonpay_review:ship_address:phone;</div>
+							</mvt:if>
+						</div>
+						<br>
+						<div class="c-form-list t-shipping-methods">
+							<h2 class="c-heading-echo">Shipping Method</h2>
+							<mvt:if expr="ISNULL l.settings:amazonpay_shippingmethods AND ISNULL l.settings:fallbackshippingmethod">
+								<div class="c-form-list__item c-form-list__item--full">
+									<p class="x-messages x-messages--info">No valid shipping methods are available for your order.</p>
+								</div>
+							<mvt:elseif expr="ISNULL l.settings:amazonpay_shippingmethods">
+								<div class="c-form-list__item c-form-list__item--full t-shipping-method">
+									<label class="c-form-checkbox c-form-checkbox--radio">
+										<mvt:assign name="l.fallback_shipping_applied" value="0" />
+
+										<mvt:foreach iterator="charge" array="basket:charges">
+											<mvt:if expr="( l.settings:charge:type EQ 'SHIPPING' ) AND ( l.settings:charge:descrip EQ l.settings:fallbackshippingmethod:name )">
+												<mvt:assign name="l.fallback_shipping_applied" value="1" />
+												<mvt:foreachstop />
+											</mvt:if>
+										</mvt:foreach>
+
+										<mvt:if expr="l.fallback_shipping_applied">	<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="" checked>
+										<mvt:else>									<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="">
+										</mvt:if>
+
+										<span class="c-form-checkbox__caption">
+											<span class="u-flex o-layout--grow o-layout--justify-between">
+												<span>&mvt:fallbackshippingmethod:name;</span>
+												<span class="u-text-medium">&mvt:fallbackshippingmethod:formatted_price;</span>
+											</span>
+										</span>
+									</label>
+								</div>
+
+								<div class="c-form-list">
+									<div class="c-form-list__item c-form-list__item--full">
+										<div class="t-payment-cta">
+											<input class="c-button c-button--full-small" type="submit" value="Place Order">
+										</div>
+									</div>
+								</div>
+							<mvt:else>
+								<mvt:foreach array="amazonpay_shippingmethods" iterator="method">
+									<div class="c-form-list__item c-form-list__item--full t-shipping-method">
+										<label class="c-form-checkbox c-form-checkbox--radio">
+											<mvt:if expr="g.Basket:ship_id EQ l.settings:method:module_id AND g.Basket:ship_data EQ l.settings:method:code">	<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code" checked>
+											<mvt:else>																											<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code">
+											</mvt:if>
+
+											<span class="c-form-checkbox__caption">
+												<span class="u-flex o-layout--grow o-layout--justify-between">
+													<span>&mvt:method:name;</span>
+													<mvt:if expr="NOT ISNULL l.settings:method:price">
+														<mvt:if expr="l.settings:method:price EQ '0.00'">
+															<span class="u-text-medium">FREE</span>
+														<mvt:else>
+															<span class="u-text-medium">&mvt:method:formatted_price;</span>
+														</mvt:if>
+													</mvt:if>
+												</span>
+											</span>
+										</label>
+									</div>
+								</mvt:foreach>
+								<div class="c-form-list">
+									<div class="c-form-list__item c-form-list__item--full">
+										<div class="t-payment-cta">
+											<input class="c-button c-button--full-small" type="submit" value="Place Order">
+										</div>
+									</div>
+								</div>
+							</mvt:if>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<aside class="o-layout__item u-width-12 u-width-4--l u-width-3--w">
+			<div class="t-basket__order-summary">
+				<mvt:item name="basket" />
+			</div>
+			<mvt:item name="readytheme" param="contentsection( 'helpful_info' )" />
+		</aside>
+	</section>
+
+	<section class="o-layout">
+		<div class="o-layout__item">
+			<mvt:item name="hdft" param="footer" />
+		</div>
+	</section>
+
+	<mvt:item name="hdft" param="global_footer" />
+</body>
+</html>

@@ -5,7 +5,9 @@
     "amazonpay_button": {
         "color": "orange",
         "size": "medium",
-        "template_filename": "bask-amazonpay_button.mvc"
+        "template_filename": "bask-amazonpay_button.mvc",
+        "v2_color": "Gold",
+        "v2_placement": "Cart"
     },
     "basket": {
         "advanced": 1,
