@@ -3301,3 +3301,11 @@ body {
 		font-size: 12px !important;
 	}
 }
+.error-captcha-div {
+	text-align: center;
+	padding: 15px;
+	background-color: var(--red-100);
+	border: 1px solid var(--red-200);
+	color: var(--red-400);
+	border-radius: 5px;
+}

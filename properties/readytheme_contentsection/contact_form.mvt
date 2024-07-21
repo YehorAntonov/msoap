@@ -1,6 +1,11 @@
 <noscript>
 	<p class="x-messages x-messages--error" data-hook="contact-us__warning">You must javascript enabled to use this form.</p>
 </noscript>
+<mvt:if expr="ISNULL g.session:cache:recaptcha_v3:settings:error_code">
+<div class="error-captcha-div">
+	<span class="error-captcha-text">Sorry, you look like a robot. We couldn’t send the form</span>
+</div>
+</mvt:if>
 <form class="x-contact-form u-hidden" data-hook="contact-form" data-action="&mvte:urls:CTFM:auto;" method="post" accept-charset="UTF-8">
 	<input name="Action" value="CTUS" type="hidden">
 	<fieldset>
