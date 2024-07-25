@@ -19,6 +19,16 @@
 		</header>
 		<mvt:if expr="NOT l.settings:global_minibasket:empty">
 			<div class="x-mini-basket__list">
+				<mvt:if expr="l.settings:global_minibasket:total GE 50">
+					<div class="container-free-ship">
+						<span class="text-free-ship">You earned free shipping!</span>
+					</div>
+				<mvt:else>
+					<mvt:assign name="g.resultfreeship" value="50 - l.settings:global_minibasket:total" />
+					<div class="container-free-ship">
+						<span class="text-free-ship">Add $&mvt:global:resultfreeship; to your cart for free shipping! </span>
+					</div>
+				</mvt:if>
 				<mvt:foreach iterator="item" array="global_minibasket:groups">
 					<mvt:do file="g.Module_Library_DB" name="l.success" value="Product_Load_Code(l.settings:item:code, l.settings:item_p )" />
 					<mvt:do file="g.Module_Feature_URI_UT" name="l.settings:item:uri" value="Store_Product_URL(l.settings:item_p, NULL)" />
@@ -98,58 +108,6 @@
   							</mvt:foreach>
 						</div>
 					</div>
-					<script>
-		$('[data-hook="button-add-to-cart"]').click(function(e) {
-			var btnAddToCart = $(this);
-
-			console.log(btnAddToCart)
-			var product_code = btnAddToCart.data('product-code');
-			// var category_code = btnAddToCart.data('category-code');
-	
-			$('[data-hook="button-add-to-cart"]').prop("disabled", true);
-			btnAddToCart.text('Processing...');
-	
-			ajaxAddToCart(product_code, 1, function() {
-				$('[data-hook="button-add-to-cart"]').prop("disabled", false);
-				btnAddToCart.text('Add To Cart');
-			});
-		});
-
-
-
-
-		function ajaxAddToCart(Product_Code, Quantity, callback) {
-			//create object with type of request and options, add product to cart
-			var data = {
-			Action: "ADPR",
-			Product_Code,
-			Quantity
-			};
-
-	
-			//create object with ajax request
-			var miniBasketRequest = $.ajax({
-			method: "POST",
-			data: data,
-			url: "https://miraclesoap.mivatest.com/basket-contents.html",
-			});
-	
-			//method done with function of response from server
-			miniBasketRequest.done(function (response) {
-				$('[data-hook="open-mini-basket"]').html($(response).find('[data-hook="open-mini-basket"]').first().html());
-				$('[data-hook="mini-basket"]').html($(response).find('[data-hook="mini-basket"]').first().html());
-				//open mini basket with click
-				// $('[data-hook="open-mini-basket"]')[0].click();
-				//callback
-	
-				callback && callback();
-			});
-			//output error
-			miniBasketRequest.fail(function (jqXHR, textStatus) {
-			//console.log( "Request failed: " + textStatus );
-			});
-		};
-</script>
 				</mvt:if>
 
 				<div class="x-mini-basket__line">

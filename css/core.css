@@ -33,6 +33,8 @@
 	--yellow-200: #e6e086;
 	--yellow-400: #65602e;
 	--white: #fff;
+	--main-blue: #086395;
+	--submain-green: #2f8e7f;
 	/* BUTTON HOVER COLORS */
 	--black--tinted: #4d4d4d;
 	--blue-400--shaded: #234d77;
@@ -51,7 +53,7 @@
 	--default-border-width: 1px;
 	--default-content-width: 90rem;
 	--default-font-size: var(--paragraph-small);
-	--default-input-font-size: 0.8125rem;
+	--default-input-font-size: 16px;
 	--default-line-height: 1.5;
 	--default-site-width: 100vw;
 	--default-spacing-unit: 16px;
@@ -2242,7 +2244,7 @@ small {
 	font-size: var(--title-one);
 	font-weight: var(--font-bold);
 	line-height: calc(var(--title-one) * 1.2);
-	color: #006194;
+	color: var(--main-blue);
 	font-style: italic;
 	margin-bottom: 0;
 	margin-top: 30px;

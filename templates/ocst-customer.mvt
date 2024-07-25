@@ -125,7 +125,7 @@
 					<input id="ShipLastName" class="c-form-input" type="text" name="ShipLastName" value="&mvte:global:ShipLastName;" &mvte:shipping_required; aria-describedby="ShippingInformation ShipLastName_label" autocomplete="family-name">
 				</div>
 				<div class="c-form-list__item o-layout__item u-width-4--m &mvte:global:ShipCompany_Row;">
-					<label id="ShipCompany_label" class="c-form-label u-font-small u-text-italic" for="ShipCompany">Company (Optional)</label>
+					<label id="ShipCompany_label" class="c-form-label u-text-italic" for="ShipCompany">Company (Optional)</label>
 					<input id="ShipCompany" class="c-form-input" type="text" name="ShipCompany" value="&mvte:global:ShipCompany;" aria-describedby="ShippingInformation ShipCompany_label" autocomplete="organization">
 				</div>
 				<div class="c-form-list__item o-layout__item u-width-8--m &mvte:global:ShipEmail_Row;">

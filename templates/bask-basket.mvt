@@ -363,6 +363,16 @@
 					<tr>
 						<td>
 							<br>
+							<mvt:if expr="l.settings:global_minibasket:total GE 50">
+								<div class="container-free-ship">
+									<span class="text-free-ship">You earned free shipping!</span>
+								</div>
+							<mvt:else>
+								<mvt:assign name="g.resultfreeship" value="50 - l.settings:global_minibasket:total" />
+								<div class="container-free-ship">
+									<span class="text-free-ship">Add $&mvt:global:resultfreeship; to your cart for free shipping! </span>
+								</div>
+							</mvt:if>
 							<a class="c-button c-button--full u-flex u-text-medium" href="&mvte:urls:OINF:auto;">Checkout</a>
 							<br>
 							<mvt:item name="readytheme" param="Load_ContentSection('paypalcp_configuration', g.basket_paypal)" />

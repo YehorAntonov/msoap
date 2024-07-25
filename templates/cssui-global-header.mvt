@@ -183,7 +183,7 @@
 						}
 						#bubble2 {
 							position: relative;
-							top: 20px;
+							top: -5px;
 							left: calc(100px + 10%);
 						}
 						#bubble3 {

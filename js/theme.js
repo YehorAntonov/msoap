@@ -101,6 +101,56 @@ const themeFunctionality = {
 			}
 			})
 		});
+		$('[data-hook="button-add-to-cart"]').click(function(e) {
+			var btnAddToCart = $(this);
+
+			console.log(btnAddToCart)
+			var product_code = btnAddToCart.data('product-code');
+			// var category_code = btnAddToCart.data('category-code');
+	
+			$('[data-hook="button-add-to-cart"]').prop("disabled", true);
+			btnAddToCart.text('Processing...');
+	
+			ajaxAddToCart(product_code, 1, function() {
+				$('[data-hook="button-add-to-cart"]').prop("disabled", false);
+				btnAddToCart.text('Add To Cart');
+			});
+		});
+
+
+
+
+		function ajaxAddToCart(Product_Code, Quantity, callback) {
+			//create object with type of request and options, add product to cart
+			var data = {
+			Action: "ADPR",
+			Product_Code,
+			Quantity
+			};
+
+	
+			//create object with ajax request
+			var miniBasketRequest = $.ajax({
+			method: "POST",
+			data: data,
+			url: "https://miraclesoap.mivatest.com/basket-contents.html",
+			});
+	
+			//method done with function of response from server
+			miniBasketRequest.done(function (response) {
+				$('[data-hook="open-mini-basket"]').html($(response).find('[data-hook="open-mini-basket"]').first().html());
+				$('[data-hook="mini-basket"]').html($(response).find('[data-hook="mini-basket"]').first().html());
+				//open mini basket with click
+				// $('[data-hook="open-mini-basket"]')[0].click();
+				//callback
+	
+				callback && callback();
+			});
+			//output error
+			miniBasketRequest.fail(function (jqXHR, textStatus) {
+			//console.log( "Request failed: " + textStatus );
+			});
+		};
 	},
 	init() {
 		/**
