@@ -85,22 +85,30 @@
 				<style>
 					@media screen and (min-width: 961px) {
 						.t-site-header__logo img {
-							margin-top: 3px;
+							margin-top: 90px;
+							max-height: 40px;
+							z-index: 1000;
 						}
 					}
 					@media screen and (min-width: 1090px) {
 						.t-site-header__logo img {
-							margin-top: 0;
+							margin-top: 80px;
+							height: 60px;
+							max-height: none;
 						}
 					}
 					@media screen and (min-width: 1180px) {
 						.t-site-header__logo img {
-							margin-top: -3px;
+							margin-top: 80px;
+							height: 70px !important;
+							max-height: none;
 						}
 					}
 					@media screen and (min-width: 1240px) {
 						.t-site-header__logo img {
-							margin-top: -8px;
+							margin-top: 70px;
+							height: 80px !important;
+							max-height: none;
 						}
 					}
 				</style>
@@ -202,26 +210,6 @@
 							left: calc(-90px + 10%);
 						}
 					}
-					/* @media screen and (max-width: 1200px) and (min-width: 1180px) {
-						.t-site-header__logo img {
-							margin-left: 1%;
-						}
-					}
-					@media screen and (max-width: 1180px) and (min-width: 1090px) {
-						.t-site-header__logo img {
-							margin-left: 3%;
-						}
-					}
-					@media screen and (max-width: 1090px) and (min-width: 1040px) {
-						.t-site-header__logo img {
-							margin-left: 5%;
-						}
-					}
-					@media screen and (max-width: 1040px) and (min-width: 960px) {
-						.t-site-header__logo img {
-							margin-left: 3%;
-						}
-					} */
 				
 				</style>
 			</mvt:if>
