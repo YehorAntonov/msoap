@@ -2044,7 +2044,7 @@
 		justify-content: start !important;
 	}
 	.bubbles-global {
-		height: 0;
+		/* height: 0; */
 	}
 	.t-site-header__logo img {
 		max-height: 32px;

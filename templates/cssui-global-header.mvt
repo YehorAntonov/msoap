@@ -156,7 +156,19 @@
 		  </section>
     </mvt:if>
 <mvt:else>
-	<main style="padding-top: 200px; padding-bottom: 50px; min-height: 1000px;" class="o-wrapper background-image">
+	<style>
+		.additional-wrap {
+			padding-top: 200px; 
+			padding-bottom: 50px; 
+			min-height: 1000px;
+		}
+		@media screen and (max-width: 960px) {
+			.additional-wrap {
+				padding-top: 0; 
+			}
+		}
+	</style>
+	<main style="" class="o-wrapper background-image additional-wrap">
 		<div style="max-width: 1600px" class="o-wrapper t-main-content-element">
 			<div class="bubbles-global o-wrapper t-main-content-element">
 				<mvt:if expr="g.Maintenance_Warning_Message">
