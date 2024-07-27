@@ -118,7 +118,7 @@
 						<p>&mvt:category:long;</p>
 					</div>
 					<div class="link-category">
-						<a aria-label="link on category" href="&mvt:category:link;">Learn More</a>
+						<a aria-label="link on category" class="" href="&mvt:category:link;">Learn More</a>
 					</div>
 				</div>
 			</div>
@@ -205,6 +205,15 @@
 	<style>
 		.circle {
 			top: -35px;
+			margin-left: 20px;
+		}
+		.t-site-header__logo img {
+			margin-left: 0;
+		}
+		@media screen and (max-width: 960px) {
+			.circle {
+			margin-left: 0;
+		}
 		}
 	</style>
 	<section class="o-layout">

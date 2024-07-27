@@ -369,8 +369,9 @@
 								</div>
 							<mvt:else>
 								<mvt:assign name="g.resultfreeship" value="50 - l.settings:global_minibasket:total" />
+								<mvt:do file="g.Module_Store_Module_Currency" name="g.formatted_resultfreeship" value="CurrencyModule_AddFormatting(g.Store:currncy_mod, g.resultfreeship)" />
 								<div class="container-free-ship">
-									<span class="text-free-ship">Add $&mvt:global:resultfreeship; to your cart for free shipping! </span>
+									<span class="text-free-ship">Add &mvte:global:formatted_resultfreeship; to your cart<br> for free shipping! </span>
 								</div>
 							</mvt:if>
 							<a class="c-button c-button--full u-flex u-text-medium" href="&mvte:urls:OINF:auto;">Checkout</a>

@@ -131,6 +131,7 @@
 		margin-top: 90px;
 		max-height: 40px;
 		z-index: 1000;
+		margin-left: 1.5%;
 	}
 }
 @media screen and (min-width: 1090px) {
@@ -147,7 +148,7 @@
 		max-height: none;
 	}
 }
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1275px) {
 	.t-site-header__logo img {
 		margin-top: 70px;
 		height: 80px !important;
@@ -1580,7 +1581,7 @@
 }
 .info-category {
 	flex: 1;
-	padding: 35px 50px 20px 40px;
+	padding: 35px 50px 20px 15px;
 }
 .info-product {
 	flex: 1;
@@ -1588,25 +1589,37 @@
 }
 .link-category {
 	margin-top: 10px;
-	color: #0F4E7E;
+}
+.link-category a {
+	text-decoration: none;
+	padding: 8px 40px 8px 40px;
+	font-size: 12px;
+	color: white;
+	background-color: #3475B3;
+	border: none;
+	border-radius: 50px;
+	width: 50%;
+	text-align: center;
 }
 .button-product__add-to-cart {
 	margin-top: 30px;
 	color: #0F4E7E;
 }
 .category-name__name {
-	font-size: 24px;
+	font-size: 22px;
 	color: #006194;
+	width: 100%;
 	font-weight: 600;
 	font-family: var(--primary-font-family);
 }
 .category-name__for {
-	font-size: 17px;
+	font-size: 13px;
 	color: #6abebb;
 	font-weight: 600;
 	padding-left: 10px;
 	align-items: center;
 	display: flex;
+	width: 100%;
 }
 .product-name__name {
 	font-size: 24px;
@@ -2676,23 +2689,32 @@ details {
 	font-size: 15px;
 	color: #00817F;
 }
-/* .description-after:after {
+.description-after:after {
 	content: '';
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 10px;
-    background: linear-gradient(180deg, transparent, #FFFFFF);
-} */
+    height: 20px;
+    background: linear-gradient(180deg, transparent, white);
+}
+.description-category-after:after {
+	content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    background: linear-gradient(180deg, transparent, #f2fcfe);
+}
 .description-after-product:after {
 	content: '';
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 10px;
-    /* background: linear-gradient(180deg, transparent, white); */
+    height: 20px;
+    background: linear-gradient(180deg, transparent, white);
 }
 .sub-name__miracle {
 	color: var(--submain-green);
@@ -2819,14 +2841,14 @@ details {
 
 /* READMORE PLUGIN */
 .more-link {
-	font-size: 15px;
-	text-decoration: none;
+	font-size: 13px;
+	/* text-decoration: none; */
 	font-weight: bold;
 	color: #006194;
 }
 .less-link {
-	font-size: 15px;
-	text-decoration: none;
+	font-size: 13px;
+	/* text-decoration: none; */
 	font-weight: bold;
 	color: #006194;
 }

@@ -89,7 +89,7 @@
 		position: relative;
 		top: -87px;
 		left: -14px;
-		font-size: 23px;
+		font-size: 21px;
 		transform: scale(0.85);
 	}
 	#faqs {
@@ -120,7 +120,7 @@
 		circleType.radius(125);
 		circleType2.radius(125);
 		circleType3.radius(125);
-		circleType4.radius(130);
+		circleType4.radius(190);
 		circleType5.radius(125);
 		circleType6.radius(125);
 		var bubbles = document.getElementById('bubbles');

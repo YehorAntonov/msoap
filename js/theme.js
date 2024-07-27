@@ -457,18 +457,18 @@ const themeFunctionality = {
 
 				}
 				else {
-					$(this).addClass('description-after-product');
+					$(this).addClass('description-category-after');
 					$(this).readmore({
 						speed: 550,
 						collapsedHeight: 63,
-						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
+						moreLink: '<a class="more-link show-more" href="#">Read More</a>',
 						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
 						beforeToggle: function(trigger, element, expanded) {
 							if (expanded) {
-								$(element).addClass('description-after-product')
+								$(element).addClass('description-category-after')
 							}
 							else {
-								$(element).removeClass('description-after-product')
+								$(element).removeClass('description-category-after')
 							}
 						}
 					});
@@ -752,7 +752,7 @@ const themeFunctionality = {
 				$('#long-descrip').readmore({
 					speed: 1000,
 					collapsedHeight: 76,
-					moreLink: '<a class="more-link" href="#">Show More</a>',
+					moreLink: '<a class="more-link" href="#">Read More</a>',
 					lessLink: '<a class="less-link" href="#">Show Less</a>',
 					beforeToggle: function(trigger, element, expanded) {
 						if (expanded) {
@@ -776,7 +776,7 @@ const themeFunctionality = {
 					$(this).readmore({
 						speed: 550,
 						collapsedHeight: 60,
-						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
+						moreLink: '<a class="more-link show-more" href="#">Read More</a>',
 						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
 						beforeToggle: function(trigger, element, expanded) {
 							if (expanded) {
@@ -798,7 +798,7 @@ const themeFunctionality = {
 					$(this).readmore({
 						speed: 550,
 						collapsedHeight: 63,
-						moreLink: '<a class="more-link show-more" href="#">Show More</a>',
+						moreLink: '<a class="more-link show-more" href="#">Read More</a>',
 						lessLink: '<a class="less-link show-less" href="#">Show Less</a>',
 						beforeToggle: function(trigger, element, expanded) {
 							if (expanded) {
