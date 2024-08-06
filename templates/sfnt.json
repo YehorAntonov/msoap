@@ -267,7 +267,7 @@
                                             "value": "left"
                                         },
                                         "heading_content": {
-                                            "value": "<h2 class=\"info-banner-main__h2\" style=\"box-sizing: inherit; margin-top: 0px; margin-bottom: 0px; font-size: 45px; color: rgb(12, 101, 149); font-family: var(--primary-font-family); line-height: 1;\"><span class=\"banner-first-color\" style=\"box-sizing: inherit; color: rgb(17, 146, 116);\">Miracle II</span>&nbsp;Family of Products</h2>"
+                                            "value": "<h2 class=\"info-banner-main__h2\" style=\"box-sizing: inherit; margin-top: 0px; margin-bottom: 0px; font-size: 45px; color: var(--main-blue); font-family: var(--primary-font-family); line-height: 1;\"><span class=\"banner-first-color\" style=\"box-sizing: inherit; color: var(--submain-green);\">Miracle II</span>&nbsp;Family of Products</h2>"
                                         },
                                         "settings": {
                                             "enabled": 1
@@ -381,7 +381,7 @@
                                             "value": "center"
                                         },
                                         "heading_content": {
-                                            "value": "<h2 class=\"info-banner-main__h2\" style=\"box-sizing: inherit; margin-top: 0px; margin-bottom: 0px; font-size: 45px; color: rgb(12, 101, 149); font-family: var(--primary-font-family); line-height: 1;\"><span class=\"banner-first-color\" style=\"box-sizing: inherit; color: rgb(17, 146, 116);\">Miracle II</span>&nbsp;Family of Products</h2>"
+                                            "value": "<h2 class=\"info-banner-main__h2\" style=\"box-sizing: inherit; margin-top: 0px; margin-bottom: 0px; font-size: 45px; color: var(--main-blue); font-family: var(--primary-font-family); line-height: 1;\"><span class=\"banner-first-color\" style=\"box-sizing: inherit; color: var(--submain-green);\">Miracle II</span>&nbsp;Family of Products</h2>"
                                         },
                                         "settings": {
                                             "enabled": 1
