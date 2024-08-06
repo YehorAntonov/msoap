@@ -279,9 +279,15 @@
 					<tr class="c-table-simple__row u-color-gray-600">
 						<td class="c-table-simple__cell u-flex o-layout--justify-between">
 							<span>Shipping</span>
-							<span>
-								<button class="c-button c-button--as-link" data-dialog-trigger="shipping-estimator">Estimate</button>
-							</span>
+							<mvt:if expr="l.settings:global_minibasket:total GE 50">
+								<span>
+									<span class="free-button">FREE</span>
+								</span>
+							<mvt:else>
+								<span>
+									<button class="c-button c-button--as-link" data-dialog-trigger="shipping-estimator">Estimate</button>
+								</span>
+							</mvt:if>
 						</td>
 					</tr>
 					
@@ -379,12 +385,12 @@
 							<mvt:item name="readytheme" param="Load_ContentSection('paypalcp_configuration', g.basket_paypal)" />
 							<mvt:item name="readytheme" param="Load_ContentSection('amazonpay_configuration', g.basket_amazon)" />
 							<mvt:item name="readytheme" param="Load_ContentSection('mvaffirm_configuration', g.basket_affirm)" />
-							<mvt:if expr="g.basket_paypal:active EQ 1 OR g.basket_amazon:active EQ 1 OR g.basket_affirm:active EQ 1">
+							<mvt:comment> <mvt:if expr="g.basket_paypal:active EQ 1 OR g.basket_amazon:active EQ 1 OR g.basket_affirm:active EQ 1">
 								<hr class="c-keyline u-border-gray-400" data-text="Or Use">
 								<mvt:item name="readytheme" param="contentsection( 'paypalcp_configuration' )" />
 								<mvt:item name="readytheme" param="contentsection( 'amazonpay_configuration' )" />
 								<mvt:item name="readytheme" param="contentsection( 'mvaffirm_configuration' )" />
-							</mvt:if>
+							</mvt:if> </mvt:comment>
 						</td>
 					</tr>
 				</tbody>

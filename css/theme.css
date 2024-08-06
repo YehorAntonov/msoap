@@ -529,7 +529,7 @@
 .t-basket__alt-heading-subtotal {
 	color: var(--gray-600);
 	display: flex;
-	font-size: var(--default-input-font-size);
+	font-size: var(--default-button-font-size);
 	justify-content: space-between;
 	margin-bottom: 0;
 }
@@ -563,7 +563,7 @@
 	}
 }
 .t-basket__product-contents summary {
-	font-size: var(--default-input-font-size);
+	font-size: var(--default-button-font-size);
 	width: -moz-fit-content;
 	width: fit-content;
 }
@@ -675,7 +675,7 @@
 .t-basket__product-remove,
 .t-basket__product-save,
 .t-basket__additional-product-actions {
-	font-size: var(--default-input-font-size);
+	font-size: var(--default-button-font-size);
 	line-height: var(--default-line-height);
 }
 
@@ -939,7 +939,7 @@
 	background-color: var(--gray-100);
 	border-bottom: var(--default-border-width) solid var(--gray-400);
 	display: flex;
-	font-size: var(--default-input-font-size);
+	font-size: var(--default-button-font-size);
 	justify-content: space-between;
 	padding: 1em;
 }
@@ -973,7 +973,7 @@
 }
 
 .t-payment-form .t-data-cvv {
-	font-size: var(--default-input-font-size);
+	font-size: var(--default-button-font-size);
 }
 
 @media (min-width: 60.0625em) {
@@ -2687,7 +2687,7 @@ details {
     overflow: hidden;
     position: relative;
 	font-size: 15px;
-	color: #00817F;
+	color: #32547D;
 }
 .description-after:after {
 	content: '';
@@ -3447,4 +3447,14 @@ body {
 .text-free-ship {
 	color: red;
 	font-weight: bold;
+}
+.free-button {
+	background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: currentColor;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+    text-decoration: none;
 }

@@ -65,7 +65,7 @@
 					</div>
 					<div class="c-form-list">
 						<div class="c-form-list__item c-form-list__item--full u-text-center u-text-right--l">
-							<input class="c-button c-button--huge u-bg-gray-50 u-font-small u-text-medium u-text-uppercase" type="submit" value="Continue to Shipping">
+							<input class="c-button c-button--huge u-bg-gray-50 u-font-small u-text-medium u-text-uppercase" type="submit" value="Continue Checkout">
 						</div>
 					</div>
 				</fieldset>

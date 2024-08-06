@@ -103,13 +103,21 @@
 			<tr class="c-table-simple__row u-color-gray-600">
 				<td class="c-table-simple__cell u-flex o-layout--justify-between">
 					<span>Shipping</span>
-					<span>TBD</span>
+					<mvt:if expr="l.settings:global_minibasket:total GE 50">
+						<span>FREE</span>
+					<mvt:else>
+						<span>TBD</span>
+					</mvt:if>
 				</td>
 			</tr>
 			<tr class="c-table-simple__row u-color-gray-600">
 				<td class="c-table-simple__cell u-flex o-layout--justify-between">
 					<span>Tax</span>
-					<span>TBD</span>
+					<mvt:if expr="l.settings:global_minibasket:total GE 50">
+						<span>FREE</span>
+					<mvt:else>
+						<span>TBD</span>
+					</mvt:if>
 				</td>
 			</tr>
 		<mvt:else>

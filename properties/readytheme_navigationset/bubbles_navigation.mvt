@@ -14,7 +14,7 @@
 	}
 	#bubble3 {
 		position: relative;
-		top: -25px;
+		top: -35px;
 		left: 50px;
 		transform: scale(0.8);
 	}
