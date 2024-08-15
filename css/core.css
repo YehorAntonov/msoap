@@ -1614,7 +1614,7 @@ small {
 .c-form-label {
 	display: inline-flex;
 	font-size: var(--default-input-font-size);
-	margin-bottom: 0.5em;
+	/* margin-bottom: 0.5em; */
 	color: #0F4E7E;
 }
 

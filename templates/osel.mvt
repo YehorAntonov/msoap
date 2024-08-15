@@ -59,7 +59,7 @@
 									</mvt:if>
 								</div>
 							<mvt:else>
-								<mvt:if expr="l.settings:global_minibasket:total GE 50">
+								<mvt:comment> <mvt:if expr="l.settings:global_minibasket:total GE 50">
 									<mvt:foreach array="shippingmethods" iterator="method">
 										<mvt:if expr="l.settings:method:name EQ 'Free Shipping'">
 											<div class="c-form-list__item c-form-list__item--full t-shipping-method">
@@ -81,7 +81,7 @@
 											</div>
 										</mvt:if>
 									</mvt:foreach>
-								<mvt:else>
+								<mvt:else> </mvt:comment>
 									<mvt:foreach array="shippingmethods" iterator="method">
 										<div class="c-form-list__item c-form-list__item--full t-shipping-method">
 											<mvt:if expr="pos1 EQ 1">
@@ -119,7 +119,7 @@
 											</mvt:if>
 										</div>
 									</mvt:foreach>
-								</mvt:if>
+								<mvt:comment> </mvt:if> </mvt:comment>
 							</mvt:if>
 						</div>
 						<br>
