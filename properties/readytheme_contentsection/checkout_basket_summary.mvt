@@ -173,7 +173,7 @@
 			</tr>
 		</mvt:if>
 
-		<mvt:if expr="l.settings:basket:redeemgiftcerts">
+		<mvt:comment> <mvt:if expr="l.settings:basket:redeemgiftcerts"> </mvt:comment>
 			<tr class="c-table-simple__row u-color-gray-600">
 				<td class="c-table-simple__cell">
 					<mvt:if expr="g.Basket:cust_id EQ 0">
@@ -233,7 +233,7 @@
 					</mvt:if>
 				</td>
 			</tr>
-		</mvt:if>
+		<mvt:comment> </mvt:if> </mvt:comment>
 		
 		<tr class="c-table-simple__row u-color-black t-basket__order-total">
 			<td class="c-table-simple__cell c-heading--subheading--small o-layout--justify-between u-flex">
