@@ -59,67 +59,47 @@
 									</mvt:if>
 								</div>
 							<mvt:else>
-								<mvt:comment> <mvt:if expr="l.settings:global_minibasket:total GE 50">
-									<mvt:foreach array="shippingmethods" iterator="method">
-										<mvt:if expr="l.settings:method:name EQ 'Free Shipping'">
+								<mvt:foreach array="shippingmethods" iterator="method">
+									<mvt:if expr="l.settings:method:name EQ 'Free Shipping'">
+										<mvt:if expr="l.settings:global_minibasket:total GE 50">
 											<div class="c-form-list__item c-form-list__item--full t-shipping-method">
 												<label class="c-form-checkbox c-form-checkbox--radio">
-													<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code" checked>
+													<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code">
 													<span class="c-form-checkbox__caption">
-														<span class="u-flex o-layout--grow o-layout--justify-between">
-															<span>&mvt:method:name;</span>
-															<mvt:if expr="NOT ISNULL l.settings:method:price">
-																<mvt:if expr="l.settings:method:price EQ '0.00'">
-																	<span class="u-text-medium">FREE</span>
-																<mvt:else>
-																	<span class="u-text-medium">&mvt:method:formatted_price;</span>
-																</mvt:if>
-															</mvt:if>
-														</span>
+													<span class="u-flex o-layout--grow o-layout--justify-between">
+													<span>&mvt:method:name;</span>
+													<mvt:if expr="NOT ISNULL l.settings:method:price">
+														<mvt:if expr="l.settings:method:price EQ '0.00'">
+															<span class="u-text-medium">FREE</span>
+														<mvt:else>
+															<span class="u-text-medium">&mvt:method:formatted_price;</span>
+														</mvt:if>
+													</mvt:if>
+													</span>
 													</span>
 												</label>
 											</div>
 										</mvt:if>
-									</mvt:foreach>
-								<mvt:else> </mvt:comment>
-									<mvt:foreach array="shippingmethods" iterator="method">
+									<mvt:elseif expr="NOT ('free' CIN l.settings:method:name)">
 										<div class="c-form-list__item c-form-list__item--full t-shipping-method">
-											<mvt:if expr="pos1 EQ 1">
-												<label class="c-form-checkbox c-form-checkbox--radio">
-													<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code" checked>
-													<span class="c-form-checkbox__caption">
-														<span class="u-flex o-layout--grow o-layout--justify-between">
-															<span>&mvt:method:name;</span>
-															<mvt:if expr="NOT ISNULL l.settings:method:price">
-																<mvt:if expr="l.settings:method:price EQ '0.00'">
-																	<span class="u-text-medium">FREE</span>
-																<mvt:else>
-																	<span class="u-text-medium">&mvt:method:formatted_price;</span>
-																</mvt:if>
-															</mvt:if>
-														</span>
-													</span>
-												</label>
-											<mvt:else>
-												<label class="c-form-checkbox c-form-checkbox--radio">
-													<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code">
-													<span class="c-form-checkbox__caption">
-														<span class="u-flex o-layout--grow o-layout--justify-between">
-															<span>&mvt:method:name;</span>
-															<mvt:if expr="NOT ISNULL l.settings:method:price">
-																<mvt:if expr="l.settings:method:price EQ '0.00'">
-																	<span class="u-text-medium">FREE</span>
-																<mvt:else>
-																	<span class="u-text-medium">&mvt:method:formatted_price;</span>
-																</mvt:if>
-															</mvt:if>
-														</span>
-													</span>
-												</label>
-											</mvt:if>
+											<label class="c-form-checkbox c-form-checkbox--radio">
+												<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code">
+												<span class="c-form-checkbox__caption">
+												<span class="u-flex o-layout--grow o-layout--justify-between">
+												<span>&mvt:method:name;</span>
+												<mvt:if expr="NOT ISNULL l.settings:method:price">
+													<mvt:if expr="l.settings:method:price EQ '0.00'">
+														<span class="u-text-medium">FREE</span>
+													<mvt:else>
+														<span class="u-text-medium">&mvt:method:formatted_price;</span>
+													</mvt:if>
+												</mvt:if>
+												</span>
+												</span>
+											</label>
 										</div>
-									</mvt:foreach>
-								<mvt:comment> </mvt:if> </mvt:comment>
+									</mvt:if>
+								</mvt:foreach>
 							</mvt:if>
 						</div>
 						<br>

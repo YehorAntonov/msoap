@@ -40,7 +40,7 @@
 	<meta name="twitter:image:alt" content="&mvte:product:name;">
 </head>
 <body id="js-&mvte:page:code;" class="o-site-wrapper t-page-&mvte:global:pageClass;">
-	<mvt:comment> <mvt:item name="hdft" param="global_header" />
+	<mvt:item name="hdft" param="global_header" />
 
 	<section class="o-layout">
 		<div class="o-layout__item">
@@ -81,6 +81,6 @@
 		</div>
 	</section>
 
-	<mvt:item name="hdft" param="global_footer" /> </mvt:comment>
+	<mvt:item name="hdft" param="global_footer" />
 </body>
 </html>

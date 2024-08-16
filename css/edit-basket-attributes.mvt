@@ -73,7 +73,7 @@
 }
 
 .x-edit-basket-attributes__form [data-product-attributes] {
-	display: grid;
+	<mvt:comment> display: grid; </mvt:comment>
 	gap: 1rem;
 	grid-template-columns: repeat(2, auto);
 }

@@ -1,5 +1,5 @@
 <mvt:if expr="(g.Action EQ 'RGRP' AND g.quote_item NE '1') OR l.settings:basket:empty">
-	<section class="o-layout t-basket__product-contents">
+	<section class="o-layout__item t-basket__product-contents">
 		<div class="o-layout__item">
 			<mvt:if expr="g.Action EQ 'RGRP' AND g.quote_item NE '1'">
 				<mvt:assign name="g.Quantity" value="miva_variable_value('Quantity' $ g.Restore_Counter)" />
@@ -164,6 +164,20 @@
 											</mvt:foreach>
 										</mvt:foreach>
 									</div>
+									<mvt:comment> <mvt:if expr="'gift' CIN l.settings:group:name">
+										<form>
+											<fieldset>
+												<p class="email-attr" name="Product_Attributes[1]:code">Recipient's Email</p>
+												<input class="email-attr-val" name="Product_Attributes[1]:value" type="text" data-attribute-code="gc-recipient" placeholder="Recipient's Email">
+												<p class="message-attr" name="Product_Attributes[2]:code">Gift Meassage</p>
+												<textarea class="message-attr-val" name="Product_Attributes[2]:value" data-attribute-code="gc-message" rows="2" cols="39" placeholder="Add your message here..."></textarea>
+												
+												<div>
+													<button data-qty="&mvt:group:quantity;" href="&mvte:urls:BASK:auto_sep;Action=RGRP&Basket_Group=&mvta:group:group_id;&Restore_Name=&mvta:group:name;&Restore_Params=&mvta:group:restore:params;&quote_item=&mvta:global:quote_item;" class="c-button" data-product-code="&mvt:group:code;" data-hook="btn-add-to-cart" type="submit">Save</button>
+												</div>
+											</fieldset>
+										</form>
+									</mvt:if> </mvt:comment>
 									<mvt:if expr="l.settings:group:subterm_id">
 										<p>Subscription: &mvte:group:productsubscriptionterm:descrip;</p>
 									</mvt:if>
@@ -226,9 +240,13 @@
 								<span class="t-basket__product-edit-save">
 									<mvt:assign name="l.settings:group:selectedAttributes" value="l.settings:group:selectedAttributes $ asciichar(125)" />
 									<mvt:assign name="l.settings:group:selectedAttributes" value="glosub(l.settings:group:selectedAttributes, ', ' $ asciichar(125), asciichar(125))" />
-									
-										<mvt:if expr="l.settings:group:product:productsubscriptionsettings:enabled OR miva_array_elements(l.settings:loaded_product_attributes) GT 0">
-											<button class="x-edit-basket-item" data-edit-basket-item data-basket-group="&mvte:group:group_id;" data-product-code="&mvte:group:code;" data-product-image="&mvte:group:imagetypes:main;" data-product-name="&mvte:group:name;" data-product-quantity="&mvte:group:quantity;" data-product-price="&mvte:group:formatted_subtotal_comprehensive;" data-selected-attributes="&mvte:group:selectedAttributes;" data-selected-subscription="&mvte:group:productsubscriptionterm:descrip;" aria-label="Edit &mvte:group:name; Options">Edit</button>
+									<mvt:if expr="(l.settings:group:product:productsubscriptionsettings:enabled) OR (miva_array_elements(l.settings:loaded_product_attributes) GT 0) AND ('gift' CIN l.settings:group:name)">
+										<button class="x-edit-basket-item" data-edit-basket-item data-basket-group="&mvte:group:group_id;" data-product-code="&mvte:group:code;" data-product-image="&mvte:group:imagetypes:main;" data-product-name="&mvte:group:name;" data-product-quantity="&mvte:group:quantity;" data-product-price="&mvte:group:formatted_subtotal_comprehensive;" data-selected-attributes="&mvte:group:selectedAttributes;" data-selected-subscription="&mvte:group:productsubscriptionterm:descrip;" aria-label="Edit &mvte:group:name; Options">Edit Gift Message and Gift Email</button>
+										<template>
+											<mvt:item name="product_attributes" param="group:product_id" />
+										</template>
+									<mvt:elseif expr="l.settings:group:product:productsubscriptionsettings:enabled OR miva_array_elements(l.settings:loaded_product_attributes) GT 0">
+										<button class="x-edit-basket-item" data-edit-basket-item data-basket-group="&mvte:group:group_id;" data-product-code="&mvte:group:code;" data-product-image="&mvte:group:imagetypes:main;" data-product-name="&mvte:group:name;" data-product-quantity="&mvte:group:quantity;" data-product-price="&mvte:group:formatted_subtotal_comprehensive;" data-selected-attributes="&mvte:group:selectedAttributes;" data-selected-subscription="&mvte:group:productsubscriptionterm:descrip;" aria-label="Edit &mvte:group:name; Options">Edit</button>
 										<template>
 											<mvt:item name="product_attributes" param="group:product_id" />
 										</template>

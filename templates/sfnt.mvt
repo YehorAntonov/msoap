@@ -96,21 +96,21 @@
 			<div class="container-category">
 				<mvt:if expr="l.settings:category:code EQ 'laundryball'">
 					<div class="circle laundaryball-cat">
-						<img alt="main image" src="&mvte:loaded_category:image;">
+						<a href="&mvt:category:link;"><img alt="main image" src="&mvte:loaded_category:image;"></a>
 					</div>
 				<mvt:elseif expr="l.settings:category:code EQ 'valupack' OR l.settings:category:code EQ 'paks'">
 					<div class="circle valuepack-cat">
-						<img alt="main image" src="&mvte:loaded_category:image;">
+						<a href="&mvt:category:link;"><img alt="main image" src="&mvte:loaded_category:image;"></a>
 					</div>
 				<mvt:else>
 					<div class="circle">
-						<img alt="main image" src="&mvte:loaded_category:image;">
+						<a href="&mvt:category:link;"><img alt="main image" src="&mvte:loaded_category:image;"></a>
 					</div>
 				</mvt:if>
 
 				<div class="info-category">
 					<div class="category-name">
-						<p class="category-name__name">&mvt:category:name;</p>
+						<a href="&mvt:category:link;" class="category-name__name">&mvt:category:name;</a>
 						<p class="category-name__for">&mvt:category:description_for;</p>
 					</div>
 

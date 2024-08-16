@@ -23,6 +23,10 @@
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
                 },
+                "14": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                },
                 "5": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
@@ -68,6 +72,10 @@
                     "url": "https://miraclesoap.mivatest.com/contact-us.html"
                 },
                 "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Help</a>",
+                    "url": "https://miraclesoap.mivatest.com/contact-us.html"
+                },
+                "14": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Help</a>",
                     "url": "https://miraclesoap.mivatest.com/contact-us.html"
                 },
@@ -119,6 +127,10 @@
                     "link": "<a href=\"https://miraclesoap.mivatest.com/order-history-list.html\" target=\"_self\">Orders</a>",
                     "url": "https://miraclesoap.mivatest.com/order-history-list.html"
                 },
+                "14": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/order-history-list.html\" target=\"_self\">Orders</a>",
+                    "url": "https://miraclesoap.mivatest.com/order-history-list.html"
+                },
                 "5": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/order-history-list.html\" target=\"_self\">Orders</a>",
                     "url": "https://miraclesoap.mivatest.com/order-history-list.html"
@@ -164,6 +176,10 @@
                     "url": "https://miraclesoap.mivatest.com/"
                 },
                 "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Gift Cards</a>",
+                    "url": "https://miraclesoap.mivatest.com/"
+                },
+                "14": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Gift Cards</a>",
                     "url": "https://miraclesoap.mivatest.com/"
                 },

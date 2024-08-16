@@ -23,6 +23,10 @@
                     "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account.html\" target=\"_self\">My Account</a>",
                     "url": "https://miraclesoap.mivatest.com/customer-account.html"
                 },
+                "14": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account.html\" target=\"_self\">My Account</a>",
+                    "url": "https://miraclesoap.mivatest.com/customer-account.html"
+                },
                 "5": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/customer-account.html\" target=\"_self\">My Account</a>",
                     "url": "https://miraclesoap.mivatest.com/customer-account.html"
@@ -68,6 +72,10 @@
                     "url": "https://miraclesoap.mivatest.com/wish-lists.html"
                 },
                 "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/wish-lists.html\" target=\"_self\">Wish List</a>",
+                    "url": "https://miraclesoap.mivatest.com/wish-lists.html"
+                },
+                "14": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/wish-lists.html\" target=\"_self\">Wish List</a>",
                     "url": "https://miraclesoap.mivatest.com/wish-lists.html"
                 },
@@ -119,6 +127,10 @@
                     "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Wholesale</a>",
                     "url": "https://miraclesoap.mivatest.com/"
                 },
+                "14": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Wholesale</a>",
+                    "url": "https://miraclesoap.mivatest.com/"
+                },
                 "5": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Wholesale</a>",
                     "url": "https://miraclesoap.mivatest.com/"
@@ -167,6 +179,10 @@
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
                 },
+                "14": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                },
                 "5": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
                     "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
@@ -212,6 +228,10 @@
                     "url": "https://miraclesoap.mivatest.com/"
                 },
                 "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Blog</a>",
+                    "url": "https://miraclesoap.mivatest.com/"
+                },
+                "14": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/\" target=\"_self\">Blog</a>",
                     "url": "https://miraclesoap.mivatest.com/"
                 },

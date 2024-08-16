@@ -101,21 +101,22 @@ const themeFunctionality = {
 			}
 			})
 		});
-		$('[data-hook="button-add-to-cart"]').click(function(e) {
+		$('body').on('click', '[data-hook="button-add-to-cart"]', function(e) {
 			var btnAddToCart = $(this);
-
-			console.log(btnAddToCart)
+		
+			console.log(btnAddToCart);
 			var product_code = btnAddToCart.data('product-code');
-			// var category_code = btnAddToCart.data('category-code');
-	
+			console.log(product_code)
 			$('[data-hook="button-add-to-cart"]').prop("disabled", true);
 			btnAddToCart.text('Processing...');
-	
+		
 			ajaxAddToCart(product_code, 1, function() {
 				$('[data-hook="button-add-to-cart"]').prop("disabled", false);
 				btnAddToCart.text('Add To Cart');
 			});
 		});
+		
+
 
 
 
@@ -859,15 +860,16 @@ const themeFunctionality = {
 
 		$('[data-hook="btn-add-to-cart"]').click(function(e) {
 			var btnAddToCart = $(this);
-			console.log(btnAddToCart)
+			// console.log(btnAddToCart)
 			var product_code = btnAddToCart.data('product-code');
+			// console.log(product_code)
 			var category_code = btnAddToCart.data('category-code');
 			var qty = parseInt($(this).parent().find('.input-count').val());
 	
 			$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
 			btnAddToCart.text('Processing...');
-	
-			ajaxAddToCart(product_code, qty, category_code, function() {
+			// console.log(qty)
+			ajaxAddToCart(product_code, qty, function() {
 				$('[data-hook="btn-add-to-cart"]').prop("disabled", false);
 				btnAddToCart.text('Add To Cart');
 			});
@@ -876,13 +878,12 @@ const themeFunctionality = {
 
 
 
-		function ajaxAddToCart(Product_Code, Quantity, Category_Code, callback) {
+		function ajaxAddToCart(Product_Code, Quantity, callback) {
 			//create object with type of request and options, add product to cart
 			var data = {
 			Action: "ADPR",
 			Product_Code,
 			Quantity,
-			Category_Code
 			};
 
 	
@@ -977,7 +978,7 @@ const themeFunctionality = {
 			$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
 			btnAddToCart.text('Processing...');
 	
-			ajaxAddToCart(product_code, qty, category_code, function() {
+			ajaxAddToCart(product_code, qty, function() {
 				$('[data-hook="btn-add-to-cart"]').prop("disabled", false);
 				btnAddToCart.text('Add To Cart');
 			});
@@ -986,13 +987,12 @@ const themeFunctionality = {
 
 
 
-		function ajaxAddToCart(Product_Code, Quantity, Category_Code, callback) {
+		function ajaxAddToCart(Product_Code, Quantity, callback) {
 			//create object with type of request and options, add product to cart
 			var data = {
 			Action: "ADPR",
 			Product_Code,
 			Quantity,
-			Category_Code
 			};
 
 	
@@ -1069,6 +1069,60 @@ const themeFunctionality = {
 				}, false);
 			}
 		})(document);
+		// $('[data-hook="btn-add-to-cart"]').click(function(e) {
+		// 	var btnAddToCart = $(this);
+		// 	var attributes = {};
+		// 	var product_code = btnAddToCart.data('product-code');
+		// 	var emailAttrCode = btnAddToCart.parent().parent().find('.email-attr').attr('name');
+		// 	// console.log(emailAttr)
+		// 	var messageAttrCode = btnAddToCart.parent().parent().find('.message-attr').attr('name');
+		// 	// console.log(emailAttr)
+		// 	var emailAttrVal = btnAddToCart.parent().parent().find('.email-attr-val').attr('name');
+		// 	var messageAttrVal = btnAddToCart.parent().parent().find('.message-attr-val').attr('name');
+		// 	var emailVal = btnAddToCart.parent().parent().find('.email-attr-val').val();
+		// 	var messageVal = btnAddToCart.parent().parent().find('.message-attr-val').val();
+		// 	attributes[emailAttrCode] = 'gc-recipient';
+		// 	attributes[emailAttrVal] = emailVal;
+		// 	attributes[messageAttrCode] = 'gc-message';
+		// 	attributes[messageAttrVal] = messageVal;
+		// 	console.log(attributes)
+		// 	// e.preventDefault();
+		// 	$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
+		// 	var href = btnAddToCart.attr('href');
+		// 	var qty = btnAddToCart.data('qty')
+		// 	ajaxAddToCartGift(product_code, qty, attributes, href, function() {
+		// 		$('[data-hook="btn-add-to-cart"]').prop("disabled", false);
+		// 	});
+		// });
+
+		// function ajaxAddToCartGift(Product_Code, Quantity, attributes, href, callback) {
+		// 	//create object with type of request and options, add product to cart
+		// 	var data = {
+		// 	Action: "ADPR",
+		// 	Product_Code,
+		// 	Quantity,
+		// 	};
+		// 	if (attributes) {
+        //         Object.assign(data, data, attributes);
+        //     }
+	
+		// 	//create object with ajax request
+		// 	var BasketRequest = $.ajax({
+		// 	method: "POST",
+		// 	data: data,
+		// 	url: href,
+		// 	});
+	
+		// 	//method done with function of response from server
+		// 	BasketRequest.done(function (response) {
+		// 		location.reload();
+		// 		callback && callback();
+		// 	});
+		// 	//output error
+		// 	BasketRequest.fail(function (jqXHR, textStatus) {
+		// 	//console.log( "Request failed: " + textStatus );
+		// 	});
+		// };
 	},
     jsORDL() {
 		document.addEventListener('click', event => {

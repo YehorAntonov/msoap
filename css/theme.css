@@ -130,7 +130,7 @@
 	.t-site-header__logo img {
 		margin-top: 90px;
 		max-height: 40px;
-		z-index: 1000;
+		z-index: 500;
 		margin-left: 1.5%;
 	}
 }
@@ -1611,6 +1611,7 @@
 	width: 100%;
 	font-weight: 600;
 	font-family: var(--primary-font-family);
+	text-decoration: none;
 }
 .category-name__for {
 	font-size: 13px;
@@ -3241,7 +3242,7 @@ details {
 	border-bottom: 1px solid #88CBC8;
 }
 body {
-	text-align: justify;
+	/* text-align: justify; */
 	font-family: "Nunito", sans-serif;
 }
 .faq-first {

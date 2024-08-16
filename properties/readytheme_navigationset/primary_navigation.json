@@ -18,6 +18,10 @@
                 "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/category-display-ctgy.html\" target=\"_self\">Products</a>",
                     "url": "https://miraclesoap.mivatest.com/category-display-ctgy.html"
+                },
+                "14": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/category-display-ctgy.html\" target=\"_self\">Products</a>",
+                    "url": "https://miraclesoap.mivatest.com/category-display-ctgy.html"
                 }
             },
             "id": "3248fe0280098554e2b6b027019e7638",
@@ -46,6 +50,10 @@
                 "13": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/product-history.html\" target=\"_self\">Product History</a>",
                     "url": "https://miraclesoap.mivatest.com/product-history.html"
+                },
+                "14": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/product-history.html\" target=\"_self\">Product History</a>",
+                    "url": "https://miraclesoap.mivatest.com/product-history.html"
                 }
             },
             "id": "a7358cc50b85d7c30dc5b53af227d80e",
@@ -72,6 +80,10 @@
                     "url": "https://miraclesoap.mivatest.com/testimonials.html"
                 },
                 "13": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/testimonials.html\" target=\"_self\">Testimonials</a>",
+                    "url": "https://miraclesoap.mivatest.com/testimonials.html"
+                },
+                "14": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/testimonials.html\" target=\"_self\">Testimonials</a>",
                     "url": "https://miraclesoap.mivatest.com/testimonials.html"
                 }
