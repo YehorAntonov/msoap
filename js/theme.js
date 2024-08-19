@@ -1231,6 +1231,49 @@ const themeFunctionality = {
 			element.preventDefault();
 			window.print();
 		});
+
+		$(document).ready(function() {
+			var giftBlock = $(this).find('.send-gift-block');
+			if (giftBlock.length > 1) {
+				giftBlock.each(function(index, element) {
+					var email = $(element).find('.send-gift-block-email').data('email');
+					var message = $(element).find('.send-gift-block-message').data('message');
+					var code = $(element).find('.send-gift-block-code').data('code');
+					// console.log(email)
+					// console.log(message)
+					var data = {
+						Action: "CERT",
+						emailsend: email,
+						messagesend: message,
+						codesend: code
+						};
+			
+						$.ajax({
+						method: "POST",
+						data: data,
+						url: "https://miraclesoap.mivatest.com/gift-certificate-recipient.html",
+						});
+				})
+			} else {
+				var email = giftBlock.find('.send-gift-block-email').data('email');
+				var message = giftBlock.find('.send-gift-block-message').data('message');
+				var code = giftBlock.find('.send-gift-block-code').data('code');
+				// console.log(email)
+				// console.log(message)
+				var data = {
+					Action: "CERT",
+					emailsend: email,
+					messagesend: message,
+					codesend: code
+					};
+		
+					$.ajax({
+					method: "POST",
+					data: data,
+					url: "https://miraclesoap.mivatest.com/gift-certificate-recipient.html",
+					});
+			}
+		})
 	},
     jsLOGN() {
 	},

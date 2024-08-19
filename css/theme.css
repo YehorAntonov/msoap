@@ -2794,6 +2794,7 @@ details {
 	margin-bottom: 0;
 	color: #259484;
     font-weight: bold;
+	text-decoration: none;
 }
 .subcategory-descrip {
 	font-size: 13px;

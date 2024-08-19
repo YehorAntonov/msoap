@@ -1,3 +1,22 @@
+<mvt:foreach iterator="group" array="order:groups">
+		<mvt:if expr="'gift' CIN l.settings:group:name">
+			<mvt:foreach iterator="option" array="group:options">
+				<mvt:if expr="l.settings:option:attr_code EQ 'gc-recipient'">
+					<mvt:assign name="g.EmailGift" value="l.settings:option:data" />
+				<mvt:elseif expr="l.settings:option:attr_code EQ 'gc-message'">
+					<mvt:assign name="g.MessageGift" value="l.settings:option:data" />
+				<mvt:elseif expr="l.settings:option:attr_code EQ 'giftcert'">
+					<mvt:assign name="g.CodeGift" value="l.settings:option:data" />
+				</mvt:if>
+			</mvt:foreach>
+			<div style="display: none;" class="send-gift-block">
+				<p class="send-gift-block-email" data-email="&mvt:global:EmailGift;"></p>
+				<p class="send-gift-block-message" data-message="&mvt:global:MessageGift;"></p>
+				<p class="send-gift-block-code" data-code="&mvt:global:CodeGift;"></p>
+			</div>
+			
+		</mvt:if>
+	</mvt:foreach>
 <div class="t-basket">
 	<div class="o-layout--justify-between u-flex">
 		<h1 class="c-heading-foxtrot">Order Summary</h1>

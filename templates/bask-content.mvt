@@ -28,7 +28,7 @@
 							<legend>Update Item Attributes</legend>
 							<div class="c-form-list">
 								<div class="c-form-list__item c-form-list__item--full" data-product-attributes></div>
-								<div class="c-form-list__item">
+								<div style="display: none;" class="c-form-list__item">
 									<label class="u-hide-visually" for="l-quantity">Quantity</label>
 									<div class="x-quantify" data-hook="quantify">
 										<button class="c-button c-button--secondary u-icon-subtract" type="button" data-action="decrement" aria-label="Decrease Quantity"></button>

@@ -1,0 +1,21 @@
+<mvt:if expr="g.Action EQ 'CERT'">
+    <mvt:comment> Send Email to Admin</mvt:comment>
+    <mvt:assign name="l.settings:email:to" value="g.emailsend" />
+    <mvt:assign name="l.settings:email:from" value="'orders@miraclesoap.com'" />
+    <mvt:assign name="l.settings:email:headers" value="'Content-Type: text/html; charset=UTF-8'" />
+    <mvt:assign name="l.settings:email:subject" value="'Gift Certificate'" />
+    <mvt:capture variable="l.settings:email:message">
+        <mvt:comment> <mvt:do file="g.Module_Feature_TUI_MGR" name="l.success" value="TemplateManager_Render_Page( 'email_form_gift' )" /> </mvt:comment>
+        Hello, you received a gift certificate!
+        Your code: &mvt:global:codesend;
+        <mvt:if expr="g.messagesend">
+            Gift Message: &mvt:global:messagesend;
+        </mvt:if>
+    </mvt:capture>
+    &mvt:email;
+    <mvt:comment> <mvt:do file="g.module_library_utilities" name="g.email_sent" value="SendEmail('antonovegor2003@gmail.com','antonovegor2003@gmail.com','Content-Type: text/html; charset=UTF-8','Gift Form Message','Content-Type: text/html; charset=UTF-8',l.settings:message)" /> </mvt:comment>
+    <mvt:do file="g.Module_Library_Utilities" name="g.success" value="v9_SendEmail( l.settings:email )" />
+    <mvt:comment> &mvt:global:messagesend;
+    &mvt:global:emailsend; </mvt:comment>
+    
+</mvt:if>

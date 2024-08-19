@@ -184,10 +184,10 @@
 
 			<div class="subcategory-container">
 				<div class="subcategory-image">
-					<img src="&mvte:subcategory:image;" alt="&mvte:subcategory:name;" loading="lazy">
+					<a href="&mvt:subcategory:link;"><img src="&mvte:subcategory:image;" alt="&mvte:subcategory:name;" loading="lazy"></a>
 				</div>
 				<mvt:item name="customfields" param="Read_Category_Code(l.settings:subcategory:code, 'description', l.settings:subcategory:descriptions)" />
-				<p class="subcategory-name">&mvt:subcategory:name;</p>
+				<a href="&mvt:subcategory:link;" class="subcategory-name">&mvt:subcategory:name;</a>
 				<p class="subcategory-descrip">&mvt:subcategory:descriptions;</p>
 				<div>
 					<a href="&mvt:subcategory:link;" class="c-button subcategory-link">Explore</a>
