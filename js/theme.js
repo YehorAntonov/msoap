@@ -909,6 +909,66 @@ const themeFunctionality = {
 			//console.log( "Request failed: " + textStatus );
 			});
 		};
+
+
+
+		$('[data-hook="btn-add-to-cart-gift"]').click(function(e) {
+			var btnAddToCart = $(this);
+			var attributes = {};
+			var product_code = btnAddToCart.data('product-code');
+			var emailAttrCode = btnAddToCart.parent().parent().find('.email-attr').attr('name');
+			// console.log(emailAttr)
+			var messageAttrCode = btnAddToCart.parent().parent().find('.message-attr').attr('name');
+			// console.log(emailAttr)
+			var emailAttrVal = btnAddToCart.parent().parent().find('.email-attr-val').attr('name');
+			var messageAttrVal = btnAddToCart.parent().parent().find('.message-attr-val').attr('name');
+			var emailVal = btnAddToCart.parent().parent().find('.email-attr-val').val();
+			var messageVal = btnAddToCart.parent().parent().find('.message-attr-val').val();
+			attributes[emailAttrCode] = 'gc-recipient';
+			attributes[emailAttrVal] = emailVal;
+			attributes[messageAttrCode] = 'gc-message';
+			attributes[messageAttrVal] = messageVal;
+			console.log(attributes)
+			// e.preventDefault();
+			$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
+			$('[data-hook="btn-add-to-cart-gift"]').prop("disabled", true);
+			var qty = parseInt($(this).parent().find('.input-count').val());
+			ajaxAddToCartGift(product_code, qty, attributes, function() {
+				$('[data-hook="btn-add-to-cart"]').prop("disabled", false);
+				$('[data-hook="btn-add-to-cart-gift"]').prop("disabled", false);
+			});
+		});
+
+		function ajaxAddToCartGift(Product_Code, Quantity, attributes, callback) {
+			//create object with type of request and options, add product to cart
+			var data = {
+			Action: "ADPR",
+			Product_Code,
+			Quantity,
+			};
+			if (attributes) {
+                Object.assign(data, data, attributes);
+            }
+	
+			//create object with ajax request
+			var miniBasketRequest = $.ajax({
+			method: "POST",
+			data: data
+			});
+	
+			//method done with function of response from server
+			miniBasketRequest.done(function (response) {
+				$('[data-hook="open-mini-basket"]').html($(response).find('[data-hook="open-mini-basket"]').first().html());
+				$('[data-hook="mini-basket"]').html($(response).find('[data-hook="mini-basket"]').first().html());
+				//open mini basket with click
+				$('[data-hook="open-mini-basket"]')[0].click();
+				callback && callback();
+			});
+			//output error
+			miniBasketRequest.fail(function (jqXHR, textStatus) {
+			//console.log( "Request failed: " + textStatus );
+			});
+		};
 	},
     jsPROD() {
 		/**
@@ -1069,60 +1129,7 @@ const themeFunctionality = {
 				}, false);
 			}
 		})(document);
-		// $('[data-hook="btn-add-to-cart"]').click(function(e) {
-		// 	var btnAddToCart = $(this);
-		// 	var attributes = {};
-		// 	var product_code = btnAddToCart.data('product-code');
-		// 	var emailAttrCode = btnAddToCart.parent().parent().find('.email-attr').attr('name');
-		// 	// console.log(emailAttr)
-		// 	var messageAttrCode = btnAddToCart.parent().parent().find('.message-attr').attr('name');
-		// 	// console.log(emailAttr)
-		// 	var emailAttrVal = btnAddToCart.parent().parent().find('.email-attr-val').attr('name');
-		// 	var messageAttrVal = btnAddToCart.parent().parent().find('.message-attr-val').attr('name');
-		// 	var emailVal = btnAddToCart.parent().parent().find('.email-attr-val').val();
-		// 	var messageVal = btnAddToCart.parent().parent().find('.message-attr-val').val();
-		// 	attributes[emailAttrCode] = 'gc-recipient';
-		// 	attributes[emailAttrVal] = emailVal;
-		// 	attributes[messageAttrCode] = 'gc-message';
-		// 	attributes[messageAttrVal] = messageVal;
-		// 	console.log(attributes)
-		// 	// e.preventDefault();
-		// 	$('[data-hook="btn-add-to-cart"]').prop("disabled", true);
-		// 	var href = btnAddToCart.attr('href');
-		// 	var qty = btnAddToCart.data('qty')
-		// 	ajaxAddToCartGift(product_code, qty, attributes, href, function() {
-		// 		$('[data-hook="btn-add-to-cart"]').prop("disabled", false);
-		// 	});
-		// });
-
-		// function ajaxAddToCartGift(Product_Code, Quantity, attributes, href, callback) {
-		// 	//create object with type of request and options, add product to cart
-		// 	var data = {
-		// 	Action: "ADPR",
-		// 	Product_Code,
-		// 	Quantity,
-		// 	};
-		// 	if (attributes) {
-        //         Object.assign(data, data, attributes);
-        //     }
-	
-		// 	//create object with ajax request
-		// 	var BasketRequest = $.ajax({
-		// 	method: "POST",
-		// 	data: data,
-		// 	url: href,
-		// 	});
-	
-		// 	//method done with function of response from server
-		// 	BasketRequest.done(function (response) {
-		// 		location.reload();
-		// 		callback && callback();
-		// 	});
-		// 	//output error
-		// 	BasketRequest.fail(function (jqXHR, textStatus) {
-		// 	//console.log( "Request failed: " + textStatus );
-		// 	});
-		// };
+		
 	},
     jsORDL() {
 		document.addEventListener('click', event => {

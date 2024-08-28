@@ -126,21 +126,21 @@
 
 												<mvt:if expr="l.settings:option:option_id">
 													<mvt:assign name="l.settings:group:restore:params" value="l.settings:group:restore:params $ '&Product_Attributes[' $ encodeattribute( l.settings:group:option_counter ) $ ']:value=' $ encodeattribute( l.settings:option:opt_code )" />
-													<span class="o-layout--grow">&mvt:option:attr_prompt;: &mvt:option:opt_prompt;</span>
+													<span class="o-layout--grow"><span class="x-edit-basket-item attribute-name">&mvt:option:attr_prompt;</span>: &mvt:option:opt_prompt;</span>
 													<mvt:if expr="l.settings:option:subtotal GT 0">
 														<span>&mvt:option:formatted_subtotal;</span>
 													</mvt:if>
 													<mvt:assign name="l.settings:group:selectedAttributes" value="l.settings:group:selectedAttributes $ asciichar(34) $ encodejavascriptstring(l.settings:option:attr_code) $ asciichar(34) $ ':' $ asciichar(34) $ encodejavascriptstring(l.settings:option:opt_code) $ asciichar(34) $ ', '" />
 												<mvt:elseif expr="NOT ISNULL l.settings:option:data">
 													<mvt:assign name="l.settings:group:restore:params" value="l.settings:group:restore:params $ '&Product_Attributes[' $ encodeattribute( l.settings:group:option_counter ) $ ']:value=' $ encodeattribute( l.settings:option:data )" />
-													<span class="o-layout--grow">&mvt:option:attr_prompt;: &mvt:option:data;</span>
+													<span class="o-layout--grow"><span class="x-edit-basket-item attribute-name">&mvt:option:attr_prompt;</span>: &mvt:option:data;</span>
 													<mvt:if expr="l.settings:option:subtotal GT 0">
 														<span>&mvt:option:formatted_subtotal;</span>
 													</mvt:if>
 													<mvt:assign name="l.settings:group:selectedAttributes" value="l.settings:group:selectedAttributes $ asciichar(34) $ encodejavascriptstring(l.settings:option:attr_code) $ asciichar(34) $ ':' $ asciichar(34) $ encodejavascriptstring(l.settings:option:data) $ asciichar(34) $ ', '" />
 												<mvt:elseif expr="NOT ISNULL l.settings:option:data_long">
 													<mvt:assign name="l.settings:group:restore:params" value="l.settings:group:restore:params $ '&Product_Attributes[' $ encodeattribute( l.settings:group:option_counter ) $ ']:value=' $ encodeattribute( l.settings:option:data_long )" />
-													<span class="o-layout--grow">&mvt:option:attr_prompt;: &mvt:option:data_long;</span>
+													<span class="o-layout--grow"><span class="x-edit-basket-item attribute-name">&mvt:option:attr_prompt;</span>: &mvt:option:data_long;</span>
 													<mvt:if expr="l.settings:option:subtotal GT 0">
 														<span>&mvt:option:formatted_subtotal;</span>
 													</mvt:if>
@@ -241,7 +241,7 @@
 									<mvt:assign name="l.settings:group:selectedAttributes" value="l.settings:group:selectedAttributes $ asciichar(125)" />
 									<mvt:assign name="l.settings:group:selectedAttributes" value="glosub(l.settings:group:selectedAttributes, ', ' $ asciichar(125), asciichar(125))" />
 									<mvt:if expr="(l.settings:group:product:productsubscriptionsettings:enabled) OR (miva_array_elements(l.settings:loaded_product_attributes) GT 0) AND ('gift' CIN l.settings:group:name)">
-										<button class="x-edit-basket-item" data-edit-basket-item data-basket-group="&mvte:group:group_id;" data-product-code="&mvte:group:code;" data-product-image="&mvte:group:imagetypes:main;" data-product-name="&mvte:group:name;" data-product-quantity="&mvte:group:quantity;" data-product-price="&mvte:group:formatted_subtotal_comprehensive;" data-selected-attributes="&mvte:group:selectedAttributes;" data-selected-subscription="&mvte:group:productsubscriptionterm:descrip;" aria-label="Edit &mvte:group:name; Options">Edit Gift Message and Gift Email</button>
+										<button class="x-edit-basket-item" data-edit-basket-item data-basket-group="&mvte:group:group_id;" data-product-code="&mvte:group:code;" data-product-image="&mvte:group:imagetypes:main;" data-product-name="&mvte:group:name;" data-product-quantity="&mvte:group:quantity;" data-product-price="&mvte:group:formatted_subtotal_comprehensive;" data-selected-attributes="&mvte:group:selectedAttributes;" data-selected-subscription="&mvte:group:productsubscriptionterm:descrip;" aria-label="Edit &mvte:group:name; Options">Edit Recipient Email and Gift Message</button>
 										<template>
 											<mvt:item name="product_attributes" param="group:product_id" />
 										</template>

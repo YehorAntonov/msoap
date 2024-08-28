@@ -65,7 +65,7 @@
   <div align="center" style="color: black; height: 100%; width: 100%;" width="100%">
       <div style=" color: black; max-width: 593px; text-align: start;">
         <h1 style="color: #4a4c56; font-size: 18px;">Hello &mvt:order:bill_fname;,</h1>
-        <font class="fonts" style="color: black;" face="" size="2">Thank you for your order! Below is a summary for your records. You will be notified once your order ships.</font></td>
+        <font class="fonts" style="color: black;" face="" size="2">Thank you for your order! You will be notified once your order ships.</font></td>
       </div>
   </div>
 
@@ -151,6 +151,7 @@
   </div>
   <div align="center" style="color: black; height: 100%; width: 100%;" width="100%">
     <div style="max-width: 593px; text-align: center; background-color: #bfe3e2; padding: 10px 0">
+      <p style="font-size: 10px;"><a href="https://miraclesoap.mivatest.com/privacy-policy.html">Privacy Policy</a> | <a href="https://miraclesoap.mivatest.com/security-policy.html">Security Policy</a></p>
       <p style="font-size: 10px;">© 2024 Miracle II, Inc. All Rights Reserved</p>
     </div>
   </div>
