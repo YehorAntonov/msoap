@@ -1,9 +1,9 @@
 <table style="width: 100%; border-collapse: collapse;">
    <tr>
    <th style="padding: 15px 0; border-top: 1px solid lightgrey;" align="left">Image</th>
-    <th style="padding: 15px 0; border-top: 1px solid lightgrey;" align="left">Item</th>
-    <th style="padding: 15px 0; border-top: 1px solid lightgrey;" align="center">Qty</th>
-    <th style="padding: 15px 0; border-top: 1px solid lightgrey;" align="center">Price</th>
+    <th style="padding: 15px 0; border-top: 1px solid lightgrey; padding-left: 10px;" align="left">Item</th>
+    <th style="padding: 15px 0; border-top: 1px solid lightgrey; min-width: 70px;" align="center">Qty</th>
+    <th style="padding: 15px 0; border-top: 1px solid lightgrey; min-width: 150px;" align="center">Price</th>
     <th style="padding: 15px 0; border-top: 1px solid lightgrey;" align="right">Total</th>
    </tr>
 
@@ -13,13 +13,20 @@
       <div>
          <mvt:if expr="ISNULL l.settings:item:imagetypes:main">
          <mvt:else>
-            <img style="object-fit: contain; width: 60px; height: 60px;" src="&mvte:item:imagetypes:main;" alt="&mvte:item:name;" border="0">
+            <img style="object-fit: contain; width: 60px; height: 60px;" src="&mvte:global:basehref;&mvte:item:imagetypes:Main;" alt="&mvte:item:name;" border="0">
          </mvt:if>
       </div>
    </td>
-   <td style="padding: 15px 0; border-top: 1px solid lightgrey;">
-      <p>&mvt:item:name;</p>
+   <td style="padding: 15px 0; border-top: 1px solid lightgrey; padding-left: 10px;">
+      <p style="font-weight: bold;">&mvt:item:name;</p>
       <mvt:comment> <p>&mvt:item:code;</p> </mvt:comment>
+      <mvt:foreach iterator="option" array="item:options">
+         <mvt:if expr="l.settings:option:attr_code EQ 'giftcert'">
+            <p style="font-size: 11px;">Gift Code: &mvt:option:data;</p>
+         <mvt:else>
+            <p style="font-size: 11px;">&mvt:option:attr_prompt;: &mvt:option:data;</p>
+         </mvt:if>
+      </mvt:foreach>
     </td>
     <td style="padding: 0; border-top: 1px solid lightgrey;" align="center">&mvte:item:quantity;</td>
     <td style="padding: 0; border-top: 1px solid lightgrey;" align="center">&mvt:item:formatted_price;</td>
