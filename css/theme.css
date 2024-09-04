@@ -363,7 +363,7 @@
 }
 @media screen and (min-width: 1600px) {
 	.bg-footer {
-		background-color: white  !important;
+		background-color: rgba(0, 0, 0, 0)!important;
 	}
 	.t-site-footer {
 		padding-top: 0 !important;
@@ -1302,11 +1302,11 @@
 
 }
 .background-header {
-	background-color: #88CBC8;
+	/* background-color: #88CBC8; */
 }
 @media screen and (min-width: 1600px) {
 	.background-header {
-		background-color: white;
+		/* background-color: white; */
 	}
 }
 /* END HEADER */
