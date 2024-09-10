@@ -2,6 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msvalidate.01" content="597C8740565ED98405645F7C6B7EE53A" />
 	<base href="&mvte:global:basehref;" />
 	<mvt:if expr="NOT ISNULL l.settings:page:title">
 		<title>&mvt:page:title;</title>

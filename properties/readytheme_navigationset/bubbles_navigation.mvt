@@ -150,9 +150,11 @@
 				</defs>
 			</svg>
 			<a aria-label="product-history" class="product__history" style="transform: scale(1);" id="product-history" href="&mvte:navigationitem:url;">&mvt:navigationitem:name;</a>
+
 			<mvt:foreach iterator="navigationitem2" array="navigationitem:items">
 				<a aria-label="product-history" class="product__history" style="transform: scale(1);" id="history" href="&mvte:navigationitem2:url;">&mvt:navigationitem2:name;</a>
 			</mvt:foreach>
+
 		</div>
 		
 	<mvt:elseif expr="POS1 EQ 2">
