@@ -1,7 +1,5 @@
 {
     "code": "mmx-product-carousel",
-    "linked_js_resources": [
-        "mmx-product-carousel"
-    ],
+    "linked_js_resources": [],
     "linked_css_resources": []
 }

@@ -2,16 +2,18 @@
     "items": [
         {
             "active": 1,
+            "branch_data": {
+                "1": {
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/product-history.html\" target=\"_self\">Product</a>",
+                    "url": "https://miraclesoap.mivatest.com/product-history.html"
+                }
+            },
             "id": "2aef7d339a1159df998ebf0634acc03a",
             "items": [
                 {
                     "active": 1,
                     "branch_data": {
                         "1": {
-                            "link": "<a href=\"https://miraclesoap.mivatest.com/product-history.html\" target=\"_self\">History</a>",
-                            "url": "https://miraclesoap.mivatest.com/product-history.html"
-                        },
-                        "14": {
                             "link": "<a href=\"https://miraclesoap.mivatest.com/product-history.html\" target=\"_self\">History</a>",
                             "url": "https://miraclesoap.mivatest.com/product-history.html"
                         }
@@ -38,10 +40,6 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/testimonials.html\" target=\"_self\">Testimonials</a>",
                     "url": "https://miraclesoap.mivatest.com/testimonials.html"
-                },
-                "14": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/testimonials.html\" target=\"_self\">Testimonials</a>",
-                    "url": "https://miraclesoap.mivatest.com/testimonials.html"
                 }
             },
             "id": "ad148ab74838ea74d9906b83d032ec87",
@@ -56,10 +54,6 @@
             "active": 1,
             "branch_data": {
                 "1": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/ctgy-accessories.html\" target=\"_self\">Products</a>",
-                    "url": "https://miraclesoap.mivatest.com/ctgy-accessories.html"
-                },
-                "14": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/ctgy-accessories.html\" target=\"_self\">Products</a>",
                     "url": "https://miraclesoap.mivatest.com/ctgy-accessories.html"
                 }
@@ -78,10 +72,6 @@
                 "1": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">FAQs</a>",
                     "url": "https://miraclesoap.mivatest.com/faqs.html"
-                },
-                "14": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/faqs.html\" target=\"_self\">FAQs</a>",
-                    "url": "https://miraclesoap.mivatest.com/faqs.html"
                 }
             },
             "id": "1503232f7ba601b6044bbb52f535a923",
@@ -96,10 +86,6 @@
             "active": 1,
             "branch_data": {
                 "1": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact</a>",
-                    "url": "https://miraclesoap.mivatest.com/contact-us.html"
-                },
-                "14": {
                     "link": "<a href=\"https://miraclesoap.mivatest.com/contact-us.html\" target=\"_self\">Contact</a>",
                     "url": "https://miraclesoap.mivatest.com/contact-us.html"
                 }

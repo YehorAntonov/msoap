@@ -160,53 +160,53 @@
             "active": 1,
             "branch_data": {
                 "1": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "10": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "11": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "12": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "13": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "14": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "5": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "6": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "7": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 },
                 "8": {
-                    "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
-                    "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+                    "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
+                    "url": "https://miraclesoap.mivatest.com/deals.html"
                 }
             },
             "id": "0c40a4741395ebd2861de98fe7191831",
-            "link": "<a href=\"https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals\" target=\"_self\">Deals</a>",
+            "link": "<a href=\"https://miraclesoap.mivatest.com/deals.html\" target=\"_self\">Deals</a>",
             "link_dest": "deals",
             "link_targ": "_self",
             "link_type": "C",
             "name": "Deals",
-            "url": "https://miraclesoap.mivatest.com/mm5/merchant.mvc?Screen=CTGY&Category_Code=deals"
+            "url": "https://miraclesoap.mivatest.com/deals.html"
         },
         {
             "active": 1,
