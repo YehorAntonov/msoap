@@ -60,7 +60,7 @@
 								</div>
 							<mvt:else>
 								<mvt:foreach array="shippingmethods" iterator="method">
-									<mvt:if expr="l.settings:method:name EQ 'Free Shipping'">
+									<mvt:comment> <mvt:if expr="l.settings:method:name EQ 'Free Shipping'">
 										<mvt:if expr="l.settings:global_minibasket:total GE 50">
 											<div class="c-form-list__item c-form-list__item--full t-shipping-method">
 												<label class="c-form-checkbox c-form-checkbox--radio">
@@ -80,7 +80,7 @@
 												</label>
 											</div>
 										</mvt:if>
-									<mvt:elseif expr="NOT ('free' CIN l.settings:method:name)">
+									<mvt:elseif expr="NOT ('free' CIN l.settings:method:name)"> </mvt:comment>
 										<div class="c-form-list__item c-form-list__item--full t-shipping-method">
 											<label class="c-form-checkbox c-form-checkbox--radio">
 												<input class="c-form-checkbox__input" type="radio" name="ShippingMethod" value="&mvte:method:module;:&mvte:method:code" checked>
@@ -98,7 +98,7 @@
 												</span>
 											</label>
 										</div>
-									</mvt:if>
+									<mvt:comment> </mvt:if> </mvt:comment>
 								</mvt:foreach>
 							</mvt:if>
 						</div>

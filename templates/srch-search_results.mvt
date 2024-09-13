@@ -152,9 +152,33 @@
 					<div class="button-product__add-to-cart">
 						
 						<div class="product-price">
-							<span class="x-product-list__price u-text-bold color-price">&mvt:product:formatted_price;</span>
-							<span class="x-product-list__price u-text-medium color-price-base"><s>&mvt:product:formatted_base_price;</s></span>
+							<mvt:if expr="'gift' CIN l.settings:product:code">
+								<div style="padding-bottom: 0;" class="product-price">
+									<span class="x-product-list__price u-text-bold color-price">&mvt:product:formatted_price;</span>
+									<span class="x-product-list__price u-text-medium color-price-base"><s>&mvt:product:formatted_base_price;</s></span>
+								</div>
+							<mvt:else>
+								<div class="product-price">
+									<span class="x-product-list__price u-text-bold color-price">&mvt:product:formatted_price;</span>
+									<span class="x-product-list__price u-text-medium color-price-base"><s>&mvt:product:formatted_base_price;</s></span>
+
+									<mvt:item name="ry_toolbelt" param="pricegroup|Product_Find|g.pricegroup|'Volume Pricing'|l.all_settings:product:code" />
+									<mvt:if expr="g.pricegroup EQ 1">
+										<span class="volume-pricing">Add another gallon - save 10%</span>
+									</mvt:if>
+								</div>
+							</mvt:if>
 						</div>
+						<mvt:if expr="'gift' CIN l.settings:product:code">
+							<form>
+								<fieldset>
+									<p style="margin-bottom: 0;" class="email-attr" name="Product_Attributes[1]:code">Recipient's Email</p>
+									<input style="max-width: 250px; width: 250px; padding: 5px 10px;" class="c-form-input email-attr-val" name="Product_Attributes[1]:value" type="text" data-attribute-code="gc-recipient" placeholder="Recipient's Email">
+									<p style="margin-bottom: 0;" class="message-attr" name="Product_Attributes[2]:code">Gift Meassage</p>
+									<textarea style="max-width: 550px; padding: 5px 10px;" class="c-form-input message-attr-val" name="Product_Attributes[2]:value" data-attribute-code="gc-message" rows="7" cols="39" placeholder="Add your message here..."></textarea>
+								</fieldset>
+							</form>
+						</mvt:if>
 						<mvt:if expr="l.settings:product:inv_active EQ 1">
         					<mvt:if expr="l.settings:product:inv_available EQ 0">
 								<div>
@@ -170,6 +194,11 @@
                 						<button aria-label="increment" name="decrement" class="but-count r-pls increment"><i class="fa-solid fa-plus"></i></button>
 									</div>
 									<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+									<mvt:if expr="'gift' CIN l.settings:product:code">
+										<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+									<mvt:else>
+										<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+									</mvt:if>
 								</div>
    							</mvt:if>
 						<mvt:else>
@@ -182,6 +211,11 @@
                 					<button aria-label="increment" name="decrement" class="but-count r-pls increment"><i class="fa-solid fa-plus"></i></button>
 								</div>
 								<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+								<mvt:if expr="'gift' CIN l.settings:product:code">
+									<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+								<mvt:else>
+									<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+								</mvt:if>
 							</div>
     					</mvt:if>
 						

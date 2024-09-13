@@ -2634,6 +2634,13 @@ details {
 		justify-content: center;
 		align-items: center;
 	}
+	.volume-pricing {
+		display: block;
+		padding-left: 0 !important;
+	}
+	.product-price {
+		text-align: center !important;
+	}
 }
 @media screen and (max-width: 960px) {
 	.info-product {
@@ -3462,4 +3469,9 @@ body {
 }
 .attribute-name {
 	font-size: 14px;
+}
+.volume-pricing {
+	font-weight: 500;
+	color: red;
+	padding-left: 3%;
 }

@@ -119,7 +119,6 @@
 		</div>
 		<!-- end .x-display-list-filtering -->
 	</section> </mvt:comment>
-	<br>
 </mvt:if>
 <mvt:foreach array="cattree_categories" iterator="category_children">
 		<mvt:if expr="l.settings:category_children:parent_id EQ l.settings:category:id">
@@ -257,6 +256,11 @@
 							<div class="product-price">
 								<span class="x-product-list__price u-text-bold color-price">&mvt:product:formatted_price;</span>
 								<span class="x-product-list__price u-text-medium color-price-base"><s>&mvt:product:formatted_base_price;</s></span>
+
+								<mvt:item name="ry_toolbelt" param="pricegroup|Product_Find|g.pricegroup|'Volume Pricing'|l.all_settings:product:code" />
+								<mvt:if expr="g.pricegroup EQ 1">
+									<span class="volume-pricing">Add another gallon - save 10%</span>
+								</mvt:if>
 							</div>
 						</mvt:if>
 						<mvt:if expr="'gift' CIN l.settings:product:code">
