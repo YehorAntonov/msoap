@@ -137,9 +137,19 @@
 <section class="main-products">
 	<mvt:foreach iterator="product" array="search_results:products">
 		<div class="container-product">
-				<div class="circle ctgy-list">
-					<img src="&mvte:product:imagetypes:main;" alt="&mvte:product:name;" loading="lazy">
-				</div>
+				<mvt:if expr="l.settings:product:code EQ '1050'">
+					<div class="circle ctgy-list">
+						<img style="transform: scale(50%);" src="&mvte:product:imagetypes:main;" alt="&mvte:product:name;" loading="lazy">
+					</div>
+				<mvt:elseif expr="'gift' CIN l.settings:product:name">
+					<div class="circle ctgy-list">
+						<img style="padding-top: 30%;" src="&mvte:product:imagetypes:main;" alt="&mvte:product:name;" loading="lazy">
+					</div>
+				<mvt:else>
+					<div class="circle ctgy-list">
+						<img src="&mvte:product:imagetypes:main;" alt="&mvte:product:name;" loading="lazy">
+					</div>
+				</mvt:if>
 
 				<div class="info-product">
 					<div class="product-name">
