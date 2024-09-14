@@ -3470,6 +3470,9 @@ body {
 .attribute-name {
 	font-size: 14px;
 }
+.disbaled-gift-count:disabled {
+	cursor: not-allowed;
+}
 .volume-pricing {
 	font-weight: 500;
 	color: red;

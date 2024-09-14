@@ -93,7 +93,7 @@
 											<mvt:else>
 												<mvt:assign name="l.settings:discount:descrip" value="l.settings:discount:descrip"/>
 											</mvt:if>
-											<span class="u-flex u-color-red">
+											<span style="padding-bottom: 10px;" class="u-flex u-color-red">
 												<span class="o-layout--grow">&mvt:discount:descrip;</span>
 												<span>&mvt:discount:formatted_discount;</span>
 											</span>

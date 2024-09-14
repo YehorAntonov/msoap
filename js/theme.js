@@ -953,7 +953,8 @@ const themeFunctionality = {
 			//create object with ajax request
 			var miniBasketRequest = $.ajax({
 			method: "POST",
-			data: data
+			data: data,
+			url: "https://miraclesoap.mivatest.com/basket-contents.html"
 			});
 	
 			//method done with function of response from server

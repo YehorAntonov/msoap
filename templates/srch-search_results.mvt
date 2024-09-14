@@ -197,13 +197,20 @@
 							<mvt:else>
 								<div class="addToCart-counting-block">
 									<div class="counting">
-										<button aria-label="decrement" name="decrement" class="but-count l-min decrement"><i class="fa-solid fa-minus"></i></button>
-                						<label for="input number">
-                    						<input aria-label="input number" name="input number" class="input-count" value="1">
-                						</label>
-                						<button aria-label="increment" name="decrement" class="but-count r-pls increment"><i class="fa-solid fa-plus"></i></button>
+										<mvt:if expr="'gift' CIN l.settings:product:code">
+											<button aria-label="decrement" name="decrement" class="but-count l-min decrement disbaled-gift-count" disabled><i class="fa-solid fa-minus"></i></button>
+											<label for="input number">
+												<input aria-label="input number" name="input number" class="input-count" value="1" disabled>
+											</label>
+											<button aria-label="increment" name="decrement" class="but-count r-pls increment disbaled-gift-count" disabled><i class="fa-solid fa-plus"></i></button>
+										<mvt:else>
+											<button aria-label="decrement" name="decrement" class="but-count l-min decrement"><i class="fa-solid fa-minus"></i></button>
+											<label for="input number">
+												<input aria-label="input number" name="input number" class="input-count" value="1">
+											</label>
+											<button aria-label="increment" name="decrement" class="but-count r-pls increment"><i class="fa-solid fa-plus"></i></button>
+										</mvt:if>
 									</div>
-									<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
 									<mvt:if expr="'gift' CIN l.settings:product:code">
 										<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
 									<mvt:else>
@@ -214,15 +221,22 @@
 						<mvt:else>
 							<div class="addToCart-counting-block">
 								<div class="counting">
-									<button aria-label="decrement" name="decrement" class="but-count l-min decrement"><i class="fa-solid fa-minus"></i></button>
-                					<label for="input number">
-                    					<input aria-label="input number" name="input number" class="input-count" value="1">
-                					</label>
-                					<button aria-label="increment" name="decrement" class="but-count r-pls increment"><i class="fa-solid fa-plus"></i></button>
+									<mvt:if expr="'gift' CIN l.settings:product:code">
+										<button aria-label="decrement" name="decrement" class="but-count l-min decrement disbaled-gift-count" disabled><i class="fa-solid fa-minus"></i></button>
+										<label for="input number">
+											<input aria-label="input number" name="input number" class="input-count" value="1" disabled>
+										</label>
+										<button aria-label="increment" name="decrement" class="but-count r-pls increment disbaled-gift-count" disabled><i class="fa-solid fa-plus"></i></button>
+									<mvt:else>
+										<button aria-label="decrement" name="decrement" class="but-count l-min decrement"><i class="fa-solid fa-minus"></i></button>
+										<label for="input number">
+											<input aria-label="input number" name="input number" class="input-count" value="1">
+										</label>
+										<button aria-label="increment" name="decrement" class="but-count r-pls increment"><i class="fa-solid fa-plus"></i></button>
+									</mvt:if>
 								</div>
-								<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
 								<mvt:if expr="'gift' CIN l.settings:product:code">
-									<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
+									<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart-gift" data-product-code="&mvt:product:code;">Add To Cart</button>
 								<mvt:else>
 									<button aria-label="add to cart" class="c-button c-button--full add-to-cart" data-hook="btn-add-to-cart" data-product-code="&mvt:product:code;">Add To Cart</button>
 								</mvt:if>
