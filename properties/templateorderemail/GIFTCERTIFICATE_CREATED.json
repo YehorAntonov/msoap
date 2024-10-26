@@ -4,7 +4,7 @@
     "ab_maxsub": 0,
     "ab_minsub": 0,
     "ab_time": 30,
-    "enabled": 0,
+    "enabled": 1,
     "name": "Gift Certificate Created",
     "on_abandon": 0,
     "on_bord": 0,
